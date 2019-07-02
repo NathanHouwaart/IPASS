@@ -16,7 +16,7 @@ else
 endif   
 
 # include hwlib
-HWLIB             ?= $(TI-SOFTWARE)/Documenten/v1-oopc-18-NathanHouwaart/hwlib
+HWLIB             ?= $(TI-SOFTWARE)/Ipass/code/hwlib
 include           $(HWLIB)/makefile.inc
 
 # set BMPTK to the bmptk subdirectory
