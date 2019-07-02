@@ -1,0 +1,78 @@
+\hypertarget{classhwlib_1_1pin__in__out__store}{}\section{hwlib\+:\+:pin\+\_\+in\+\_\+out\+\_\+store Class Reference}
+\label{classhwlib_1_1pin__in__out__store}\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+store@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+store}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/stores.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+in\+\_\+out\+\_\+store\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+in\+\_\+out\+\_\+store\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a8328b4207d39521fe525d710cc4bf800}\label{classhwlib_1_1pin__in__out__store_a8328b4207d39521fe525d710cc4bf800}} 
+void \hyperlink{classhwlib_1_1pin__in__out__store_a8328b4207d39521fe525d710cc4bf800}{write} (bool v) override
+\begin{DoxyCompactList}\small\item\em set the current pin level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a1adabeb1425e9068ae5bc3f1f2fddb99}\label{classhwlib_1_1pin__in__out__store_a1adabeb1425e9068ae5bc3f1f2fddb99}} 
+bool \hyperlink{classhwlib_1_1pin__in__out__store_a1adabeb1425e9068ae5bc3f1f2fddb99}{read} () override
+\begin{DoxyCompactList}\small\item\em returns the current pin level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a0e37e1e5712f3f929828687af68e0f1a}\label{classhwlib_1_1pin__in__out__store_a0e37e1e5712f3f929828687af68e0f1a}} 
+void \hyperlink{classhwlib_1_1pin__in__out__store_a0e37e1e5712f3f929828687af68e0f1a}{direction\+\_\+set\+\_\+input} () override
+\begin{DoxyCompactList}\small\item\em set the direction flags to indicate input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a18435aa514bf63d61e0bbb17a29e0502}\label{classhwlib_1_1pin__in__out__store_a18435aa514bf63d61e0bbb17a29e0502}} 
+void \hyperlink{classhwlib_1_1pin__in__out__store_a18435aa514bf63d61e0bbb17a29e0502}{direction\+\_\+set\+\_\+output} () override
+\begin{DoxyCompactList}\small\item\em set the direction flags to indicate output \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_ab937ad62722a0295a1829cf60d18b468}\label{classhwlib_1_1pin__in__out__store_ab937ad62722a0295a1829cf60d18b468}} 
+void \hyperlink{classhwlib_1_1pin__in__out__store_ab937ad62722a0295a1829cf60d18b468}{flush} () override
+\begin{DoxyCompactList}\small\item\em increment the flush count \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a6b0862f07398e67ec22b7ed2c293c484}\label{classhwlib_1_1pin__in__out__store_a6b0862f07398e67ec22b7ed2c293c484}} 
+void \hyperlink{classhwlib_1_1pin__in__out__store_a6b0862f07398e67ec22b7ed2c293c484}{refresh} () override
+\begin{DoxyCompactList}\small\item\em increment the refresh count \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_ae26b3186167d3f10db2bb73573c366da}\label{classhwlib_1_1pin__in__out__store_ae26b3186167d3f10db2bb73573c366da}} 
+void \hyperlink{classhwlib_1_1pin__in__out__store_ae26b3186167d3f10db2bb73573c366da}{direction\+\_\+flush} () override
+\begin{DoxyCompactList}\small\item\em increment the direction\+\_\+flush count \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a27c12f816cac56c9254916136048efdc}\label{classhwlib_1_1pin__in__out__store_a27c12f816cac56c9254916136048efdc}} 
+bool \hyperlink{classhwlib_1_1pin__in__out__store_a27c12f816cac56c9254916136048efdc}{value} = false
+\begin{DoxyCompactList}\small\item\em the current pin level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_ac83179f0a7c5829dc951fd9d8f19f68a}\label{classhwlib_1_1pin__in__out__store_ac83179f0a7c5829dc951fd9d8f19f68a}} 
+bool \hyperlink{classhwlib_1_1pin__in__out__store_ac83179f0a7c5829dc951fd9d8f19f68a}{is\+\_\+output} = false
+\begin{DoxyCompactList}\small\item\em true iff the current direction is output \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a4660352552843a744238cc6f61eeb4c4}\label{classhwlib_1_1pin__in__out__store_a4660352552843a744238cc6f61eeb4c4}} 
+bool \hyperlink{classhwlib_1_1pin__in__out__store_a4660352552843a744238cc6f61eeb4c4}{is\+\_\+input} = false
+\begin{DoxyCompactList}\small\item\em true iff the current direction is input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_ac37e42812cf21d687e5dc14f715a2338}\label{classhwlib_1_1pin__in__out__store_ac37e42812cf21d687e5dc14f715a2338}} 
+int \hyperlink{classhwlib_1_1pin__in__out__store_ac37e42812cf21d687e5dc14f715a2338}{read\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremented on each \hyperlink{classhwlib_1_1pin__in__out__store_a1adabeb1425e9068ae5bc3f1f2fddb99}{read()} call \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a7f51535fc78a23092cde787e618bf3b7}\label{classhwlib_1_1pin__in__out__store_a7f51535fc78a23092cde787e618bf3b7}} 
+int \hyperlink{classhwlib_1_1pin__in__out__store_a7f51535fc78a23092cde787e618bf3b7}{write\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremented on each \hyperlink{classhwlib_1_1pin__in__out__store_a8328b4207d39521fe525d710cc4bf800}{write()} call \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a54004fe37c8d530cb2063eb311be0112}\label{classhwlib_1_1pin__in__out__store_a54004fe37c8d530cb2063eb311be0112}} 
+int \hyperlink{classhwlib_1_1pin__in__out__store_a54004fe37c8d530cb2063eb311be0112}{direction\+\_\+set\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremented on \hyperlink{classhwlib_1_1pin__in__out__store_a0e37e1e5712f3f929828687af68e0f1a}{direction\+\_\+set\+\_\+input()} \& direction\+\_\+set\+Output() calls \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a77df9a0a05db65e915e0427f760c339e}\label{classhwlib_1_1pin__in__out__store_a77df9a0a05db65e915e0427f760c339e}} 
+int \hyperlink{classhwlib_1_1pin__in__out__store_a77df9a0a05db65e915e0427f760c339e}{flush\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremenst on each \hyperlink{classhwlib_1_1pin__in__out__store_ab937ad62722a0295a1829cf60d18b468}{flush()} call \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_acd2a8145b4dfdc826053615b023b4c29}\label{classhwlib_1_1pin__in__out__store_acd2a8145b4dfdc826053615b023b4c29}} 
+int \hyperlink{classhwlib_1_1pin__in__out__store_acd2a8145b4dfdc826053615b023b4c29}{refresh\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremenst on each \hyperlink{classhwlib_1_1pin__in__out__store_a6b0862f07398e67ec22b7ed2c293c484}{refresh()} call \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__store_a0fbd7cf032dad9c61a213a7b4ff11979}\label{classhwlib_1_1pin__in__out__store_a0fbd7cf032dad9c61a213a7b4ff11979}} 
+int \hyperlink{classhwlib_1_1pin__in__out__store_a0fbd7cf032dad9c61a213a7b4ff11979}{direction\+\_\+flush\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremenst on each \hyperlink{classhwlib_1_1pin__in__out__store_ae26b3186167d3f10db2bb73573c366da}{direction\+\_\+flush()} call \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} that stores its state and operation counts
+
+A \hyperlink{classhwlib_1_1pin__in__out__store}{pin\+\_\+in\+\_\+out\+\_\+store} is useful for tests. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-stores_8hpp}{hwlib-\/pin-\/stores.\+hpp}\end{DoxyCompactItemize}

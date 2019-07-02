@@ -1,0 +1,145 @@
+\hypertarget{classcard}{}\section{card Class Reference}
+\label{classcard}\index{card@{card}}
+
+
+card class  
+
+
+
+
+{\ttfamily \#include $<$mifare\+Classic.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcard_a93a10f1d2e4b3af94962373b88eecd6d}{card} ()
+\begin{DoxyCompactList}\small\item\em Default onstructor for a normal nfc card. \end{DoxyCompactList}\item 
+void \hyperlink{classcard_acc59c0616f2cb2a275e4f3dc12cf2e68}{add\+Page} (uint8\+\_\+t $\ast$bytes, size\+\_\+t bytes\+Size, int page\+Number)
+\begin{DoxyCompactList}\small\item\em Add a page to the card data buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classcard_a94c174b824e03f95a8c6c460fde5cc05}{read\+Page} (int page\+Number) const
+\begin{DoxyCompactList}\small\item\em Read a page from the card buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classcard_af5b0f2fc4fe0a5c1c05bdac63580a560}{set\+U\+ID} (uint8\+\_\+t $\ast$uid)
+\begin{DoxyCompactList}\small\item\em This function sets the U\+ID of a card object. \end{DoxyCompactList}\item 
+void \hyperlink{classcard_aacc4d5b92c92e3e7e2304d1b9dd17ddd}{set\+U\+ID} (\hyperlink{classreceivedCommand}{received\+Command} \&response)
+\begin{DoxyCompactList}\small\item\em This function sets the U\+ID of a card object. \end{DoxyCompactList}\item 
+std\+::array$<$ uint8\+\_\+t, nfc\+::pn532\+::general\+::\+Mifare1k\+U\+I\+Dsize $>$ \hyperlink{classcard_a2c2641a935f04c070f73a3df9e38b03d}{get\+U\+ID} () const
+\begin{DoxyCompactList}\small\item\em This function will return the stored U\+ID of a card data object. \end{DoxyCompactList}\item 
+std\+::array$<$ uint8\+\_\+t, nfc\+::pn532\+::general\+::\+Mifare1k\+Page\+Size $>$ \hyperlink{classcard_ad250e1e0d55889e332239b6ab0763223}{get\+Page} (uint8\+\_\+t page) const
+\begin{DoxyCompactList}\small\item\em This function will return the data of one specific page that is stored in this data object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+card class 
+
+This class saves the data of the card in a buffer You can either read, add orr add a U\+ID. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcard_a93a10f1d2e4b3af94962373b88eecd6d}\label{classcard_a93a10f1d2e4b3af94962373b88eecd6d}} 
+\index{card@{card}!card@{card}}
+\index{card@{card}!card@{card}}
+\subsubsection{\texorpdfstring{card()}{card()}}
+{\footnotesize\ttfamily card\+::card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default onstructor for a normal nfc card. 
+
+A normal nfc card has a page size of 16 bytes, hence this default constructor sets the page size to 16. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcard_acc59c0616f2cb2a275e4f3dc12cf2e68}\label{classcard_acc59c0616f2cb2a275e4f3dc12cf2e68}} 
+\index{card@{card}!add\+Page@{add\+Page}}
+\index{add\+Page@{add\+Page}!card@{card}}
+\subsubsection{\texorpdfstring{add\+Page()}{addPage()}}
+{\footnotesize\ttfamily void card\+::add\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bytes,  }\item[{size\+\_\+t}]{bytes\+Size,  }\item[{int}]{page\+Number }\end{DoxyParamCaption})}
+
+
+
+Add a page to the card data buffer. 
+
+This command stores the received bytes from the pn532 chip in a buffer. This way we can read the whole card faster. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & Pointer to an array of the bytes that need to be stored in the card object \\
+\hline
+{\em bytes\+Size} & Size of the array with data \\
+\hline
+{\em page\+Number} & Page the data needs to be stored in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcard_ad250e1e0d55889e332239b6ab0763223}\label{classcard_ad250e1e0d55889e332239b6ab0763223}} 
+\index{card@{card}!get\+Page@{get\+Page}}
+\index{get\+Page@{get\+Page}!card@{card}}
+\subsubsection{\texorpdfstring{get\+Page()}{getPage()}}
+{\footnotesize\ttfamily std\+::array$<$ uint8\+\_\+t, nfc\+::pn532\+::general\+::\+Mifare1k\+Page\+Size $>$ card\+::get\+Page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{page }\end{DoxyParamCaption}) const}
+
+
+
+This function will return the data of one specific page that is stored in this data object. 
+
+\begin{DoxyReturn}{Returns}
+array Content of one particulair page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcard_a2c2641a935f04c070f73a3df9e38b03d}\label{classcard_a2c2641a935f04c070f73a3df9e38b03d}} 
+\index{card@{card}!get\+U\+ID@{get\+U\+ID}}
+\index{get\+U\+ID@{get\+U\+ID}!card@{card}}
+\subsubsection{\texorpdfstring{get\+U\+I\+D()}{getUID()}}
+{\footnotesize\ttfamily std\+::array$<$ uint8\+\_\+t, 4 $>$ card\+::get\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function will return the stored U\+ID of a card data object. 
+
+\begin{DoxyReturn}{Returns}
+array User ID that is stored in the data object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcard_a94c174b824e03f95a8c6c460fde5cc05}\label{classcard_a94c174b824e03f95a8c6c460fde5cc05}} 
+\index{card@{card}!read\+Page@{read\+Page}}
+\index{read\+Page@{read\+Page}!card@{card}}
+\subsubsection{\texorpdfstring{read\+Page()}{readPage()}}
+{\footnotesize\ttfamily void card\+::read\+Page (\begin{DoxyParamCaption}\item[{int}]{page\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Read a page from the card buffer. 
+
+This command reads a specific page form the card buffer and prints it out in the terminal 
+\begin{DoxyParams}{Parameters}
+{\em pagenumber} & Number of the page needs to be read \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcard_af5b0f2fc4fe0a5c1c05bdac63580a560}\label{classcard_af5b0f2fc4fe0a5c1c05bdac63580a560}} 
+\index{card@{card}!set\+U\+ID@{set\+U\+ID}}
+\index{set\+U\+ID@{set\+U\+ID}!card@{card}}
+\subsubsection{\texorpdfstring{set\+U\+I\+D()}{setUID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void card\+::set\+U\+ID (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{uid }\end{DoxyParamCaption})}
+
+
+
+This function sets the U\+ID of a card object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & Pointer to an array of the U\+ID that needs to be stored in the card data type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcard_aacc4d5b92c92e3e7e2304d1b9dd17ddd}\label{classcard_aacc4d5b92c92e3e7e2304d1b9dd17ddd}} 
+\index{card@{card}!set\+U\+ID@{set\+U\+ID}}
+\index{set\+U\+ID@{set\+U\+ID}!card@{card}}
+\subsubsection{\texorpdfstring{set\+U\+I\+D()}{setUID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void card\+::set\+U\+ID (\begin{DoxyParamCaption}\item[{\hyperlink{classreceivedCommand}{received\+Command} \&}]{response }\end{DoxyParamCaption})}
+
+
+
+This function sets the U\+ID of a card object. 
+
+This function takes a \hyperlink{classreceivedCommand}{received\+Command} as argument and will abduct the currect U\+ID from it 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classreceivedCommand}{received\+Command}} & a received command that the U\+ID needs to be abducted from \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{mifareClassic_8h}{mifare\+Classic.\+h}\item 
+code/src/\hyperlink{mifareClassic_8cpp}{mifare\+Classic.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classhwlib_1_1pcf8591}{}\section{hwlib\+:\+:pcf8591 Class Reference}
+\label{classhwlib_1_1pcf8591}\index{hwlib\+::pcf8591@{hwlib\+::pcf8591}}
+
+
+{\ttfamily \#include $<$hwlib-\/pcf8591.\+hpp$>$}
+
+
+
+Collaboration diagram for hwlib\+:\+:pcf8591\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1pcf8591_abcaa1f0b67d70cd95754fd02a939240b}{pcf8591} (\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&bus, uint\+\_\+fast8\+\_\+t address=0x48)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pcf8591_a49118bd1d284d0e72aca58558b854b2d}\label{classhwlib_1_1pcf8591_a49118bd1d284d0e72aca58558b854b2d}} 
+one\+\_\+dac \hyperlink{classhwlib_1_1pcf8591_a49118bd1d284d0e72aca58558b854b2d}{dac0} \{ $\ast$this \}
+\begin{DoxyCompactList}\small\item\em the D/A converter channel of the chip \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+one\+\_\+adc \hyperlink{classhwlib_1_1pcf8591_a29a87f5711fbbd85ed5c477a5eab1b6f}{adc0} \{ $\ast$this, 0 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pcf8591_aa916285265761457b7c95207d2b41118}\label{classhwlib_1_1pcf8591_aa916285265761457b7c95207d2b41118}} 
+one\+\_\+adc {\bfseries adc1} \{ $\ast$this, 1 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pcf8591_acb459e70a386e9b62fb0680ea5e84cfb}\label{classhwlib_1_1pcf8591_acb459e70a386e9b62fb0680ea5e84cfb}} 
+one\+\_\+adc {\bfseries adc2} \{ $\ast$this, 2 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pcf8591_aa89be33b4b8d5a329120e867e8d8245f}\label{classhwlib_1_1pcf8591_aa89be33b4b8d5a329120e867e8d8245f}} 
+one\+\_\+adc {\bfseries adc3} \{ $\ast$this, 3 \}
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+\hyperlink{classhwlib_1_1pcf8591}{pcf8591} I2C A/D and D/A converter
+
+This class implements an interface to a \hyperlink{classhwlib_1_1pcf8591}{pcf8591} A/D \& D/A converter chip.
+
+
+
+A \hyperlink{classhwlib_1_1pcf8591}{pcf8591} is an I2C slave that provides 4 8-\/bits A/D inputs (that can be arranged in various combinations of single and balaced inputs), and a single8-\/bits D/A output. The power supply range is 2.\+5 .. 5.\+5 Volt. Of the 7-\/bit slave address, 3 bits are set by the level of 3 input pins (A0..A2) of the chip. When all 3 are pulled low, the slave address is 0x48.
+
+The next code repeatedly prints the values read by the 4 (single-\/ended) A/D converters.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ references\+:
+\begin{DoxyItemize}
+\item \href{http://www.nxp.com/documents/data_sheet/PCF8591.pdf}{\tt P\+C\+F8591 data sheet} (pdf) 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pcf8591_abcaa1f0b67d70cd95754fd02a939240b}\label{classhwlib_1_1pcf8591_abcaa1f0b67d70cd95754fd02a939240b}} 
+\index{hwlib\+::pcf8591@{hwlib\+::pcf8591}!pcf8591@{pcf8591}}
+\index{pcf8591@{pcf8591}!hwlib\+::pcf8591@{hwlib\+::pcf8591}}
+\subsubsection{\texorpdfstring{pcf8591()}{pcf8591()}}
+{\footnotesize\ttfamily hwlib\+::pcf8591\+::pcf8591 (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&}]{bus,  }\item[{uint\+\_\+fast8\+\_\+t}]{address = {\ttfamily 0x48} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct an interface to a \hyperlink{classhwlib_1_1pcf8591}{pcf8591} chip
+
+This constructor creates an interface to a \hyperlink{classhwlib_1_1pcf8591}{pcf8591} I2C A/D and D/A converter from the I2C bus it is connected to and and the chip address. The address is the 3-\/bit address that is determined by the 3 address input pins of the chip. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pcf8591_a29a87f5711fbbd85ed5c477a5eab1b6f}\label{classhwlib_1_1pcf8591_a29a87f5711fbbd85ed5c477a5eab1b6f}} 
+\index{hwlib\+::pcf8591@{hwlib\+::pcf8591}!adc0@{adc0}}
+\index{adc0@{adc0}!hwlib\+::pcf8591@{hwlib\+::pcf8591}}
+\subsubsection{\texorpdfstring{adc0}{adc0}}
+{\footnotesize\ttfamily one\+\_\+adc hwlib\+::pcf8591\+::adc0 \{ $\ast$this, 0 \}}
+
+the A/D converter channels of the chip
+
+The adc0 ... adc3 attributes represent the 4 A/D inputs of the chip. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{hwlib-pcf8591_8hpp}{hwlib-\/pcf8591.\+hpp}\end{DoxyCompactItemize}

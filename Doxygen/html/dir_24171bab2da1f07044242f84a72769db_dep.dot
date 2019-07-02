@@ -1,0 +1,11 @@
+digraph "examples_mifare_classic/Oled_decorator" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3d4d49a34023605d025eb3d0b5f107a1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="examples_mifare_classic" fontname="Helvetica", fontsize="10", URL="dir_3d4d49a34023605d025eb3d0b5f107a1.html"]
+  dir_24171bab2da1f07044242f84a72769db [shape=box, label="Oled_decorator", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_24171bab2da1f07044242f84a72769db.html"];
+  }
+  dir_050edd66366d13764f98250ef6db77f6 [shape=box label="code" fillcolor="white" style="filled" color="red" URL="dir_050edd66366d13764f98250ef6db77f6.html"];
+  dir_24171bab2da1f07044242f84a72769db->dir_050edd66366d13764f98250ef6db77f6 [headlabel="1", labeldistance=1.5 headhref="dir_000006_000013.html"];
+}

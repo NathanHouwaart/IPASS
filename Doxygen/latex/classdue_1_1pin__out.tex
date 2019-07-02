@@ -1,0 +1,102 @@
+\hypertarget{classdue_1_1pin__out}{}\section{due\+:\+:pin\+\_\+out Class Reference}
+\label{classdue_1_1pin__out}\index{due\+::pin\+\_\+out@{due\+::pin\+\_\+out}}
+
+
+\hyperlink{classdue_1_1pin__out}{pin\+\_\+out} implementation for a A\+T\+S\+A\+M3\+X8E  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/arduino-\/due.\+hpp$>$}
+
+
+
+Inheritance diagram for due\+:\+:pin\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for due\+:\+:pin\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdue_1_1pin__out_a0b19237d811428c455d607f7ed86da53}{pin\+\_\+out} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\hyperlink{classdue_1_1pin__out_ad0ede1c3e5e7501ae0dd045d83578c6c}{pin\+\_\+out} (\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins} name)
+\item 
+void \hyperlink{classdue_1_1pin__out_aa9127ae6a6d0c5f607569d9f67c5fa2b}{write} (bool v) override
+\item 
+void \hyperlink{classdue_1_1pin__out_a3db1935f691af312853dc2ebe06a56fb}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdue_1_1pin__out}{pin\+\_\+out} implementation for a A\+T\+S\+A\+M3\+X8E 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__out_a0b19237d811428c455d607f7ed86da53}\label{classdue_1_1pin__out_a0b19237d811428c455d607f7ed86da53}} 
+\index{due\+::pin\+\_\+out@{due\+::pin\+\_\+out}!pin\+\_\+out@{pin\+\_\+out}}
+\index{pin\+\_\+out@{pin\+\_\+out}!due\+::pin\+\_\+out@{due\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+out()}{pin\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+out\+::pin\+\_\+out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} constructor
+
+Constructor for a A\+T\+S\+A\+M3\+X8E input pin.
+
+The port\+\_\+number and pin\+\_\+number refer to the chip, not to the Arduino board pin names.
+
+This constructor sets the pin direction to output. \mbox{\Hypertarget{classdue_1_1pin__out_ad0ede1c3e5e7501ae0dd045d83578c6c}\label{classdue_1_1pin__out_ad0ede1c3e5e7501ae0dd045d83578c6c}} 
+\index{due\+::pin\+\_\+out@{due\+::pin\+\_\+out}!pin\+\_\+out@{pin\+\_\+out}}
+\index{pin\+\_\+out@{pin\+\_\+out}!due\+::pin\+\_\+out@{due\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+out()}{pin\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+out\+::pin\+\_\+out (\begin{DoxyParamCaption}\item[{\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} constructor from a Due pin name
+
+This call creates a \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} from an Arduino Due pin name.
+
+This constructor sets the pin direction to output. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__out_a3db1935f691af312853dc2ebe06a56fb}\label{classdue_1_1pin__out_a3db1935f691af312853dc2ebe06a56fb}} 
+\index{due\+::pin\+\_\+out@{due\+::pin\+\_\+out}!flush@{flush}}
+\index{flush@{flush}!due\+::pin\+\_\+out@{due\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+out\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{hwlib\+::pin\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__out_aa9127ae6a6d0c5f607569d9f67c5fa2b}\label{classdue_1_1pin__out_aa9127ae6a6d0c5f607569d9f67c5fa2b}} 
+\index{due\+::pin\+\_\+out@{due\+::pin\+\_\+out}!write@{write}}
+\index{write@{write}!due\+::pin\+\_\+out@{due\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classdue_1_1pin__out_a3db1935f691af312853dc2ebe06a56fb}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-arduino-due_8hpp}{hwlib-\/arduino-\/due.\+hpp}\end{DoxyCompactItemize}

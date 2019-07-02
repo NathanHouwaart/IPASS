@@ -1,0 +1,102 @@
+\hypertarget{classstm32f103c8_1_1pin__out}{}\section{stm32f103c8\+:\+:pin\+\_\+out Class Reference}
+\label{classstm32f103c8_1_1pin__out}\index{stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}}
+
+
+\hyperlink{classstm32f103c8_1_1pin__out}{pin\+\_\+out} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8}  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/stm32f103c8.\+hpp$>$}
+
+
+
+Inheritance diagram for stm32f103c8\+:\+:pin\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for stm32f103c8\+:\+:pin\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstm32f103c8_1_1pin__out_a4a2fe51a52b60eaf8f060273bdc133ac}{pin\+\_\+out} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\hyperlink{classstm32f103c8_1_1pin__out_ad226a64af3c8204040694b8d8c634b1d}{pin\+\_\+out} (\hyperlink{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}{pins} name)
+\item 
+void \hyperlink{classstm32f103c8_1_1pin__out_af1d21fc8d9b0d8dc2c4b5e9aadef12f5}{write} (bool v) override
+\item 
+void \hyperlink{classstm32f103c8_1_1pin__out_a401a547302edb7ceb655e5d4be0af6a8}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classstm32f103c8_1_1pin__out}{pin\+\_\+out} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__out_a4a2fe51a52b60eaf8f060273bdc133ac}\label{classstm32f103c8_1_1pin__out_a4a2fe51a52b60eaf8f060273bdc133ac}} 
+\index{stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}!pin\+\_\+out@{pin\+\_\+out}}
+\index{pin\+\_\+out@{pin\+\_\+out}!stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+out()}{pin\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily stm32f103c8\+::pin\+\_\+out\+::pin\+\_\+out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f103c8}{stm32f103c8} \hyperlink{classstm32f103c8_1_1pin__out}{pin\+\_\+out} constructor
+
+Construct an \hyperlink{namespacestm32f103c8}{stm32f103c8} output pin from its port and pin numbers.
+
+This constructor sets the pin direction to output.
+
+This constructor doesn\textquotesingle{}t set the pin value to high or low, the set function must be called to do so. \mbox{\Hypertarget{classstm32f103c8_1_1pin__out_ad226a64af3c8204040694b8d8c634b1d}\label{classstm32f103c8_1_1pin__out_ad226a64af3c8204040694b8d8c634b1d}} 
+\index{stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}!pin\+\_\+out@{pin\+\_\+out}}
+\index{pin\+\_\+out@{pin\+\_\+out}!stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+out()}{pin\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily stm32f103c8\+::pin\+\_\+out\+::pin\+\_\+out (\begin{DoxyParamCaption}\item[{\hyperlink{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}{pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f103c8}{stm32f103c8} \hyperlink{classstm32f103c8_1_1pin__out}{pin\+\_\+out} constructor Construct an \hyperlink{namespacestm32f103c8}{stm32f103c8} output pin from its blue-\/pill pin name.
+
+This constructor sets the pin direction to output.
+
+This constructor doesn\textquotesingle{}t set the pin value to high or low, the set function must be called to do so. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__out_a401a547302edb7ceb655e5d4be0af6a8}\label{classstm32f103c8_1_1pin__out_a401a547302edb7ceb655e5d4be0af6a8}} 
+\index{stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}!flush@{flush}}
+\index{flush@{flush}!stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void stm32f103c8\+::pin\+\_\+out\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{hwlib\+::pin\+\_\+out}.
+
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__out_af1d21fc8d9b0d8dc2c4b5e9aadef12f5}\label{classstm32f103c8_1_1pin__out_af1d21fc8d9b0d8dc2c4b5e9aadef12f5}} 
+\index{stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}!write@{write}}
+\index{write@{write}!stm32f103c8\+::pin\+\_\+out@{stm32f103c8\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void stm32f103c8\+::pin\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classstm32f103c8_1_1pin__out_a401a547302edb7ceb655e5d4be0af6a8}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-stm32f103c8_8hpp}{hwlib-\/stm32f103c8.\+hpp}\end{DoxyCompactItemize}

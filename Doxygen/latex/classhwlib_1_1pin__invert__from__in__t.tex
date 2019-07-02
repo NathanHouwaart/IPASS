@@ -1,0 +1,73 @@
+\hypertarget{classhwlib_1_1pin__invert__from__in__t}{}\section{hwlib\+:\+:pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__invert__from__in__t}\index{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/invert.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__invert__from__in__t_affe4424d2548f8f72f691b1bf904ac06}\label{classhwlib_1_1pin__invert__from__in__t_affe4424d2548f8f72f691b1bf904ac06}} 
+\hyperlink{classhwlib_1_1pin__invert__from__in__t_affe4424d2548f8f72f691b1bf904ac06}{pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t} (\hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} \&slave)
+\begin{DoxyCompactList}\small\item\em construct from a \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} \end{DoxyCompactList}\item 
+bool \hyperlink{classhwlib_1_1pin__invert__from__in__t_a41050e62292c67a287bbd9fbce004b45}{read} ()
+\item 
+void \hyperlink{classhwlib_1_1pin__invert__from__in__t_a6361c3508dd5b7abcc4f6b4953710f95}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+inverse of a \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in}
+
+The preferred way to use this class is through the overloaded constructor function \hyperlink{namespacehwlib_ab619d7f70bb62112b2a04192f5103a24}{invert()}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__invert__from__in__t_a41050e62292c67a287bbd9fbce004b45}\label{classhwlib_1_1pin__invert__from__in__t_a41050e62292c67a287bbd9fbce004b45}} 
+\index{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t}!read@{read}}
+\index{read@{read}!hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classhwlib_1_1pin__invert__from__in__t_a6361c3508dd5b7abcc4f6b4953710f95}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{hwlib\+::pin\+\_\+in}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__invert__from__in__t_a6361c3508dd5b7abcc4f6b4953710f95}\label{classhwlib_1_1pin__invert__from__in__t_a6361c3508dd5b7abcc4f6b4953710f95}} 
+\index{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+in\+\_\+t\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1pin__invert__from__in__t_a41050e62292c67a287bbd9fbce004b45}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{hwlib\+::pin\+\_\+in}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-invert_8hpp}{hwlib-\/pin-\/invert.\+hpp}\end{DoxyCompactItemize}

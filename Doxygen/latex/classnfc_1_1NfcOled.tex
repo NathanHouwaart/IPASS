@@ -1,0 +1,130 @@
+\hypertarget{classnfc_1_1NfcOled}{}\section{nfc\+:\+:Nfc\+Oled Class Reference}
+\label{classnfc_1_1NfcOled}\index{nfc\+::\+Nfc\+Oled@{nfc\+::\+Nfc\+Oled}}
+
+
+Oled decorator for the \hyperlink{classnfc_1_1NFC}{N\+FC} class.  
+
+
+
+
+{\ttfamily \#include $<$pn532\+Oled.\+h$>$}
+
+
+
+Inheritance diagram for nfc\+:\+:Nfc\+Oled\+:
+% FIG 0
+
+
+Collaboration diagram for nfc\+:\+:Nfc\+Oled\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfc_1_1NfcOled_ab3917823345cbb6bc0881fa04d84a6cb}{Nfc\+Oled} (\hyperlink{classnfc_1_1NFC}{N\+FC} \&slave, hwlib\+::terminal\+\_\+from \&display, \hyperlink{classcommunication_1_1protocol}{communication\+::protocol} \&\+\_\+protocol)
+\begin{DoxyCompactList}\small\item\em Constructor for the Oled decorator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a2b394a955afe3f280e3f2509908effe9}\label{classnfc_1_1NfcOled_a2b394a955afe3f280e3f2509908effe9}} 
+void \hyperlink{classnfc_1_1NfcOled_a2b394a955afe3f280e3f2509908effe9}{init} () override
+\begin{DoxyCompactList}\small\item\em Initialise the pn532 and display the state on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_aa969ac754435a695ce1ddb8c4285e76c}\label{classnfc_1_1NfcOled_aa969ac754435a695ce1ddb8c4285e76c}} 
+void \hyperlink{classnfc_1_1NfcOled_aa969ac754435a695ce1ddb8c4285e76c}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, const uint8\+\_\+t n\+Bytes) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+send\+Data() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}\label{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}} 
+void \hyperlink{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}{get\+Data} (uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n\+Bytes) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+get\+Data() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}\label{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}{write\+Register} (const uint16\+\_\+t reg, const uint8\+\_\+t val) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+write\+Register() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a15c794124696c14893ffcf781609c00e}\label{classnfc_1_1NfcOled_a15c794124696c14893ffcf781609c00e}} 
+std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1NfcOled_a15c794124696c14893ffcf781609c00e}{read\+Register} (const uint16\+\_\+t reg) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+read\+Register() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a93a2097132e92d3bc6f1e1c4c45d364b}\label{classnfc_1_1NfcOled_a93a2097132e92d3bc6f1e1c4c45d364b}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a93a2097132e92d3bc6f1e1c4c45d364b}{write\+G\+P\+IO} (uint8\+\_\+t new\+Pin\+State) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+write\+G\+P\+I\+O() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a0dd17c714697e9883aa35962c5229625}\label{classnfc_1_1NfcOled_a0dd17c714697e9883aa35962c5229625}} 
+std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1NfcOled_a0dd17c714697e9883aa35962c5229625}{read\+G\+P\+IO} () override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+read\+G\+P\+I\+O() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_aed3fb53e82dba1bbdc97adb38d6fdb29}\label{classnfc_1_1NfcOled_aed3fb53e82dba1bbdc97adb38d6fdb29}} 
+bool \hyperlink{classnfc_1_1NfcOled_aed3fb53e82dba1bbdc97adb38d6fdb29}{wait\+For\+Chip} (const int timeout) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+wait\+For\+Chip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}\label{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}} 
+bool \hyperlink{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}{check\+Ack} (const uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+check\+Ack() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}\label{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}} 
+\hyperlink{structnfc_1_1Result}{Result} \hyperlink{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}{send\+Command\+And\+Check\+Ack} (\hyperlink{classsetupSendCommand}{setup\+Send\+Command} \&command) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+send\+Command\+And\+Check\+Ack() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a76e1f57a8cf76b22029df6da4d8bacd2}\label{classnfc_1_1NfcOled_a76e1f57a8cf76b22029df6da4d8bacd2}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a76e1f57a8cf76b22029df6da4d8bacd2}{perform\+Selftest} () override
+\begin{DoxyCompactList}\small\item\em Perform a selftest and display it\textquotesingle{}s outcome on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a037638d75c50a76c7f62d0e69cb44cdb}\label{classnfc_1_1NfcOled_a037638d75c50a76c7f62d0e69cb44cdb}} 
+std\+::array$<$ uint8\+\_\+t, 5 $>$ \hyperlink{classnfc_1_1NfcOled_a037638d75c50a76c7f62d0e69cb44cdb}{get\+General\+Status} () override
+\begin{DoxyCompactList}\small\item\em Get the general status of the pn532 and display the result on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_add83fefdd3a5eadc6f85617173d08336}\label{classnfc_1_1NfcOled_add83fefdd3a5eadc6f85617173d08336}} 
+std\+::array$<$ uint8\+\_\+t, 5 $>$ \hyperlink{classnfc_1_1NfcOled_add83fefdd3a5eadc6f85617173d08336}{get\+Firmware\+Version} () override
+\begin{DoxyCompactList}\small\item\em Get the firmware version of the pn532 and display the result on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a1779648dbd03771141b98ac604ba7982}\label{classnfc_1_1NfcOled_a1779648dbd03771141b98ac604ba7982}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a1779648dbd03771141b98ac604ba7982}{S\+A\+M\+Configuration} (const uint8\+\_\+t mode) override
+\begin{DoxyCompactList}\small\item\em Conigure tha S\+AM and display the status on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a708a50eec4640caca921af9958c43972}\label{classnfc_1_1NfcOled_a708a50eec4640caca921af9958c43972}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a708a50eec4640caca921af9958c43972}{R\+F\+Field} (const bool state) override
+\begin{DoxyCompactList}\small\item\em Switch the RF fiel on or off and display the result on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a1c64d60d6008551a530d668acbdb5ede}\label{classnfc_1_1NfcOled_a1c64d60d6008551a530d668acbdb5ede}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a1c64d60d6008551a530d668acbdb5ede}{set\+Max\+Retries} (const uint8\+\_\+t max\+Retries) override
+\begin{DoxyCompactList}\small\item\em Set the max retries and display the result on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a8c233683d71236d6238d840eeeb5d626}\label{classnfc_1_1NfcOled_a8c233683d71236d6238d840eeeb5d626}} 
+bool \hyperlink{classnfc_1_1NfcOled_a8c233683d71236d6238d840eeeb5d626}{detect\+Card} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t n\+Cards, const uint8\+\_\+t cardtype) override
+\begin{DoxyCompactList}\small\item\em Wait for a card and update the display to inform that the pn532 is ready to detect a card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a7ae4a0942240950d8db41b75c898cb3c}\label{classnfc_1_1NfcOled_a7ae4a0942240950d8db41b75c898cb3c}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a7ae4a0942240950d8db41b75c898cb3c}{select\+Card} () override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+select\+Card() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_aadcb1a6a9e6241c80ecd50de0d108907}\label{classnfc_1_1NfcOled_aadcb1a6a9e6241c80ecd50de0d108907}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_aadcb1a6a9e6241c80ecd50de0d108907}{set\+Serial\+Baudrate} (const \hyperlink{declarations_8h_a18236cb00569a8f612f8957044868f74}{baud\+Rate} br) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+set\+Serial\+Baudrate() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a87d38aa8fcb687e276f18ae691b4ff0f}\label{classnfc_1_1NfcOled_a87d38aa8fcb687e276f18ae691b4ff0f}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a87d38aa8fcb687e276f18ae691b4ff0f}{mifare\+Read\+Page} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t card\+Number, const uint8\+\_\+t page\+Number)
+\begin{DoxyCompactList}\small\item\em Same as slave.\+mifare\+Read\+Page() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a1168a23f48bec44eae8d65a1625736e5}\label{classnfc_1_1NfcOled_a1168a23f48bec44eae8d65a1625736e5}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a1168a23f48bec44eae8d65a1625736e5}{mifare\+Authenticate} (\hyperlink{classcard}{card} \&cardinfo, uint8\+\_\+t card\+Number, \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, uint8\+\_\+t pagenr, const uint8\+\_\+t $\ast$key) override
+\begin{DoxyCompactList}\small\item\em Try to authenticate a sector trailer block and display the status on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a547e3a810432ebbb3e9a03dc7c2fa0c8}\label{classnfc_1_1NfcOled_a547e3a810432ebbb3e9a03dc7c2fa0c8}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a547e3a810432ebbb3e9a03dc7c2fa0c8}{mifare\+Write\+Page} (\hyperlink{classcard}{card} \&cardinfo, uint8\+\_\+t card\+Number, uint8\+\_\+t page\+Number, const char $\ast$data) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+mifare\+Write\+Page() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_abed1963a7aaaa03737ecc7893abfbb23}\label{classnfc_1_1NfcOled_abed1963a7aaaa03737ecc7893abfbb23}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_abed1963a7aaaa03737ecc7893abfbb23}{mifare\+Read\+Card} (\hyperlink{classcard}{card} \&card\+Info, const uint8\+\_\+t card\+Number, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const \hyperlink{structnfc_1_1cardKeys}{card\+Keys} \&authentication\+Keys) override
+\begin{DoxyCompactList}\small\item\em Will try to read a card and will display the status on the display() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_a51057bf2bceb99fafeeaec0589470efb}\label{classnfc_1_1NfcOled_a51057bf2bceb99fafeeaec0589470efb}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a51057bf2bceb99fafeeaec0589470efb}{mifare\+Make\+Value\+Block} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t card\+Number, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key) override
+\begin{DoxyCompactList}\small\item\em Will try to make a value block and will display the status on the display() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_aa7bca4b2b6aeb113b9346f74d5d8e4b7}\label{classnfc_1_1NfcOled_aa7bca4b2b6aeb113b9346f74d5d8e4b7}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_aa7bca4b2b6aeb113b9346f74d5d8e4b7}{mifare\+Increment} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t card\+Number, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key, const uint32\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+mifare\+Increment() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_ab0a2321b094ce75503cde8f6bb7a91ef}\label{classnfc_1_1NfcOled_ab0a2321b094ce75503cde8f6bb7a91ef}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_ab0a2321b094ce75503cde8f6bb7a91ef}{mifare\+Transfer} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t cardnumber, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+mifare\+Transfer() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnfc_1_1NfcOled_af6fd65859104e507b4c8c5718bc86d22}\label{classnfc_1_1NfcOled_af6fd65859104e507b4c8c5718bc86d22}} 
+\hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_af6fd65859104e507b4c8c5718bc86d22}{mifare\+Decrement} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t cardnumber, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key, const uint32\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Same as slave.\+mifare\+Decrement() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Oled decorator for the \hyperlink{classnfc_1_1NFC}{N\+FC} class. 
+
+With a decorator, additional features can be added on top of the already existing \hyperlink{classnfc_1_1NFC}{N\+FC} funcions. This specific decorator does that by executing a command, and displaying ( most of ) it\textquotesingle{}s output on an oled display. Not all functions make use of the oled display (yet). Those functions will just call their slave counterfit functions 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnfc_1_1NfcOled_ab3917823345cbb6bc0881fa04d84a6cb}\label{classnfc_1_1NfcOled_ab3917823345cbb6bc0881fa04d84a6cb}} 
+\index{nfc\+::\+Nfc\+Oled@{nfc\+::\+Nfc\+Oled}!Nfc\+Oled@{Nfc\+Oled}}
+\index{Nfc\+Oled@{Nfc\+Oled}!nfc\+::\+Nfc\+Oled@{nfc\+::\+Nfc\+Oled}}
+\subsubsection{\texorpdfstring{Nfc\+Oled()}{NfcOled()}}
+{\footnotesize\ttfamily nfc\+::\+Nfc\+Oled\+::\+Nfc\+Oled (\begin{DoxyParamCaption}\item[{\hyperlink{classnfc_1_1NFC}{N\+FC} \&}]{slave,  }\item[{hwlib\+::terminal\+\_\+from \&}]{display,  }\item[{\hyperlink{classcommunication_1_1protocol}{communication\+::protocol} \&}]{\+\_\+protocol }\end{DoxyParamCaption})}
+
+
+
+Constructor for the Oled decorator. 
+
+Takes a display as additional argument 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{pn532Oled_8h}{pn532\+Oled.\+h}\item 
+code/src/\hyperlink{pn532Oled_8cpp}{pn532\+Oled.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{pn532Oled_8h}{}\section{code/headers/pn532\+Oled.h File Reference}
+\label{pn532Oled_8h}\index{code/headers/pn532\+Oled.\+h@{code/headers/pn532\+Oled.\+h}}
+
+
+This file implements a decorator for the N\+FC class in order to be used with an oled display.  
+
+
+{\ttfamily \#include \char`\"{}pn532.\+h\char`\"{}}\newline
+Include dependency graph for pn532\+Oled.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfc_1_1NfcOled}{nfc\+::\+Nfc\+Oled}
+\begin{DoxyCompactList}\small\item\em Oled decorator for the \hyperlink{classnfc_1_1NFC}{N\+FC} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a decorator for the N\+FC class in order to be used with an oled display. 
+
+This file implements a decorator for the abstract N\+FC class so an oled screen can be used to display data on
+
+Make sure the external G\+P\+IO pins of the pn532 are set to the proper protocol and match the protocol selected in this file.
+
+G\+P\+IO pin layout\+: ~\newline
+ P1 $\vert$ P2 = protocol\+: ~\newline
+ 0 $\vert$ 0 = U\+A\+RT ~\newline
+ 0 $\vert$ 1 = S\+PI ~\newline
+ 1 $\vert$ 0 = i2C ~\newline
+ Functions that write to the display by default\+:
+\begin{DoxyItemize}
+\item N\+F\+C-\/$>$Init()
+\item N\+F\+C-\/$>$perform\+Self\+Test()
+\item N\+F\+C-\/$>$get\+General\+Status()
+\item N\+F\+C-\/$>$get\+Firmware\+Version()
+\item N\+F\+C-\/$>$S\+A\+M\+Configuration()
+\item N\+F\+C-\/$>$R\+F\+Field()
+\item N\+F\+C-\/$>$detect\+Card()
+\item N\+F\+C-\/$>$mifare\+Authenticate()
+\item N\+F\+C-\/$>$mifare\+Read\+Card()
+\item N\+F\+C-\/$>$mifare\+Make\+Value\+Block()
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The content that is written to the display can be changed / altered in the \hyperlink{pn532Oled_8cpp}{pn532\+Oled.\+cpp} file. When you do, just make sure there is a hwlib\+::wait\+\_\+ms( x ) after you write to the oled. Otherwise the contend will be overwritten too quickly in order to read it.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

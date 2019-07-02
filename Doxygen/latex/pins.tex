@@ -1,0 +1,140 @@
+Micro-\/controllers have G\+P\+IO (General Purpose Input / Ouput) pins that can be used by the micro-\/controller application software to interface with hardware external to the micro-\/controller in a very basic way.
+
+A G\+P\+IO pin can -\/ under software control -\/ be configure to be either an input or an output. When configured as input, its level (high or low) can be read by the software. When configured as output, the software can write a level to the pin.
+
+~\newline
+ 
+
+\hypertarget{pins_pin-types}{}\section{types}\label{pins_pin-types}
+In hwlib, four (abstract) types of pin objects are defined\+:
+
+
+\begin{DoxyItemize}
+\item a \hyperlink{classhwlib_1_1pin__in}{hwlib\+::pin\+\_\+in} can only be used for input (read)
+\item a \hyperlink{classhwlib_1_1pin__out}{hwlib\+::pin\+\_\+out} can only be used for output (write)
+\item a \hyperlink{classhwlib_1_1pin__in__out}{hwlib\+::pin\+\_\+in\+\_\+out} can be used for input or output, but it must be configured for the appropriate direction (input or output) before it is used in either way.
+\item a \hyperlink{classhwlib_1_1pin__oc}{hwlib\+::pin\+\_\+oc} (open collector) can be used for input or output (without configuring it for a direction), but a write(1) must be done before it can be meaningfully read.
+\end{DoxyItemize}
+
+Each target provides (concrete) classes for each of the four types of pins.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{pins_pin-construction}{}\section{construction}\label{pins_pin-construction}
+Micro-\/controller hardware groups their G\+P\+IO pins into ports. A pin can be constructed by specifying the port and the pin number within the port.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ Boards (like the Arduino Uno) often have names for their pins. Those names are often totally unrelated to the port and pins of the micro-\/controller on the board. A pin can be constructed by specifying the board-\/specific pin name (or pin function, like \textquotesingle{}led\textquotesingle{} or \textquotesingle{}scl\textquotesingle{}).
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{pins_pin-operation}{}\section{operations}\label{pins_pin-operation}
+The next tables shows the operations that are available for each type of pin.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ pin type }&\textbf{ reading }&\textbf{ writing }&\textbf{ direction control  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ pin type }&\textbf{ reading }&\textbf{ writing }&\textbf{ direction control  }\\\cline{1-4}
+\endhead
+\hyperlink{classhwlib_1_1pin__in}{in} &\hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{refresh()}, \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{read()} &&\\\cline{1-4}
+\hyperlink{classhwlib_1_1pin__out}{out} &&\hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{write()}, \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{write()} &\\\cline{1-4}
+\hyperlink{classhwlib_1_1pin__in__out}{in\+\_\+out} &\hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{refresh()}, \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{read()} &\hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{write()}, \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{write()} &\hyperlink{classhwlib_1_1pin__in__out_a54ce1a5086d3c9e7b868511b1d46acd0}{direction\+\_\+set\+\_\+input()}, \hyperlink{classhwlib_1_1pin__in__out_ad08a5f5e9a4c3aadaa7c665b98f2418e}{direction\+\_\+set\+\_\+output()}, \hyperlink{classhwlib_1_1pin__in__out_a86ef2b296683d8c0133280075c82cb51}{direction\+\_\+flush()} \\\cline{1-4}
+\hyperlink{classhwlib_1_1pin__oc}{oc} &\hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{refresh()}, \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{read()} &\hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{write()}, \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{write()} &\\\cline{1-4}
+\end{longtabu}
+A read() returns a bool, a write() accepts a bool. The other calls take no parameters and return void.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ For an \hyperlink{classhwlib_1_1pin__in__out}{in\+\_\+out} pin the direction must be set to input before a read() is done, and to output before a write() is done.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ As shown in the examples, a read() should be preceded by a refresh(), a write should be followed by a flush(), and a direction change should be followed by a \hyperlink{classhwlib_1_1pin__in__out_a86ef2b296683d8c0133280075c82cb51}{direction\+\_\+flush()}, as explained in the page on \hyperlink{buffering}{buffering}.
+
+~\newline
+ 
+
+\hypertarget{pins_pin-direct}{}\section{direct}\label{pins_pin-direct}
+Pin operations (read, write, direction\+\_\+set\+\_\+input, direction\+\_\+set\+\_\+output) are (potentially) \hyperlink{buffering}{buffered}.
+
+The \hyperlink{namespacehwlib_a43941b7f246ad934ee43dbfa0f5c8b5a}{direct()} creator function can be used to create a pin that has read(), write() and direction\+\_\+set\+\_\+$\ast$() operations with direct effect.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{pins_pin-invert}{}\section{invert}\label{pins_pin-invert}
+The \hyperlink{namespacehwlib_ab619d7f70bb62112b2a04192f5103a24}{hwlib\+::invert} \hyperlink{namespacehwlib_ab619d7f70bb62112b2a04192f5103a24}{invert()} function constructs a new pin from an existing one. When a value is written to this new pin, the inverse of this value is written to the old pin. Likewise, when a value is read from the new pin, the value is the inverse of the value read from the old pin. The new pin is of the same type (in, out, in\+\_\+out, oc) as the existing one from which it was created.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{pins_pin-conversion}{}\section{conversion}\label{pins_pin-conversion}
+Conversion functions are available that create a pin of one type from one of another type. Of course, not all such conversions are possible.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ function }&\textbf{ accepted pin types  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ function }&\textbf{ accepted pin types  }\\\cline{1-2}
+\endhead
+pin\+\_\+in\+\_\+from( pin ) &in, in\+\_\+out, oc \\\cline{1-2}
+pin\+\_\+out\+\_\+from( pin ) &out, in\+\_\+out, oc \\\cline{1-2}
+pin\+\_\+in\+\_\+out\+\_\+from( pin ) &in\+\_\+out, oc \\\cline{1-2}
+pin\+\_\+oc\+\_\+from( pin ) &in\+\_\+out, oc \\\cline{1-2}
+\end{longtabu}
+~\newline
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+~\newline
+ 
+
+\hypertarget{pins_pin-all}{}\section{All}\label{pins_pin-all}
+The overloaded \hyperlink{structxy_af0ac2823653fbb02e47de4315fb20a49}{all()} function creates a single out pin from up to 16 out pins. Writing a value to the single pin writes the value to all pin that it was constructed from, and similarly flushing the single pin flushes all pins it was constructed from.
+
+~\newline
+ 
+
+\hypertarget{pins_pin-pullups}{}\section{Pull-\/ups \& pull-\/downs}\label{pins_pin-pullups}
+Some pins have pull-\/up and/or pull-\/down resistors that can be enabled and disabled under software control. If so, such pins provide these functions\+:
+\begin{DoxyItemize}
+\item pullup\+\_\+disable(), pullup\+\_\+enable() (when pull-\/ups are available)
+\item pulldown\+\_\+disable(), pulldown\+\_\+enable() (when pull-\/downs are available)
+\end{DoxyItemize}
+
+Unlike other pin functionality, these functions operate directly (they have no corresponding flush() functions).
+
+~\newline
+ 

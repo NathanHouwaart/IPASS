@@ -1,0 +1,131 @@
+The (abstract) types \hyperlink{char-io_istream}{istream} and \hyperlink{char-io_ostream}{ostream} are used to read and write characters.
+
+~\newline
+ 
+
+\hypertarget{char-io_istream}{}\section{istream}\label{char-io_istream}
+The (bastract) \hyperlink{classhwlib_1_1istream}{istream} class provides a basic interface to a source of characters. It allows for the reading of a single character, either blocking (waiting for a character to become available) or non-\/blocking (\textquotesingle{}\textbackslash{}0\textquotesingle{} is returned immediately when no character is available.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ functions }&\textbf{ effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ functions }&\textbf{ effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1istream_a9a260f800b08d4788b9e399f65d1c728}{getc()} &wait for a char and return it \\\cline{1-2}
+\hyperlink{classhwlib_1_1istream_aa4ff0ebb0bd23b9fb765520aa49416f4}{getc\+\_\+nowait()} &immediately return a char, returns \textquotesingle{}\textbackslash{}0\textquotesingle{} if none available \\\cline{1-2}
+\hyperlink{classhwlib_1_1istream_a77c1ce784f42922cd4758f2d8a6c59b3}{char\+\_\+available()} &return whether a char is available \\\cline{1-2}
+\hyperlink{classhwlib_1_1istream_a88dabf0f321a5f098ede5ee108d0a92b}{operator$>$$>$} &equivalent to getc() \\\cline{1-2}
+\end{longtabu}
+Operations on an istream are not buffered.
+
+~\newline
+ 
+
+\hypertarget{char-io_ostream}{}\section{ostream}\label{char-io_ostream}
+The (abstract) \hyperlink{classhwlib_1_1ostream}{ostream} class provides an interface to a sink of characters. Both basic (single character) and formatted operations are provided. Unlike isteram, all ostream operations are (potentially) buffered\+: a \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} call might be needed to make sure that everything what was written takes effect.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ basic functions }&\textbf{ effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ basic functions }&\textbf{ effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1ostream_a3b2b77c9e933b76bd6ddd85b9883a31b}{putc(c)} &write the char c \\\cline{1-2}
+\hyperlink{classhwlib_1_1ostream_a5f43f08159d2733e02805f134598f96a}{flush()} &flushes all buffered output \\\cline{1-2}
+\end{longtabu}
+The formatted ostream operations are used via the overloaded $<$$<$ operator and mimic std\+::ostream operations.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ write using $<$$<$ }&\textbf{ effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ write using $<$$<$ }&\textbf{ effect  }\\\cline{1-2}
+\endhead
+bool &writes the bool value (see boolalpha) \\\cline{1-2}
+char &writes the single char \\\cline{1-2}
+short int, int, long int, long long int &writes the (signed) integer value \\\cline{1-2}
+unsigned integers &writes the (unsigned) integer value \\\cline{1-2}
+const char $\ast$ &writes the string \\\cline{1-2}
+\hyperlink{classhwlib_1_1string}{string} &writes the string \\\cline{1-2}
+flush &equivalent to a \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} call \\\cline{1-2}
+\end{longtabu}
+~\newline
+
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ formatting }&\textbf{ effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ formatting }&\textbf{ effect  }\\\cline{1-2}
+\endhead
+boolalpha &bools are written as \textquotesingle{}0\textquotesingle{} or \textquotesingle{}1\textquotesingle{}. \\\cline{1-2}
+noboolalpha &bools are written as \textquotesingle{}false\textquotesingle{} or \textquotesingle{}true\textquotesingle{} \\\cline{1-2}
+showbase &ints are witten with a base prefix \\\cline{1-2}
+noshowbase &ints are written without a base prefix \\\cline{1-2}
+setfill(c) &c is used as the fill character \\\cline{1-2}
+setwidth(n) &a write uses a field of n positions \\\cline{1-2}
+right &a write is left aligned in its field \\\cline{1-2}
+left &a write is right aligned in its field \\\cline{1-2}
+bin &integers are written base 2 \\\cline{1-2}
+oct &integers are written base 8 \\\cline{1-2}
+dec &integers are written base 10 \\\cline{1-2}
+hex &integers are written base 16 \\\cline{1-2}
+\end{longtabu}
+~\newline
+ 
+
+\hypertarget{char-io_terminal}{}\section{terminal}\label{char-io_terminal}
+An \hyperlink{classhwlib_1_1terminal}{hwlib\+::terminal} terminal is an ostream that writes to a rectangular screen of characters. In addition to the ostream formatting, it provides additional functions that control the cursor and can clear or a part of the screen. A terminal is typically used to display characters on a character L\+CD or O\+L\+ED screen.
+
+Terminal coordinates are 0-\/origin and count to the right and down. In other words, the top-\/left character position is (0,0), and the bottom right character position is size -\/ (1,1).
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ terminal functions and attributes }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ terminal functions and attributes }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1terminal_ae9a152d0d8d1c1e0de12e9f363e46224}{size} &size in characters in x and y direction \\\cline{1-2}
+\hyperlink{classhwlib_1_1terminal_aeb11ed01f6b2dff73d624ae17955a32e}{cursor} &the current cursor position (readonly) \\\cline{1-2}
+\hyperlink{classhwlib_1_1terminal_ad03a78feb552449609cacd9ffce4cb6e}{cursor\+\_\+set()} &set the current cursor position \\\cline{1-2}
+\end{longtabu}
+A terminal can be used \textquotesingle{}in-\/channel\textquotesingle{} by the characters that are wriiten to it. The following special character sequences are supported\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ special sequence }&\textbf{ effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ special sequence }&\textbf{ effect  }\\\cline{1-2}
+\endhead
+\textquotesingle{}\textbackslash{}n\textquotesingle{} &puts the cursor at the first position of the next line \\\cline{1-2}
+\textquotesingle{}\textbackslash{}r\textquotesingle{} &puts the cursor at the start of the current line \\\cline{1-2}
+\textquotesingle{}\textbackslash{}f\textquotesingle{} &puts the cursor at the top-\/left position and clears the terminal \\\cline{1-2}
+\textquotesingle{}\textbackslash{}txxyy\textquotesingle{} &puts the cursor at the position (xx,yy) \\\cline{1-2}
+\end{longtabu}
+~\newline
+ 

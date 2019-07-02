@@ -1,0 +1,158 @@
+\hypertarget{classdb103_1_1pin__in__out}{}\section{db103\+:\+:pin\+\_\+in\+\_\+out Class Reference}
+\label{classdb103_1_1pin__in__out}\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+
+
+\hyperlink{classdb103_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for the L\+P\+C1114  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/db103.\+hpp$>$}
+
+
+
+Inheritance diagram for db103\+:\+:pin\+\_\+in\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for db103\+:\+:pin\+\_\+in\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdb103_1_1pin__in__out_a0cffb6f1eb4b215902f500c96c4866c4}{pin\+\_\+in\+\_\+out} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\item 
+virtual void \hyperlink{classdb103_1_1pin__in__out_af03a8c83335daf7c529a6a73fdfbf1b4}{direction\+\_\+set\+\_\+input} () override
+\item 
+bool \hyperlink{classdb103_1_1pin__in__out_a67a48a90485305275ce4573f5e371f6a}{read} () override
+\item 
+virtual void \hyperlink{classdb103_1_1pin__in__out_a55b94d79329ccbe2a263e954cccc1ba9}{direction\+\_\+set\+\_\+output} () override
+\item 
+void \hyperlink{classdb103_1_1pin__in__out_a45dcb3f770c432ece4374fcc428ee2e7}{write} (bool v) override
+\item 
+void \hyperlink{classdb103_1_1pin__in__out_a62907588942315bdfe8d467dadc22ed7}{refresh} () override
+\item 
+void \hyperlink{classdb103_1_1pin__in__out_a7cfd446e8a7c4453345ac3ec53d386ce}{flush} () override
+\item 
+void \hyperlink{classdb103_1_1pin__in__out_a9ec40785c38b923a6c5270e4435ad876}{direction\+\_\+flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdb103_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for the L\+P\+C1114 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a0cffb6f1eb4b215902f500c96c4866c4}\label{classdb103_1_1pin__in__out_a0cffb6f1eb4b215902f500c96c4866c4}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!pin\+\_\+in\+\_\+out@{pin\+\_\+in\+\_\+out}}
+\index{pin\+\_\+in\+\_\+out@{pin\+\_\+in\+\_\+out}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+in\+\_\+out()}{pin\_in\_out()}}
+{\footnotesize\ttfamily db103\+::pin\+\_\+in\+\_\+out\+::pin\+\_\+in\+\_\+out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+L\+P\+C1114 \hyperlink{classdb103_1_1pin__out}{pin\+\_\+out} constructor
+
+Constructor for an L\+P\+C1114 input pin.
+
+This constructor doesn\textquotesingle{}t set the pin direction to input or output, a direction\+\_\+set function must be called to do so. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a9ec40785c38b923a6c5270e4435ad876}\label{classdb103_1_1pin__in__out_a9ec40785c38b923a6c5270e4435ad876}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!direction\+\_\+flush@{direction\+\_\+flush}}
+\index{direction\+\_\+flush@{direction\+\_\+flush}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+flush()}{direction\_flush()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush the direction
+
+Calling this function flushes the direction as set by the last call to \hyperlink{classdb103_1_1pin__in__out_af03a8c83335daf7c529a6a73fdfbf1b4}{direction\+\_\+set\+\_\+input()} or \hyperlink{classdb103_1_1pin__in__out_a55b94d79329ccbe2a263e954cccc1ba9}{direction\+\_\+set\+\_\+output()} to the pin. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a86ef2b296683d8c0133280075c82cb51}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_af03a8c83335daf7c529a6a73fdfbf1b4}\label{classdb103_1_1pin__in__out_af03a8c83335daf7c529a6a73fdfbf1b4}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}}
+\index{direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+input()}{direction\_set\_input()}}
+{\footnotesize\ttfamily virtual void db103\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to input
+
+Calling this function sets the pin identified by p to input.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a54ce1a5086d3c9e7b868511b1d46acd0}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a55b94d79329ccbe2a263e954cccc1ba9}\label{classdb103_1_1pin__in__out_a55b94d79329ccbe2a263e954cccc1ba9}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}}
+\index{direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+output()}{direction\_set\_output()}}
+{\footnotesize\ttfamily virtual void db103\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to output
+
+Calling this function sets the pin identified by p to output.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_ad08a5f5e9a4c3aadaa7c665b98f2418e}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a7cfd446e8a7c4453345ac3ec53d386ce}\label{classdb103_1_1pin__in__out_a7cfd446e8a7c4453345ac3ec53d386ce}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!flush@{flush}}
+\index{flush@{flush}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+in\+\_\+out\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a5207c9e30f0c88e4c052952397c2da88}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a67a48a90485305275ce4573f5e371f6a}\label{classdb103_1_1pin__in__out_a67a48a90485305275ce4573f5e371f6a}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!read@{read}}
+\index{read@{read}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool db103\+::pin\+\_\+in\+\_\+out\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classdb103_1_1pin__in__out_a62907588942315bdfe8d467dadc22ed7}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a5caebc7ab9fe49b7e020b89f0a2cf892}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a62907588942315bdfe8d467dadc22ed7}\label{classdb103_1_1pin__in__out_a62907588942315bdfe8d467dadc22ed7}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!refresh@{refresh}}
+\index{refresh@{refresh}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+in\+\_\+out\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdb103_1_1pin__in__out_a67a48a90485305275ce4573f5e371f6a}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a8815baac4e5193ec68795956f5e363a6}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__in__out_a45dcb3f770c432ece4374fcc428ee2e7}\label{classdb103_1_1pin__in__out_a45dcb3f770c432ece4374fcc428ee2e7}} 
+\index{db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}!write@{write}}
+\index{write@{write}!db103\+::pin\+\_\+in\+\_\+out@{db103\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+in\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classdb103_1_1pin__in__out_a7cfd446e8a7c4453345ac3ec53d386ce}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_aa5e2adcb5707f86c20b6306fc09f1582}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-db103_8hpp}{hwlib-\/db103.\+hpp}\end{DoxyCompactItemize}

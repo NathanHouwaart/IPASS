@@ -1,0 +1,116 @@
+\hypertarget{classhwlib_1_1terminal}{}\section{hwlib\+:\+:terminal Class Reference}
+\label{classhwlib_1_1terminal}\index{hwlib\+::terminal@{hwlib\+::terminal}}
+
+
+{\ttfamily \#include $<$hwlib-\/terminal.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:terminal\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:terminal\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1terminal_af55bf18e347959a373bba863cdbdb27a}\label{classhwlib_1_1terminal_af55bf18e347959a373bba863cdbdb27a}} 
+\hyperlink{classhwlib_1_1terminal_af55bf18e347959a373bba863cdbdb27a}{terminal} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1terminal_ae9a152d0d8d1c1e0de12e9f363e46224}{size})
+\begin{DoxyCompactList}\small\item\em construct a terminal from its size in characters in x and y direction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1terminal_ad03a78feb552449609cacd9ffce4cb6e}\label{classhwlib_1_1terminal_ad03a78feb552449609cacd9ffce4cb6e}} 
+virtual void \hyperlink{classhwlib_1_1terminal_ad03a78feb552449609cacd9ffce4cb6e}{cursor\+\_\+set} (\hyperlink{classhwlib_1_1xy}{xy} target)
+\begin{DoxyCompactList}\small\item\em put the cursor (write location) at x, y \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1terminal_abce5e677f5eb98ecf53f9d8b617fb206}\label{classhwlib_1_1terminal_abce5e677f5eb98ecf53f9d8b617fb206}} 
+void \hyperlink{classhwlib_1_1terminal_abce5e677f5eb98ecf53f9d8b617fb206}{putc} (char c)
+\begin{DoxyCompactList}\small\item\em write a single character \end{DoxyCompactList}\item 
+virtual void \hyperlink{classhwlib_1_1terminal_a89b385b6e92fd9d37e7ac16126ba8f32}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1terminal_ae9a152d0d8d1c1e0de12e9f363e46224}\label{classhwlib_1_1terminal_ae9a152d0d8d1c1e0de12e9f363e46224}} 
+const \hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1terminal_ae9a152d0d8d1c1e0de12e9f363e46224}{size}
+\begin{DoxyCompactList}\small\item\em the size of the terminal in characters in x and y direction \end{DoxyCompactList}\item 
+\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1terminal_aeb11ed01f6b2dff73d624ae17955a32e}{cursor}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classhwlib_1_1terminal_a9444bf4339b2ac85f8c90abdaaa23f6c}{putc\+\_\+implementation} (char c)=0
+\item 
+virtual void \hyperlink{classhwlib_1_1terminal_ad4ea7dd275af1f707ce4020cbbc12547}{cursor\+\_\+set\+\_\+implementation} (\hyperlink{classhwlib_1_1xy}{xy} target)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1terminal_a541fbb14ebbd1efa59afe84f8903856e}\label{classhwlib_1_1terminal_a541fbb14ebbd1efa59afe84f8903856e}} 
+virtual void \hyperlink{classhwlib_1_1terminal_a541fbb14ebbd1efa59afe84f8903856e}{flush} ()
+\begin{DoxyCompactList}\small\item\em The default implementation of flush does nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+terminal interface
+
+This class implements an interface to a character terminal.
+
+A terminal is a rectangular windows of (A\+S\+C\+II) characters.
+
+A terminal implements the ostream interface, but it doesn\textquotesingle{}t scroll\+: while the cursor is outside the visible character area (beyond the end of the line, or beyond the number of lines) any character writes will be ignored.
+
+Some characters are treated special\+:
+\begin{DoxyItemize}
+\item \textquotesingle{}\textbackslash{}n\textquotesingle{} puts the cursor at the first position of the next line
+\item \textquotesingle{}\textbackslash{}r\textquotesingle{} puts the cursor at the start of the current line
+\item \textquotesingle{}\textbackslash{}f\textquotesingle{} puts the cursor at the top-\/left position and clears the terminal
+\item \textquotesingle{}\textbackslash{}txxyy\textquotesingle{} puts the cursor at the position (xx,yy)
+\end{DoxyItemize}
+
+The x and y coordinates are 0-\/origin and count to the right and down. In other words, the top-\/left character position is (0,0), and the bottom right character position is size -\/ (1,1).
+
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1terminal_a89b385b6e92fd9d37e7ac16126ba8f32}\label{classhwlib_1_1terminal_a89b385b6e92fd9d37e7ac16126ba8f32}} 
+\index{hwlib\+::terminal@{hwlib\+::terminal}!clear@{clear}}
+\index{clear@{clear}!hwlib\+::terminal@{hwlib\+::terminal}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void hwlib\+::terminal\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+clear the terminal
+
+This function clears the terminal and puts the cursor at (0,0). The default implementation does this by writing spaces to all locations. A concrete implementation might provide a better (faster) way. 
+
+Reimplemented in \hyperlink{classhwlib_1_1hd44780_a45d4a84c9da66fa350270df482c6e58f}{hwlib\+::hd44780}.
+
+\mbox{\Hypertarget{classhwlib_1_1terminal_ad4ea7dd275af1f707ce4020cbbc12547}\label{classhwlib_1_1terminal_ad4ea7dd275af1f707ce4020cbbc12547}} 
+\index{hwlib\+::terminal@{hwlib\+::terminal}!cursor\+\_\+set\+\_\+implementation@{cursor\+\_\+set\+\_\+implementation}}
+\index{cursor\+\_\+set\+\_\+implementation@{cursor\+\_\+set\+\_\+implementation}!hwlib\+::terminal@{hwlib\+::terminal}}
+\subsubsection{\texorpdfstring{cursor\+\_\+set\+\_\+implementation()}{cursor\_set\_implementation()}}
+{\footnotesize\ttfamily virtual void hwlib\+::terminal\+::cursor\+\_\+set\+\_\+implementation (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+change the write location
+
+This function is called when the write location is changed {\itshape except} when it is changed to the next x position by a call to putc\+\_\+implementation.
+
+The default implementation does nothing. \mbox{\Hypertarget{classhwlib_1_1terminal_a9444bf4339b2ac85f8c90abdaaa23f6c}\label{classhwlib_1_1terminal_a9444bf4339b2ac85f8c90abdaaa23f6c}} 
+\index{hwlib\+::terminal@{hwlib\+::terminal}!putc\+\_\+implementation@{putc\+\_\+implementation}}
+\index{putc\+\_\+implementation@{putc\+\_\+implementation}!hwlib\+::terminal@{hwlib\+::terminal}}
+\subsubsection{\texorpdfstring{putc\+\_\+implementation()}{putc\_implementation()}}
+{\footnotesize\ttfamily virtual void hwlib\+::terminal\+::putc\+\_\+implementation (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+the actual writing of a character
+
+When this function is called, the the current cursor is guaranteed to be within the terminal, and the character is not one of the special characters (\textbackslash{}n, \textbackslash{}r, \textbackslash{}c) 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwlib_1_1terminal_aeb11ed01f6b2dff73d624ae17955a32e}\label{classhwlib_1_1terminal_aeb11ed01f6b2dff73d624ae17955a32e}} 
+\index{hwlib\+::terminal@{hwlib\+::terminal}!cursor@{cursor}}
+\index{cursor@{cursor}!hwlib\+::terminal@{hwlib\+::terminal}}
+\subsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1xy}{xy} hwlib\+::terminal\+::cursor}
+
+the current cursor location
+
+Don\textquotesingle{}t write to this attribute, use \hyperlink{classhwlib_1_1terminal_ad03a78feb552449609cacd9ffce4cb6e}{cursor\+\_\+set()}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/char-\/io/\hyperlink{hwlib-terminal_8hpp}{hwlib-\/terminal.\+hpp}\end{DoxyCompactItemize}

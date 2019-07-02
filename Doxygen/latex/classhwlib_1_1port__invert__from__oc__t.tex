@@ -1,0 +1,145 @@
+\hypertarget{classhwlib_1_1port__invert__from__oc__t}{}\section{hwlib\+:\+:port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t Class Reference}
+\label{classhwlib_1_1port__invert__from__oc__t}\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+
+
+{\ttfamily \#include $<$hwlib-\/port-\/invert.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1port__invert__from__oc__t_a7d3d2c2353f3cb4f1b1805a4bdcfd519}{port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t} (\hyperlink{classhwlib_1_1port__oc}{port\+\_\+oc} \&port)
+\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1port__invert__from__oc__t_aebb0d0486a6a31d075ee9e4467f3a7f6}{number\+\_\+of\+\_\+pins} () override
+\item 
+uint\+\_\+fast16\+\_\+t \hyperlink{classhwlib_1_1port__invert__from__oc__t_ab2ad571f994e23b53f86e9655541b10d}{read} () override
+\item 
+void \hyperlink{classhwlib_1_1port__invert__from__oc__t_a72a8110fbfc6115c279e9340869420d7}{refresh} () override
+\item 
+void \hyperlink{classhwlib_1_1port__invert__from__oc__t_a7c59288ec311931116f47f88dfd1d1f0}{write} (uint\+\_\+fast16\+\_\+t x) override
+\item 
+void \hyperlink{classhwlib_1_1port__invert__from__oc__t_af2b0e060990d5c507bd0b796d84a8777}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+invert an open-\/collector port
+
+This decorator inverts the result of read and write operations on an input port\+:
+\begin{DoxyItemize}
+\item When a value would be returned by the original port, the inverted port returns the value with all bits inverted.
+\item When a value is written to the inverted output port, the inverse of that value is written to the original port. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1port__invert__from__oc__t_a7d3d2c2353f3cb4f1b1805a4bdcfd519}\label{classhwlib_1_1port__invert__from__oc__t_a7d3d2c2353f3cb4f1b1805a4bdcfd519}} 
+\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\index{port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t()}{port\_invert\_from\_oc\_t()}}
+{\footnotesize\ttfamily hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1port__oc}{port\+\_\+oc} \&}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct an inverted open-\/collector port
+
+This constructor creates an inverted open-\/collector port from an existing open-\/collector port. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1port__invert__from__oc__t_af2b0e060990d5c507bd0b796d84a8777}\label{classhwlib_1_1port__invert__from__oc__t_af2b0e060990d5c507bd0b796d84a8777}} 
+\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the port buffer
+
+This function flushes the port write buffer\+: if a buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1port__oc_a49b64bd24431b35e92e208df84327dae}{hwlib\+::port\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__invert__from__oc__t_aebb0d0486a6a31d075ee9e4467f3a7f6}\label{classhwlib_1_1port__invert__from__oc__t_aebb0d0486a6a31d075ee9e4467f3a7f6}} 
+\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!number\+\_\+of\+\_\+pins@{number\+\_\+of\+\_\+pins}}
+\index{number\+\_\+of\+\_\+pins@{number\+\_\+of\+\_\+pins}!hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+pins()}{number\_of\_pins()}}
+{\footnotesize\ttfamily uint\+\_\+fast8\+\_\+t hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+::number\+\_\+of\+\_\+pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+get number of pins
+
+This function returns the number of pins in the port. 
+
+Implements \hyperlink{classhwlib_1_1port__oc_a44d0dbfde290ad17237ad70c09a4c402}{hwlib\+::port\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__invert__from__oc__t_ab2ad571f994e23b53f86e9655541b10d}\label{classhwlib_1_1port__invert__from__oc__t_ab2ad571f994e23b53f86e9655541b10d}} 
+\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!read@{read}}
+\index{read@{read}!hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily uint\+\_\+fast16\+\_\+t hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read from the port
+
+This function reads and returns the pins that are part of the port. The lowest bit of the result reflects the first pin of the port, etc.
+
+Before calling this function the port direction must have been set to input by calling port\+\_\+direction\+\_\+set\+\_\+input(). 
+
+Implements \hyperlink{classhwlib_1_1port__oc_a422b02326f14332df44863adced18427}{hwlib\+::port\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__invert__from__oc__t_a72a8110fbfc6115c279e9340869420d7}\label{classhwlib_1_1port__invert__from__oc__t_a72a8110fbfc6115c279e9340869420d7}} 
+\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the port buffer
+
+This function refreshed the contents of the read buffer that might be used by get\+\_\+buffered() with a value read from the pins.
+
+The read buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1port__oc_aa4488183f5cf241ba48ad4dd1a89e42a}{hwlib\+::port\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__invert__from__oc__t_a7c59288ec311931116f47f88dfd1d1f0}\label{classhwlib_1_1port__invert__from__oc__t_a7c59288ec311931116f47f88dfd1d1f0}} 
+\index{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}!write@{write}}
+\index{write@{write}!hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::port\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t\+::write (\begin{DoxyParamCaption}\item[{uint\+\_\+fast16\+\_\+t}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write to the port
+
+This function writes to the pins that are part of the port. The lowest bit is written to the first pin of the port, etc.
+
+Before calling this function the port direction must have been set to output by calling direction\+\_\+set\+\_\+output(). 
+
+Implements \hyperlink{classhwlib_1_1port__oc_aa5889aedda709f045730db9859e4fcf4}{hwlib\+::port\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/ports/\hyperlink{hwlib-port-invert_8hpp}{hwlib-\/port-\/invert.\+hpp}\end{DoxyCompactItemize}

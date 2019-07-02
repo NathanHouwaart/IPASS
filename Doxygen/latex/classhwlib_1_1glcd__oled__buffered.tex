@@ -1,0 +1,81 @@
+\hypertarget{classhwlib_1_1glcd__oled__buffered}{}\section{hwlib\+:\+:glcd\+\_\+oled\+\_\+buffered Class Reference}
+\label{classhwlib_1_1glcd__oled__buffered}\index{hwlib\+::glcd\+\_\+oled\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+buffered}}
+
+
+Oled B/W graphics L\+CD, buffered.  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/glcd-\/oled.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:glcd\+\_\+oled\+\_\+buffered\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:glcd\+\_\+oled\+\_\+buffered\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__buffered_ac4ad2a9a1d2f5b862a0833c6096a08af}\label{classhwlib_1_1glcd__oled__buffered_ac4ad2a9a1d2f5b862a0833c6096a08af}} 
+{\bfseries glcd\+\_\+oled\+\_\+buffered} (\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&bus, uint\+\_\+fast8\+\_\+t address=0x3\+C)
+\item 
+virtual void \hyperlink{classhwlib_1_1glcd__oled__buffered_a1df3ca6d163e33b2edf1242acf47342a}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear the window \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}{flush} ()
+\begin{DoxyCompactList}\small\item\em write the pixel buffer to the oled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Oled B/W graphics L\+CD, buffered. 
+
+This class implements a {\itshape buffered} interface to an 128 x 64 pixel monochrome (on/off) O\+L\+ED display. Buffering means that all writes are buffered in memory until \hyperlink{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}{flush()} is called.
+
+These displays are available in various colcors (green, red, white, etc.). The interface is I2C. The driver chip is an S\+S\+D1306.
+
+When the P\+CB has regulator (3-\/legged component) the power can be 3 -\/ 5V. If it hasn\textquotesingle{}t, you can use only 3.\+3V.
+
+There are variations of this display with more pins, which have more interface options (S\+PI as alternative interface).
+
+This type of display is reasonably priced and available from lots of sources. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__buffered_a1df3ca6d163e33b2edf1242acf47342a}\label{classhwlib_1_1glcd__oled__buffered_a1df3ca6d163e33b2edf1242acf47342a}} 
+\index{hwlib\+::glcd\+\_\+oled\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+buffered}!clear@{clear}}
+\index{clear@{clear}!hwlib\+::glcd\+\_\+oled\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+buffered}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void hwlib\+::glcd\+\_\+oled\+\_\+buffered\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+clear the window 
+
+This function clears the windows by writing the background color to all pixels. The default implementation writes to all pixels in sequence. A concrete window can probably provide a faster implementation.
+
+When buffering is specified ( buf == buffered ) the actual clearing can be delayed until the next \hyperlink{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}{flush()} call. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{hwlib\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}\label{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}} 
+\index{hwlib\+::glcd\+\_\+oled\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+buffered}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::glcd\+\_\+oled\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+buffered}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::glcd\+\_\+oled\+\_\+buffered\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+write the pixel buffer to the oled 
+
+All write (and clear) calls change only the in-\/memory pixel buffer. This call writes this pixel buffer to the oled. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{attic_2hwlib-glcd-oled_8hpp}{hwlib-\/glcd-\/oled.\+hpp}\end{DoxyCompactItemize}

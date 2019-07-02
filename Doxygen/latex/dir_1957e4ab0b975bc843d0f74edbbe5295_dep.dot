@@ -1,0 +1,17 @@
+digraph "code/hwlib/attic" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8c7ab17f9992e40c8375e1e07a9ca95c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="hwlib" fontname="Helvetica", fontsize="10", URL="dir_8c7ab17f9992e40c8375e1e07a9ca95c.html"]
+  subgraph clusterdir_1957e4ab0b975bc843d0f74edbbe5295 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1957e4ab0b975bc843d0f74edbbe5295.html"];
+    dir_1957e4ab0b975bc843d0f74edbbe5295 [shape=plaintext label="attic"];
+    dir_ec6335dde9460b516b7b933c6cbbe8d0 [shape=box label="arduino-nano" color="red" fillcolor="white" style="filled" URL="dir_ec6335dde9460b516b7b933c6cbbe8d0.html"];
+    dir_e3e1e1ad8e6faea0eb2e3979ca623c58 [shape=box label="chris" color="black" fillcolor="white" style="filled" URL="dir_e3e1e1ad8e6faea0eb2e3979ca623c58.html"];
+    dir_ccc87402ab7cb8089d5d597f4f03ecfb [shape=box label="due-#010 - blink direct muti-target" color="black" fillcolor="white" style="filled" URL="dir_ccc87402ab7cb8089d5d597f4f03ecfb.html"];
+    dir_8475d7139b2ce2622e273a215a95ce08 [shape=box label="examples" color="black" fillcolor="white" style="filled" URL="dir_8475d7139b2ce2622e273a215a95ce08.html"];
+    dir_f0e1a63120d63b2e9e9c67a0e0e501ce [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_f0e1a63120d63b2e9e9c67a0e0e501ce.html"];
+  }
+  }
+}

@@ -1,0 +1,45 @@
+\hypertarget{classhwlib_1_1pin__in__store}{}\section{hwlib\+:\+:pin\+\_\+in\+\_\+store Class Reference}
+\label{classhwlib_1_1pin__in__store}\index{hwlib\+::pin\+\_\+in\+\_\+store@{hwlib\+::pin\+\_\+in\+\_\+store}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/stores.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+in\+\_\+store\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+in\+\_\+store\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__store_a561cf1c65fd14dbfba4c352ef4a186fa}\label{classhwlib_1_1pin__in__store_a561cf1c65fd14dbfba4c352ef4a186fa}} 
+bool \hyperlink{classhwlib_1_1pin__in__store_a561cf1c65fd14dbfba4c352ef4a186fa}{read} () override
+\begin{DoxyCompactList}\small\item\em returns the current pin level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__store_a74fdba836b96f7a08327e96b8921e58c}\label{classhwlib_1_1pin__in__store_a74fdba836b96f7a08327e96b8921e58c}} 
+void \hyperlink{classhwlib_1_1pin__in__store_a74fdba836b96f7a08327e96b8921e58c}{refresh} () override
+\begin{DoxyCompactList}\small\item\em increment the refresh count \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__store_ab0652a2e0e5031cd9ee5cf595fb79bd8}\label{classhwlib_1_1pin__in__store_ab0652a2e0e5031cd9ee5cf595fb79bd8}} 
+bool \hyperlink{classhwlib_1_1pin__in__store_ab0652a2e0e5031cd9ee5cf595fb79bd8}{value} = false
+\begin{DoxyCompactList}\small\item\em the current pin level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__store_a92df8af624eafedb4431700f149ef154}\label{classhwlib_1_1pin__in__store_a92df8af624eafedb4431700f149ef154}} 
+int \hyperlink{classhwlib_1_1pin__in__store_a92df8af624eafedb4431700f149ef154}{read\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremented on each \hyperlink{classhwlib_1_1pin__in__store_a561cf1c65fd14dbfba4c352ef4a186fa}{read()} call \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__store_a90b7370c441d2c99d0cf7f740717458e}\label{classhwlib_1_1pin__in__store_a90b7370c441d2c99d0cf7f740717458e}} 
+int \hyperlink{classhwlib_1_1pin__in__store_a90b7370c441d2c99d0cf7f740717458e}{refresh\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em incremenst on each \hyperlink{classhwlib_1_1pin__in__store_a74fdba836b96f7a08327e96b8921e58c}{refresh()} call \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} that stores its state and operation counts
+
+A \hyperlink{classhwlib_1_1pin__in__store}{pin\+\_\+in\+\_\+store} is useful for tests. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-stores_8hpp}{hwlib-\/pin-\/stores.\+hpp}\end{DoxyCompactItemize}

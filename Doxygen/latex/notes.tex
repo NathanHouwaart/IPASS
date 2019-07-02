@@ -1,0 +1,64 @@
+Open issues and further work\+:
+\begin{DoxyItemize}
+\item string class needs rework, tests and documentation
+\item lpc1114 should run at 48 M\+Hz, and use timer for timing
+\item arduino uno should use timer for timing, and hardware uart
+\item native target should support hwlib\+:cout and (less urgent) \hyperlink{namespacehwlib_ad736b5e00021a29fc5543ec7b36dfe14}{hwlib\+::cin}
+\end{DoxyItemize}
+
+Things that would be good to do but are not urgent\+:
+\begin{DoxyItemize}
+\item add some window decorators, like for instance a frame
+\item comment after each class closing \};
+\item doxygen class list should be sorted by category
+\item consistency in decorator class names\+: all xxx\+\_\+from\+\_\+yyy\+\_\+t
+\item document matrix keypart with 4x4 illustrations, add 3x4 demo
+\item add smart-\/buffering oled version, and read-\/write version
+\item find out what goes wrong with A\+V\+R8 and the 16x16 font
+\item add border decorator for frame, use in demos
+\item single way of keep-\/out-\/of-\/doxygen\+: ifdef D\+O\+X\+Y\+G\+EN and ///cond
+\item add a list of i2c slave addresses
+\item add examples for pin \& port \textquotesingle{}all\textquotesingle{}
+\item add examples to istream, ostream, graphics, timing, i2c, spi, adc, dac
+\item add examples \& more documentation for matrix-\/of-\/switches (pics of good \& bad foil!)
+\item document the demo\textquotesingle{}s (pin, port, dac) = check and document the \textquotesingle{}native\textquotesingle{} target
+\item add nrf24
+\item use \hyperlink{namespacehwlib_ab619d7f70bb62112b2a04192f5103a24}{invert()} for an inverted window
+\item use part() for a window part, add terminal-\/part
+\item more documentation for the graphics page
+\item check demo comment titles
+\item how to \textbackslash{}ref to overloaded constructors (graphics)
+\item always use constructor function
+\item more tests, start with pins and ports
+\item targets auto-\/generate from text in targets??
+\item add \textquotesingle{}best used via\textquotesingle{} to all generator function classes
+\item more text and examples in the graphics documentation
+\end{DoxyItemize}
+
+More-\/or-\/less urgent things to do\+:
+\begin{DoxyItemize}
+\item \href{https://www.rhydolabz.com/wiki/?p=16424}{\tt https\+://www.\+rhydolabz.\+com/wiki/?p=16424} ; \href{https://alselectro.wordpress.com/2016/05/12/serial-lcd-i2c-module-pcf8574/}{\tt https\+://alselectro.\+wordpress.\+com/2016/05/12/serial-\/lcd-\/i2c-\/module-\/pcf8574/}
+\item document I2C and S\+PI
+\item check snippet comment titles (or remove?)
+\item solve -\/lgdi32
+\item yield in oled i2c
+\item test the blue-\/pil blink (delay)
+\item repair the blue-\/pill uart
+\item port names instead of numbers
+\item yield in oled long i2c transfer!
+\item uno hardware uart note limitations
+\item uno check other L\+CD sizes
+\item rename to \+\_\+$\ast$\+\_\+t for invert, all, from
+\item test pins \& decorators \+: add test pin
+\item copy-\/protect relevant classes like i2c transaction
+\item S\+PI write/read single byte
+\item lines/circles demo optional frame (parameter)? or frame decorator?
+\item more general text (buffering, generator functions, conversions)
+\item check more files, not done yet!
+\item due demos\textquotesingle{} rename / renumber
+\item check S\+PI for flush
+\item check 595 buffering
+\item add blue-\/pill documentation \& picture
+\item char stream mux / demux
+\item ostream has format data {\itshape inside}\+: shouild be separate. raw\+\_\+ostream? 
+\end{DoxyItemize}

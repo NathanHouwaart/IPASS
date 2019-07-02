@@ -1,0 +1,81 @@
+\hypertarget{hwlib-atmega328_8hpp}{}\section{code/hwlib/library/targets/hwlib-\/atmega328.hpp File Reference}
+\label{hwlib-atmega328_8hpp}\index{code/hwlib/library/targets/hwlib-\/atmega328.\+hpp@{code/hwlib/library/targets/hwlib-\/atmega328.\+hpp}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}avr/io.\+h\char`\"{}}\newline
+Include dependency graph for hwlib-\/atmega328.hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classatmega328_1_1pin__adc}{atmega328\+::pin\+\_\+adc}
+\item 
+class \hyperlink{classatmega328_1_1pin__in}{atmega328\+::pin\+\_\+in}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classatmega328_1_1pin__in}{pin\+\_\+in} implementation for an A\+T\+Mega328P \end{DoxyCompactList}\item 
+class \hyperlink{classatmega328_1_1pin__out}{atmega328\+::pin\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classatmega328_1_1pin__out}{pin\+\_\+out} implementation for a A\+T\+Mega328P \end{DoxyCompactList}\item 
+class \hyperlink{classatmega328_1_1pin__in__out}{atmega328\+::pin\+\_\+in\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classatmega328_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for a A\+T\+Mega328P \end{DoxyCompactList}\item 
+class \hyperlink{classatmega328_1_1pin__oc}{atmega328\+::pin\+\_\+oc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classatmega328_1_1pin__oc}{pin\+\_\+oc} implementation for a A\+T\+Mega328P \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacehwlib}{hwlib}
+\begin{DoxyCompactList}\small\item\em hwlib library \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hwlib-atmega328_8hpp_aaefc2f2daad036597659b3c9675a955f}\label{hwlib-atmega328_8hpp_aaefc2f2daad036597659b3c9675a955f}} 
+volatile uint8\+\_\+t \&\hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} {\bfseries atmega328\+::port\+\_\+data} (uint\+\_\+fast8\+\_\+t port)
+\item 
+\mbox{\Hypertarget{hwlib-atmega328_8hpp_a4a3bf60471f4578ce23fff0fcef7cc2e}\label{hwlib-atmega328_8hpp_a4a3bf60471f4578ce23fff0fcef7cc2e}} 
+volatile uint8\+\_\+t \&\hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} {\bfseries atmega328\+::port\+\_\+input} (uint\+\_\+fast8\+\_\+t port)
+\item 
+\mbox{\Hypertarget{hwlib-atmega328_8hpp_a0692068cf4c06f6eec03a8fcb090574b}\label{hwlib-atmega328_8hpp_a0692068cf4c06f6eec03a8fcb090574b}} 
+volatile uint8\+\_\+t \&\hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} {\bfseries atmega328\+::port\+\_\+direction} (uint\+\_\+fast8\+\_\+t port)
+\item 
+\mbox{\Hypertarget{hwlib-atmega328_8hpp_a07a1eb9c8d90a9b603f403dc274ba679}\label{hwlib-atmega328_8hpp_a07a1eb9c8d90a9b603f403dc274ba679}} 
+void \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} {\bfseries atmega328\+::configure\+\_\+as\+\_\+gpio} (uint\+\_\+fast8\+\_\+t port, uint\+\_\+fast8\+\_\+t pin)
+\item 
+bool \hyperlink{hwlib-atmega328_8hpp_a209a31828048372289a41def7830b7df}{atmega328\+::uart\+\_\+char\+\_\+available} ()
+\item 
+char \hyperlink{hwlib-atmega328_8hpp_abbb8d9f17b9d0bbed06ddfb28c2cc90f}{atmega328\+::uart\+\_\+getc} ()
+\item 
+void \hyperlink{hwlib-atmega328_8hpp_ac98241515514f0cb2b4bebd38cbe944b}{atmega328\+::uart\+\_\+putc} (char c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hwlib-atmega328_8hpp_file_a209a31828048372289a41def7830b7df}\label{hwlib-atmega328_8hpp_file_a209a31828048372289a41def7830b7df}} 
+\index{hwlib-\/atmega328.\+hpp@{hwlib-\/atmega328.\+hpp}!uart\+\_\+char\+\_\+available@{uart\+\_\+char\+\_\+available}}
+\index{uart\+\_\+char\+\_\+available@{uart\+\_\+char\+\_\+available}!hwlib-\/atmega328.\+hpp@{hwlib-\/atmega328.\+hpp}}
+\subsubsection{\texorpdfstring{uart\+\_\+char\+\_\+available()}{uart\_char\_available()}}
+{\footnotesize\ttfamily bool atmega328\+::uart\+\_\+char\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+console character available check
+
+This is the function used to check if the console (istream) input has a character available. The embedded targets provide an implementation that checks the serial port.
+
+This definition is weak, which allows an application to provide its own definition. \mbox{\Hypertarget{hwlib-atmega328_8hpp_file_abbb8d9f17b9d0bbed06ddfb28c2cc90f}\label{hwlib-atmega328_8hpp_file_abbb8d9f17b9d0bbed06ddfb28c2cc90f}} 
+\index{hwlib-\/atmega328.\+hpp@{hwlib-\/atmega328.\+hpp}!uart\+\_\+getc@{uart\+\_\+getc}}
+\index{uart\+\_\+getc@{uart\+\_\+getc}!hwlib-\/atmega328.\+hpp@{hwlib-\/atmega328.\+hpp}}
+\subsubsection{\texorpdfstring{uart\+\_\+getc()}{uart\_getc()}}
+{\footnotesize\ttfamily char atmega328\+::uart\+\_\+getc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+console character input function
+
+This is the function used for console (istream) input. The embedded targets provide an implementation that reads from the serial port.
+
+This definition is weak, which allows an application to provide its own definition. \mbox{\Hypertarget{hwlib-atmega328_8hpp_file_ac98241515514f0cb2b4bebd38cbe944b}\label{hwlib-atmega328_8hpp_file_ac98241515514f0cb2b4bebd38cbe944b}} 
+\index{hwlib-\/atmega328.\+hpp@{hwlib-\/atmega328.\+hpp}!uart\+\_\+putc@{uart\+\_\+putc}}
+\index{uart\+\_\+putc@{uart\+\_\+putc}!hwlib-\/atmega328.\+hpp@{hwlib-\/atmega328.\+hpp}}
+\subsubsection{\texorpdfstring{uart\+\_\+putc()}{uart\_putc()}}
+{\footnotesize\ttfamily void atmega328\+::uart\+\_\+putc (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+console character output function
+
+This is the function used for console (ostream) output. The embedded targets provide an implementation that writes to the serial port.
+
+This definition is weak, which allows an application to provide its own definition. 

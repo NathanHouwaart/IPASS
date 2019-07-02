@@ -1,0 +1,114 @@
+\hypertarget{classhwlib_1_1pin__oc}{}\section{hwlib\+:\+:pin\+\_\+oc Class Reference}
+\label{classhwlib_1_1pin__oc}\index{hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+oc\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{read} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{refresh} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{write} (bool x)=0
+\item 
+virtual void \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{flush} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+open-\/collector input/output pin interface
+
+This class abstracts the interface for an open-\/collector input/output pin. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}\label{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}} 
+\index{hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily virtual void hwlib\+::pin\+\_\+oc\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implemented in \hyperlink{classdue_1_1pin__oc_a911e67dbcc0005b3eae0d511f576a215}{due\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__from__in__out__t_add08ce2c564c20a9aea9bac915123929}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classstm32f103c8_1_1pin__oc_ac86dbc1c7430d2dbdee190ee87b2e35e}{stm32f103c8\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__from__oc__t_a20b667326a27ae3156874fc308d4e795}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classstm32f030x6_1_1pin__oc_afa293f1a0ee8f1cb4936521df144453e}{stm32f030x6\+::pin\+\_\+oc}, \hyperlink{classdb103_1_1pin__oc_a9aa19305905fe3a647fe1fa50a243dae}{db103\+::pin\+\_\+oc}, \hyperlink{classatmega328_1_1pin__oc_a3eb816793385d952d5fb00f473b07349}{atmega328\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__store_a34885dcd712db6db9fc5ef9559ac34de}{hwlib\+::pin\+\_\+oc\+\_\+store}, \hyperlink{classhwlib_1_1pin__direct__from__oc__t_a3009f8da456f04e889ee1d81e8bcf0b4}{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1pin__invert__from__oc__t_ad470fa699bc65083d65190ff22efe600}{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}, and \hyperlink{classhwlib_1_1pin__oc__dummy__t_ab3eb9b3c0a350944f791adf194e2f9ab}{hwlib\+::pin\+\_\+oc\+\_\+dummy\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}\label{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}} 
+\index{hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}!read@{read}}
+\index{read@{read}!hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool hwlib\+::pin\+\_\+oc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implemented in \hyperlink{classdue_1_1pin__oc_a2b9121a384b5645253b799e54417c5ca}{due\+::pin\+\_\+oc}, \hyperlink{classstm32f103c8_1_1pin__oc_ae733a459b1f10ca38ac20f2d60923833}{stm32f103c8\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__from__in__out__t_ae1e2dcf630d637e8d31e9942f7323a2b}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1pin__oc__from__oc__t_aa896dfa412fe5644e0096b38c739cd42}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classstm32f030x6_1_1pin__oc_a97615ebdacdd8405e87f8f6440e5fce1}{stm32f030x6\+::pin\+\_\+oc}, \hyperlink{classatmega328_1_1pin__oc_a89733673f7d2e2e96b2b71dbabf4505a}{atmega328\+::pin\+\_\+oc}, \hyperlink{classdb103_1_1pin__oc_ae48de2077c383bcab947278ee6564398}{db103\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__store_a20ffb88febe8d86f2686ed937ab6bc5a}{hwlib\+::pin\+\_\+oc\+\_\+store}, \hyperlink{classhwlib_1_1pin__direct__from__oc__t_af9243ffeb3095cefb13b7a3daf209339}{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1pin__invert__from__oc__t_a650ed38934b4585f42c756edd19b9c67}{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}, and \hyperlink{classhwlib_1_1pin__oc__dummy__t_a53c06f28f7885d1bed4d29cb15aa4b33}{hwlib\+::pin\+\_\+oc\+\_\+dummy\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}\label{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}} 
+\index{hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void hwlib\+::pin\+\_\+oc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implemented in \hyperlink{classdue_1_1pin__oc_a9cda433d0079aee45a282f07efe2fee3}{due\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__from__in__out__t_a99df420aaed9a39dad71658b9483c002}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classstm32f103c8_1_1pin__oc_a6f063df5c0c2a290ed095b26faab4aab}{stm32f103c8\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__from__oc__t_a2bdf7192ad976dab785df8874267420d}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classstm32f030x6_1_1pin__oc_ab856468835abcd32a9161b94c789ec7d}{stm32f030x6\+::pin\+\_\+oc}, \hyperlink{classdb103_1_1pin__oc_af033054181da84fd2392f611ca391ee3}{db103\+::pin\+\_\+oc}, \hyperlink{classatmega328_1_1pin__oc_a1768ece62a74ed6f657427cb0db5b5e3}{atmega328\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__store_ac78956e4f8a142e4fa4076bddd1db190}{hwlib\+::pin\+\_\+oc\+\_\+store}, \hyperlink{classhwlib_1_1pin__direct__from__oc__t_ab18895f60f0b8f314da92711176d3464}{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1pin__invert__from__oc__t_ab2394ce2e52a3dd16a22663436d000f7}{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}, and \hyperlink{classhwlib_1_1pin__oc__dummy__t_a3609bb12b15736b0ad6d734c1d45ae49}{hwlib\+::pin\+\_\+oc\+\_\+dummy\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}\label{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}} 
+\index{hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}!write@{write}}
+\index{write@{write}!hwlib\+::pin\+\_\+oc@{hwlib\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void hwlib\+::pin\+\_\+oc\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implemented in \hyperlink{classdue_1_1pin__oc_ae79fc294d52d1d7c69117af5ffd81316}{due\+::pin\+\_\+oc}, \hyperlink{classstm32f103c8_1_1pin__oc_a9e5f3ecc1c5aff4b4277ea33d26ef0c7}{stm32f103c8\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__from__in__out__t_a5bd43e42810402353b4e902579055ef0}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1pin__oc__from__oc__t_a0ada22e9e4452523de2b89b6b049c10b}{hwlib\+::pin\+\_\+oc\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classstm32f030x6_1_1pin__oc_a08be59f5868ae70133e95d172318043b}{stm32f030x6\+::pin\+\_\+oc}, \hyperlink{classatmega328_1_1pin__oc_a9eb229792f730515636057cd97609b43}{atmega328\+::pin\+\_\+oc}, \hyperlink{classdb103_1_1pin__oc_a77912a9a646cb67030854d69d911acbd}{db103\+::pin\+\_\+oc}, \hyperlink{classhwlib_1_1pin__oc__store_a160171c403e03d8abdc7480bc7475dff}{hwlib\+::pin\+\_\+oc\+\_\+store}, \hyperlink{classhwlib_1_1pin__direct__from__oc__t_a46ed21095c419bb3a8b720f3a8b00811}{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1pin__invert__from__oc__t_a60831a081f8f796a47e41a87bef8a398}{hwlib\+::pin\+\_\+invert\+\_\+from\+\_\+oc\+\_\+t}, and \hyperlink{classhwlib_1_1pin__oc__dummy__t_a85fd03ccea573743545a33c131d2674d}{hwlib\+::pin\+\_\+oc\+\_\+dummy\+\_\+t}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin_8hpp}{hwlib-\/pin.\+hpp}\end{DoxyCompactItemize}

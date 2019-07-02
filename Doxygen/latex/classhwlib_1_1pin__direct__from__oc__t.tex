@@ -1,0 +1,123 @@
+\hypertarget{classhwlib_1_1pin__direct__from__oc__t}{}\section{hwlib\+:\+:pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__direct__from__oc__t}\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/direct.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__oc__t_aeb00c5708c996dfac4ef573622fcb017}\label{classhwlib_1_1pin__direct__from__oc__t_aeb00c5708c996dfac4ef573622fcb017}} 
+\hyperlink{classhwlib_1_1pin__direct__from__oc__t_aeb00c5708c996dfac4ef573622fcb017}{pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t} (\hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \&slave)
+\begin{DoxyCompactList}\small\item\em construct from a \hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1pin__direct__from__oc__t_a46ed21095c419bb3a8b720f3a8b00811}{write} (bool v) override
+\item 
+bool \hyperlink{classhwlib_1_1pin__direct__from__oc__t_af9243ffeb3095cefb13b7a3daf209339}{read} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__direct__from__oc__t_a3009f8da456f04e889ee1d81e8bcf0b4}{flush} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__direct__from__oc__t_ab18895f60f0b8f314da92711176d3464}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a direct-\/effect \hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc}
+
+This is a version of \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} where the various operations have direct (immediate) effect\+: no refresh or flush calls needed. This have a negative effect on the execution time.
+
+The preferred way to use this class is through the overloaded constructor function \hyperlink{namespacehwlib_a43941b7f246ad934ee43dbfa0f5c8b5a}{direct()}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__oc__t_a3009f8da456f04e889ee1d81e8bcf0b4}\label{classhwlib_1_1pin__direct__from__oc__t_a3009f8da456f04e889ee1d81e8bcf0b4}} 
+\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__oc__t_af9243ffeb3095cefb13b7a3daf209339}\label{classhwlib_1_1pin__direct__from__oc__t_af9243ffeb3095cefb13b7a3daf209339}} 
+\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}!read@{read}}
+\index{read@{read}!hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classhwlib_1_1pin__direct__from__oc__t_ab18895f60f0b8f314da92711176d3464}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__oc__t_ab18895f60f0b8f314da92711176d3464}\label{classhwlib_1_1pin__direct__from__oc__t_ab18895f60f0b8f314da92711176d3464}} 
+\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1pin__direct__from__oc__t_af9243ffeb3095cefb13b7a3daf209339}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__oc__t_a46ed21095c419bb3a8b720f3a8b00811}\label{classhwlib_1_1pin__direct__from__oc__t_a46ed21095c419bb3a8b720f3a8b00811}} 
+\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}!write@{write}}
+\index{write@{write}!hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+oc\+\_\+t\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1pin__direct__from__oc__t_a3009f8da456f04e889ee1d81e8bcf0b4}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{hwlib\+::pin\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-direct_8hpp}{hwlib-\/pin-\/direct.\+hpp}\end{DoxyCompactItemize}

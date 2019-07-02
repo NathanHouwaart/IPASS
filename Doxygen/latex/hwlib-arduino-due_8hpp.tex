@@ -1,0 +1,191 @@
+\hypertarget{hwlib-arduino-due_8hpp}{}\section{code/hwlib/library/targets/hwlib-\/arduino-\/due.hpp File Reference}
+\label{hwlib-arduino-due_8hpp}\index{code/hwlib/library/targets/hwlib-\/arduino-\/due.\+hpp@{code/hwlib/library/targets/hwlib-\/arduino-\/due.\+hpp}}
+{\ttfamily \#include \char`\"{}sam.\+h\char`\"{}}\newline
+Include dependency graph for hwlib-\/arduino-\/due.hpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdue_1_1ad__pin__info__type}{due\+::ad\+\_\+pin\+\_\+info\+\_\+type}
+\begin{DoxyCompactList}\small\item\em definition of an A/D input \end{DoxyCompactList}\item 
+class \hyperlink{classdue_1_1pin__in}{due\+::pin\+\_\+in}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdue_1_1pin__in}{pin\+\_\+in} implementation for a A\+T\+S\+A\+M3\+X8E \end{DoxyCompactList}\item 
+class \hyperlink{classdue_1_1pin__out}{due\+::pin\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} implementation for a A\+T\+S\+A\+M3\+X8E \end{DoxyCompactList}\item 
+class \hyperlink{classdue_1_1pin__in__out}{due\+::pin\+\_\+in\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdue_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for a A\+T\+S\+A\+M3\+X8E \end{DoxyCompactList}\item 
+class \hyperlink{classdue_1_1pin__oc}{due\+::pin\+\_\+oc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdue_1_1pin__oc}{pin\+\_\+oc} implementation for a A\+T\+S\+A\+M3\+X8E \end{DoxyCompactList}\item 
+class \hyperlink{classdue_1_1d2__36kHz}{due\+::d2\+\_\+36k\+Hz}
+\item 
+class \hyperlink{classdue_1_1pin__adc}{due\+::pin\+\_\+adc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdue_1_1pin__adc}{pin\+\_\+adc} implementation for a A\+T\+S\+A\+M3\+X8E \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacedue}{due}
+\begin{DoxyCompactList}\small\item\em hwlib H\+AL for the Arduino Due \end{DoxyCompactList}\item 
+ \hyperlink{namespacehwlib}{hwlib}
+\begin{DoxyCompactList}\small\item\em hwlib library \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{due\+::pins} \{ \newline
+{\bfseries d0}, 
+{\bfseries d1}, 
+{\bfseries d2}, 
+{\bfseries d3}, 
+\newline
+{\bfseries d4}, 
+{\bfseries d5}, 
+{\bfseries d6}, 
+{\bfseries d7}, 
+\newline
+{\bfseries d8}, 
+{\bfseries d9}, 
+{\bfseries d10}, 
+{\bfseries d11}, 
+\newline
+{\bfseries d12}, 
+{\bfseries d13}, 
+{\bfseries d14}, 
+{\bfseries d15}, 
+\newline
+{\bfseries d16}, 
+{\bfseries d17}, 
+{\bfseries d18}, 
+{\bfseries d19}, 
+\newline
+{\bfseries d20}, 
+{\bfseries d21}, 
+{\bfseries d22}, 
+{\bfseries d23}, 
+\newline
+{\bfseries d24}, 
+{\bfseries d25}, 
+{\bfseries d26}, 
+{\bfseries d27}, 
+\newline
+{\bfseries d28}, 
+{\bfseries d29}, 
+{\bfseries d30}, 
+{\bfseries d31}, 
+\newline
+{\bfseries d32}, 
+{\bfseries d33}, 
+{\bfseries d34}, 
+{\bfseries d35}, 
+\newline
+{\bfseries d36}, 
+{\bfseries d37}, 
+{\bfseries d38}, 
+{\bfseries d39}, 
+\newline
+{\bfseries d40}, 
+{\bfseries d41}, 
+{\bfseries d42}, 
+{\bfseries d43}, 
+\newline
+{\bfseries d44}, 
+{\bfseries d45}, 
+{\bfseries d46}, 
+{\bfseries d47}, 
+\newline
+{\bfseries d48}, 
+{\bfseries d49}, 
+{\bfseries d50}, 
+{\bfseries d51}, 
+\newline
+{\bfseries d52}, 
+{\bfseries d53}, 
+{\bfseries a0}, 
+{\bfseries a1}, 
+\newline
+{\bfseries a2}, 
+{\bfseries a3}, 
+{\bfseries a4}, 
+{\bfseries a5}, 
+\newline
+{\bfseries a6}, 
+{\bfseries a7}, 
+{\bfseries a8}, 
+{\bfseries a9}, 
+\newline
+{\bfseries a10}, 
+{\bfseries a11}, 
+{\bfseries dac0}, 
+{\bfseries dac1}, 
+\newline
+{\bfseries canrx}, 
+{\bfseries cantx}, 
+{\bfseries scl}, 
+{\bfseries sda}, 
+\newline
+{\bfseries scl1}, 
+{\bfseries sda1}, 
+{\bfseries tx}, 
+{\bfseries rx}, 
+\newline
+{\bfseries led}, 
+{\bfseries sck}, 
+{\bfseries miso}, 
+{\bfseries mosi}, 
+\newline
+{\bfseries cs0}, 
+{\bfseries cs1}
+ \}
+\item 
+enum \hyperlink{namespacedue_a5ecc98d40585c91eabbfb14f71bd7d4c}{due\+::ad\+\_\+pins} \{ \newline
+{\bfseries a0}, 
+{\bfseries a1}, 
+{\bfseries a2}, 
+{\bfseries a3}, 
+\newline
+{\bfseries a4}, 
+{\bfseries a5}, 
+{\bfseries a6}, 
+{\bfseries a7}, 
+\newline
+{\bfseries a8}, 
+{\bfseries a9}, 
+{\bfseries a10}, 
+{\bfseries a11}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedue_a13c9d311278ec150daa2a17a0f0c2fd2}\label{namespacedue_a13c9d311278ec150daa2a17a0f0c2fd2}} 
+Pio \& {\bfseries due\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak)) port\+\_\+registers(uint32\+\_\+t port)
+\item 
+uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacedue_aa7b4a4a4dffe3296d13e465cc3d78a62}{due\+::ticks\+\_\+per\+\_\+us} ()
+\begin{DoxyCompactList}\small\item\em the number of ticks per us \end{DoxyCompactList}\item 
+uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacedue_a686106c53be24f799ee7313069a678be}{due\+::now\+\_\+ticks} ()
+\begin{DoxyCompactList}\small\item\em returns the number of ticks since some fixed starting point \end{DoxyCompactList}\item 
+bool \hyperlink{namespacedue_a3fb7cef33e032624d26b3a94f09974d1}{due\+::uart\+\_\+char\+\_\+available} ()
+\item 
+char \hyperlink{namespacedue_aaac909e6a73b4a5ed65230aad135c277}{due\+::uart\+\_\+getc} ()
+\item 
+void \hyperlink{namespacedue_a4a5e5e08f37cad92092942e5b8898471}{due\+::uart\+\_\+putc} (char c)
+\item 
+void \hyperlink{namespacehwlib_a9c01a1d0319f5eadd8926e66aea19aa0}{hwlib\+::wait\+\_\+ns} (int\+\_\+fast32\+\_\+t n)
+\item 
+void \hyperlink{namespacehwlib_a0096b739fc566c896366ecbd3113cc1e}{hwlib\+::wait\+\_\+us} (int\+\_\+fast32\+\_\+t n)
+\item 
+void \hyperlink{namespacehwlib_a6119aa5d3034176aa1515ef4bb193044}{hwlib\+::wait\+\_\+ms} (int\+\_\+fast32\+\_\+t n)
+\item 
+void \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacehwlib_ae568ebef4b8d8a77cecae8cea595896f}{hwlib\+::uart\+\_\+putc} (char c)
+\item 
+bool \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacehwlib_aaf31868f62815d2e405ad90469ae50a5}{hwlib\+::uart\+\_\+char\+\_\+available} ()
+\item 
+char \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacehwlib_aa5ee60a7ff11cc49aba41f8be7f08a67}{hwlib\+::uart\+\_\+getc} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacehwlib_a38b6b0445f82e91a09a20486fd909382}\label{namespacehwlib_a38b6b0445f82e91a09a20486fd909382}} 
+const auto {\bfseries hwlib\+::target\+\_\+chip} = target\+\_\+chips\+::atsam3x8e
+\item 
+\mbox{\Hypertarget{namespacehwlib_a391d0dc84553228bf97052c74ae954af}\label{namespacehwlib_a391d0dc84553228bf97052c74ae954af}} 
+const auto {\bfseries hwlib\+::target\+\_\+board} = target\+\_\+boards\+::arduino\+\_\+due
+\end{DoxyCompactItemize}

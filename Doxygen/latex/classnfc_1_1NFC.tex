@@ -1,0 +1,772 @@
+\hypertarget{classnfc_1_1NFC}{}\section{nfc\+:\+:N\+FC Class Reference}
+\label{classnfc_1_1NFC}\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+
+
+{\ttfamily \#include $<$nfc.\+h$>$}
+
+
+
+Inheritance diagram for nfc\+:\+:N\+FC\+:
+% FIG 0
+
+
+Collaboration diagram for nfc\+:\+:N\+FC\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfc_1_1NFC_a6ebeb8952cb8be604ef33d4188f86303}{N\+FC} (\hyperlink{classcommunication_1_1protocol}{communication\+::protocol} \&\+\_\+protocol)
+\begin{DoxyCompactList}\small\item\em Constructor for the abstract \hyperlink{classnfc_1_1NFC}{N\+FC} class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfc_1_1NFC_a9893c1b762ed0c6796afcde7733bd8cc}{init} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to intialise a \hyperlink{classnfc_1_1NFC}{N\+FC} card. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfc_1_1NFC_af8fe01b21da65e4e8334f802073168ab}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, const uint8\+\_\+t n\+\_\+bytes)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to send data to the nfc chip over the provided interface. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfc_1_1NFC_a3458fc807a5f0d485099a1e5f54bcbb5}{get\+Data} (uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n\+\_\+bytes)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to get data from the nfc chip over the provided interface. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a7e0a000aadae9b545e94ba213d4ac24e}{write\+Register} (const uint16\+\_\+t reg, const uint8\+\_\+t val)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to write a internal register of a nfc chip. \end{DoxyCompactList}\item 
+virtual std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1NFC_a47da8428b5ee9011cc3f5e9cc501ce22}{read\+Register} (const uint16\+\_\+t reg)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to read a internal register of a nfc chip. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a606b08348cb8176a38b2dd9fc1136888}{write\+G\+P\+IO} (uint8\+\_\+t new\+Pin\+State)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to write/set certain G\+P\+IO pins of the nfc chip. \end{DoxyCompactList}\item 
+virtual std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1NFC_a2d2ccf98ac7faaa8652a69c0242e031c}{read\+G\+P\+IO} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to read certain G\+P\+IO pins of the nfc chip. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classnfc_1_1NFC_a71585d021800a85b4a52a212d6313b1f}{wait\+For\+Chip} (const int timeout=2000)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to check wether the nfc chip has responded within the given timeout. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classnfc_1_1NFC_a9d859ed12251d6d553d9f5c09bbb10ef}{check\+Ack} (const uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to check wether the send data has been acknowleged by the nfc chip. \end{DoxyCompactList}\item 
+virtual \hyperlink{structnfc_1_1Result}{Result} \hyperlink{classnfc_1_1NFC_a2a14e65f49707ef1efaea07ec9fce1c8}{send\+Command\+And\+Check\+Ack} (\hyperlink{classsetupSendCommand}{setup\+Send\+Command} \&command)=0
+\begin{DoxyCompactList}\small\item\em Abstract function that can handle the complete communication between the nfc chip and host controller. \end{DoxyCompactList}\item 
+virtual std\+::array$<$ uint8\+\_\+t, 5 $>$ \hyperlink{classnfc_1_1NFC_a25a4f9824ac567c8ca37ea3486d32882}{get\+Firmware\+Version} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to get the firmware version of the \hyperlink{classnfc_1_1NFC}{N\+FC} chip. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_ac23474442d2bc8e35ee583c1390386eb}{perform\+Selftest} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to let the nfc chip perform a selftest. \end{DoxyCompactList}\item 
+virtual std\+::array$<$ uint8\+\_\+t, 5 $>$ \hyperlink{classnfc_1_1NFC_a4ee83726542bf5f25eacb9feaccefd28}{get\+General\+Status} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to get the current status of a nfc chip. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classnfc_1_1NFC_a72523a6c0afdb3f695a64e46fd6d2213}{detect\+Card} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t n\+Cards, const uint8\+\_\+t cardtype)=0
+\begin{DoxyCompactList}\small\item\em Abstract function for a nfc chip to detect wether a nfc card is within it´s rf field. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a89a1275bc915581d708c65d487427317}{select\+Card} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to select / or deselect a specific card that is in the nfc\textquotesingle{}s rf field. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_ab4dc91843bbd93211aa0f086e93b8608}{S\+A\+M\+Configuration} (const uint8\+\_\+t mode)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to set the mode of the internal S\+AM (Security Access Module) \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a1179f5330aa9092aff8b1d6f984bc621}{R\+F\+Field} (const bool state)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to switch nfc\textquotesingle{}s RF field on or off. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a9dd84363c873a5d00c7edce644706bc0}{set\+Max\+Retries} (const uint8\+\_\+t max\+Retries)=0
+\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a1657b79a7ca710e01cf053ab269949ba}{set\+Serial\+Baudrate} (const \hyperlink{declarations_8h_a18236cb00569a8f612f8957044868f74}{nfc\+::baud\+Rate} br)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to change the serial baudrate beteween a nfc chip and host controller. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_af9089f7662b5c41791c1acac197dc843}{mifare\+Read\+Card} (\hyperlink{classcard}{card} \&card\+Info, const uint8\+\_\+t card\+Number, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const \hyperlink{structnfc_1_1cardKeys}{card\+Keys} \&authentication\+Keys)=0
+\begin{DoxyCompactList}\small\item\em Method to read a entire mifare classic card. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_adb0cc22d46e5a97d0b991891998578c6}{mifare\+Read\+Page} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t card\+Number, const uint8\+\_\+t page\+Number)=0
+\begin{DoxyCompactList}\small\item\em Method to read a certain mifare classic page. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a5b2d7d0316f500f2bc69203eee7aa655}{mifare\+Write\+Page} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t card\+Number, const uint8\+\_\+t page\+Number, const char $\ast$data)=0
+\begin{DoxyCompactList}\small\item\em Method to write to a certain page of a mifare classic card. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a1a6dc3144b89ea1df4ac47b1d2e476d2}{mifare\+Authenticate} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t card\+Number, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t $\ast$key)=0
+\begin{DoxyCompactList}\small\item\em Method to write to authenticate a certain sector trailer block of a mifare classic card. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a4904606f6d5d94c5c1fde57310af5691}{mifare\+Make\+Value\+Block} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t cardnumber, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to transform a given page ( pagenr ) to a valueblock. \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a2c14cb2a6f71cffcc949c084a0cefd2b}{mifare\+Increment} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t cardnumber, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key, const uint32\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to increment a valueblock by a given value ( value ) \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a81f93853766cc9df5f061b95b6a41700}{mifare\+Decrement} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t cardnumber, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key, const uint32\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to decrement a valueblock by a given value ( value ) \end{DoxyCompactList}\item 
+virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_adbbca8ec51da75e498c7a9f10346ee07}{mifare\+Transfer} (\hyperlink{classcard}{card} \&cardinfo, const uint8\+\_\+t cardnumber, const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands} AorB, const uint8\+\_\+t pagenr, const uint8\+\_\+t sector, const uint8\+\_\+t $\ast$key)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to update a valueblock with the value that is in the internal buffer of the mifare card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnfc_1_1NFC_ac6089dd87172f3ce870767500e53b9e8}\label{classnfc_1_1NFC_ac6089dd87172f3ce870767500e53b9e8}} 
+\hyperlink{classcommunication_1_1protocol}{communication\+::protocol} \& {\bfseries \+\_\+protocol}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pure abstract template class that can be implemented by any nfc reader 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnfc_1_1NFC_a6ebeb8952cb8be604ef33d4188f86303}\label{classnfc_1_1NFC_a6ebeb8952cb8be604ef33d4188f86303}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!N\+FC@{N\+FC}}
+\index{N\+FC@{N\+FC}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{N\+F\+C()}{NFC()}}
+{\footnotesize\ttfamily nfc\+::\+N\+F\+C\+::\+N\+FC (\begin{DoxyParamCaption}\item[{\hyperlink{classcommunication_1_1protocol}{communication\+::protocol} \&}]{\+\_\+protocol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the abstract \hyperlink{classnfc_1_1NFC}{N\+FC} class. 
+
+Takes a protocol (S\+PI, I2C, U\+A\+RT) as argument 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnfc_1_1NFC_a9d859ed12251d6d553d9f5c09bbb10ef}\label{classnfc_1_1NFC_a9d859ed12251d6d553d9f5c09bbb10ef}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!check\+Ack@{check\+Ack}}
+\index{check\+Ack@{check\+Ack}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{check\+Ack()}{checkAck()}}
+{\footnotesize\ttfamily virtual bool nfc\+::\+N\+F\+C\+::check\+Ack (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{const uint8\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to check wether the send data has been acknowleged by the nfc chip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the acknowledge buffer we want to check \\
+\hline
+{\em n} & Size of the ack buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true A\+CK == ok; 
+
+false A\+CK != ok; 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a631fa2690b45119c7bbb99e07f41b464}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a72523a6c0afdb3f695a64e46fd6d2213}\label{classnfc_1_1NFC_a72523a6c0afdb3f695a64e46fd6d2213}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!detect\+Card@{detect\+Card}}
+\index{detect\+Card@{detect\+Card}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{detect\+Card()}{detectCard()}}
+{\footnotesize\ttfamily virtual bool nfc\+::\+N\+F\+C\+::detect\+Card (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{n\+Cards,  }\item[{const uint8\+\_\+t}]{cardtype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function for a nfc chip to detect wether a nfc card is within it´s rf field. 
+
+\begin{DoxyWarning}{Warning}
+not all nfc chips natively implement anticollision. Be carefull when n\+Cards is set to 2 or more cards. This may cause unwanted behaviour if not implemented correctly
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & Card class where the card data can be stored in \\
+\hline
+{\em n\+Cards} & Amount of cards that can be detected by the nfc card \\
+\hline
+{\em cardtype} & Type of card that needs to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false No card has been detected 
+
+true A card has been detected 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a35a81a5e67025f6c04e472e3bd9e508c}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a8c233683d71236d6238d840eeeb5d626}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a3458fc807a5f0d485099a1e5f54bcbb5}\label{classnfc_1_1NFC_a3458fc807a5f0d485099a1e5f54bcbb5}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily virtual void nfc\+::\+N\+F\+C\+::get\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{const uint8\+\_\+t}]{n\+\_\+bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to get data from the nfc chip over the provided interface. 
+
+\begin{DoxyNote}{Note}
+Some nfc chips have internal firmware that handles the outgoing data. If this is not the case, the abstract function write register can be combined with this function to achieve the same thing 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the buffer we want to store received data in \\
+\hline
+{\em n\+\_\+bytes} & Amount of bytes that needs to be read \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_ae8414552a504fec6b62ad0be140e53e0}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a25a4f9824ac567c8ca37ea3486d32882}\label{classnfc_1_1NFC_a25a4f9824ac567c8ca37ea3486d32882}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!get\+Firmware\+Version@{get\+Firmware\+Version}}
+\index{get\+Firmware\+Version@{get\+Firmware\+Version}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{get\+Firmware\+Version()}{getFirmwareVersion()}}
+{\footnotesize\ttfamily virtual std\+::array$<$uint8\+\_\+t, 5$>$ nfc\+::\+N\+F\+C\+::get\+Firmware\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to get the firmware version of the \hyperlink{classnfc_1_1NFC}{N\+FC} chip. 
+
+\begin{DoxyReturn}{Returns}
+array\mbox{[}0\mbox{]} Status of the operation 
+
+array\mbox{[}1\mbox{]} Device version 
+
+array\mbox{[}2\mbox{]} Firmware verion 
+
+array\mbox{[}3\mbox{]} Firmware version 
+
+array\mbox{[}4\mbox{]} Suppor version 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a00764b6b9472c89430bb1503ec1bf08b}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_add83fefdd3a5eadc6f85617173d08336}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a4ee83726542bf5f25eacb9feaccefd28}\label{classnfc_1_1NFC_a4ee83726542bf5f25eacb9feaccefd28}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!get\+General\+Status@{get\+General\+Status}}
+\index{get\+General\+Status@{get\+General\+Status}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{get\+General\+Status()}{getGeneralStatus()}}
+{\footnotesize\ttfamily virtual std\+::array$<$uint8\+\_\+t, 5$>$ nfc\+::\+N\+F\+C\+::get\+General\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to get the current status of a nfc chip. 
+
+\begin{DoxyReturn}{Returns}
+std\+::array woth general status 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a9ffef9f3b2982346499703361c6e7d5c}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a037638d75c50a76c7f62d0e69cb44cdb}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a9893c1b762ed0c6796afcde7733bd8cc}\label{classnfc_1_1NFC_a9893c1b762ed0c6796afcde7733bd8cc}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!init@{init}}
+\index{init@{init}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void nfc\+::\+N\+F\+C\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to intialise a \hyperlink{classnfc_1_1NFC}{N\+FC} card. 
+
+This method is used to initialise a \hyperlink{classnfc_1_1NFC}{N\+FC} card For exampe\+: Set cerain flags, modes, etc.. 
+
+Implemented in \hyperlink{classnfc_1_1NfcOled_a2b394a955afe3f280e3f2509908effe9}{nfc\+::\+Nfc\+Oled}, and \hyperlink{classnfc_1_1PN532__chip_ab2eecf84902eedff7e7b5fae0c562804}{nfc\+::\+P\+N532\+\_\+chip}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a1a6dc3144b89ea1df4ac47b1d2e476d2}\label{classnfc_1_1NFC_a1a6dc3144b89ea1df4ac47b1d2e476d2}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Authenticate@{mifare\+Authenticate}}
+\index{mifare\+Authenticate@{mifare\+Authenticate}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Authenticate()}{mifareAuthenticate()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Authenticate (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{card\+Number,  }\item[{const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands}}]{AorB,  }\item[{const uint8\+\_\+t}]{pagenr,  }\item[{const uint8\+\_\+t $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to write to authenticate a certain sector trailer block of a mifare classic card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & a card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & card that needs to be written to \\
+\hline
+{\em AorB} & autenticate with key a or key b \\
+\hline
+{\em page\+Number} & pagenumber that needs to be authenticated \\
+\hline
+{\em key} & pointer to key array that the sector trailer block needs to be autenticated with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a9737b9cf574ec198bcc0f9f42f50d882}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a1168a23f48bec44eae8d65a1625736e5}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a81f93853766cc9df5f061b95b6a41700}\label{classnfc_1_1NFC_a81f93853766cc9df5f061b95b6a41700}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Decrement@{mifare\+Decrement}}
+\index{mifare\+Decrement@{mifare\+Decrement}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Decrement()}{mifareDecrement()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Decrement (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{cardnumber,  }\item[{const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands}}]{AorB,  }\item[{const uint8\+\_\+t}]{pagenr,  }\item[{const uint8\+\_\+t}]{sector,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to decrement a valueblock by a given value ( value ) 
+
+\begin{DoxyNote}{Note}
+When this function is implemented, the actual valueblock of the card will not be modified. Only the internal temporary buffer will be updated. In order to update the actual valueblock the transfer function needs to be called after this function. source\+: \href{http://www.cs.ru.nl/~wouter/papers/2008-thebest-updated.pdf}{\tt http\+://www.\+cs.\+ru.\+nl/$\sim$wouter/papers/2008-\/thebest-\/updated.\+pdf} p. 7 2.\+2 using value blocks
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & A card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & Card that needs to be written to \\
+\hline
+{\em AorB} & Autenticate with key a or key b \\
+\hline
+{\em page\+Number} & Pagenumber that needs to be authenticated \\
+\hline
+{\em sector} & Sector where the new valueblock will be located in \\
+\hline
+{\em key} & Pointer to key array that the sector trailer block needs to be autenticated with \\
+\hline
+{\em value} & Value the sectorblock needs to be decremented by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a564426d78d1041dcfcf450c5086b3656}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_af6fd65859104e507b4c8c5718bc86d22}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a2c14cb2a6f71cffcc949c084a0cefd2b}\label{classnfc_1_1NFC_a2c14cb2a6f71cffcc949c084a0cefd2b}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Increment@{mifare\+Increment}}
+\index{mifare\+Increment@{mifare\+Increment}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Increment()}{mifareIncrement()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Increment (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{cardnumber,  }\item[{const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands}}]{AorB,  }\item[{const uint8\+\_\+t}]{pagenr,  }\item[{const uint8\+\_\+t}]{sector,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to increment a valueblock by a given value ( value ) 
+
+\begin{DoxyNote}{Note}
+When this function is implemented, the valueblock will not be modified only the internal temporary buffer will be updated. In order to update the actual valueblock the transfer function needs to be called after this function. source source\+: \href{http://www.cs.ru.nl/~wouter/papers/2008-thebest-updated.pdf}{\tt http\+://www.\+cs.\+ru.\+nl/$\sim$wouter/papers/2008-\/thebest-\/updated.\+pdf} p. 7 -\/ 2.\+2 using value blocks
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & A card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & Card that needs to be written to \\
+\hline
+{\em AorB} & Autenticate with key a or key b \\
+\hline
+{\em page\+Number} & Pagenumber that needs to be authenticated \\
+\hline
+{\em sector} & Sector where the new valueblock will be located in \\
+\hline
+{\em key} & Pointer to key array that the sector trailer block needs to be autenticated with \\
+\hline
+{\em value} & Value the sectorblock needs to be incremented by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_aca0f8a430afe385c102740a0aedd54e8}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_aa7bca4b2b6aeb113b9346f74d5d8e4b7}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a4904606f6d5d94c5c1fde57310af5691}\label{classnfc_1_1NFC_a4904606f6d5d94c5c1fde57310af5691}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Make\+Value\+Block@{mifare\+Make\+Value\+Block}}
+\index{mifare\+Make\+Value\+Block@{mifare\+Make\+Value\+Block}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Make\+Value\+Block()}{mifareMakeValueBlock()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Make\+Value\+Block (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{cardnumber,  }\item[{const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands}}]{AorB,  }\item[{const uint8\+\_\+t}]{pagenr,  }\item[{const uint8\+\_\+t}]{sector,  }\item[{const uint8\+\_\+t $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to transform a given page ( pagenr ) to a valueblock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & A card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & Card that needs to be written to \\
+\hline
+{\em AorB} & Autenticate with key a or key b \\
+\hline
+{\em page\+Number} & Pagenumber that needs to be authenticated \\
+\hline
+{\em sector} & Sector where the new valueblock will be located in \\
+\hline
+{\em key} & Pointer to key array that the sector trailer block needs to be autenticated with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_aed07d1cf07fc0e2a277df1a80a1335c6}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a51057bf2bceb99fafeeaec0589470efb}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_af9089f7662b5c41791c1acac197dc843}\label{classnfc_1_1NFC_af9089f7662b5c41791c1acac197dc843}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Read\+Card@{mifare\+Read\+Card}}
+\index{mifare\+Read\+Card@{mifare\+Read\+Card}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Read\+Card()}{mifareReadCard()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Read\+Card (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{card\+Info,  }\item[{const uint8\+\_\+t}]{card\+Number,  }\item[{const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands}}]{AorB,  }\item[{const \hyperlink{structnfc_1_1cardKeys}{card\+Keys} \&}]{authentication\+Keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to read a entire mifare classic card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & a card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & card that needs to be read \\
+\hline
+{\em AorB} & wether the sector trailer blocks need to be authenticated with key A or key B \\
+\hline
+{\em \hyperlink{structnfc_1_1cardKeys}{card\+Keys}} & struct to the sector trailer keys of the card \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a6c6507959ad2d05236e0b08c7f9c6b48}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_abed1963a7aaaa03737ecc7893abfbb23}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_adb0cc22d46e5a97d0b991891998578c6}\label{classnfc_1_1NFC_adb0cc22d46e5a97d0b991891998578c6}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Read\+Page@{mifare\+Read\+Page}}
+\index{mifare\+Read\+Page@{mifare\+Read\+Page}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Read\+Page()}{mifareReadPage()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Read\+Page (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{card\+Number,  }\item[{const uint8\+\_\+t}]{page\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to read a certain mifare classic page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & a card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & card that needs to be read from \\
+\hline
+{\em page\+Number} & pagenumber that needs to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_aa092e119cfa374603b5b7c9eaed9bcf6}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a87d38aa8fcb687e276f18ae691b4ff0f}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_adbbca8ec51da75e498c7a9f10346ee07}\label{classnfc_1_1NFC_adbbca8ec51da75e498c7a9f10346ee07}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Transfer@{mifare\+Transfer}}
+\index{mifare\+Transfer@{mifare\+Transfer}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Transfer()}{mifareTransfer()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Transfer (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{cardnumber,  }\item[{const \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{mifare\+Commands}}]{AorB,  }\item[{const uint8\+\_\+t}]{pagenr,  }\item[{const uint8\+\_\+t}]{sector,  }\item[{const uint8\+\_\+t $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to update a valueblock with the value that is in the internal buffer of the mifare card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & A card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & Card that needs to be written to \\
+\hline
+{\em AorB} & Autenticate with key a or key b \\
+\hline
+{\em page\+Number} & Pagenumber that needs to be authenticated \\
+\hline
+{\em sector} & Sector where the new valueblock will be located in \\
+\hline
+{\em key} & Pointer to key array that the sector trailer block needs to be autenticated with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a7c0e1c1e6df0dbe1d53f27b27f26ff8f}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_ab0a2321b094ce75503cde8f6bb7a91ef}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a5b2d7d0316f500f2bc69203eee7aa655}\label{classnfc_1_1NFC_a5b2d7d0316f500f2bc69203eee7aa655}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!mifare\+Write\+Page@{mifare\+Write\+Page}}
+\index{mifare\+Write\+Page@{mifare\+Write\+Page}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{mifare\+Write\+Page()}{mifareWritePage()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::mifare\+Write\+Page (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo,  }\item[{const uint8\+\_\+t}]{card\+Number,  }\item[{const uint8\+\_\+t}]{page\+Number,  }\item[{const char $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method to write to a certain page of a mifare classic card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & a card class where the card data can be stored in \\
+\hline
+{\em card\+Number} & card that needs to be written to \\
+\hline
+{\em page\+Number} & pagenumber that needs to be written to \\
+\hline
+{\em data} & pointer to data array that needs to be written to the card \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a2abf2e6dfabc2ca86eeb6c1edbfccb84}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a547e3a810432ebbb3e9a03dc7c2fa0c8}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_ac23474442d2bc8e35ee583c1390386eb}\label{classnfc_1_1NFC_ac23474442d2bc8e35ee583c1390386eb}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!perform\+Selftest@{perform\+Selftest}}
+\index{perform\+Selftest@{perform\+Selftest}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{perform\+Selftest()}{performSelftest()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::perform\+Selftest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to let the nfc chip perform a selftest. 
+
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_af47e591d52986e2241b80f1581af34ab}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a76e1f57a8cf76b22029df6da4d8bacd2}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a2d2ccf98ac7faaa8652a69c0242e031c}\label{classnfc_1_1NFC_a2d2ccf98ac7faaa8652a69c0242e031c}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!read\+G\+P\+IO@{read\+G\+P\+IO}}
+\index{read\+G\+P\+IO@{read\+G\+P\+IO}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{read\+G\+P\+I\+O()}{readGPIO()}}
+{\footnotesize\ttfamily virtual std\+::array$<$uint8\+\_\+t, 2$>$ nfc\+::\+N\+F\+C\+::read\+G\+P\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to read certain G\+P\+IO pins of the nfc chip. 
+
+\begin{DoxyReturn}{Returns}
+array\mbox{[}0\mbox{]} Status of the operation 
+
+array\mbox{[}1\mbox{]} Pin status for each G\+P\+IO pin 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a1c7e2ace0798d1e6b11bbab4a5e632c5}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a0dd17c714697e9883aa35962c5229625}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a47da8428b5ee9011cc3f5e9cc501ce22}\label{classnfc_1_1NFC_a47da8428b5ee9011cc3f5e9cc501ce22}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!read\+Register@{read\+Register}}
+\index{read\+Register@{read\+Register}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{read\+Register()}{readRegister()}}
+{\footnotesize\ttfamily virtual std\+::array$<$uint8\+\_\+t, 2$>$ nfc\+::\+N\+F\+C\+::read\+Register (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{reg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to read a internal register of a nfc chip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Internal adress of the register that needs to be read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array\mbox{[}0\mbox{]} Statuscode of the operation 
+
+array\mbox{[}1\mbox{]} Value of the internal register 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a7c3e596337bced5394689396d201bc13}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a15c794124696c14893ffcf781609c00e}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a1179f5330aa9092aff8b1d6f984bc621}\label{classnfc_1_1NFC_a1179f5330aa9092aff8b1d6f984bc621}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!R\+F\+Field@{R\+F\+Field}}
+\index{R\+F\+Field@{R\+F\+Field}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{R\+F\+Field()}{RFField()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::\+R\+F\+Field (\begin{DoxyParamCaption}\item[{const bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to switch nfc\textquotesingle{}s RF field on or off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Wether the rf field needs to be on (1) of off (0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a23d21f68ecf6ea7c8a134436b94943b9}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a708a50eec4640caca921af9958c43972}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_ab4dc91843bbd93211aa0f086e93b8608}\label{classnfc_1_1NFC_ab4dc91843bbd93211aa0f086e93b8608}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!S\+A\+M\+Configuration@{S\+A\+M\+Configuration}}
+\index{S\+A\+M\+Configuration@{S\+A\+M\+Configuration}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{S\+A\+M\+Configuration()}{SAMConfiguration()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::\+S\+A\+M\+Configuration (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to set the mode of the internal S\+AM (Security Access Module) 
+
+Not all chips come with a S\+AM. Read the documentation of the specific chip thoroughly To know wether to implement it or not
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode we want to initialise the nfc chip in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a8c8bdeb6af78024e6fb2ab119575843a}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a1779648dbd03771141b98ac604ba7982}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a89a1275bc915581d708c65d487427317}\label{classnfc_1_1NFC_a89a1275bc915581d708c65d487427317}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!select\+Card@{select\+Card}}
+\index{select\+Card@{select\+Card}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{select\+Card()}{selectCard()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::select\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to select / or deselect a specific card that is in the nfc\textquotesingle{}s rf field. 
+
+This can be used when multiple cards are within the rf field of a \hyperlink{classnfc_1_1NFC}{N\+FC} chip \begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a348f7d8d7cf3853e47307efe5f787f34}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a7ae4a0942240950d8db41b75c898cb3c}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a2a14e65f49707ef1efaea07ec9fce1c8}\label{classnfc_1_1NFC_a2a14e65f49707ef1efaea07ec9fce1c8}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!send\+Command\+And\+Check\+Ack@{send\+Command\+And\+Check\+Ack}}
+\index{send\+Command\+And\+Check\+Ack@{send\+Command\+And\+Check\+Ack}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{send\+Command\+And\+Check\+Ack()}{sendCommandAndCheckAck()}}
+{\footnotesize\ttfamily virtual \hyperlink{structnfc_1_1Result}{Result} nfc\+::\+N\+F\+C\+::send\+Command\+And\+Check\+Ack (\begin{DoxyParamCaption}\item[{\hyperlink{classsetupSendCommand}{setup\+Send\+Command} \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function that can handle the complete communication between the nfc chip and host controller. 
+
+Example\+: This function will send a command to the nfc chip It waits till the chip responds It checks if the nfc chip has send an A\+C\+Knowlege frame It waits again till the chip is ready to to send data to the host controller Formats the received data 
+\begin{DoxyParams}{Parameters}
+{\em command} & Command that needs to be send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structnfc_1_1Result}{Result}\mbox{[}0\mbox{]} Statuscode of the operation 
+
+\hyperlink{structnfc_1_1Result}{Result}\mbox{[}1\mbox{]} received command/data frm the nfc chip 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a3184528f3e8e793905d1638067cfe9e1}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_af8fe01b21da65e4e8334f802073168ab}\label{classnfc_1_1NFC_af8fe01b21da65e4e8334f802073168ab}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{send\+Data()}{sendData()}}
+{\footnotesize\ttfamily virtual void nfc\+::\+N\+F\+C\+::send\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{command\+Buffer,  }\item[{const uint8\+\_\+t}]{n\+\_\+bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to send data to the nfc chip over the provided interface. 
+
+\begin{DoxyNote}{Note}
+Some nfc chips have internal firmware that handles the incoming data. If this is not the case, the abstract function write register can be combined with this function to achieve the same thing 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffer} & Pointer to the command\+Buffer we want to send \\
+\hline
+{\em n\+\_\+bytes} & Amount of bytes that needs to be send \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_aab53fb1c9fced99ce154ab035f795302}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_aa969ac754435a695ce1ddb8c4285e76c}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a9dd84363c873a5d00c7edce644706bc0}\label{classnfc_1_1NFC_a9dd84363c873a5d00c7edce644706bc0}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!set\+Max\+Retries@{set\+Max\+Retries}}
+\index{set\+Max\+Retries@{set\+Max\+Retries}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{set\+Max\+Retries()}{setMaxRetries()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::set\+Max\+Retries (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{max\+Retries }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Retries} & number of times the pn532 will try to activate a target \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_ae418a2f5fc2d4d344264fe2ec549f912}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a1c64d60d6008551a530d668acbdb5ede}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a1657b79a7ca710e01cf053ab269949ba}\label{classnfc_1_1NFC_a1657b79a7ca710e01cf053ab269949ba}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!set\+Serial\+Baudrate@{set\+Serial\+Baudrate}}
+\index{set\+Serial\+Baudrate@{set\+Serial\+Baudrate}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{set\+Serial\+Baudrate()}{setSerialBaudrate()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::set\+Serial\+Baudrate (\begin{DoxyParamCaption}\item[{const \hyperlink{declarations_8h_a18236cb00569a8f612f8957044868f74}{nfc\+::baud\+Rate}}]{br }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to change the serial baudrate beteween a nfc chip and host controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em br} & Baudrate the serial communication needs to be changed to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+statuscode Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a4a524db2e74cbbe891378747f1f99c89}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_aadcb1a6a9e6241c80ecd50de0d108907}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a71585d021800a85b4a52a212d6313b1f}\label{classnfc_1_1NFC_a71585d021800a85b4a52a212d6313b1f}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!wait\+For\+Chip@{wait\+For\+Chip}}
+\index{wait\+For\+Chip@{wait\+For\+Chip}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{wait\+For\+Chip()}{waitForChip()}}
+{\footnotesize\ttfamily virtual bool nfc\+::\+N\+F\+C\+::wait\+For\+Chip (\begin{DoxyParamCaption}\item[{const int}]{timeout = {\ttfamily 2000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to check wether the nfc chip has responded within the given timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & Maximum time the host controller needs to wait for a response of the nfc chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Chip responded in time 
+
+false Chip didnt respond in time 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a10aa275adf2ddbcb6db5afa5666a9594}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_aed3fb53e82dba1bbdc97adb38d6fdb29}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a606b08348cb8176a38b2dd9fc1136888}\label{classnfc_1_1NFC_a606b08348cb8176a38b2dd9fc1136888}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!write\+G\+P\+IO@{write\+G\+P\+IO}}
+\index{write\+G\+P\+IO@{write\+G\+P\+IO}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{write\+G\+P\+I\+O()}{writeGPIO()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::write\+G\+P\+IO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{new\+Pin\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to write/set certain G\+P\+IO pins of the nfc chip. 
+
+\begin{DoxyWarning}{Warning}
+This function is for advanced users only. If the wrong gpio pins are written the hardware might become unstable. a hard reset is then required to save the nfc chip 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_ad33f6bf96640bf7b10407e735ca57e2a}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a93a2097132e92d3bc6f1e1c4c45d364b}{nfc\+::\+Nfc\+Oled}.
+
+\mbox{\Hypertarget{classnfc_1_1NFC_a7e0a000aadae9b545e94ba213d4ac24e}\label{classnfc_1_1NFC_a7e0a000aadae9b545e94ba213d4ac24e}} 
+\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}!write\+Register@{write\+Register}}
+\index{write\+Register@{write\+Register}!nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
+\subsubsection{\texorpdfstring{write\+Register()}{writeRegister()}}
+{\footnotesize\ttfamily virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} nfc\+::\+N\+F\+C\+::write\+Register (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{reg,  }\item[{const uint8\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to write a internal register of a nfc chip. 
+
+\begin{DoxyWarning}{Warning}
+May alter the behaviour of the nfc chip 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Internal adress of the register that needs to be written to \\
+\hline
+{\em val} & Value that needs to be written to the register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status\+Code Status of the operation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnfc_1_1PN532__chip_a2b82f8ed84c6a9b4a7f0c1ad699c13a7}{nfc\+::\+P\+N532\+\_\+chip}, and \hyperlink{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}{nfc\+::\+Nfc\+Oled}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{nfc_8h}{nfc.\+h}\end{DoxyCompactItemize}

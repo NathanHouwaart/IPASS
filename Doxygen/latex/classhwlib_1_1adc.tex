@@ -1,0 +1,74 @@
+\hypertarget{classhwlib_1_1adc}{}\section{hwlib\+:\+:adc Class Reference}
+\label{classhwlib_1_1adc}\index{hwlib\+::adc@{hwlib\+::adc}}
+
+
+{\ttfamily \#include $<$hwlib-\/adc.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:adc\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}\label{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}} 
+typedef uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type}
+\begin{DoxyCompactList}\small\item\em the type of the result returned by \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{read()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{read} ()=0
+\item 
+\mbox{\Hypertarget{classhwlib_1_1adc_a88335c0ccb13ac26819e8727fe7a0e63}\label{classhwlib_1_1adc_a88335c0ccb13ac26819e8727fe7a0e63}} 
+\hyperlink{classhwlib_1_1adc_a88335c0ccb13ac26819e8727fe7a0e63}{adc} (uint\+\_\+fast8\+\_\+t n\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em specify the number of bits \end{DoxyCompactList}\item 
+virtual void \hyperlink{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}{refresh} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1adc_a94a0df22c46f1958f7351585bbc073ea}\label{classhwlib_1_1adc_a94a0df22c46f1958f7351585bbc073ea}} 
+const uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1adc_a94a0df22c46f1958f7351585bbc073ea}{adc\+\_\+n\+\_\+bits}
+\begin{DoxyCompactList}\small\item\em the number of bits in the result returned by \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{read()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1adc_a588267c5f52797ff87e65df0875c2ff1}\label{classhwlib_1_1adc_a588267c5f52797ff87e65df0875c2ff1}} 
+const \hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} \hyperlink{classhwlib_1_1adc_a588267c5f52797ff87e65df0875c2ff1}{adc\+\_\+max\+\_\+value}
+\begin{DoxyCompactList}\small\item\em the maximum value that can be meaningfully written using write()) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A/D input interface
+
+This class abstracts the interface to an A\+DC (Analog to Digital Converter). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}\label{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}} 
+\index{hwlib\+::adc@{hwlib\+::adc}!read@{read}}
+\index{read@{read}!hwlib\+::adc@{hwlib\+::adc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual \hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} hwlib\+::adc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+do an A/D conversion and return the result
+
+This function performs an A/D conversion and returns the result. The lower n\+\_\+bits of the result are the conversion result, the remaining higher bits are 0. 
+
+Implemented in \hyperlink{classdue_1_1pin__adc_a3b562b594bbbe3e8815a9223fa6520cc}{due\+::pin\+\_\+adc}, \hyperlink{classdb103_1_1pin__adc_a2eca8e0a04be08ab585325d27ff93d64}{db103\+::pin\+\_\+adc}, and \hyperlink{classatmega328_1_1pin__adc_a4017fd7e32de94fc9e895cd9e9346430}{atmega328\+::pin\+\_\+adc}.
+
+\mbox{\Hypertarget{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}\label{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}} 
+\index{hwlib\+::adc@{hwlib\+::adc}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::adc@{hwlib\+::adc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void hwlib\+::adc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+refresh the adc value
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implemented in \hyperlink{classdue_1_1pin__adc_ab30deacf575e1ef59af13aea24f77584}{due\+::pin\+\_\+adc}, \hyperlink{classdb103_1_1pin__adc_aff62b5768df51a17f01d416002586e86}{db103\+::pin\+\_\+adc}, and \hyperlink{classatmega328_1_1pin__adc_af71ffd74aacbf0aac5f6693a065896a2}{atmega328\+::pin\+\_\+adc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-adc_8hpp}{hwlib-\/adc.\+hpp}\end{DoxyCompactItemize}

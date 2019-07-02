@@ -1,0 +1,55 @@
+\hypertarget{classatmega328_1_1pin__adc}{}\section{atmega328\+:\+:pin\+\_\+adc Class Reference}
+\label{classatmega328_1_1pin__adc}\index{atmega328\+::pin\+\_\+adc@{atmega328\+::pin\+\_\+adc}}
+
+
+Inheritance diagram for atmega328\+:\+:pin\+\_\+adc\+:
+% FIG 0
+
+
+Collaboration diagram for atmega328\+:\+:pin\+\_\+adc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classatmega328_1_1pin__adc_a9110ab125d258acd73583ad46a707278}\label{classatmega328_1_1pin__adc_a9110ab125d258acd73583ad46a707278}} 
+{\bfseries pin\+\_\+adc} (uint\+\_\+fast8\+\_\+t pin)
+\item 
+uint\+\_\+fast32\+\_\+t \hyperlink{classatmega328_1_1pin__adc_a4017fd7e32de94fc9e895cd9e9346430}{read} () override
+\item 
+void \hyperlink{classatmega328_1_1pin__adc_af71ffd74aacbf0aac5f6693a065896a2}{refresh} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classatmega328_1_1pin__adc_a4017fd7e32de94fc9e895cd9e9346430}\label{classatmega328_1_1pin__adc_a4017fd7e32de94fc9e895cd9e9346430}} 
+\index{atmega328\+::pin\+\_\+adc@{atmega328\+::pin\+\_\+adc}!read@{read}}
+\index{read@{read}!atmega328\+::pin\+\_\+adc@{atmega328\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily uint\+\_\+fast32\+\_\+t atmega328\+::pin\+\_\+adc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+do an A/D conversion and return the result
+
+This function performs an A/D conversion and returns the result. The lower n\+\_\+bits of the result are the conversion result, the remaining higher bits are 0. 
+
+Implements \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{hwlib\+::adc}.
+
+\mbox{\Hypertarget{classatmega328_1_1pin__adc_af71ffd74aacbf0aac5f6693a065896a2}\label{classatmega328_1_1pin__adc_af71ffd74aacbf0aac5f6693a065896a2}} 
+\index{atmega328\+::pin\+\_\+adc@{atmega328\+::pin\+\_\+adc}!refresh@{refresh}}
+\index{refresh@{refresh}!atmega328\+::pin\+\_\+adc@{atmega328\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void atmega328\+::pin\+\_\+adc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh the adc value
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classatmega328_1_1pin__adc_a4017fd7e32de94fc9e895cd9e9346430}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}{hwlib\+::adc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-atmega328_8hpp}{hwlib-\/atmega328.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+\hypertarget{nfc_8h}{}\section{code/headers/nfc.h File Reference}
+\label{nfc_8h}\index{code/headers/nfc.\+h@{code/headers/nfc.\+h}}
+
+
+Abstract nfc class that can be implemented for any nfc reader.  
+
+
+{\ttfamily \#include \char`\"{}interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mifare\+Classic.\+h\char`\"{}}\newline
+Include dependency graph for nfc.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfc_1_1Result}{nfc\+::\+Result}
+\item 
+class \hyperlink{classnfc_1_1NFC}{nfc\+::\+N\+FC}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract nfc class that can be implemented for any nfc reader. 
+
+This file contains the abstract interface for any nfc reader. You can inherit from this class and overwrite its abstract functions.
+
+If you do so, you can use the format\+:
+
+\hyperlink{classnfc_1_1NFC}{nfc\+::\+N\+FC}$\ast$ nfc = \&Y\+O\+U\+R\+\_\+\+N\+F\+C\+\_\+\+C\+L\+A\+S\+S( constructor arguments ); nfc-\/$>$get\+Firmwareversion(); nfc-\/$>$get\+General\+Status();
+
+And so on..
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

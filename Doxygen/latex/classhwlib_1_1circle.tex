@@ -1,0 +1,80 @@
+\hypertarget{classhwlib_1_1circle}{}\section{hwlib\+:\+:circle Class Reference}
+\label{classhwlib_1_1circle}\index{hwlib\+::circle@{hwlib\+::circle}}
+
+
+a circle object  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/graphics.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:circle\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:circle\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1circle_a1aeb184559094cd455833d2f4dd83dc0}\label{classhwlib_1_1circle_a1aeb184559094cd455833d2f4dd83dc0}} 
+\hyperlink{classhwlib_1_1circle_a1aeb184559094cd455833d2f4dd83dc0}{circle} (\hyperlink{classhwlib_1_1location}{location} \hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start}, uint\+\_\+fast16\+\_\+t radius, \hyperlink{classhwlib_1_1color}{color} fg=\hyperlink{namespacehwlib_aa9c056fa29bc9af9f55d4b774bb3898a}{black}, \hyperlink{classhwlib_1_1color}{color} bg=transparent)
+\begin{DoxyCompactList}\small\item\em create a circle object \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}{draw} (\hyperlink{classhwlib_1_1window}{window} \&w) override
+\begin{DoxyCompactList}\small\item\em interface to draw the object buffered \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1circle_a1516f6f0af132e1ef4a050d5cd0eaf2d}\label{classhwlib_1_1circle_a1516f6f0af132e1ef4a050d5cd0eaf2d}} 
+\hyperlink{classhwlib_1_1circle_a1516f6f0af132e1ef4a050d5cd0eaf2d}{circle} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start}, uint\+\_\+fast16\+\_\+t radius, \hyperlink{classhwlib_1_1color}{color} ink)
+\begin{DoxyCompactList}\small\item\em create a circle object of a specific color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1circle_ab461754713a88ae8d5e8ab5a2e01a14b}\label{classhwlib_1_1circle_ab461754713a88ae8d5e8ab5a2e01a14b}} 
+\hyperlink{classhwlib_1_1circle_ab461754713a88ae8d5e8ab5a2e01a14b}{circle} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start}, uint\+\_\+fast16\+\_\+t radius)
+\begin{DoxyCompactList}\small\item\em create a circle object of the foreground color \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}{draw} (\hyperlink{classhwlib_1_1window}{window} \&w) override
+\begin{DoxyCompactList}\small\item\em interface to draw the object buffered \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+a circle object 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}\label{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}} 
+\index{hwlib\+::circle@{hwlib\+::circle}!draw@{draw}}
+\index{draw@{draw}!hwlib\+::circle@{hwlib\+::circle}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void hwlib\+::circle\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1window}{window} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+interface to draw the object buffered 
+
+You must supply the window.
+
+If buffering is specified, the actuial drawing can be delayed until \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} is aclled. 
+
+Implements \hyperlink{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}{hwlib\+::drawable}.
+
+\mbox{\Hypertarget{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}\label{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}} 
+\index{hwlib\+::circle@{hwlib\+::circle}!draw@{draw}}
+\index{draw@{draw}!hwlib\+::circle@{hwlib\+::circle}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void hwlib\+::circle\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1window}{window} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+interface to draw the object buffered 
+
+You must supply the window.
+
+If buffering is specified, the actuial drawing can be delayed until \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} is aclled. 
+
+Implements \hyperlink{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}{hwlib\+::drawable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-graphics_8hpp}{hwlib-\/graphics.\+hpp}\item 
+code/hwlib/library/graphics/\hyperlink{hwlib-graphics-drawables_8hpp}{hwlib-\/graphics-\/drawables.\+hpp}\end{DoxyCompactItemize}

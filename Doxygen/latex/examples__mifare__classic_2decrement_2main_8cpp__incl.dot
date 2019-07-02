@@ -1,0 +1,31 @@
+digraph "examples_mifare_classic/decrement/main.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="examples_mifare_classic\l/decrement/main.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="../../code/headers\l/pn532Oled.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532Oled_8h.html",tooltip="This file implements a decorator for the NFC class in order to be used with an oled display..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="pn532.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532_8h.html",tooltip="Implementation of the Abstract NFC interface for the pn532. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="nfc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nfc_8h.html",tooltip="Abstract nfc class that can be implemented for any nfc reader. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="interface.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8h.html",tooltip="Abstract protocol class and it&#39;s specific protocol implementation. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="hwlib.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="pn532Command.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532Command_8h.html",tooltip="This file contains two data objects that handle and trim the outgoing and received commands of a pn53..."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="../../hwlib/library\l/hwlib.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="declarations.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$declarations_8h.html",tooltip="Specific declarations for the nfc classes to use. "];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="hardware_uart.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hardware__uart_8h.html",tooltip="This file implements the functions declared in hardware_uart.hpp. "];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="mifareClassic.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mifareClassic_8h.html",tooltip="Data object for a nfc card where data can be stored in. "];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+}

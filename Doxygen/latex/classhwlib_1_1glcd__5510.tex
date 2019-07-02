@@ -1,0 +1,82 @@
+\hypertarget{classhwlib_1_1glcd__5510}{}\section{hwlib\+:\+:glcd\+\_\+5510 Class Reference}
+\label{classhwlib_1_1glcd__5510}\index{hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}}
+
+
+{\ttfamily \#include $<$hwlib-\/glcd-\/5510.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:glcd\+\_\+5510\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:glcd\+\_\+5510\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1glcd__5510_a689cb8a2f60f76f087b83626b2ca931a}{glcd\+\_\+5510} (\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&sce, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&res, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&dc, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&sdin, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&sclk)
+\item 
+void \hyperlink{classhwlib_1_1glcd__5510_a533b2663e151bee909543d0038b2cb4d}{clear} () override
+\begin{DoxyCompactList}\small\item\em clear the window \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1glcd__5510_ac53cb29b0973166ae3f54940a71317bf}{flush} () override
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Nokia 5510 B/W graphics L\+CD
+
+This class implements an interface to the type of L\+CD that was used in older Nokia telephones. It is a 84 columns x 48 lines black-\/and-\/white L\+CD.
+
+This type of L\+CD is cheap and available from lots of sources, but the quality is often abominable.
+
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__5510_a689cb8a2f60f76f087b83626b2ca931a}\label{classhwlib_1_1glcd__5510_a689cb8a2f60f76f087b83626b2ca931a}} 
+\index{hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}!glcd\+\_\+5510@{glcd\+\_\+5510}}
+\index{glcd\+\_\+5510@{glcd\+\_\+5510}!hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}}
+\subsubsection{\texorpdfstring{glcd\+\_\+5510()}{glcd\_5510()}}
+{\footnotesize\ttfamily hwlib\+::glcd\+\_\+5510\+::glcd\+\_\+5510 (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{sce,  }\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{res,  }\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{dc,  }\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{sdin,  }\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{sclk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+create a 5510 L\+CD
+
+This constructor creates a 5510 L\+CD from its interface pins. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__5510_a533b2663e151bee909543d0038b2cb4d}\label{classhwlib_1_1glcd__5510_a533b2663e151bee909543d0038b2cb4d}} 
+\index{hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}!clear@{clear}}
+\index{clear@{clear}!hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void hwlib\+::glcd\+\_\+5510\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+clear the window 
+
+This function clears the windows by writing the background color to all pixels. The default implementation writes to all pixels in sequence. A concrete window can probably provide a faster implementation.
+
+When buffering is specified ( buf == buffered ) the actual clearing can be delayed until the next \hyperlink{classhwlib_1_1glcd__5510_ac53cb29b0973166ae3f54940a71317bf}{flush()} call. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{hwlib\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1glcd__5510_ac53cb29b0973166ae3f54940a71317bf}\label{classhwlib_1_1glcd__5510_ac53cb29b0973166ae3f54940a71317bf}} 
+\index{hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::glcd\+\_\+5510@{hwlib\+::glcd\+\_\+5510}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::glcd\+\_\+5510\+::flush (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{hwlib-glcd-5510_8hpp}{hwlib-\/glcd-\/5510.\+hpp}\end{DoxyCompactItemize}

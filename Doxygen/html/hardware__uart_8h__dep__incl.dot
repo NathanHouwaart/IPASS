@@ -1,0 +1,42 @@
+digraph "code/headers/hardware_uart.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="code/headers/hardware\l_uart.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="code/headers/interface.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8h.html",tooltip="Abstract protocol class and it&#39;s specific protocol implementation. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="code/headers/nfc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nfc_8h.html",tooltip="Abstract nfc class that can be implemented for any nfc reader. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="code/headers/pn532.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532_8h.html",tooltip="Implementation of the Abstract NFC interface for the pn532. "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="code/headers/pn532Oled.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532Oled_8h.html",tooltip="This file implements a decorator for the NFC class in order to be used with an oled display..."];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="application/code/headers\l/stations.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stations_8h.html",tooltip="Struct declarations and staion declerations of ov class. "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="application/code/headers/ov.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ov_8h.html",tooltip="abstract OV tracker class "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="application/code/headers\l/train_ov.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train__ov_8h_source.html"];
+  Node7 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="code/src/pn532Oled.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532Oled_8cpp.html",tooltip="This file implements the functions declared in pn532Oled.h. "];
+  Node7 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="examples_mifare_classic\l/decrement/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2decrement_2main_8cpp.html",tooltip="Example use of the nfc library to decrement a value block on a Mifare classic 1k using the pn532..."];
+  Node7 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="examples_mifare_classic\l/increment/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2increment_2main_8cpp.html",tooltip="Example use of the nfc library to increment a value block on a Mifare classic 1k using the pn532..."];
+  Node7 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="examples_mifare_classic\l/Oled_decorator/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2Oled__decorator_2main_8cpp.html",tooltip="Example use of the nfc oled decorator to integrate an oled display with the pn532. "];
+  Node6 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="code/src/pn532.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532_8cpp.html",tooltip="This file implements the functions declared in pn532.h. "];
+  Node6 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="examples_mifare_classic\l/make_value_block/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2make__value__block_2main_8cpp.html",tooltip="Example use of the nfc library to create a Mifare value block on a Mifare classic 1k using the pn532..."];
+  Node6 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="examples_mifare_classic\l/miscelanious/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2miscelanious_2main_8cpp.html",tooltip="Example use of the nfc library to execute various miscelanious commands on the PN532. "];
+  Node6 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="examples_mifare_classic\l/pn532_status/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2pn532__status_2main_8cpp.html",tooltip="Example use of the nfc library to get the general status of the PN532. "];
+  Node6 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="examples_mifare_classic\l/read_card/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2read__card_2main_8cpp.html",tooltip="Example use of the nfc library to read a entire Mifare Classic 1k card with the pn532. "];
+  Node6 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="examples_mifare_classic\l/write_page/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2write__page_2main_8cpp.html",tooltip="Example use of the nfc library to write data to a mifare classic card with the pn532. "];
+  Node4 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="code/src/interface.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8cpp.html",tooltip="This file implements the functions declared in interface.h. "];
+}

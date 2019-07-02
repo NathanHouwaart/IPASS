@@ -1,0 +1,67 @@
+\hypertarget{classdb103_1_1pin__adc}{}\section{db103\+:\+:pin\+\_\+adc Class Reference}
+\label{classdb103_1_1pin__adc}\index{db103\+::pin\+\_\+adc@{db103\+::pin\+\_\+adc}}
+
+
+adc implementation for an L\+P\+C1114  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/db103.\+hpp$>$}
+
+
+
+Inheritance diagram for db103\+:\+:pin\+\_\+adc\+:
+% FIG 0
+
+
+Collaboration diagram for db103\+:\+:pin\+\_\+adc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdb103_1_1pin__adc_a8208afd669b42a5fd49cdaea3bd2fe86}\label{classdb103_1_1pin__adc_a8208afd669b42a5fd49cdaea3bd2fe86}} 
+\hyperlink{classdb103_1_1pin__adc_a8208afd669b42a5fd49cdaea3bd2fe86}{pin\+\_\+adc} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em create an A/D pin from its port and pin numbers \end{DoxyCompactList}\item 
+\hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} \hyperlink{classdb103_1_1pin__adc_a2eca8e0a04be08ab585325d27ff93d64}{read} () override
+\item 
+void \hyperlink{classdb103_1_1pin__adc_aff62b5768df51a17f01d416002586e86}{refresh} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+adc implementation for an L\+P\+C1114 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__adc_a2eca8e0a04be08ab585325d27ff93d64}\label{classdb103_1_1pin__adc_a2eca8e0a04be08ab585325d27ff93d64}} 
+\index{db103\+::pin\+\_\+adc@{db103\+::pin\+\_\+adc}!read@{read}}
+\index{read@{read}!db103\+::pin\+\_\+adc@{db103\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} db103\+::pin\+\_\+adc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+do an A/D conversion and return the result
+
+This function performs an A/D conversion and returns the result. The lower n\+\_\+bits of the result are the conversion result, the remaining higher bits are 0. 
+
+Implements \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{hwlib\+::adc}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__adc_aff62b5768df51a17f01d416002586e86}\label{classdb103_1_1pin__adc_aff62b5768df51a17f01d416002586e86}} 
+\index{db103\+::pin\+\_\+adc@{db103\+::pin\+\_\+adc}!refresh@{refresh}}
+\index{refresh@{refresh}!db103\+::pin\+\_\+adc@{db103\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+adc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh the adc value
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdb103_1_1pin__adc_a2eca8e0a04be08ab585325d27ff93d64}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}{hwlib\+::adc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-db103_8hpp}{hwlib-\/db103.\+hpp}\end{DoxyCompactItemize}

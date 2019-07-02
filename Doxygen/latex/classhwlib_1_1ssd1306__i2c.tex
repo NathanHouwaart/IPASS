@@ -1,0 +1,45 @@
+\hypertarget{classhwlib_1_1ssd1306__i2c}{}\section{hwlib\+:\+:ssd1306\+\_\+i2c Class Reference}
+\label{classhwlib_1_1ssd1306__i2c}\index{hwlib\+::ssd1306\+\_\+i2c@{hwlib\+::ssd1306\+\_\+i2c}}
+
+
+Inheritance diagram for hwlib\+:\+:ssd1306\+\_\+i2c\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:ssd1306\+\_\+i2c\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_a774c16248b7450b141ed11ccba10c85f}\label{classhwlib_1_1ssd1306__i2c_a774c16248b7450b141ed11ccba10c85f}} 
+\hyperlink{classhwlib_1_1ssd1306__i2c_a774c16248b7450b141ed11ccba10c85f}{ssd1306\+\_\+i2c} (\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&\hyperlink{classhwlib_1_1ssd1306__i2c_a6dd727643c4b270cc364cd6e00ec84e9}{bus}, uint\+\_\+fast8\+\_\+t address=0x3\+C)
+\begin{DoxyCompactList}\small\item\em construct by providing the i2c channel \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_a2c27f988f3850cf6524a4731a81fc654}\label{classhwlib_1_1ssd1306__i2c_a2c27f988f3850cf6524a4731a81fc654}} 
+void \hyperlink{classhwlib_1_1ssd1306__i2c_a2c27f988f3850cf6524a4731a81fc654}{command} (\hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{ssd1306\+\_\+commands} c)
+\begin{DoxyCompactList}\small\item\em send a command without data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_a006d72bfb812ed7f11b662cc2d3503e3}\label{classhwlib_1_1ssd1306__i2c_a006d72bfb812ed7f11b662cc2d3503e3}} 
+void \hyperlink{classhwlib_1_1ssd1306__i2c_a006d72bfb812ed7f11b662cc2d3503e3}{command} (\hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{ssd1306\+\_\+commands} c, uint8\+\_\+t d0)
+\begin{DoxyCompactList}\small\item\em send a command with one data byte \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_adb0629f2319034b7188e65c6156521cd}\label{classhwlib_1_1ssd1306__i2c_adb0629f2319034b7188e65c6156521cd}} 
+void \hyperlink{classhwlib_1_1ssd1306__i2c_adb0629f2319034b7188e65c6156521cd}{command} (\hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{ssd1306\+\_\+commands} c, uint8\+\_\+t d0, uint8\+\_\+t d1)
+\begin{DoxyCompactList}\small\item\em send a command with two data bytes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_ae99373da0f0c62aaa4159dfb10bd31e3}\label{classhwlib_1_1ssd1306__i2c_ae99373da0f0c62aaa4159dfb10bd31e3}} 
+void \hyperlink{classhwlib_1_1ssd1306__i2c_ae99373da0f0c62aaa4159dfb10bd31e3}{pixels\+\_\+byte\+\_\+write} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1location}{location}, uint8\+\_\+t d)
+\begin{DoxyCompactList}\small\item\em write the pixel byte d at column x page y \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_a6dd727643c4b270cc364cd6e00ec84e9}\label{classhwlib_1_1ssd1306__i2c_a6dd727643c4b270cc364cd6e00ec84e9}} 
+\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \& \hyperlink{classhwlib_1_1ssd1306__i2c_a6dd727643c4b270cc364cd6e00ec84e9}{bus}
+\begin{DoxyCompactList}\small\item\em the i2c channel \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_ad9413c2ad455b2ca2da69cc0e809d7a0}\label{classhwlib_1_1ssd1306__i2c_ad9413c2ad455b2ca2da69cc0e809d7a0}} 
+uint\+\_\+fast8\+\_\+t {\bfseries address}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__i2c_a77134fdcf0f0f81b9e27bb0bf770133d}\label{classhwlib_1_1ssd1306__i2c_a77134fdcf0f0f81b9e27bb0bf770133d}} 
+\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1ssd1306__i2c_a77134fdcf0f0f81b9e27bb0bf770133d}{cursor}
+\begin{DoxyCompactList}\small\item\em current cursor location in the controller \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{library_2peripherals_2hwlib-glcd-oled_8hpp}{hwlib-\/glcd-\/oled.\+hpp}\end{DoxyCompactItemize}

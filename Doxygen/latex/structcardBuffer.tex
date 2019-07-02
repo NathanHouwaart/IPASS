@@ -1,0 +1,45 @@
+\hypertarget{structcardBuffer}{}\section{card\+Buffer$<$ n $>$ Struct Template Reference}
+\label{structcardBuffer}\index{card\+Buffer$<$ n $>$@{card\+Buffer$<$ n $>$}}
+
+
+Cardbuffer struct.  
+
+
+
+
+{\ttfamily \#include $<$stations.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcardBuffer_a3f9111470d3792d2211ab2d7a2dfcd5e}\label{structcardBuffer_a3f9111470d3792d2211ab2d7a2dfcd5e}} 
+int {\bfseries get\+Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcardBuffer_ad9268b7f51605832ed40de6dd5c0614d}\label{structcardBuffer_ad9268b7f51605832ed40de6dd5c0614d}} 
+int {\bfseries spaces\+\_\+occupied}
+\item 
+\mbox{\Hypertarget{structcardBuffer_a08f636cccb0dad601e0515cb52d819db}\label{structcardBuffer_a08f636cccb0dad601e0515cb52d819db}} 
+std\+::array$<$ \hyperlink{structStation}{Station}, n $>$ {\bfseries checkin\+Station}
+\item 
+\mbox{\Hypertarget{structcardBuffer_ae99ba4d49495e8e1d23d61381ce83c58}\label{structcardBuffer_ae99ba4d49495e8e1d23d61381ce83c58}} 
+std\+::array$<$ \hyperlink{classcard}{card}, n $>$ {\bfseries checkins}
+\item 
+\mbox{\Hypertarget{structcardBuffer_a20fddce529cea9521d901a2569e9bc4b}\label{structcardBuffer_a20fddce529cea9521d901a2569e9bc4b}} 
+std\+::array$<$ bool, n $>$ {\bfseries available}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int n$>$\newline
+struct card\+Buffer$<$ n $>$}
+
+Cardbuffer struct. 
+
+This struct will be for managing the checked in cards and managing the free spaces in the buffer A cardbuffer has \+: spaces\+\_\+occupied = amount of spaces occupied by a checked in card checkin\+Station = place where the perticulair card has checked in checkins = U\+ID\textquotesingle{}s of the checked in chards available = array which indicates what index is free for a new card 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+application/code/headers/\hyperlink{stations_8h}{stations.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,94 @@
+\hypertarget{classatmega328_1_1pin__in}{}\section{atmega328\+:\+:pin\+\_\+in Class Reference}
+\label{classatmega328_1_1pin__in}\index{atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}}
+
+
+\hyperlink{classatmega328_1_1pin__in}{pin\+\_\+in} implementation for an A\+T\+Mega328P  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/atmega328.\+hpp$>$}
+
+
+
+Inheritance diagram for atmega328\+:\+:pin\+\_\+in\+:
+% FIG 0
+
+
+Collaboration diagram for atmega328\+:\+:pin\+\_\+in\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classatmega328_1_1pin__in_a212d67988ac71e08199e311e721ec739}{pin\+\_\+in} (uint8\+\_\+t port\+\_\+number, uint8\+\_\+t pin\+\_\+number)
+\item 
+bool \hyperlink{classatmega328_1_1pin__in_a77953ce4da1daee0511822ebae5f80e9}{read} () override
+\item 
+void \hyperlink{classatmega328_1_1pin__in_a5582f55d2e2d857e941002a7c16cea8f}{refresh} () override
+\item 
+\mbox{\Hypertarget{classatmega328_1_1pin__in_aade77154a811bf4d05a461a435cebe03}\label{classatmega328_1_1pin__in_aade77154a811bf4d05a461a435cebe03}} 
+void {\bfseries pullup\+\_\+enable} ()
+\item 
+\mbox{\Hypertarget{classatmega328_1_1pin__in_ab9708e4473478e726c2cccc0a8ef1203}\label{classatmega328_1_1pin__in_ab9708e4473478e726c2cccc0a8ef1203}} 
+void {\bfseries pullup\+\_\+disable} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classatmega328_1_1pin__in}{pin\+\_\+in} implementation for an A\+T\+Mega328P 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classatmega328_1_1pin__in_a212d67988ac71e08199e311e721ec739}\label{classatmega328_1_1pin__in_a212d67988ac71e08199e311e721ec739}} 
+\index{atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}!pin\+\_\+in@{pin\+\_\+in}}
+\index{pin\+\_\+in@{pin\+\_\+in}!atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{pin\+\_\+in()}{pin\_in()}}
+{\footnotesize\ttfamily atmega328\+::pin\+\_\+in\+::pin\+\_\+in (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port\+\_\+number,  }\item[{uint8\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{classatmega328_1_1pin__in}{pin\+\_\+in} constructor from A\+T\+Mega328P port/pin numbers
+
+This call creates a \hyperlink{classatmega328_1_1pin__in}{pin\+\_\+in} from an A\+T\+Mega328P port/pin number pair.
+
+This constructor sets the pin direction to input. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classatmega328_1_1pin__in_a77953ce4da1daee0511822ebae5f80e9}\label{classatmega328_1_1pin__in_a77953ce4da1daee0511822ebae5f80e9}} 
+\index{atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}!read@{read}}
+\index{read@{read}!atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool atmega328\+::pin\+\_\+in\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classatmega328_1_1pin__in_a5582f55d2e2d857e941002a7c16cea8f}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{hwlib\+::pin\+\_\+in}.
+
+\mbox{\Hypertarget{classatmega328_1_1pin__in_a5582f55d2e2d857e941002a7c16cea8f}\label{classatmega328_1_1pin__in_a5582f55d2e2d857e941002a7c16cea8f}} 
+\index{atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}!refresh@{refresh}}
+\index{refresh@{refresh}!atmega328\+::pin\+\_\+in@{atmega328\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void atmega328\+::pin\+\_\+in\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classatmega328_1_1pin__in_a77953ce4da1daee0511822ebae5f80e9}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{hwlib\+::pin\+\_\+in}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-atmega328_8hpp}{hwlib-\/atmega328.\+hpp}\end{DoxyCompactItemize}

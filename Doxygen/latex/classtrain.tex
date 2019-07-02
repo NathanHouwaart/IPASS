@@ -1,0 +1,274 @@
+\hypertarget{classtrain}{}\section{train Class Reference}
+\label{classtrain}\index{train@{train}}
+
+
+Train implementation of a ov public transportation system.  
+
+
+
+
+{\ttfamily \#include $<$train\+\_\+ov.\+h$>$}
+
+
+
+Inheritance diagram for train\+:
+% FIG 0
+
+
+Collaboration diagram for train\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtrain_ae6db22b1f686e5a4a65434a4a7157643}{train} (\hyperlink{classnfc_1_1NFC}{nfc\+::\+N\+FC} \&nfc, hwlib\+::terminal\+\_\+from \&display, hwlib\+::pin\+\_\+in \&station\+Pin1, hwlib\+::pin\+\_\+in \&station\+Pin2, hwlib\+::pin\+\_\+in \&station\+Pin3, hwlib\+::pin\+\_\+in \&station\+Pin4, hwlib\+::pin\+\_\+in \&station\+Pin5, hwlib\+::pin\+\_\+in \&station\+Pin6, hwlib\+::pin\+\_\+in \&station\+Pin7, hwlib\+::pin\+\_\+in \&station\+Pin8, hwlib\+::pin\+\_\+in \&mode\+Select\+Pin1, hwlib\+::pin\+\_\+in \&mode\+Select\+Pin2, hwlib\+::pin\+\_\+in \&mode\+Select\+Pin3, hwlib\+::pin\+\_\+in \&mode\+Select\+Pin4, float price\+Per\+Kilometer, int max\+Card\+Balance, int top\+Up\+Value, \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{nfc\+::mifare\+Commands} AorB, uint8\+\_\+t value\+Block\+Location, uint8\+\_\+t sector\+Location)
+\begin{DoxyCompactList}\small\item\em Constructor of a train class application. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_a52db26884bf0f979ad55ce92f3d2f159}{init} () override
+\begin{DoxyCompactList}\small\item\em This function will initialise the train class. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_a4509fc35ff69717aab2636dd847981d4}{wait\+Card} () override
+\begin{DoxyCompactList}\small\item\em This function will wait for a card to be present in the nfc\textquotesingle{}s rf field. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_a1e0e594fdafed4ac60b5b6d81b91c2ca}{check\+In} (\hyperlink{classcard}{card} \&cardinfo) override
+\begin{DoxyCompactList}\small\item\em This function is used to checkin a card that has not yet been checked in. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_ae631814ed393394a525646ada78e1994}{check\+Out} (const int index) override
+\begin{DoxyCompactList}\small\item\em This function is used to checkout a card that has already checked in. \end{DoxyCompactList}\item 
+\hyperlink{stations_8h_ad03936209251465257e0fdcfb33dbf91}{Mode} \hyperlink{classtrain_ae788938711f5940abc9ad9fa09a77011}{get\+Mode} () override
+\begin{DoxyCompactList}\small\item\em This function will read out the 8 G\+P\+IO pins to determine the current station. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_ae4cd3a06c0b736f2de38dd7987e9576e}{set\+Mode} (const \hyperlink{stations_8h_ad03936209251465257e0fdcfb33dbf91}{Mode} new\+Mode) override
+\begin{DoxyCompactList}\small\item\em This function will set the mode of apllication. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_a76824298a986f6a897b3e7cba2c8f15d}{get\+And\+Set\+Station} () override
+\begin{DoxyCompactList}\small\item\em This function is used to get and set a new station. \end{DoxyCompactList}\item 
+float \hyperlink{classtrain_ab027ec1ad985772fbc8b5d65a34da7be}{calculate\+\_\+price} (const int index) override
+\begin{DoxyCompactList}\small\item\em This function is used to calculate the price of the ride based on distance traveled. \end{DoxyCompactList}\item 
+bool \hyperlink{classtrain_aa484ea80f6754481e8c566da13c72f82}{validate\+Card} (\hyperlink{classcard}{card} \&cardinfo) override
+\begin{DoxyCompactList}\small\item\em This fucntion will check wether a card is formatted properly for the application. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classtrain_a518b32482f1a5a32cc372b6679644b43}{get\+Balance} (\hyperlink{classcard}{card} \&cardinfo) override
+\begin{DoxyCompactList}\small\item\em This function will get the current balance of a given card. \end{DoxyCompactList}\item 
+void \hyperlink{classtrain_a1bb8ac7f3f0bf3bfe61cf479abfe4cbb}{top\+Up} (int increment\+Value) override
+\begin{DoxyCompactList}\small\item\em This function will top up the balance of a given card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Train implementation of a ov public transportation system. 
+
+can check in, out, tup up the card balance and travel to different stations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtrain_ae6db22b1f686e5a4a65434a4a7157643}\label{classtrain_ae6db22b1f686e5a4a65434a4a7157643}} 
+\index{train@{train}!train@{train}}
+\index{train@{train}!train@{train}}
+\subsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily train\+::train (\begin{DoxyParamCaption}\item[{\hyperlink{classnfc_1_1NFC}{nfc\+::\+N\+FC} \&}]{nfc,  }\item[{hwlib\+::terminal\+\_\+from \&}]{display,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin1,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin2,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin3,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin4,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin5,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin6,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin7,  }\item[{hwlib\+::pin\+\_\+in \&}]{station\+Pin8,  }\item[{hwlib\+::pin\+\_\+in \&}]{mode\+Select\+Pin1,  }\item[{hwlib\+::pin\+\_\+in \&}]{mode\+Select\+Pin2,  }\item[{hwlib\+::pin\+\_\+in \&}]{mode\+Select\+Pin3,  }\item[{hwlib\+::pin\+\_\+in \&}]{mode\+Select\+Pin4,  }\item[{float}]{price\+Per\+Kilometer,  }\item[{int}]{max\+Card\+Balance,  }\item[{int}]{top\+Up\+Value,  }\item[{\hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{nfc\+::mifare\+Commands}}]{AorB,  }\item[{uint8\+\_\+t}]{value\+Block\+Location,  }\item[{uint8\+\_\+t}]{sector\+Location }\end{DoxyParamCaption})}
+
+
+
+Constructor of a train class application. 
+
+This function will need all the data fields of the \hyperlink{classovTracker}{ov\+Tracker} supporter Upon initialising the \hyperlink{classovTracker}{ov\+Tracker} class, the train class will initialise itself by calling \hyperlink{classtrain_a52db26884bf0f979ad55ce92f3d2f159}{init()} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtrain_ab027ec1ad985772fbc8b5d65a34da7be}\label{classtrain_ab027ec1ad985772fbc8b5d65a34da7be}} 
+\index{train@{train}!calculate\+\_\+price@{calculate\+\_\+price}}
+\index{calculate\+\_\+price@{calculate\+\_\+price}!train@{train}}
+\subsubsection{\texorpdfstring{calculate\+\_\+price()}{calculate\_price()}}
+{\footnotesize\ttfamily float train\+::calculate\+\_\+price (\begin{DoxyParamCaption}\item[{const int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function is used to calculate the price of the ride based on distance traveled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & cardindex of the card that the price needs to be calculated for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float price of the ride 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classovTracker_ad50a46fc20404df988d477f5525ae9d9}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_a1e0e594fdafed4ac60b5b6d81b91c2ca}\label{classtrain_a1e0e594fdafed4ac60b5b6d81b91c2ca}} 
+\index{train@{train}!check\+In@{check\+In}}
+\index{check\+In@{check\+In}!train@{train}}
+\subsubsection{\texorpdfstring{check\+In()}{checkIn()}}
+{\footnotesize\ttfamily void train\+::check\+In (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function is used to checkin a card that has not yet been checked in. 
+
+The function will check for a apropriate card The function will check if there is space in the buffer
+
+Upon checking in, this function will put the read card in the buffer among with the checkin station Upon checking in, this function will also show the balance of card 
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & card class with stored U\+ID \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classovTracker_a1d5cd8f5a6bd02c91d6d010f1a3839ce}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_ae631814ed393394a525646ada78e1994}\label{classtrain_ae631814ed393394a525646ada78e1994}} 
+\index{train@{train}!check\+Out@{check\+Out}}
+\index{check\+Out@{check\+Out}!train@{train}}
+\subsubsection{\texorpdfstring{check\+Out()}{checkOut()}}
+{\footnotesize\ttfamily void train\+::check\+Out (\begin{DoxyParamCaption}\item[{const int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function is used to checkout a card that has already checked in. 
+
+This function will handle the complete calculations needed in order to decrement the correct value from the card It will decrement x amount based on the km´s traveled Upon checking out, this function will display the remaining balance on the card Upon checking out, this function will clear the read card from the buffer. 
+\begin{DoxyParams}{Parameters}
+{\em index} & index of where the card info is stored in the array \\
+\hline
+\end{DoxyParams}
+will check the saldo of the card 
+
+Implements \hyperlink{classovTracker_a96e808776b864290f742f271e18c401c}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_a76824298a986f6a897b3e7cba2c8f15d}\label{classtrain_a76824298a986f6a897b3e7cba2c8f15d}} 
+\index{train@{train}!get\+And\+Set\+Station@{get\+And\+Set\+Station}}
+\index{get\+And\+Set\+Station@{get\+And\+Set\+Station}!train@{train}}
+\subsubsection{\texorpdfstring{get\+And\+Set\+Station()}{getAndSetStation()}}
+{\footnotesize\ttfamily void train\+::get\+And\+Set\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function is used to get and set a new station. 
+
+this function changes the internal current station.\+id member 
+
+Implements \hyperlink{classovTracker_ae570f702740648f2994a0159616fa763}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_a518b32482f1a5a32cc372b6679644b43}\label{classtrain_a518b32482f1a5a32cc372b6679644b43}} 
+\index{train@{train}!get\+Balance@{get\+Balance}}
+\index{get\+Balance@{get\+Balance}!train@{train}}
+\subsubsection{\texorpdfstring{get\+Balance()}{getBalance()}}
+{\footnotesize\ttfamily uint32\+\_\+t train\+::get\+Balance (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function will get the current balance of a given card. 
+
+It will do this by converting the 4 byte int value to a 4 byte float value; 
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & card class with stored card information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+balance the balance of the card 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classovTracker_a9bcfc435593679ec503a48da21d7a5a0}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_ae788938711f5940abc9ad9fa09a77011}\label{classtrain_ae788938711f5940abc9ad9fa09a77011}} 
+\index{train@{train}!get\+Mode@{get\+Mode}}
+\index{get\+Mode@{get\+Mode}!train@{train}}
+\subsubsection{\texorpdfstring{get\+Mode()}{getMode()}}
+{\footnotesize\ttfamily \hyperlink{stations_8h_ad03936209251465257e0fdcfb33dbf91}{Mode} train\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function will read out the 8 G\+P\+IO pins to determine the current station. 
+
+By reading the 8 gpio pins and storing them in a 8 bit value, \begin{DoxyReturn}{Returns}
+uint8\+\_\+t value of the pins read 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classovTracker_afda6f161dc45106e43fc5031916fd91a}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_a52db26884bf0f979ad55ce92f3d2f159}\label{classtrain_a52db26884bf0f979ad55ce92f3d2f159}} 
+\index{train@{train}!init@{init}}
+\index{init@{init}!train@{train}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void train\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function will initialise the train class. 
+
+The pn532 nfc chip will be setup to read the proper cardtypes 
+
+Implements \hyperlink{classovTracker_aa12f6c32a67e9a00d4b733963c54b443}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_ae4cd3a06c0b736f2de38dd7987e9576e}\label{classtrain_ae4cd3a06c0b736f2de38dd7987e9576e}} 
+\index{train@{train}!set\+Mode@{set\+Mode}}
+\index{set\+Mode@{set\+Mode}!train@{train}}
+\subsubsection{\texorpdfstring{set\+Mode()}{setMode()}}
+{\footnotesize\ttfamily void train\+::set\+Mode (\begin{DoxyParamCaption}\item[{const \hyperlink{stations_8h_ad03936209251465257e0fdcfb33dbf91}{Mode}}]{new\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function will set the mode of apllication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint8\+\_\+t} & mode \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classovTracker_a776f469f9db184664e4f4425cca2df32}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_a1bb8ac7f3f0bf3bfe61cf479abfe4cbb}\label{classtrain_a1bb8ac7f3f0bf3bfe61cf479abfe4cbb}} 
+\index{train@{train}!top\+Up@{top\+Up}}
+\index{top\+Up@{top\+Up}!train@{train}}
+\subsubsection{\texorpdfstring{top\+Up()}{topUp()}}
+{\footnotesize\ttfamily void train\+::top\+Up (\begin{DoxyParamCaption}\item[{int}]{increment\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function will top up the balance of a given card. 
+
+It will top up the card by the given incrementvalue 
+
+Implements \hyperlink{classovTracker_a9611f8fe5ed1937262ebcd89bd7ee617}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_aa484ea80f6754481e8c566da13c72f82}\label{classtrain_aa484ea80f6754481e8c566da13c72f82}} 
+\index{train@{train}!validate\+Card@{validate\+Card}}
+\index{validate\+Card@{validate\+Card}!train@{train}}
+\subsubsection{\texorpdfstring{validate\+Card()}{validateCard()}}
+{\footnotesize\ttfamily bool train\+::validate\+Card (\begin{DoxyParamCaption}\item[{\hyperlink{classcard}{card} \&}]{cardinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This fucntion will check wether a card is formatted properly for the application. 
+
+It will achieve this by decrementing 0 and then transfering it to the page. If the page Is not properly formatted, the transfer command will throw an error 
+\begin{DoxyParams}{Parameters}
+{\em cardinfo} & card class with stored card information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true card properly formatted 
+
+false card not properly formatted 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classovTracker_a793048db1b73e4e36a0cf11839048f73}{ov\+Tracker}.
+
+\mbox{\Hypertarget{classtrain_a4509fc35ff69717aab2636dd847981d4}\label{classtrain_a4509fc35ff69717aab2636dd847981d4}} 
+\index{train@{train}!wait\+Card@{wait\+Card}}
+\index{wait\+Card@{wait\+Card}!train@{train}}
+\subsubsection{\texorpdfstring{wait\+Card()}{waitCard()}}
+{\footnotesize\ttfamily void train\+::wait\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function will wait for a card to be present in the nfc\textquotesingle{}s rf field. 
+
+Once a card has been detected, it will call the aproprate function (check in/ check out) 
+
+Implements \hyperlink{classovTracker_a43dea6c5e524377f2190e59a7da85b51}{ov\+Tracker}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+application/code/headers/train\+\_\+ov.\+h\item 
+application/code/src/train\+\_\+ov.\+cpp\end{DoxyCompactItemize}

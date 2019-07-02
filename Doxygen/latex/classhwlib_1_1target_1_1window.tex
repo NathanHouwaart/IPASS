@@ -1,0 +1,101 @@
+\hypertarget{classhwlib_1_1target_1_1window}{}\section{hwlib\+:\+:target\+:\+:window Class Reference}
+\label{classhwlib_1_1target_1_1window}\index{hwlib\+::target\+::window@{hwlib\+::target\+::window}}
+
+
+Inheritance diagram for hwlib\+:\+:target\+:\+:window\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:target\+:\+:window\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_a6ccacf6e033df6b33c4c3944d9b86dcd}\label{classhwlib_1_1target_1_1window_a6ccacf6e033df6b33c4c3944d9b86dcd}} 
+{\bfseries window} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}{size}, \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}{foreground}=\hyperlink{namespacehwlib_aa9c056fa29bc9af9f55d4b774bb3898a}{black}, \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}{background}=white, int m=5)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_a73bf147c1b4348fae0f78395ab1b164a}\label{classhwlib_1_1target_1_1window_a73bf147c1b4348fae0f78395ab1b164a}} 
+{\bfseries window} (int x, int y, int m=5)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_aa0d41fa8c4b4fa8671b1f4d9d6f4988d}\label{classhwlib_1_1target_1_1window_aa0d41fa8c4b4fa8671b1f4d9d6f4988d}} 
+void {\bfseries poll} ()
+\item 
+void \hyperlink{classhwlib_1_1target_1_1window_ae432e3dc481e789f5d972331eb1f6725}{write\+\_\+implementation} (\hyperlink{classhwlib_1_1xy}{xy} pos, \hyperlink{classhwlib_1_1color}{color} col) override
+\item 
+void \hyperlink{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}{flush} () override
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_a266159cf8c02b85747d0f43eb519b0e0}\label{classhwlib_1_1target_1_1window_a266159cf8c02b85747d0f43eb519b0e0}} 
+{\bfseries window} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}{size}, int m=5)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_a73bf147c1b4348fae0f78395ab1b164a}\label{classhwlib_1_1target_1_1window_a73bf147c1b4348fae0f78395ab1b164a}} 
+{\bfseries window} (int x, int y, int m=5)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_aa0d41fa8c4b4fa8671b1f4d9d6f4988d}\label{classhwlib_1_1target_1_1window_aa0d41fa8c4b4fa8671b1f4d9d6f4988d}} 
+void {\bfseries poll} ()
+\item 
+void \hyperlink{classhwlib_1_1target_1_1window_ae432e3dc481e789f5d972331eb1f6725}{write\+\_\+implementation} (\hyperlink{classhwlib_1_1xy}{xy} pos, \hyperlink{classhwlib_1_1color}{color} col) override
+\item 
+void \hyperlink{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}{flush} () override
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}\label{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}} 
+\index{hwlib\+::target\+::window@{hwlib\+::target\+::window}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::target\+::window@{hwlib\+::target\+::window}}
+\subsubsection{\texorpdfstring{flush()}{flush()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void hwlib\+::target\+::window\+::flush (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}\label{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}} 
+\index{hwlib\+::target\+::window@{hwlib\+::target\+::window}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::target\+::window@{hwlib\+::target\+::window}}
+\subsubsection{\texorpdfstring{flush()}{flush()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void hwlib\+::target\+::window\+::flush (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_ae432e3dc481e789f5d972331eb1f6725}\label{classhwlib_1_1target_1_1window_ae432e3dc481e789f5d972331eb1f6725}} 
+\index{hwlib\+::target\+::window@{hwlib\+::target\+::window}!write\+\_\+implementation@{write\+\_\+implementation}}
+\index{write\+\_\+implementation@{write\+\_\+implementation}!hwlib\+::target\+::window@{hwlib\+::target\+::window}}
+\subsubsection{\texorpdfstring{write\+\_\+implementation()}{write\_implementation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void hwlib\+::target\+::window\+::write\+\_\+implementation (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{pos,  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+write a pixel -\/ implementation
+
+This N\+VI function writes a the color col to the pixel at location loc. Loc is guaranteed to be within the window, and the color is guranteed to be not transparent. 
+
+Implements \hyperlink{classhwlib_1_1window}{hwlib\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1target_1_1window_ae432e3dc481e789f5d972331eb1f6725}\label{classhwlib_1_1target_1_1window_ae432e3dc481e789f5d972331eb1f6725}} 
+\index{hwlib\+::target\+::window@{hwlib\+::target\+::window}!write\+\_\+implementation@{write\+\_\+implementation}}
+\index{write\+\_\+implementation@{write\+\_\+implementation}!hwlib\+::target\+::window@{hwlib\+::target\+::window}}
+\subsubsection{\texorpdfstring{write\+\_\+implementation()}{write\_implementation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void hwlib\+::target\+::window\+::write\+\_\+implementation (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{pos,  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+write a pixel -\/ implementation
+
+This N\+VI function writes a the color col to the pixel at location loc. Loc is guaranteed to be within the window, and the color is guranteed to be not transparent. 
+
+Implements \hyperlink{classhwlib_1_1window}{hwlib\+::window}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-native-sfml_8hpp}{hwlib-\/native-\/sfml.\+hpp}\item 
+code/hwlib/library/targets/\hyperlink{hwlib-native-windows_8hpp}{hwlib-\/native-\/windows.\+hpp}\end{DoxyCompactItemize}

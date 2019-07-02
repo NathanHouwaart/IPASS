@@ -1,0 +1,143 @@
+\hypertarget{classhwlib_1_1pin__in__out__dummy__t}{}\section{hwlib\+:\+:pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__in__out__dummy__t}\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+
+
+a dummy (do-\/nothing) \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} class  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/dummies.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classhwlib_1_1pin__in__out__dummy__t_ae5ed2ec46aee911a4c3827688cbf72b8}{write} (bool v) override
+\item 
+bool \hyperlink{classhwlib_1_1pin__in__out__dummy__t_a6cc3d99badf70aae8b076594ffd5f465}{read} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__in__out__dummy__t_af5f3e57b6496dc0e523fe6000e2caefc}{direction\+\_\+set\+\_\+input} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__in__out__dummy__t_a065ca763bd00d4cd6bf3fd11610779db}{direction\+\_\+set\+\_\+output} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__in__out__dummy__t_ab799d24ac3180d3d7e97512410ef9994}{flush} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__in__out__dummy__t_a7553d2ee2e380a7156655c725dd71e71}{refresh} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__in__out__dummy__t_ad33911be9133dd967220eac92b232c78}{direction\+\_\+flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a dummy (do-\/nothing) \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} class 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_ad33911be9133dd967220eac92b232c78}\label{classhwlib_1_1pin__in__out__dummy__t_ad33911be9133dd967220eac92b232c78}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!direction\+\_\+flush@{direction\+\_\+flush}}
+\index{direction\+\_\+flush@{direction\+\_\+flush}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{direction\+\_\+flush()}{direction\_flush()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::direction\+\_\+flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush the direction
+
+Calling this function flushes the direction as set by the last call to \hyperlink{classhwlib_1_1pin__in__out__dummy__t_af5f3e57b6496dc0e523fe6000e2caefc}{direction\+\_\+set\+\_\+input()} or \hyperlink{classhwlib_1_1pin__in__out__dummy__t_a065ca763bd00d4cd6bf3fd11610779db}{direction\+\_\+set\+\_\+output()} to the pin. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a86ef2b296683d8c0133280075c82cb51}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_af5f3e57b6496dc0e523fe6000e2caefc}\label{classhwlib_1_1pin__in__out__dummy__t_af5f3e57b6496dc0e523fe6000e2caefc}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}}
+\index{direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+input()}{direction\_set\_input()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::direction\+\_\+set\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to input
+
+Calling this function sets the pin identified by p to input.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a54ce1a5086d3c9e7b868511b1d46acd0}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_a065ca763bd00d4cd6bf3fd11610779db}\label{classhwlib_1_1pin__in__out__dummy__t_a065ca763bd00d4cd6bf3fd11610779db}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}}
+\index{direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+output()}{direction\_set\_output()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::direction\+\_\+set\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to output
+
+Calling this function sets the pin identified by p to output.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_ad08a5f5e9a4c3aadaa7c665b98f2418e}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_ab799d24ac3180d3d7e97512410ef9994}\label{classhwlib_1_1pin__in__out__dummy__t_ab799d24ac3180d3d7e97512410ef9994}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a5207c9e30f0c88e4c052952397c2da88}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_a6cc3d99badf70aae8b076594ffd5f465}\label{classhwlib_1_1pin__in__out__dummy__t_a6cc3d99badf70aae8b076594ffd5f465}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!read@{read}}
+\index{read@{read}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classhwlib_1_1pin__in__out__dummy__t_a7553d2ee2e380a7156655c725dd71e71}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a5caebc7ab9fe49b7e020b89f0a2cf892}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_a7553d2ee2e380a7156655c725dd71e71}\label{classhwlib_1_1pin__in__out__dummy__t_a7553d2ee2e380a7156655c725dd71e71}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1pin__in__out__dummy__t_a6cc3d99badf70aae8b076594ffd5f465}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a8815baac4e5193ec68795956f5e363a6}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__out__dummy__t_ae5ed2ec46aee911a4c3827688cbf72b8}\label{classhwlib_1_1pin__in__out__dummy__t_ae5ed2ec46aee911a4c3827688cbf72b8}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}!write@{write}}
+\index{write@{write}!hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+out\+\_\+dummy\+\_\+t\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1pin__in__out__dummy__t_ab799d24ac3180d3d7e97512410ef9994}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_aa5e2adcb5707f86c20b6306fc09f1582}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-dummies_8hpp}{hwlib-\/pin-\/dummies.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,163 @@
+\hypertarget{classhwlib_1_1hc595}{}\section{hwlib\+:\+:hc595 Class Reference}
+\label{classhwlib_1_1hc595}\index{hwlib\+::hc595@{hwlib\+::hc595}}
+
+
+{\ttfamily \#include $<$hwlib-\/hc595.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:hc595\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:hc595\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1hc595_a293236ae5bd14fa376d8b540324f07c0}{hc595} (\hyperlink{classhwlib_1_1spi__bus}{spi\+\_\+bus} \&bus, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&sel)
+\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1hc595_a89c7b21cb99d61c91f764a0fdb7ceb9b}{number\+\_\+of\+\_\+pins} () override
+\item 
+void \hyperlink{classhwlib_1_1hc595_a5cc052f6de8be418a6a3cb69919fd168}{write} (uint\+\_\+fast16\+\_\+t x) override
+\item 
+void \hyperlink{classhwlib_1_1hc595_a89801264883c79926fd9f0983662e50a}{flush} () override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+one\+\_\+pin \hyperlink{classhwlib_1_1hc595_a5e124516aa762629f95c7ab63e0b3d18}{p0} \{ $\ast$this, 0 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_a2f83cce5a65436a22b18a9eae016535c}\label{classhwlib_1_1hc595_a2f83cce5a65436a22b18a9eae016535c}} 
+one\+\_\+pin {\bfseries p1} \{ $\ast$this, 1 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_abcdcdb111610864066f7dcb601473c26}\label{classhwlib_1_1hc595_abcdcdb111610864066f7dcb601473c26}} 
+one\+\_\+pin {\bfseries p2} \{ $\ast$this, 2 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_a1e2958a2516802e2d6010f53c26802bd}\label{classhwlib_1_1hc595_a1e2958a2516802e2d6010f53c26802bd}} 
+one\+\_\+pin {\bfseries p3} \{ $\ast$this, 3 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_ac0b7be902f6bcaeccc77eaac57836131}\label{classhwlib_1_1hc595_ac0b7be902f6bcaeccc77eaac57836131}} 
+one\+\_\+pin {\bfseries p4} \{ $\ast$this, 4 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_a071e5983d048d42902099cd432b11cae}\label{classhwlib_1_1hc595_a071e5983d048d42902099cd432b11cae}} 
+one\+\_\+pin {\bfseries p5} \{ $\ast$this, 5 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_a0e6cc70a4cb74a6a00f7d65f41744646}\label{classhwlib_1_1hc595_a0e6cc70a4cb74a6a00f7d65f41744646}} 
+one\+\_\+pin {\bfseries p6} \{ $\ast$this, 6 \}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1hc595_a28075ecea47020c790ea098e32ab0b5f}\label{classhwlib_1_1hc595_a28075ecea47020c790ea098e32ab0b5f}} 
+one\+\_\+pin {\bfseries p7} \{ $\ast$this, 7 \}
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+\hyperlink{classhwlib_1_1hc595}{hc595} 8-\/bit output shift register
+
+This class implements an interface to an \hyperlink{classhwlib_1_1hc595}{hc595} 8-\/bit output shift register chip.
+
+
+
+The \hyperlink{classhwlib_1_1hc595}{hc595} is an 8-\/bit serial-\/in parallel-\/out shift register, connected to an 8-\/bit data storage register. The 8 outputs of the data register are available on chip pins. The power supply range is 2.\+0 .. 6.\+0 Volt.
+
+
+
+The H\+C595 can be used as S\+PI output-\/only peripheral\+:
+\begin{DoxyItemize}
+\item connect MR (active-\/low reset input) to the power
+\item connect OE (active-\/low output enable) to gound
+\item use DS as M\+O\+SI
+\item use S\+H\+CP as S\+L\+CK
+\item use S\+T\+CP as SS
+\end{DoxyItemize}
+
+Note that S\+T\+CP is not a real chip-\/select\+: the chip will always respond to the data that is clocked by storing it in the shift register. But only the chip that got the select signal will (on the rising edge of the SS) transfer the data from the shift register to the storage register, hence affecting the outputs.
+
+The next code shows a kitt display on 8 L\+E\+Ds connected to the H\+C595 output pins\+: 
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ The 74\+H\+C\+T595 is a similar chip, but intended (only) for 5V power, and for use with the old T\+TL signal levels (HC chips are for the C\+M\+OS signal levels that are more common now).
+
+references\+:
+\begin{DoxyItemize}
+\item \href{https://www.nxp.com/documents/data_sheet/74HC_HCT595.pdf}{\tt 74\+H\+C595/74\+H\+C\+T595 data sheet} (nxp, pdf) 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1hc595_a293236ae5bd14fa376d8b540324f07c0}\label{classhwlib_1_1hc595_a293236ae5bd14fa376d8b540324f07c0}} 
+\index{hwlib\+::hc595@{hwlib\+::hc595}!hc595@{hc595}}
+\index{hc595@{hc595}!hwlib\+::hc595@{hwlib\+::hc595}}
+\subsubsection{\texorpdfstring{hc595()}{hc595()}}
+{\footnotesize\ttfamily hwlib\+::hc595\+::hc595 (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1spi__bus}{spi\+\_\+bus} \&}]{bus,  }\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{sel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct an interface to an \hyperlink{classhwlib_1_1hc595}{hc595} chip
+
+This constructor creates an interface to an \hyperlink{classhwlib_1_1hc595}{hc595} 8-\/bit output shift register chip from the S\+PI bus it is connected to and and the active-\/low chip select line. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1hc595_a89801264883c79926fd9f0983662e50a}\label{classhwlib_1_1hc595_a89801264883c79926fd9f0983662e50a}} 
+\index{hwlib\+::hc595@{hwlib\+::hc595}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::hc595@{hwlib\+::hc595}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::hc595\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the port buffer
+
+This function flushes the port write buffer\+: if a buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1port__out_aff7c8d768ec0b7f3d738a47ef1a4bbfe}{hwlib\+::port\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1hc595_a89c7b21cb99d61c91f764a0fdb7ceb9b}\label{classhwlib_1_1hc595_a89c7b21cb99d61c91f764a0fdb7ceb9b}} 
+\index{hwlib\+::hc595@{hwlib\+::hc595}!number\+\_\+of\+\_\+pins@{number\+\_\+of\+\_\+pins}}
+\index{number\+\_\+of\+\_\+pins@{number\+\_\+of\+\_\+pins}!hwlib\+::hc595@{hwlib\+::hc595}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+pins()}{number\_of\_pins()}}
+{\footnotesize\ttfamily uint\+\_\+fast8\+\_\+t hwlib\+::hc595\+::number\+\_\+of\+\_\+pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+get number of pins
+
+This function returns the number of pins in the port. 
+
+Implements \hyperlink{classhwlib_1_1port__out_a8593e2ff755b938797defb06c1e085df}{hwlib\+::port\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1hc595_a5cc052f6de8be418a6a3cb69919fd168}\label{classhwlib_1_1hc595_a5cc052f6de8be418a6a3cb69919fd168}} 
+\index{hwlib\+::hc595@{hwlib\+::hc595}!write@{write}}
+\index{write@{write}!hwlib\+::hc595@{hwlib\+::hc595}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::hc595\+::write (\begin{DoxyParamCaption}\item[{uint\+\_\+fast16\+\_\+t}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{hwlib\+::port\+\_\+out}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwlib_1_1hc595_a5e124516aa762629f95c7ab63e0b3d18}\label{classhwlib_1_1hc595_a5e124516aa762629f95c7ab63e0b3d18}} 
+\index{hwlib\+::hc595@{hwlib\+::hc595}!p0@{p0}}
+\index{p0@{p0}!hwlib\+::hc595@{hwlib\+::hc595}}
+\subsubsection{\texorpdfstring{p0}{p0}}
+{\footnotesize\ttfamily one\+\_\+pin hwlib\+::hc595\+::p0 \{ $\ast$this, 0 \}}
+
+the output pins of the chip
+
+The p0 ... p7 attributes represent the 8 output pins of the chip. A write to one of these pins will affect (only) the corresponding output pin of the chip. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{hwlib-hc595_8hpp}{hwlib-\/hc595.\+hpp}\end{DoxyCompactItemize}

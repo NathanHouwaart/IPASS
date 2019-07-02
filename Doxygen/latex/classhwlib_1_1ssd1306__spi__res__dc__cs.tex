@@ -1,0 +1,51 @@
+\hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs}{}\section{hwlib\+:\+:ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs Class Reference}
+\label{classhwlib_1_1ssd1306__spi__res__dc__cs}\index{hwlib\+::ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs@{hwlib\+::ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs}}
+
+
+Inheritance diagram for hwlib\+:\+:ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_ac503ccd62adc6e5e66747139a178fe9d}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_ac503ccd62adc6e5e66747139a178fe9d}} 
+\hyperlink{classhwlib_1_1ssd1306__spi__res__dc__cs_ac503ccd62adc6e5e66747139a178fe9d}{ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs} (\hyperlink{classhwlib_1_1spi__bus}{spi\+\_\+bus} \&bus, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&res, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&dc, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&cs)
+\begin{DoxyCompactList}\small\item\em construct by providing the spi bus and the res, dc and cs pins \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_a7ffb61960736c14092cc21631591d01f}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_a7ffb61960736c14092cc21631591d01f}} 
+void \hyperlink{classhwlib_1_1ssd1306__spi__res__dc__cs_a7ffb61960736c14092cc21631591d01f}{command} (\hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{ssd1306\+\_\+commands} c)
+\begin{DoxyCompactList}\small\item\em send a command without data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_a14e35540ddcda48310436719d4894f5c}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_a14e35540ddcda48310436719d4894f5c}} 
+void \hyperlink{classhwlib_1_1ssd1306__spi__res__dc__cs_a14e35540ddcda48310436719d4894f5c}{command} (\hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{ssd1306\+\_\+commands} c, uint8\+\_\+t d0)
+\begin{DoxyCompactList}\small\item\em send a command with one data byte \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_a3e5b5742b5d8ab8bb198a14d1d1a57a8}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_a3e5b5742b5d8ab8bb198a14d1d1a57a8}} 
+void \hyperlink{classhwlib_1_1ssd1306__spi__res__dc__cs_a3e5b5742b5d8ab8bb198a14d1d1a57a8}{command} (\hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{ssd1306\+\_\+commands} c, uint8\+\_\+t d0, uint8\+\_\+t d1)
+\begin{DoxyCompactList}\small\item\em send a command with two data bytes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_a68c463efc6448039c9aae685faee4b5e}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_a68c463efc6448039c9aae685faee4b5e}} 
+void \hyperlink{classhwlib_1_1ssd1306__spi__res__dc__cs_a68c463efc6448039c9aae685faee4b5e}{pixels\+\_\+byte\+\_\+write} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1location}{location}, uint8\+\_\+t d)
+\begin{DoxyCompactList}\small\item\em write the pixel byte d at column x page y \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_ab9196615bbac54765a72120f09f2659a}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_ab9196615bbac54765a72120f09f2659a}} 
+\hyperlink{classhwlib_1_1spi__bus}{spi\+\_\+bus} \& {\bfseries bus}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_adf7fda24f1f06bd7682644ca88f0ad97}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_adf7fda24f1f06bd7682644ca88f0ad97}} 
+\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \& {\bfseries res}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_a1e12d81b255c3c124ce359085de570f8}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_a1e12d81b255c3c124ce359085de570f8}} 
+\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \& {\bfseries dc}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_ac15bf3d2964a36188d74d337325b9590}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_ac15bf3d2964a36188d74d337325b9590}} 
+\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \& {\bfseries cs}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1ssd1306__spi__res__dc__cs_a8a9db144d2415bd10f67fa4d8f6845a8}\label{classhwlib_1_1ssd1306__spi__res__dc__cs_a8a9db144d2415bd10f67fa4d8f6845a8}} 
+\hyperlink{classhwlib_1_1xy}{xy} {\bfseries cursor}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{library_2peripherals_2hwlib-glcd-oled_8hpp}{hwlib-\/glcd-\/oled.\+hpp}\end{DoxyCompactItemize}

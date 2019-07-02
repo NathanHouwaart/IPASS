@@ -1,0 +1,67 @@
+\hypertarget{stations_8h}{}\section{application/code/headers/stations.h File Reference}
+\label{stations_8h}\index{application/code/headers/stations.\+h@{application/code/headers/stations.\+h}}
+
+
+Struct declarations and staion declerations of ov class.  
+
+
+{\ttfamily \#include \char`\"{}../../../code/headers/pn532\+Oled.\+h\char`\"{}}\newline
+Include dependency graph for stations.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structStation}{Station}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structStation}{Station} struct. Data for one perticulair staion can be stored in here. \end{DoxyCompactList}\item 
+struct \hyperlink{structcardBuffer}{card\+Buffer$<$ n $>$}
+\begin{DoxyCompactList}\small\item\em Cardbuffer struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stations_8h_ad03936209251465257e0fdcfb33dbf91}\label{stations_8h_ad03936209251465257e0fdcfb33dbf91}} 
+enum \hyperlink{stations_8h_ad03936209251465257e0fdcfb33dbf91}{Mode} \+: const uint8\+\_\+t \{ {\bfseries travel\+Mode} = 0x01, 
+{\bfseries top\+Up\+Mode} = 0x02, 
+{\bfseries make\+Card\+Mode} = 0x03, 
+{\bfseries invalid\+Mode} = 0x\+FF
+ \}\begin{DoxyCompactList}\small\item\em enum class with differrent modes of the application \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stations_8h_abc47a60caba871dfb562a3626de10812}\label{stations_8h_abc47a60caba871dfb562a3626de10812}} 
+const constexpr \hyperlink{structStation}{Station} \hyperlink{stations_8h_abc47a60caba871dfb562a3626de10812}{amersfoort} = \{ \char`\"{}Amersfoort\char`\"{}, 0 , 5.\+3878266 , 52.\+1561113 \}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structStation}{Station} declerations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stations_8h_a39ee5b2985aedafef55cdbe290d51826}\label{stations_8h_a39ee5b2985aedafef55cdbe290d51826}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries utrecht} = \{ \char`\"{}Utrecht\char`\"{} , 1 , 5.\+1214201 , 52.\+0907374 \}
+\item 
+\mbox{\Hypertarget{stations_8h_af24119b002f53ff2366a96a733308aa5}\label{stations_8h_af24119b002f53ff2366a96a733308aa5}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries amsterdam} = \{ \char`\"{}Amsterdam\char`\"{} , 2 , 4.\+895168 , 52.\+370216 \}
+\item 
+\mbox{\Hypertarget{stations_8h_a844fb60a5c054db323ff070ea32055ff}\label{stations_8h_a844fb60a5c054db323ff070ea32055ff}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries schiphol} = \{ \char`\"{}Schiphol\char`\"{} , 4 , 4.\+7682744 , 52.\+3105386 \}
+\item 
+\mbox{\Hypertarget{stations_8h_af7a9544da257f47553fb49aea247f4d0}\label{stations_8h_af7a9544da257f47553fb49aea247f4d0}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries haarlem} = \{ \char`\"{}Haarlem\char`\"{} , 8 , 4.\+646219 , 52.\+387386 \}
+\item 
+\mbox{\Hypertarget{stations_8h_ac0a5981efcc7164c15ef94ae57b1c2eb}\label{stations_8h_ac0a5981efcc7164c15ef94ae57b1c2eb}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries den\+Haag} = \{ \char`\"{}Den\+Haag\char`\"{} , 16 , 4.\+3006999 , 52.\+0704978 \}
+\item 
+\mbox{\Hypertarget{stations_8h_aff9c6a4891042457f64e672a60056b8a}\label{stations_8h_aff9c6a4891042457f64e672a60056b8a}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries rotterdam} = \{ \char`\"{}Rotterdam\char`\"{} , 32 , 4.\+4777325 , 51.\+9244201 \}
+\item 
+\mbox{\Hypertarget{stations_8h_a129232ff1f857a39ef2d13f88f2bb168}\label{stations_8h_a129232ff1f857a39ef2d13f88f2bb168}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries gouda} = \{ \char`\"{}Gouda\char`\"{} , 64 , 4.\+7104633 , 52.\+0115205 \}
+\item 
+\mbox{\Hypertarget{stations_8h_a8237a581a211b659a8ea5eaa1becac13}\label{stations_8h_a8237a581a211b659a8ea5eaa1becac13}} 
+const constexpr \hyperlink{structStation}{Station} {\bfseries eindhoven} = \{ \char`\"{}Eindhoven\char`\"{} , 128, 5.\+4697225 , 51.\+441642 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct declarations and staion declerations of ov class. 
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

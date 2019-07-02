@@ -1,0 +1,75 @@
+\hypertarget{classhwlib_1_1glcd__oled}{}\section{hwlib\+:\+:glcd\+\_\+oled Class Reference}
+\label{classhwlib_1_1glcd__oled}\index{hwlib\+::glcd\+\_\+oled@{hwlib\+::glcd\+\_\+oled}}
+
+
+Oled B/W graphics L\+CD.  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/glcd-\/oled.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:glcd\+\_\+oled\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:glcd\+\_\+oled\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1glcd__oled_a263ff5913c63771b23ec6b64c4bf77e1}{glcd\+\_\+oled} (\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&bus, const uint\+\_\+fast8\+\_\+t address=0x3\+C)
+\begin{DoxyCompactList}\small\item\em create an O\+L\+ED \end{DoxyCompactList}\item 
+virtual void \hyperlink{classhwlib_1_1glcd__oled_a58e191e5350f349facee130513a08b75}{flush} ()
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Oled B/W graphics L\+CD. 
+
+This class implements an interface to an 128 x 64 pixel monochrome (on/off) O\+L\+ED display. These displays are available in various colcors (green, red, white, etc.). The interface is I2C. The driver chip is an S\+S\+D1306.
+
+When the P\+CB has regulator (3-\/legged component) the power can be 3 -\/ 5V. If it hasn\textquotesingle{}t, you can use only 3.\+3V.
+
+There are variations of this display with more pins, which have more interface options (S\+PI as alternative interface).
+
+This type of display is reasonably priced and available from lots of sources.
+
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled_a263ff5913c63771b23ec6b64c4bf77e1}\label{classhwlib_1_1glcd__oled_a263ff5913c63771b23ec6b64c4bf77e1}} 
+\index{hwlib\+::glcd\+\_\+oled@{hwlib\+::glcd\+\_\+oled}!glcd\+\_\+oled@{glcd\+\_\+oled}}
+\index{glcd\+\_\+oled@{glcd\+\_\+oled}!hwlib\+::glcd\+\_\+oled@{hwlib\+::glcd\+\_\+oled}}
+\subsubsection{\texorpdfstring{glcd\+\_\+oled()}{glcd\_oled()}}
+{\footnotesize\ttfamily hwlib\+::glcd\+\_\+oled\+::glcd\+\_\+oled (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&}]{bus,  }\item[{const uint\+\_\+fast8\+\_\+t}]{address = {\ttfamily 0x3C} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create an O\+L\+ED 
+
+This constructor creates an O\+L\+ED from the I2C bus and its I2C address. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled_a58e191e5350f349facee130513a08b75}\label{classhwlib_1_1glcd__oled_a58e191e5350f349facee130513a08b75}} 
+\index{hwlib\+::glcd\+\_\+oled@{hwlib\+::glcd\+\_\+oled}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::glcd\+\_\+oled@{hwlib\+::glcd\+\_\+oled}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily virtual void hwlib\+::glcd\+\_\+oled\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{attic_2hwlib-glcd-oled_8hpp}{hwlib-\/glcd-\/oled.\+hpp}\end{DoxyCompactItemize}

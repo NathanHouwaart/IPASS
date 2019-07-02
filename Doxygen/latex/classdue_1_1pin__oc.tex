@@ -1,0 +1,150 @@
+\hypertarget{classdue_1_1pin__oc}{}\section{due\+:\+:pin\+\_\+oc Class Reference}
+\label{classdue_1_1pin__oc}\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+
+
+\hyperlink{classdue_1_1pin__oc}{pin\+\_\+oc} implementation for a A\+T\+S\+A\+M3\+X8E  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/arduino-\/due.\+hpp$>$}
+
+
+
+Inheritance diagram for due\+:\+:pin\+\_\+oc\+:
+% FIG 0
+
+
+Collaboration diagram for due\+:\+:pin\+\_\+oc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdue_1_1pin__oc_ac7b805c3e4492fa621850c8469af91b9}{pin\+\_\+oc} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\hyperlink{classdue_1_1pin__oc_a26daecda4236219f16e896cb82e9e6aa}{pin\+\_\+oc} (\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins} name)
+\item 
+bool \hyperlink{classdue_1_1pin__oc_a2b9121a384b5645253b799e54417c5ca}{read} () override
+\item 
+void \hyperlink{classdue_1_1pin__oc_ae79fc294d52d1d7c69117af5ffd81316}{write} (bool v) override
+\item 
+void \hyperlink{classdue_1_1pin__oc_a911e67dbcc0005b3eae0d511f576a215}{flush} () override
+\item 
+void \hyperlink{classdue_1_1pin__oc_a9cda433d0079aee45a282f07efe2fee3}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdue_1_1pin__oc}{pin\+\_\+oc} implementation for a A\+T\+S\+A\+M3\+X8E 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__oc_ac7b805c3e4492fa621850c8469af91b9}\label{classdue_1_1pin__oc_ac7b805c3e4492fa621850c8469af91b9}} 
+\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__oc}{pin\+\_\+oc} constructor
+
+Constructor for a A\+T\+S\+A\+M3\+X8E input pin.
+
+The port\+\_\+number and pin\+\_\+number refer to the chip, not to the Arduino board pin names.
+
+This constructor sets the pin to high (high-\/impedance). \mbox{\Hypertarget{classdue_1_1pin__oc_a26daecda4236219f16e896cb82e9e6aa}\label{classdue_1_1pin__oc_a26daecda4236219f16e896cb82e9e6aa}} 
+\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__oc}{pin\+\_\+oc} constructor from a Due pin name
+
+This call creates a \hyperlink{classdue_1_1pin__oc}{pin\+\_\+oc} from an Arduino Due pin name.
+
+This constructor sets the pin to high (high-\/impedance). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__oc_a911e67dbcc0005b3eae0d511f576a215}\label{classdue_1_1pin__oc_a911e67dbcc0005b3eae0d511f576a215}} 
+\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}!flush@{flush}}
+\index{flush@{flush}!due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+oc\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classdue_1_1pin__oc_a2b9121a384b5645253b799e54417c5ca}\label{classdue_1_1pin__oc_a2b9121a384b5645253b799e54417c5ca}} 
+\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}!read@{read}}
+\index{read@{read}!due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool due\+::pin\+\_\+oc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classdue_1_1pin__oc_a9cda433d0079aee45a282f07efe2fee3}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classdue_1_1pin__oc_a9cda433d0079aee45a282f07efe2fee3}\label{classdue_1_1pin__oc_a9cda433d0079aee45a282f07efe2fee3}} 
+\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}!refresh@{refresh}}
+\index{refresh@{refresh}!due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+oc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdue_1_1pin__oc_a2b9121a384b5645253b799e54417c5ca}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classdue_1_1pin__oc_ae79fc294d52d1d7c69117af5ffd81316}\label{classdue_1_1pin__oc_ae79fc294d52d1d7c69117af5ffd81316}} 
+\index{due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}!write@{write}}
+\index{write@{write}!due\+::pin\+\_\+oc@{due\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+oc\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classdue_1_1pin__oc_a911e67dbcc0005b3eae0d511f576a215}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{hwlib\+::pin\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-arduino-due_8hpp}{hwlib-\/arduino-\/due.\+hpp}\end{DoxyCompactItemize}

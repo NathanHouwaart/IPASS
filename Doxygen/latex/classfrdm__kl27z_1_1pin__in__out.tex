@@ -1,0 +1,62 @@
+\hypertarget{classfrdm__kl27z_1_1pin__in__out}{}\section{frdm\+\_\+kl27z\+:\+:pin\+\_\+in\+\_\+out Class Reference}
+\label{classfrdm__kl27z_1_1pin__in__out}\index{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out@{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out}}
+
+
+Inheritance diagram for frdm\+\_\+kl27z\+:\+:pin\+\_\+in\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for frdm\+\_\+kl27z\+:\+:pin\+\_\+in\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfrdm__kl27z_1_1pin__in__out_ae9944138f353324e8979c2e91f32b8b3}\label{classfrdm__kl27z_1_1pin__in__out_ae9944138f353324e8979c2e91f32b8b3}} 
+{\bfseries pin\+\_\+in\+\_\+out} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+void \hyperlink{classfrdm__kl27z_1_1pin__in__out_ad79b75a4e50849d72506746cbea81160}{direction\+\_\+set\+\_\+input} () override
+\item 
+\mbox{\Hypertarget{classfrdm__kl27z_1_1pin__in__out_a44ece8407574edcbb6ba86777dc1063d}\label{classfrdm__kl27z_1_1pin__in__out_a44ece8407574edcbb6ba86777dc1063d}} 
+bool {\bfseries get} (hwlib\+::buffering buf=hwlib\+::buffering\+::unbuffered) override
+\item 
+void \hyperlink{classfrdm__kl27z_1_1pin__in__out_a329bd2ea5a7fc1516ceacc8708a1226e}{direction\+\_\+set\+\_\+output} () override
+\item 
+\mbox{\Hypertarget{classfrdm__kl27z_1_1pin__in__out_a1ed81a826c7e55c1ed04d54cbcd73c4d}\label{classfrdm__kl27z_1_1pin__in__out_a1ed81a826c7e55c1ed04d54cbcd73c4d}} 
+void {\bfseries set} (bool v, hwlib\+::buffering buf=hwlib\+::buffering\+::unbuffered) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfrdm__kl27z_1_1pin__in__out_ad79b75a4e50849d72506746cbea81160}\label{classfrdm__kl27z_1_1pin__in__out_ad79b75a4e50849d72506746cbea81160}} 
+\index{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out@{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}}
+\index{direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}!frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out@{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+input()}{direction\_set\_input()}}
+{\footnotesize\ttfamily void frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to input
+
+Calling this function sets the pin identified by p to input.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a54ce1a5086d3c9e7b868511b1d46acd0}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classfrdm__kl27z_1_1pin__in__out_a329bd2ea5a7fc1516ceacc8708a1226e}\label{classfrdm__kl27z_1_1pin__in__out_a329bd2ea5a7fc1516ceacc8708a1226e}} 
+\index{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out@{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}}
+\index{direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}!frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out@{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+output()}{direction\_set\_output()}}
+{\footnotesize\ttfamily void frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to output
+
+Calling this function sets the pin identified by p to output.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_ad08a5f5e9a4c3aadaa7c665b98f2418e}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-frdm-kl27z_8hpp}{hwlib-\/frdm-\/kl27z.\+hpp}\end{DoxyCompactItemize}

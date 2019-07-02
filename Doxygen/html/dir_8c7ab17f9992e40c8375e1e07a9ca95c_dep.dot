@@ -1,0 +1,17 @@
+digraph "code/hwlib" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_050edd66366d13764f98250ef6db77f6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="code" fontname="Helvetica", fontsize="10", URL="dir_050edd66366d13764f98250ef6db77f6.html"]
+  subgraph clusterdir_8c7ab17f9992e40c8375e1e07a9ca95c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_8c7ab17f9992e40c8375e1e07a9ca95c.html"];
+    dir_8c7ab17f9992e40c8375e1e07a9ca95c [shape=plaintext label="hwlib"];
+    dir_1957e4ab0b975bc843d0f74edbbe5295 [shape=box label="attic" color="red" fillcolor="white" style="filled" URL="dir_1957e4ab0b975bc843d0f74edbbe5295.html"];
+    dir_60978be7647254ad8b3d14b7abf6b62a [shape=box label="demo" color="red" fillcolor="white" style="filled" URL="dir_60978be7647254ad8b3d14b7abf6b62a.html"];
+    dir_33f30be71f7836e0b938a7c6dbb46ef4 [shape=box label="doxyfiles" color="red" fillcolor="white" style="filled" URL="dir_33f30be71f7836e0b938a7c6dbb46ef4.html"];
+    dir_1d5cef9fe6fd26d4dd3493d6929495e1 [shape=box label="library" color="red" fillcolor="white" style="filled" URL="dir_1d5cef9fe6fd26d4dd3493d6929495e1.html"];
+    dir_76084e32f3d8b79127cddade226c023b [shape=box label="test" color="red" fillcolor="white" style="filled" URL="dir_76084e32f3d8b79127cddade226c023b.html"];
+  }
+  }
+}

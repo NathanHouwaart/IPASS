@@ -1,0 +1,74 @@
+\hypertarget{namespacenfc_1_1pn532_1_1command}{}\section{nfc\+:\+:pn532\+:\+:command Namespace Reference}
+\label{namespacenfc_1_1pn532_1_1command}\index{nfc\+::pn532\+::command@{nfc\+::pn532\+::command}}
+
+
+Pn532 commands. User manual p.\+65 \& p.\+66.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1diagnose}{diagnose}
+\begin{DoxyCompactList}\small\item\em Different diagnose commands. User manual p.\+69 -\/ p.\+72. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1GPIO}{G\+P\+IO}
+\begin{DoxyCompactList}\small\item\em Different \hyperlink{namespacenfc_1_1pn532_1_1command_1_1GPIO}{G\+P\+IO} related declarations. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1RFItem}{R\+F\+Item}
+\begin{DoxyCompactList}\small\item\em Different RF configuration options. User manual p.\+101 -\/ p.\+106. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1SAMmode}{S\+A\+Mmode}
+\begin{DoxyCompactList}\small\item\em Different S\+AM mode configurations. User manual p.\+89 -\/ p.\+97. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_ac328c34e45a34dbcb476249e08402db0}\label{namespacenfc_1_1pn532_1_1command_ac328c34e45a34dbcb476249e08402db0}} 
+enum \hyperlink{namespacenfc_1_1pn532_1_1command_ac328c34e45a34dbcb476249e08402db0}{Card\+Type} \+: const uint8\+\_\+t \{ \newline
+{\bfseries Type\+A\+\_\+\+I\+S\+O\+\_\+\+I\+E\+C14443} = 0x00, 
+{\bfseries Feli\+Ca\+Polling212kbps} = 0x01, 
+{\bfseries Feli\+Ca\+Polling424kbps} = 0x02, 
+{\bfseries Type\+B\+\_\+\+I\+S0\+\_\+\+I\+E\+C14443} = 0x03, 
+\newline
+{\bfseries In\+Jewel\+Tag106kbps} = 0x04
+ \}\begin{DoxyCompactList}\small\item\em Different cardtypes the pn532 can read. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a32ec14eba3357a0687a430ceba345e6f}\label{namespacenfc_1_1pn532_1_1command_a32ec14eba3357a0687a430ceba345e6f}} 
+const uint8\+\_\+t {\bfseries Perform\+Selftest} = 0x00
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a1f0c75df9b8bc5ac2c7b3968f30f0c5e}\label{namespacenfc_1_1pn532_1_1command_a1f0c75df9b8bc5ac2c7b3968f30f0c5e}} 
+const uint8\+\_\+t {\bfseries Get\+Firmware\+Version} = 0x02
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a1b4754ca9cd79c88eae9e313165b89ac}\label{namespacenfc_1_1pn532_1_1command_a1b4754ca9cd79c88eae9e313165b89ac}} 
+const uint8\+\_\+t {\bfseries get\+General\+Status} = 0x04
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_ac7cc7a6814d9d86880cc8e308260e693}\label{namespacenfc_1_1pn532_1_1command_ac7cc7a6814d9d86880cc8e308260e693}} 
+const uint8\+\_\+t {\bfseries read\+Register} = 0x06
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_aea2468d639f848660dcae00199ba4f21}\label{namespacenfc_1_1pn532_1_1command_aea2468d639f848660dcae00199ba4f21}} 
+const uint8\+\_\+t {\bfseries write\+Register} = 0x08
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_afe07758f7ac86edfae1d0bed5ce80e7c}\label{namespacenfc_1_1pn532_1_1command_afe07758f7ac86edfae1d0bed5ce80e7c}} 
+const uint8\+\_\+t {\bfseries read\+G\+P\+IO} = 0x0C
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a45a5c5295cb76cfc15f4a6c9a36a8f15}\label{namespacenfc_1_1pn532_1_1command_a45a5c5295cb76cfc15f4a6c9a36a8f15}} 
+const uint8\+\_\+t {\bfseries write\+G\+P\+IO} = 0x0E
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a3a12e6586558b163d6c976a9c9b0ed84}\label{namespacenfc_1_1pn532_1_1command_a3a12e6586558b163d6c976a9c9b0ed84}} 
+const uint8\+\_\+t {\bfseries set\+Serial\+Baudrate} = 0x10
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_ae0658fe30470b3df3871ecc4a872ab3a}\label{namespacenfc_1_1pn532_1_1command_ae0658fe30470b3df3871ecc4a872ab3a}} 
+const uint8\+\_\+t {\bfseries S\+A\+M\+Configuration} = 0x14
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a35a1e049e7ede04c3333e8ca4ea850fa}\label{namespacenfc_1_1pn532_1_1command_a35a1e049e7ede04c3333e8ca4ea850fa}} 
+const uint8\+\_\+t {\bfseries R\+F\+Configuration} = 0x32
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a277b57192cfa053471a7245a5d612abc}\label{namespacenfc_1_1pn532_1_1command_a277b57192cfa053471a7245a5d612abc}} 
+const uint8\+\_\+t {\bfseries In\+List\+Passive\+Target} = 0x4A
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_aed733a6e58c28c5efca87874056f21f0}\label{namespacenfc_1_1pn532_1_1command_aed733a6e58c28c5efca87874056f21f0}} 
+const uint8\+\_\+t {\bfseries In\+Data\+Exchange} = 0x40
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pn532 commands. User manual p.\+65 \& p.\+66. 

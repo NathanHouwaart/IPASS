@@ -1,0 +1,88 @@
+\hypertarget{classdb103_1_1pin__out}{}\section{db103\+:\+:pin\+\_\+out Class Reference}
+\label{classdb103_1_1pin__out}\index{db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}}
+
+
+\hyperlink{classdb103_1_1pin__out}{pin\+\_\+out} implementation for the L\+P\+C1114  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/db103.\+hpp$>$}
+
+
+
+Inheritance diagram for db103\+:\+:pin\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for db103\+:\+:pin\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdb103_1_1pin__out_a30fcf182dc199f65fe085770f5f0c70b}{pin\+\_\+out} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\item 
+void \hyperlink{classdb103_1_1pin__out_adb5167058deb8fbd3e4c1bbdb456a6e3}{write} (bool v) override
+\item 
+void \hyperlink{classdb103_1_1pin__out_ad94271fe261522bf18b35e084076c12d}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdb103_1_1pin__out}{pin\+\_\+out} implementation for the L\+P\+C1114 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__out_a30fcf182dc199f65fe085770f5f0c70b}\label{classdb103_1_1pin__out_a30fcf182dc199f65fe085770f5f0c70b}} 
+\index{db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}!pin\+\_\+out@{pin\+\_\+out}}
+\index{pin\+\_\+out@{pin\+\_\+out}!db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+out()}{pin\_out()}}
+{\footnotesize\ttfamily db103\+::pin\+\_\+out\+::pin\+\_\+out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+L\+P\+C1114 \hyperlink{classdb103_1_1pin__out}{pin\+\_\+out} constructor
+
+Constructor for an L\+P\+C11114 output pin.
+
+This constructor sets the pin direction to output. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__out_ad94271fe261522bf18b35e084076c12d}\label{classdb103_1_1pin__out_ad94271fe261522bf18b35e084076c12d}} 
+\index{db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}!flush@{flush}}
+\index{flush@{flush}!db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+out\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{hwlib\+::pin\+\_\+out}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__out_adb5167058deb8fbd3e4c1bbdb456a6e3}\label{classdb103_1_1pin__out_adb5167058deb8fbd3e4c1bbdb456a6e3}} 
+\index{db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}!write@{write}}
+\index{write@{write}!db103\+::pin\+\_\+out@{db103\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classdb103_1_1pin__out_ad94271fe261522bf18b35e084076c12d}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-db103_8hpp}{hwlib-\/db103.\+hpp}\end{DoxyCompactItemize}

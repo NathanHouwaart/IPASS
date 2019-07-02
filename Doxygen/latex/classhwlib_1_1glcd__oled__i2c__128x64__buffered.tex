@@ -1,0 +1,53 @@
+\hypertarget{classhwlib_1_1glcd__oled__i2c__128x64__buffered}{}\section{hwlib\+:\+:glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered Class Reference}
+\label{classhwlib_1_1glcd__oled__i2c__128x64__buffered}\index{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered}}
+
+
+buffered oled window  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/glcd-\/oled.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__i2c__128x64__buffered_a416ca491f7a5e3b6aabc42928cbc6534}\label{classhwlib_1_1glcd__oled__i2c__128x64__buffered_a416ca491f7a5e3b6aabc42928cbc6534}} 
+\hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__buffered_a416ca491f7a5e3b6aabc42928cbc6534}{glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered} (\hyperlink{classhwlib_1_1i2c__bus}{i2c\+\_\+bus} \&\hyperlink{classhwlib_1_1ssd1306__i2c_a6dd727643c4b270cc364cd6e00ec84e9}{bus}, int address=0x3\+C)
+\begin{DoxyCompactList}\small\item\em construct by providing the i2c channel \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__buffered_aa2f62fb4a54ea1cfa9f608e703fd046e}{flush} () override
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+buffered oled window 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__i2c__128x64__buffered_aa2f62fb4a54ea1cfa9f608e703fd046e}\label{classhwlib_1_1glcd__oled__i2c__128x64__buffered_aa2f62fb4a54ea1cfa9f608e703fd046e}} 
+\index{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered@{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered\+::flush (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{library_2peripherals_2hwlib-glcd-oled_8hpp}{hwlib-\/glcd-\/oled.\+hpp}\end{DoxyCompactItemize}

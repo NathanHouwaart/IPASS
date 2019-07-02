@@ -1,0 +1,76 @@
+\hypertarget{classstm32f030x6_1_1pin__out}{}\section{stm32f030x6\+:\+:pin\+\_\+out Class Reference}
+\label{classstm32f030x6_1_1pin__out}\index{stm32f030x6\+::pin\+\_\+out@{stm32f030x6\+::pin\+\_\+out}}
+
+
+\hyperlink{classstm32f030x6_1_1pin__out}{pin\+\_\+out} implementation for an \hyperlink{namespacestm32f030x6}{stm32f030x6}  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/stm32f030x6.\+hpp$>$}
+
+
+
+Inheritance diagram for stm32f030x6\+:\+:pin\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for stm32f030x6\+:\+:pin\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstm32f030x6_1_1pin__out_a330f2888ff00608e91f0f6cbd7dabc80}{pin\+\_\+out} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__out_aa39b841cedf29539fa5f65c6b5737f64}\label{classstm32f030x6_1_1pin__out_aa39b841cedf29539fa5f65c6b5737f64}} 
+{\bfseries pin\+\_\+out} (\hyperlink{namespacestm32f030x6_aec819db41bff19f45418c0d22e5ccecf}{pins} name)
+\item 
+void \hyperlink{classstm32f030x6_1_1pin__out_a6f859b59bf358e37fffe4d20fc5a718a}{write} (bool v) override
+\item 
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__out_a60a0a32244f92ea60ce0db0af50349ae}\label{classstm32f030x6_1_1pin__out_a60a0a32244f92ea60ce0db0af50349ae}} 
+void {\bfseries fklush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classstm32f030x6_1_1pin__out}{pin\+\_\+out} implementation for an \hyperlink{namespacestm32f030x6}{stm32f030x6} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__out_a330f2888ff00608e91f0f6cbd7dabc80}\label{classstm32f030x6_1_1pin__out_a330f2888ff00608e91f0f6cbd7dabc80}} 
+\index{stm32f030x6\+::pin\+\_\+out@{stm32f030x6\+::pin\+\_\+out}!pin\+\_\+out@{pin\+\_\+out}}
+\index{pin\+\_\+out@{pin\+\_\+out}!stm32f030x6\+::pin\+\_\+out@{stm32f030x6\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+out()}{pin\_out()}}
+{\footnotesize\ttfamily stm32f030x6\+::pin\+\_\+out\+::pin\+\_\+out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f030x6}{stm32f030x6} \hyperlink{classstm32f030x6_1_1pin__out}{pin\+\_\+out} constructor
+
+Constructor for an \hyperlink{namespacestm32f030x6}{stm32f030x6} output pin.
+
+This constructor sets the pin direction to output.
+
+This constructor doesn\textquotesingle{}t set the pin value to high or low, the set function must be called to do so. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__out_a6f859b59bf358e37fffe4d20fc5a718a}\label{classstm32f030x6_1_1pin__out_a6f859b59bf358e37fffe4d20fc5a718a}} 
+\index{stm32f030x6\+::pin\+\_\+out@{stm32f030x6\+::pin\+\_\+out}!write@{write}}
+\index{write@{write}!stm32f030x6\+::pin\+\_\+out@{stm32f030x6\+::pin\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void stm32f030x6\+::pin\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-stm32f030x6_8hpp}{hwlib-\/stm32f030x6.\+hpp}\end{DoxyCompactItemize}

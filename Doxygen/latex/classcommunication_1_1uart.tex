@@ -1,0 +1,124 @@
+\hypertarget{classcommunication_1_1uart}{}\section{communication\+:\+:uart Class Reference}
+\label{classcommunication_1_1uart}\index{communication\+::uart@{communication\+::uart}}
+
+
+Hardware U\+A\+RT implementation of the abstract protocol class.  
+
+
+
+
+{\ttfamily \#include $<$interface.\+h$>$}
+
+
+
+Inheritance diagram for communication\+:\+:uart\+:
+% FIG 0
+
+
+Collaboration diagram for communication\+:\+:uart\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommunication_1_1uart_a6d657ea9323428aae6737ca31c206bb1}{uart} (\hyperlink{classuart__abstract}{uart\+\_\+abstract} \&bus)
+\begin{DoxyCompactList}\small\item\em Constructor of the U\+A\+RT class. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1uart_aea97e95d698c8738fb891e5f0d65e288}{wake\+Up} () override
+\begin{DoxyCompactList}\small\item\em This Funtion will wake up / initialise the spi bus / chip for communication. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1uart_a915087d1f825171d705801de0981b151}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, uint8\+\_\+t n\+Bytes)
+\begin{DoxyCompactList}\small\item\em This function sends n\+Bytes to the chip connected to the U\+A\+RT bus. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1uart_a37a51dcb95fb5178b5fa441acd437ae4}{receive\+Data} (uint8\+\_\+t $\ast$receive\+Buffer, uint8\+\_\+t n\+Bytes)
+\begin{DoxyCompactList}\small\item\em This function receives n\+Bytes from the chip connected to the U\+A\+RT bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hardware U\+A\+RT implementation of the abstract protocol class. 
+
+\begin{DoxyWarning}{Warning}
+This hardware implementation is not yet finished! This implementation can send data over the U\+A\+RT protocol, but cannot properly receive data yet. This is a work in progress 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcommunication_1_1uart_a6d657ea9323428aae6737ca31c206bb1}\label{classcommunication_1_1uart_a6d657ea9323428aae6737ca31c206bb1}} 
+\index{communication\+::uart@{communication\+::uart}!uart@{uart}}
+\index{uart@{uart}!communication\+::uart@{communication\+::uart}}
+\subsubsection{\texorpdfstring{uart()}{uart()}}
+{\footnotesize\ttfamily communication\+::uart\+::uart (\begin{DoxyParamCaption}\item[{\hyperlink{classuart__abstract}{uart\+\_\+abstract} \&}]{bus }\end{DoxyParamCaption})}
+
+
+
+Constructor of the U\+A\+RT class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em abstract\+\_\+uart} & A reference to a abstract uart class \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommunication_1_1uart_a37a51dcb95fb5178b5fa441acd437ae4}\label{classcommunication_1_1uart_a37a51dcb95fb5178b5fa441acd437ae4}} 
+\index{communication\+::uart@{communication\+::uart}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!communication\+::uart@{communication\+::uart}}
+\subsubsection{\texorpdfstring{receive\+Data()}{receiveData()}}
+{\footnotesize\ttfamily void communication\+::uart\+::receive\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{receive\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function receives n\+Bytes from the chip connected to the U\+A\+RT bus. 
+
+\begin{DoxyWarning}{Warning}
+This function does not work properly yet! Internal U\+A\+RT Receive register may overflow and therefore interrupt causing undefined behaviour
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em receive\+Buffer} & Pointer to the start of the receive\+Buffer where data can be stored in \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to be received over spi \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcommunication_1_1protocol_ad0d43530ae3db2b14a6e9c1f77aa530a}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1uart_a915087d1f825171d705801de0981b151}\label{classcommunication_1_1uart_a915087d1f825171d705801de0981b151}} 
+\index{communication\+::uart@{communication\+::uart}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!communication\+::uart@{communication\+::uart}}
+\subsubsection{\texorpdfstring{send\+Data()}{sendData()}}
+{\footnotesize\ttfamily void communication\+::uart\+::send\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{command\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function sends n\+Bytes to the chip connected to the U\+A\+RT bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffer} & Pointer to the start of the commandbuffer that needs to be send \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to send over spi \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcommunication_1_1protocol_a1745c4aac1b27bac2d350be54fedc388}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1uart_aea97e95d698c8738fb891e5f0d65e288}\label{classcommunication_1_1uart_aea97e95d698c8738fb891e5f0d65e288}} 
+\index{communication\+::uart@{communication\+::uart}!wake\+Up@{wake\+Up}}
+\index{wake\+Up@{wake\+Up}!communication\+::uart@{communication\+::uart}}
+\subsubsection{\texorpdfstring{wake\+Up()}{wakeUp()}}
+{\footnotesize\ttfamily void communication\+::uart\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This Funtion will wake up / initialise the spi bus / chip for communication. 
+
+Function will send a rather long preamble with 0x55 as the first byte. This is in order to wake up the chip if it was asleep 
+
+Implements \hyperlink{classcommunication_1_1protocol_aefe3def7b92b2eae8c98bfc542e27078}{communication\+::protocol}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{interface_8h}{interface.\+h}\item 
+code/src/\hyperlink{interface_8cpp}{interface.\+cpp}\end{DoxyCompactItemize}

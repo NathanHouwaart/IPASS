@@ -1,0 +1,49 @@
+\hypertarget{examples__mifare__classic_2miscelanious_2main_8cpp}{}\section{examples\+\_\+mifare\+\_\+classic/miscelanious/main.cpp File Reference}
+\label{examples__mifare__classic_2miscelanious_2main_8cpp}\index{examples\+\_\+mifare\+\_\+classic/miscelanious/main.\+cpp@{examples\+\_\+mifare\+\_\+classic/miscelanious/main.\+cpp}}
+
+
+Example use of the nfc library to execute various miscelanious commands on the P\+N532.  
+
+
+{\ttfamily \#include \char`\"{}../../code/headers/pn532.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{examples__mifare__classic_2miscelanious_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{examples__mifare__classic_2miscelanious_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example use of the nfc library to execute various miscelanious commands on the P\+N532. 
+
+This file will demonstrate how to use the nfc library to execute various miscelanious commands on the P\+N532
+
+Make sure the external G\+P\+IO pins of the pn532 are set to the proper protocol and match the protocol selected in this file.
+
+G\+P\+IO pin layout\+: ~\newline
+ P1 $\vert$ P2 = protocol\+: ~\newline
+ 0 $\vert$ 0 = U\+A\+RT ~\newline
+ 0 $\vert$ 1 = S\+PI ~\newline
+ 1 $\vert$ 0 = i2C ~\newline
+
+
+There are serveral commands that can be used by the pn532
+\begin{DoxyItemize}
+\item write\+Register() write to a specific register
+\item read\+Register() read from a specific register
+\item read\+G\+P\+I\+O() read the gpio pin state
+\item write\+G\+P\+I\+O() write the gpio pin state
+\item R\+F\+Field() sitch the rf field on or off
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+Use write\+G\+P\+I\+O() function at your own risk. Misusing this function may cause the pn532 to be damaged or cause undefined behaviour
+\end{DoxyWarning}
+If one of the functions fails, it will return a statuscode other than pn532\+Status\+OK. The error cause can be deducted by comapring the given error code with the errors declared in\+: \hyperlink{declarations_8h}{declarations.\+h}
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

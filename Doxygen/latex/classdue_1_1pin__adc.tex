@@ -1,0 +1,95 @@
+\hypertarget{classdue_1_1pin__adc}{}\section{due\+:\+:pin\+\_\+adc Class Reference}
+\label{classdue_1_1pin__adc}\index{due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}}
+
+
+\hyperlink{classdue_1_1pin__adc}{pin\+\_\+adc} implementation for a A\+T\+S\+A\+M3\+X8E  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/arduino-\/due.\+hpp$>$}
+
+
+
+Inheritance diagram for due\+:\+:pin\+\_\+adc\+:
+% FIG 0
+
+
+Collaboration diagram for due\+:\+:pin\+\_\+adc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdue_1_1pin__adc_a830aea1f1d8f1b538e73ac57ece494c1}{pin\+\_\+adc} (uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Constructor for a A\+T\+S\+A\+M3\+X8E AD channel number. \end{DoxyCompactList}\item 
+\hyperlink{classdue_1_1pin__adc_a106bc97a20bb90be8cc0d8d9152d201f}{pin\+\_\+adc} (\hyperlink{namespacedue_a5ecc98d40585c91eabbfb14f71bd7d4c}{ad\+\_\+pins} name)
+\begin{DoxyCompactList}\small\item\em Arduino Due \hyperlink{classdue_1_1pin__adc}{pin\+\_\+adc} constructor from a Due pin name. \end{DoxyCompactList}\item 
+\hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} \hyperlink{classdue_1_1pin__adc_a3b562b594bbbe3e8815a9223fa6520cc}{read} () override
+\begin{DoxyCompactList}\small\item\em get an adc reading \end{DoxyCompactList}\item 
+void \hyperlink{classdue_1_1pin__adc_ab30deacf575e1ef59af13aea24f77584}{refresh} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdue_1_1pin__adc}{pin\+\_\+adc} implementation for a A\+T\+S\+A\+M3\+X8E 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__adc_a830aea1f1d8f1b538e73ac57ece494c1}\label{classdue_1_1pin__adc_a830aea1f1d8f1b538e73ac57ece494c1}} 
+\index{due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}!pin\+\_\+adc@{pin\+\_\+adc}}
+\index{pin\+\_\+adc@{pin\+\_\+adc}!due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{pin\+\_\+adc()}{pin\_adc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+adc\+::pin\+\_\+adc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for a A\+T\+S\+A\+M3\+X8E AD channel number. 
+
+This constructor initializes the pin to be an A\+DC input. \mbox{\Hypertarget{classdue_1_1pin__adc_a106bc97a20bb90be8cc0d8d9152d201f}\label{classdue_1_1pin__adc_a106bc97a20bb90be8cc0d8d9152d201f}} 
+\index{due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}!pin\+\_\+adc@{pin\+\_\+adc}}
+\index{pin\+\_\+adc@{pin\+\_\+adc}!due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{pin\+\_\+adc()}{pin\_adc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+adc\+::pin\+\_\+adc (\begin{DoxyParamCaption}\item[{\hyperlink{namespacedue_a5ecc98d40585c91eabbfb14f71bd7d4c}{ad\+\_\+pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Arduino Due \hyperlink{classdue_1_1pin__adc}{pin\+\_\+adc} constructor from a Due pin name. 
+
+This call creates a \hyperlink{classdue_1_1pin__adc}{pin\+\_\+adc} from an Arduino Due pin name.
+
+This constructor initializes the pin to be an A\+DC input. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__adc_a3b562b594bbbe3e8815a9223fa6520cc}\label{classdue_1_1pin__adc_a3b562b594bbbe3e8815a9223fa6520cc}} 
+\index{due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}!read@{read}}
+\index{read@{read}!due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} due\+::pin\+\_\+adc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get an adc reading 
+
+This function performs and A\+DC conversion and returns the result. For the S\+A\+M3X, a conversion is done for all pins that are configured as A\+DC inputs, but only the value for the pin itself is returned. This is wastefull, but it seems to be how this chip must be used. 
+
+Implements \hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{hwlib\+::adc}.
+
+\mbox{\Hypertarget{classdue_1_1pin__adc_ab30deacf575e1ef59af13aea24f77584}\label{classdue_1_1pin__adc_ab30deacf575e1ef59af13aea24f77584}} 
+\index{due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}!refresh@{refresh}}
+\index{refresh@{refresh}!due\+::pin\+\_\+adc@{due\+::pin\+\_\+adc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+adc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh the adc value
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdue_1_1pin__adc_a3b562b594bbbe3e8815a9223fa6520cc}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}{hwlib\+::adc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-arduino-due_8hpp}{hwlib-\/arduino-\/due.\+hpp}\end{DoxyCompactItemize}

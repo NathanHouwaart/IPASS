@@ -1,0 +1,21 @@
+digraph "hwlib::glcd_oled_i2c_128x64_fast_buffered"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="hwlib::glcd_oled_i2c\l_128x64_fast_buffered",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="hwlib::ssd1306_i2c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1ssd1306__i2c.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cursor" ];
+  Node5 [label="hwlib::xy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1xy.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bus" ];
+  Node6 [label="hwlib::i2c_bus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1i2c__bus.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" primitives" ];
+  Node7 [label="hwlib::i2c_primitives",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1i2c__primitives.html"];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="hwlib::window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1window.html",tooltip="a graphics window "];
+  Node5 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" size" ];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" foreground\nbackground" ];
+  Node9 [label="hwlib::color",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1color.html",tooltip="graphics color "];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" size" ];
+  Node10 [label="hwlib::location",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1location.html",tooltip="a pixel coordinate "];
+}

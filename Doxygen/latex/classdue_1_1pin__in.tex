@@ -1,0 +1,108 @@
+\hypertarget{classdue_1_1pin__in}{}\section{due\+:\+:pin\+\_\+in Class Reference}
+\label{classdue_1_1pin__in}\index{due\+::pin\+\_\+in@{due\+::pin\+\_\+in}}
+
+
+\hyperlink{classdue_1_1pin__in}{pin\+\_\+in} implementation for a A\+T\+S\+A\+M3\+X8E  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/arduino-\/due.\+hpp$>$}
+
+
+
+Inheritance diagram for due\+:\+:pin\+\_\+in\+:
+% FIG 0
+
+
+Collaboration diagram for due\+:\+:pin\+\_\+in\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdue_1_1pin__in_a5c42406ed2241133b3dfa3bbd73083b2}{pin\+\_\+in} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\hyperlink{classdue_1_1pin__in_a91f66ca279e18ced46cf693bcf3c0935}{pin\+\_\+in} (\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins} name)
+\item 
+\mbox{\Hypertarget{classdue_1_1pin__in_a7fc705239315bc681632c10274521b0b}\label{classdue_1_1pin__in_a7fc705239315bc681632c10274521b0b}} 
+void \hyperlink{classdue_1_1pin__in_a7fc705239315bc681632c10274521b0b}{pullup\+\_\+disable} ()
+\begin{DoxyCompactList}\small\item\em disable the internal weak pullup \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdue_1_1pin__in_a0eeab386c01dafe2340ba2d4a55ca78b}\label{classdue_1_1pin__in_a0eeab386c01dafe2340ba2d4a55ca78b}} 
+void \hyperlink{classdue_1_1pin__in_a0eeab386c01dafe2340ba2d4a55ca78b}{pullup\+\_\+enable} ()
+\begin{DoxyCompactList}\small\item\em enable the internal weak pullup \end{DoxyCompactList}\item 
+bool \hyperlink{classdue_1_1pin__in_aa032c49b961b38e4afaeb4a811311449}{read} () override
+\item 
+void \hyperlink{classdue_1_1pin__in_aa83ead7fe5283fc95bae295ed1a35bd3}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdue_1_1pin__in}{pin\+\_\+in} implementation for a A\+T\+S\+A\+M3\+X8E 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__in_a5c42406ed2241133b3dfa3bbd73083b2}\label{classdue_1_1pin__in_a5c42406ed2241133b3dfa3bbd73083b2}} 
+\index{due\+::pin\+\_\+in@{due\+::pin\+\_\+in}!pin\+\_\+in@{pin\+\_\+in}}
+\index{pin\+\_\+in@{pin\+\_\+in}!due\+::pin\+\_\+in@{due\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{pin\+\_\+in()}{pin\_in()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+in\+::pin\+\_\+in (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__in}{pin\+\_\+in} constructor
+
+Constructor for a A\+T\+S\+A\+M3\+X8E input pin.
+
+The port\+\_\+number and pin\+\_\+number refer to the chip, not to the Arduino board pin names.
+
+This constructor sets the pin direction to input. By default, the internal weak pull-\/up is enabled. \mbox{\Hypertarget{classdue_1_1pin__in_a91f66ca279e18ced46cf693bcf3c0935}\label{classdue_1_1pin__in_a91f66ca279e18ced46cf693bcf3c0935}} 
+\index{due\+::pin\+\_\+in@{due\+::pin\+\_\+in}!pin\+\_\+in@{pin\+\_\+in}}
+\index{pin\+\_\+in@{pin\+\_\+in}!due\+::pin\+\_\+in@{due\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{pin\+\_\+in()}{pin\_in()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+in\+::pin\+\_\+in (\begin{DoxyParamCaption}\item[{\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__in}{pin\+\_\+in} constructor from a Due pin name
+
+This call creates a \hyperlink{classdue_1_1pin__in}{pin\+\_\+in} from an Arduino Due pin name.
+
+This constructor sets the pin direction to input. By default, the internal weak pull-\/up is enabled. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__in_aa032c49b961b38e4afaeb4a811311449}\label{classdue_1_1pin__in_aa032c49b961b38e4afaeb4a811311449}} 
+\index{due\+::pin\+\_\+in@{due\+::pin\+\_\+in}!read@{read}}
+\index{read@{read}!due\+::pin\+\_\+in@{due\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool due\+::pin\+\_\+in\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classdue_1_1pin__in_aa83ead7fe5283fc95bae295ed1a35bd3}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{hwlib\+::pin\+\_\+in}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in_aa83ead7fe5283fc95bae295ed1a35bd3}\label{classdue_1_1pin__in_aa83ead7fe5283fc95bae295ed1a35bd3}} 
+\index{due\+::pin\+\_\+in@{due\+::pin\+\_\+in}!refresh@{refresh}}
+\index{refresh@{refresh}!due\+::pin\+\_\+in@{due\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdue_1_1pin__in_aa032c49b961b38e4afaeb4a811311449}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{hwlib\+::pin\+\_\+in}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-arduino-due_8hpp}{hwlib-\/arduino-\/due.\+hpp}\end{DoxyCompactItemize}

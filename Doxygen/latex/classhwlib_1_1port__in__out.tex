@@ -1,0 +1,146 @@
+\hypertarget{classhwlib_1_1port__in__out}{}\section{hwlib\+:\+:port\+\_\+in\+\_\+out Class Reference}
+\label{classhwlib_1_1port__in__out}\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+
+
+{\ttfamily \#include $<$hwlib-\/port.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:port\+\_\+in\+\_\+out\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1port__in__out_a44243a6c7664e734563f1809058751bc}{number\+\_\+of\+\_\+pins} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1port__in__out_ac7a9611410ddb9fd5d8e2dd15bff0a3f}{direction\+\_\+set\+\_\+input} ()=0
+\item 
+virtual uint\+\_\+fast16\+\_\+t \hyperlink{classhwlib_1_1port__in__out_a5f6662d6fccd2b256d20722a4f3e5840}{read} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1port__in__out_afa3680e36a05dd3f5a0eac1b63aac37c}{refresh} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1port__in__out_a515b4a6bbde4f2df5bb11cda41234fe4}{direction\+\_\+set\+\_\+output} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1port__in__out_a0019c1f35d6f7b1d3ace6b22da86ecec}{write} (uint\+\_\+fast16\+\_\+t x)=0
+\item 
+virtual void \hyperlink{classhwlib_1_1port__in__out_a164564bcd08c137f0ff2e6445e9cfe5e}{flush} ()=0
+\item 
+virtual void \hyperlink{classhwlib_1_1port__in__out_a431b79eee48a21a93978bfdf6620f800}{direction\+\_\+flush} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input / output port interface
+
+This is the interface of an input / output port. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_a431b79eee48a21a93978bfdf6620f800}\label{classhwlib_1_1port__in__out_a431b79eee48a21a93978bfdf6620f800}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!direction\+\_\+flush@{direction\+\_\+flush}}
+\index{direction\+\_\+flush@{direction\+\_\+flush}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+flush()}{direction\_flush()}}
+{\footnotesize\ttfamily virtual void hwlib\+::port\+\_\+in\+\_\+out\+::direction\+\_\+flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+flush the direction
+
+Calling this function flushes the direction as set by the last call to \hyperlink{classhwlib_1_1port__in__out_ac7a9611410ddb9fd5d8e2dd15bff0a3f}{direction\+\_\+set\+\_\+input()} or \hyperlink{classhwlib_1_1port__in__out_a515b4a6bbde4f2df5bb11cda41234fe4}{direction\+\_\+set\+\_\+output()} to the port. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_a4bf6d967ceda394a0de3d23fc9895072}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_aa8d8a3394669a8899d4e02f678722c3f}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_afe4c9b2ae4b70627cb11ab296211b7f3}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__invert__from__in__out__t_a85f7917e1b70d8eb637aede9040d2d00}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__direct__from__in__out__t_a399d11ab7b3d583162c6bcaa584d2deb}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_ac7a9611410ddb9fd5d8e2dd15bff0a3f}\label{classhwlib_1_1port__in__out_ac7a9611410ddb9fd5d8e2dd15bff0a3f}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}}
+\index{direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+input()}{direction\_set\_input()}}
+{\footnotesize\ttfamily virtual void hwlib\+::port\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+set the direction of the port to input.
+
+Calling this function sets all pins of the port to input. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_a49e31b927bbf0c677cc9e436459aae44}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_a701fe36cf6d03151ede1382c0ee054c5}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_acdd41d7b0788c259ef2a7a62ea9476ea}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__direct__from__in__out__t_ad4aa8a6a665220be275597d7b00a306c}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__invert__from__in__out__t_a5af46d9dbe68de372e99ffea6617cb34}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_a515b4a6bbde4f2df5bb11cda41234fe4}\label{classhwlib_1_1port__in__out_a515b4a6bbde4f2df5bb11cda41234fe4}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}}
+\index{direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+output()}{direction\_set\_output()}}
+{\footnotesize\ttfamily virtual void hwlib\+::port\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+set the direction of the port to output
+
+Calling this function sets all pins of the port to output. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_aa148c50e132f6657d4c3a292b91896da}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_ab4cd56460a6627c3fc7f39cb2e78a9c8}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_a2fb1966c582d06ecaa8ba67ab6fe2be0}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__direct__from__in__out__t_a8702543e5a779026dd0b8602aaf5ae56}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__invert__from__in__out__t_a081fcd37931c8b02a8bcc61899ea5346}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_a164564bcd08c137f0ff2e6445e9cfe5e}\label{classhwlib_1_1port__in__out_a164564bcd08c137f0ff2e6445e9cfe5e}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily virtual void hwlib\+::port\+\_\+in\+\_\+out\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+flush the port buffer
+
+This function flushes the port write buffer\+: if a buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_a7ae629f8dc18f39975494b5f370551b2}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_aed77890fb29c1b3e5991786e8bd419d5}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_ad93519fe8087b7b65f35442f8c505ccf}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__invert__from__in__out__t_a9066c534e517baf82995863bb67cb443}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__direct__from__in__out__t_a59745ee886092e4ff81906aafedbcfdd}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_a44243a6c7664e734563f1809058751bc}\label{classhwlib_1_1port__in__out_a44243a6c7664e734563f1809058751bc}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!number\+\_\+of\+\_\+pins@{number\+\_\+of\+\_\+pins}}
+\index{number\+\_\+of\+\_\+pins@{number\+\_\+of\+\_\+pins}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+pins()}{number\_of\_pins()}}
+{\footnotesize\ttfamily virtual uint\+\_\+fast8\+\_\+t hwlib\+::port\+\_\+in\+\_\+out\+::number\+\_\+of\+\_\+pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+get number of pins
+
+This function returns the number of pins in the port. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_a07646684024952afc6c166142f0d181b}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_a0dda97b4a90f2f63ed7c95f5b45f4d37}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_a06fa8cbc11dc64651e8214e4217b2453}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__invert__from__in__out__t_a150f95f7fe2520298a139cfd58293923}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__direct__from__in__out__t_a7b9bed1806a7597e886404637d1fdf7e}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_a5f6662d6fccd2b256d20722a4f3e5840}\label{classhwlib_1_1port__in__out_a5f6662d6fccd2b256d20722a4f3e5840}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!read@{read}}
+\index{read@{read}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual uint\+\_\+fast16\+\_\+t hwlib\+::port\+\_\+in\+\_\+out\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+read from the port
+
+This function reads and returns the pins that are part of the port. The lowest bit of the result reflects the first pin of the port, etc.
+
+Before calling this function the port direction must have been set to input by calling port\+\_\+direction\+\_\+set\+\_\+input(). 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_a3ee4e60ccde68e997fa48e041dc0e74c}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_a9d57f7d3ee2ef22d16d6c47ec914c0fd}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_a2e645477ddba8954d3117a62703f170c}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__invert__from__in__out__t_afabad4a7b11e0127b82015b0efbb2e41}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__direct__from__in__out__t_adfcd5d0e4d4d76a1e92a37fc8e007f0b}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_afa3680e36a05dd3f5a0eac1b63aac37c}\label{classhwlib_1_1port__in__out_afa3680e36a05dd3f5a0eac1b63aac37c}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void hwlib\+::port\+\_\+in\+\_\+out\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+refresh the port buffer
+
+This function refreshed the contents of the read buffer that might be used by get\+\_\+buffered() with a value read from the pins.
+
+The read buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_a35caf2a5266975de6065d2cd801f47f3}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_a18b040a25923ba0189c5689e2dedb233}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_a0a9b4ffd9faed2aaec708141e699545c}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__direct__from__in__out__t_a4c609a465a6cd1996780001a04ae5bf4}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__invert__from__in__out__t_ace7b8002a7aa10de1a22634c04751123}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+\mbox{\Hypertarget{classhwlib_1_1port__in__out_a0019c1f35d6f7b1d3ace6b22da86ecec}\label{classhwlib_1_1port__in__out_a0019c1f35d6f7b1d3ace6b22da86ecec}} 
+\index{hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}!write@{write}}
+\index{write@{write}!hwlib\+::port\+\_\+in\+\_\+out@{hwlib\+::port\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void hwlib\+::port\+\_\+in\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{uint\+\_\+fast16\+\_\+t}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+write to the port
+
+This function writes to the pins that are part of the port. The lowest bit is written to the first pin of the port, etc.
+
+Before calling this function the port direction must have been set to output by calling \hyperlink{classhwlib_1_1port__in__out_a515b4a6bbde4f2df5bb11cda41234fe4}{direction\+\_\+set\+\_\+output()}. 
+
+Implemented in \hyperlink{classhwlib_1_1port__in__out__from__in__out__t_acf0e3831b73a125fed1bbf6e9986551c}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__oc__t_a47f3cada1694544f728d33f85918a806}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+oc\+\_\+t}, \hyperlink{classhwlib_1_1port__in__out__from__pins__t_a38b742fa3bcaa474b5beaeb71a5c364a}{hwlib\+::port\+\_\+in\+\_\+out\+\_\+from\+\_\+pins\+\_\+t}, \hyperlink{classhwlib_1_1port__invert__from__in__out__t_add95d20973a18e012ff97988e49aeff4}{hwlib\+::port\+\_\+invert\+\_\+from\+\_\+in\+\_\+out\+\_\+t}, and \hyperlink{classhwlib_1_1port__direct__from__in__out__t_a952b994b4b4793590252781686468e48}{hwlib\+::port\+\_\+direct\+\_\+from\+\_\+in\+\_\+out\+\_\+t}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/ports/\hyperlink{hwlib-port_8hpp}{hwlib-\/port.\+hpp}\end{DoxyCompactItemize}

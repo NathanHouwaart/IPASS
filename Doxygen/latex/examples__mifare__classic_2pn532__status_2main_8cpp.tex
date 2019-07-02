@@ -1,0 +1,46 @@
+\hypertarget{examples__mifare__classic_2pn532__status_2main_8cpp}{}\section{examples\+\_\+mifare\+\_\+classic/pn532\+\_\+status/main.cpp File Reference}
+\label{examples__mifare__classic_2pn532__status_2main_8cpp}\index{examples\+\_\+mifare\+\_\+classic/pn532\+\_\+status/main.\+cpp@{examples\+\_\+mifare\+\_\+classic/pn532\+\_\+status/main.\+cpp}}
+
+
+Example use of the nfc library to get the general status of the P\+N532.  
+
+
+{\ttfamily \#include \char`\"{}../../code/headers/pn532.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{examples__mifare__classic_2pn532__status_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{examples__mifare__classic_2pn532__status_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example use of the nfc library to get the general status of the P\+N532. 
+
+This file will demonstrate how to use the nfc library to get the general status of the P\+N532
+
+Make sure the external G\+P\+IO pins of the pn532 are set to the proper protocol and match the protocol selected in this file.
+
+G\+P\+IO pin layout\+: ~\newline
+ P1 $\vert$ P2 = protocol\+: ~\newline
+ 0 $\vert$ 0 = U\+A\+RT ~\newline
+ 0 $\vert$ 1 = S\+PI ~\newline
+ 1 $\vert$ 0 = i2C ~\newline
+
+
+There are three commands that can give the user information about the pn532\textquotesingle{}s status\+:
+\begin{DoxyItemize}
+\item Get\+Firmware\+Version()
+\item perform\+Selftest()
+\item get\+General\+Status()
+\end{DoxyItemize}
+
+Get\+Firmware\+Version() is often used at the beginning of a program to see wether the pn532 is connected with the host controller or not. perform\+Selftest() is a helpfull tool to check if the communication between the chip and host controller is working properly get\+General\+Status() is a used to determine the current state of the pn532. The last error thrown, the amount of cards controlled and the S\+AM (Security Access Module) state
+
+If one of the functions fails, it will return a statuscode other than pn532\+Status\+OK. The error cause can be deducted by comapring the given error code with the errors declared in\+: \hyperlink{declarations_8h}{declarations.\+h}
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

@@ -1,0 +1,37 @@
+Implementations of the hardware abstractions (like pins and delays) are provided for the supported targets\+:
+\begin{DoxyItemize}
+\item Arduino Uno (A\+T\+M\+E\+G\+A328P chip)
+\item Arduino Due (A\+T\+S\+A\+M3\+X8E chip)
+\item D\+B103 (L\+P\+C1114 chip)
+\item blue-\/pill (\hyperlink{namespacestm32f103c8}{stm32f103c8} chip)
+\end{DoxyItemize}
+
+The easy way is to use the library with bmptk\+: Include hwlib.\+hpp, which will include the correct target header based on the H\+W\+L\+I\+B\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+$\ast$ macro that is set in the bmptk makefile. Bmptk passes this setting to the hwlib.\+hpp file via a macro definition on the compiler command line.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ A hwlib application includes hwlib.\+hpp.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ This file will include the correct target header based on the H\+W\+L\+I\+B\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+$\ast$ macro., defined in the compiler command line. This macro must identify one of the supported \hyperlink{targets}{targets }.
+
+When the bmptk build system is used, the H\+W\+L\+I\+B\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+$\ast$ passed is determined by the T\+A\+R\+G\+ET setting in the bmptk makefile.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ The sources within the library use a makefile.\+link file in each subdirectory, which passes \textquotesingle{}control\textquotesingle{} up to the next-\/higher directory.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ The makefile.\+link in the root directory includes the makefile.\+custom (if one exsts) or the makefile.\+local, which set things like the location of the bmptk and catch2 files. 

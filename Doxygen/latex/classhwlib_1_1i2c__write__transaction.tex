@@ -1,0 +1,50 @@
+\hypertarget{classhwlib_1_1i2c__write__transaction}{}\section{hwlib\+:\+:i2c\+\_\+write\+\_\+transaction Class Reference}
+\label{classhwlib_1_1i2c__write__transaction}\index{hwlib\+::i2c\+\_\+write\+\_\+transaction@{hwlib\+::i2c\+\_\+write\+\_\+transaction}}
+
+
+{\ttfamily \#include $<$hwlib-\/i2c.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1i2c__write__transaction_a9238d0369f2249ea8de55383a0396db2}\label{classhwlib_1_1i2c__write__transaction_a9238d0369f2249ea8de55383a0396db2}} 
+\hyperlink{classhwlib_1_1i2c__write__transaction_a9238d0369f2249ea8de55383a0396db2}{i2c\+\_\+write\+\_\+transaction} (\hyperlink{classhwlib_1_1i2c__primitives}{i2c\+\_\+primitives} \&primitives, uint\+\_\+fast8\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em create (start) a write transaction \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1i2c__write__transaction_a15fdb954f92b784f2d723892b57f6728}{write} (const uint8\+\_\+t d)
+\item 
+void \hyperlink{classhwlib_1_1i2c__write__transaction_a518cffb445b15fc027d2689f17ef45e8}{write} (const uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1i2c__write__transaction_a57a9e4a60bd32b521159b86898a842b7}\label{classhwlib_1_1i2c__write__transaction_a57a9e4a60bd32b521159b86898a842b7}} 
+\hyperlink{classhwlib_1_1i2c__write__transaction_a57a9e4a60bd32b521159b86898a842b7}{$\sim$i2c\+\_\+write\+\_\+transaction} ()
+\begin{DoxyCompactList}\small\item\em terminate (close) the write transaction \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+i2c write transaction class
+
+This class abstracts a write transaction. The write transaction is in progress for as long as this object exists. Multiple write calls can be done on the object. The destructor will close the transaction. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1i2c__write__transaction_a15fdb954f92b784f2d723892b57f6728}\label{classhwlib_1_1i2c__write__transaction_a15fdb954f92b784f2d723892b57f6728}} 
+\index{hwlib\+::i2c\+\_\+write\+\_\+transaction@{hwlib\+::i2c\+\_\+write\+\_\+transaction}!write@{write}}
+\index{write@{write}!hwlib\+::i2c\+\_\+write\+\_\+transaction@{hwlib\+::i2c\+\_\+write\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void hwlib\+::i2c\+\_\+write\+\_\+transaction\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write a single byte
+
+This function write the byte d to the slave. \mbox{\Hypertarget{classhwlib_1_1i2c__write__transaction_a518cffb445b15fc027d2689f17ef45e8}\label{classhwlib_1_1i2c__write__transaction_a518cffb445b15fc027d2689f17ef45e8}} 
+\index{hwlib\+::i2c\+\_\+write\+\_\+transaction@{hwlib\+::i2c\+\_\+write\+\_\+transaction}!write@{write}}
+\index{write@{write}!hwlib\+::i2c\+\_\+write\+\_\+transaction@{hwlib\+::i2c\+\_\+write\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void hwlib\+::i2c\+\_\+write\+\_\+transaction\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{data\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write bytes
+
+This function writes n bytes from data\mbox{[}\mbox{]} to the slave.
+
+Note that n is a byte, hence the maximum number of bytes per call is 255. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-i2c_8hpp}{hwlib-\/i2c.\+hpp}\end{DoxyCompactItemize}

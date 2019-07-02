@@ -1,0 +1,73 @@
+\hypertarget{classhwlib_1_1pin__in__from__oc__t}{}\section{hwlib\+:\+:pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__in__from__oc__t}\index{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/from-\/pin.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__in__from__oc__t_abebbc3a5bf5351fa9c4d1c1e0c7768a2}\label{classhwlib_1_1pin__in__from__oc__t_abebbc3a5bf5351fa9c4d1c1e0c7768a2}} 
+\hyperlink{classhwlib_1_1pin__in__from__oc__t_abebbc3a5bf5351fa9c4d1c1e0c7768a2}{pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t} (\hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \&slave)
+\begin{DoxyCompactList}\small\item\em construct from a \hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \end{DoxyCompactList}\item 
+bool \hyperlink{classhwlib_1_1pin__in__from__oc__t_a451b54793f3bfb713bd90edb115c9ef2}{read} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__in__from__oc__t_a2c0103a43cb2c3d65d944a645a54a8c6}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} constructed from a \hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc}
+
+The preferred way to use this class is through the overloaded constructor function \hyperlink{namespacehwlib_a2f8ff4c157c60783c37db6bb1e11e3a4}{pin\+\_\+in\+\_\+from()}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__in__from__oc__t_a451b54793f3bfb713bd90edb115c9ef2}\label{classhwlib_1_1pin__in__from__oc__t_a451b54793f3bfb713bd90edb115c9ef2}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t}!read@{read}}
+\index{read@{read}!hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classhwlib_1_1pin__in__from__oc__t_a2c0103a43cb2c3d65d944a645a54a8c6}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{hwlib\+::pin\+\_\+in}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__in__from__oc__t_a2c0103a43cb2c3d65d944a645a54a8c6}\label{classhwlib_1_1pin__in__from__oc__t_a2c0103a43cb2c3d65d944a645a54a8c6}} 
+\index{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t@{hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+in\+\_\+from\+\_\+oc\+\_\+t\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1pin__in__from__oc__t_a451b54793f3bfb713bd90edb115c9ef2}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{hwlib\+::pin\+\_\+in}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-from-pin_8hpp}{hwlib-\/pin-\/from-\/pin.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{classstm32f030x6_1_1pin__in}{}\section{stm32f030x6\+:\+:pin\+\_\+in Class Reference}
+\label{classstm32f030x6_1_1pin__in}\index{stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}}
+
+
+\hyperlink{classstm32f030x6_1_1pin__in}{pin\+\_\+in} implementation for a A\+T\+S\+A\+M3\+X8E  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/stm32f030x6.\+hpp$>$}
+
+
+
+Inheritance diagram for stm32f030x6\+:\+:pin\+\_\+in\+:
+% FIG 0
+
+
+Collaboration diagram for stm32f030x6\+:\+:pin\+\_\+in\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstm32f030x6_1_1pin__in_ae6c64cb5e31bf1525121bde6f22cce73}{pin\+\_\+in} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__in_a33c9c609037a4154f562859262c68569}\label{classstm32f030x6_1_1pin__in_a33c9c609037a4154f562859262c68569}} 
+{\bfseries pin\+\_\+in} (\hyperlink{namespacestm32f030x6_aec819db41bff19f45418c0d22e5ccecf}{pins} name)
+\item 
+bool \hyperlink{classstm32f030x6_1_1pin__in_a930e692fe61caf9724c53ac9f0577432}{read} () override() override
+\item 
+void \hyperlink{classstm32f030x6_1_1pin__in_a8d213fc447b0c7e8acf5f331f1c85683}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classstm32f030x6_1_1pin__in}{pin\+\_\+in} implementation for a A\+T\+S\+A\+M3\+X8E 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__in_ae6c64cb5e31bf1525121bde6f22cce73}\label{classstm32f030x6_1_1pin__in_ae6c64cb5e31bf1525121bde6f22cce73}} 
+\index{stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}!pin\+\_\+in@{pin\+\_\+in}}
+\index{pin\+\_\+in@{pin\+\_\+in}!stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{pin\+\_\+in()}{pin\_in()}}
+{\footnotesize\ttfamily stm32f030x6\+::pin\+\_\+in\+::pin\+\_\+in (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f030x6}{stm32f030x6} \hyperlink{classstm32f030x6_1_1pin__in}{pin\+\_\+in} constructor
+
+Constructor for an \hyperlink{namespacestm32f030x6}{stm32f030x6} input pin.
+
+This constructor sets the pin direction to input. By default, the internal weak pull-\/up is enabled. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__in_a930e692fe61caf9724c53ac9f0577432}\label{classstm32f030x6_1_1pin__in_a930e692fe61caf9724c53ac9f0577432}} 
+\index{stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}!read@{read}}
+\index{read@{read}!stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool stm32f030x6\+::pin\+\_\+in\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classstm32f030x6_1_1pin__in_a8d213fc447b0c7e8acf5f331f1c85683}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{hwlib\+::pin\+\_\+in}.
+
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__in_a8d213fc447b0c7e8acf5f331f1c85683}\label{classstm32f030x6_1_1pin__in_a8d213fc447b0c7e8acf5f331f1c85683}} 
+\index{stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}!refresh@{refresh}}
+\index{refresh@{refresh}!stm32f030x6\+::pin\+\_\+in@{stm32f030x6\+::pin\+\_\+in}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void stm32f030x6\+::pin\+\_\+in\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classstm32f030x6_1_1pin__in_a930e692fe61caf9724c53ac9f0577432}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{hwlib\+::pin\+\_\+in}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-stm32f030x6_8hpp}{hwlib-\/stm32f030x6.\+hpp}\end{DoxyCompactItemize}

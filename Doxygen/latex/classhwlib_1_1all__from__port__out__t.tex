@@ -1,0 +1,86 @@
+\hypertarget{classhwlib_1_1all__from__port__out__t}{}\section{hwlib\+:\+:all\+\_\+from\+\_\+port\+\_\+out\+\_\+t Class Reference}
+\label{classhwlib_1_1all__from__port__out__t}\index{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}}
+
+
+pin class that writes to a pins in a port  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/port-\/all.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:all\+\_\+from\+\_\+port\+\_\+out\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:all\+\_\+from\+\_\+port\+\_\+out\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1all__from__port__out__t_acb149b2059c4f4ae102f1076eb7801a2}{all\+\_\+from\+\_\+port\+\_\+out\+\_\+t} (\hyperlink{classhwlib_1_1port__out}{port\+\_\+out} \&slave)
+\item 
+void \hyperlink{classhwlib_1_1all__from__port__out__t_ad062b586a43e257a4e7fa14ba3ce7d21}{write} (bool x) override
+\item 
+void \hyperlink{classhwlib_1_1all__from__port__out__t_aa98ee6cecc0f87b153f5aea8b2967f21}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+pin class that writes to a pins in a port 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1all__from__port__out__t_acb149b2059c4f4ae102f1076eb7801a2}\label{classhwlib_1_1all__from__port__out__t_acb149b2059c4f4ae102f1076eb7801a2}} 
+\index{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}!all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}}
+\index{all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}!hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}}
+\subsubsection{\texorpdfstring{all\+\_\+from\+\_\+port\+\_\+out\+\_\+t()}{all\_from\_port\_out\_t()}}
+{\footnotesize\ttfamily hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1port__out}{port\+\_\+out} \&}]{slave }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct a \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} from a \hyperlink{classhwlib_1_1port__out}{port\+\_\+out}
+
+This \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} writes to all pins in the port. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1all__from__port__out__t_aa98ee6cecc0f87b153f5aea8b2967f21}\label{classhwlib_1_1all__from__port__out__t_aa98ee6cecc0f87b153f5aea8b2967f21}} 
+\index{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{hwlib\+::pin\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1all__from__port__out__t_ad062b586a43e257a4e7fa14ba3ce7d21}\label{classhwlib_1_1all__from__port__out__t_ad062b586a43e257a4e7fa14ba3ce7d21}} 
+\index{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}!write@{write}}
+\index{write@{write}!hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t@{hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::all\+\_\+from\+\_\+port\+\_\+out\+\_\+t\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1all__from__port__out__t_aa98ee6cecc0f87b153f5aea8b2967f21}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/ports/\hyperlink{hwlib-port-all_8hpp}{hwlib-\/port-\/all.\+hpp}\end{DoxyCompactItemize}

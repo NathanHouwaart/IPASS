@@ -1,0 +1,44 @@
+\hypertarget{classhwlib_1_1spi__bus__bit__banged__sclk__mosi__miso}{}\section{hwlib\+:\+:spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso Class Reference}
+\label{classhwlib_1_1spi__bus__bit__banged__sclk__mosi__miso}\index{hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso@{hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso}}
+
+
+{\ttfamily \#include $<$hwlib-\/spi.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1spi__bus__bit__banged__sclk__mosi__miso_a7536e874c3e0ee32eb43cf6e41985cbf}{spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso} (\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&\+\_\+sclk, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&\+\_\+mosi, \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} \&\+\_\+miso)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+bit-\/banged S\+PI bus implementation
+
+This class implements a bit-\/banged master interface to a S\+PI bus. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1spi__bus__bit__banged__sclk__mosi__miso_a7536e874c3e0ee32eb43cf6e41985cbf}\label{classhwlib_1_1spi__bus__bit__banged__sclk__mosi__miso_a7536e874c3e0ee32eb43cf6e41985cbf}} 
+\index{hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso@{hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso}!spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso@{spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso}}
+\index{spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso@{spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso}!hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso@{hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso}}
+\subsubsection{\texorpdfstring{spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso()}{spi\_bus\_bit\_banged\_sclk\_mosi\_miso()}}
+{\footnotesize\ttfamily hwlib\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso\+::spi\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+sclk\+\_\+mosi\+\_\+miso (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{\+\_\+sclk,  }\item[{\hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&}]{\+\_\+mosi,  }\item[{\hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} \&}]{\+\_\+miso }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct a bit-\/banged S\+PI bus from the sclk, miso and mosi pins
+
+This constructor creates a simple bit-\/banged S\+PI bus master from the sclk, miso and mosi pins.
+
+The chip select pins for the individual chips supplied to the write\+\_\+and\+\_\+read() functions.
+
+When the S\+PI bus is used for either only writing or only reading, the unused pin argument can be specified as pin\+\_\+out\+\_\+dummy or pin\+\_\+in\+\_\+dummy. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-spi_8hpp}{hwlib-\/spi.\+hpp}\end{DoxyCompactItemize}

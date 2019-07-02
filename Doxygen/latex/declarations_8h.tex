@@ -1,0 +1,244 @@
+\hypertarget{declarations_8h}{}\section{code/headers/declarations.h File Reference}
+\label{declarations_8h}\index{code/headers/declarations.\+h@{code/headers/declarations.\+h}}
+
+
+Specific declarations for the nfc classes to use.  
+
+
+{\ttfamily \#include \char`\"{}hwlib.\+hpp\char`\"{}}\newline
+Include dependency graph for declarations.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfc_1_1cardKeys}{nfc\+::card\+Keys}
+\begin{DoxyCompactList}\small\item\em A struct containing all 32 keys of a mifare classic 1k. Can be altered based on own card setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1general}{nfc\+::pn532\+::general}
+\begin{DoxyCompactList}\small\item\em General commands of for the pn532. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command}{nfc\+::pn532\+::command}
+\begin{DoxyCompactList}\small\item\em Pn532 commands. User manual p.\+65 \& p.\+66. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1diagnose}{nfc\+::pn532\+::command\+::diagnose}
+\begin{DoxyCompactList}\small\item\em Different diagnose commands. User manual p.\+69 -\/ p.\+72. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1GPIO}{nfc\+::pn532\+::command\+::\+G\+P\+IO}
+\begin{DoxyCompactList}\small\item\em Different \hyperlink{namespacenfc_1_1pn532_1_1command_1_1GPIO}{G\+P\+IO} related declarations. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1SAMmode}{nfc\+::pn532\+::command\+::\+S\+A\+Mmode}
+\begin{DoxyCompactList}\small\item\em Different S\+AM mode configurations. User manual p.\+89 -\/ p.\+97. \end{DoxyCompactList}\item 
+ \hyperlink{namespacenfc_1_1pn532_1_1command_1_1RFItem}{nfc\+::pn532\+::command\+::\+R\+F\+Item}
+\begin{DoxyCompactList}\small\item\em Different RF configuration options. User manual p.\+101 -\/ p.\+106. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}\label{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}} 
+enum \hyperlink{declarations_8h_a305b1a3bcfca65e2a82f0f9d24676835}{nfc\+::mifare\+Commands} \+: const uint8\+\_\+t \{ \newline
+{\bfseries authenticate\+KeyA} = 0x60, 
+{\bfseries authenticate\+KeyB} = 0x61, 
+{\bfseries Read16\+Bytes} = 0x30, 
+{\bfseries Write16\+Bytes} = 0x\+A0, 
+\newline
+{\bfseries Write4\+Bytes} = 0x\+A2, 
+{\bfseries Incrementation} = 0x\+C1, 
+{\bfseries Decrementation} = 0x\+C0, 
+{\bfseries Transfare} = 0x\+B0, 
+\newline
+{\bfseries Restore} = 0x\+C2
+ \}\begin{DoxyCompactList}\small\item\em Mifare specific commands. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{declarations_8h_a18236cb00569a8f612f8957044868f74}\label{declarations_8h_a18236cb00569a8f612f8957044868f74}} 
+enum \hyperlink{declarations_8h_a18236cb00569a8f612f8957044868f74}{nfc\+::baud\+Rate} \+: const uint8\+\_\+t \{ \newline
+{\bfseries \+\_\+9k6\+Baud} = 0x00, 
+{\bfseries \+\_\+19k2\+Baud} = 0x01, 
+{\bfseries \+\_\+38k4\+Baud} = 0x02, 
+{\bfseries \+\_\+57k6\+Baud} = 0x03, 
+\newline
+{\bfseries \+\_\+115k2\+Baud} = 0x04, 
+{\bfseries \+\_\+230k4\+Baud} = 0x05, 
+{\bfseries \+\_\+460k8\+Baud} = 0x06, 
+{\bfseries \+\_\+921k6\+Baud} = 0x07, 
+\newline
+{\bfseries \+\_\+1m2k\+Baud} = 0x08
+ \}\begin{DoxyCompactList}\small\item\em Different baudrates the for the U\+A\+RT protocol. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}\label{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}} 
+enum \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{nfc\+::status\+Code} \+: const uint8\+\_\+t \{ \newline
+{\bfseries pn532\+Status\+OK} = 0x00, 
+{\bfseries pn532\+Status\+Timeout} = 0x01, 
+{\bfseries pn532\+Status\+C\+R\+C\+Error} = 0x02, 
+{\bfseries pn532\+Status\+Parity\+Error} = 0x03, 
+\newline
+{\bfseries pn532\+Status\+Collision\+Error} = 0x04, 
+{\bfseries pn532\+Status\+Mifare\+Framing\+Error} = 0x05, 
+{\bfseries pn532\+Status\+Collision\+Error2} = 0x06, 
+{\bfseries pn532\+Status\+Buffer\+Size\+Insufficient} = 0x07, 
+\newline
+{\bfseries pn532\+Status\+Selftest\+Fail} = 0x08, 
+{\bfseries pn532\+Status\+R\+F\+Buffer\+Overflow} = 0x09, 
+{\bfseries pn532\+Status\+R\+F\+Field\+Timeout} = 0x0A, 
+{\bfseries pn532\+Status\+R\+F\+Protocol\+Error} = 0x0B, 
+\newline
+{\bfseries pn532\+Status\+Invalid\+Ack\+Frame} = 0x0C, 
+{\bfseries pn532\+Status\+Temperature\+Error} = 0x0D, 
+{\bfseries pn532\+Status\+Internal\+Buffer\+Overflow} = 0x0E, 
+{\bfseries pn532\+Status\+Invalid\+Parameter} = 0x10, 
+\newline
+{\bfseries pn532\+Status\+Mifare\+Aut\+Error} = 0x14, 
+{\bfseries pn532\+Status\+U\+I\+D\+Check\+Byte\+Error} = 0x23, 
+{\bfseries pn532\+Status\+Wrong\+Config} = 0x26, 
+{\bfseries pn532\+Status\+Wrong\+Command} = 0x27, 
+\newline
+{\bfseries pn532\+Status\+Released} = 0x27, 
+{\bfseries pn532\+Status\+Over\+Current} = 0x2D, 
+{\bfseries pn532\+Status\+Missing\+D\+EP} = 0x2E, 
+{\bfseries pn532status\+S\+A\+Merror} = 0x2F
+ \}\begin{DoxyCompactList}\small\item\em Specific statuscodes the nfc chips can return. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_ac328c34e45a34dbcb476249e08402db0}\label{namespacenfc_1_1pn532_1_1command_ac328c34e45a34dbcb476249e08402db0}} 
+enum \hyperlink{namespacenfc_1_1pn532_1_1command_ac328c34e45a34dbcb476249e08402db0}{nfc\+::pn532\+::command\+::\+Card\+Type} \+: const uint8\+\_\+t \{ \newline
+{\bfseries Type\+A\+\_\+\+I\+S\+O\+\_\+\+I\+E\+C14443} = 0x00, 
+{\bfseries Feli\+Ca\+Polling212kbps} = 0x01, 
+{\bfseries Feli\+Ca\+Polling424kbps} = 0x02, 
+{\bfseries Type\+B\+\_\+\+I\+S0\+\_\+\+I\+E\+C14443} = 0x03, 
+\newline
+{\bfseries In\+Jewel\+Tag106kbps} = 0x04
+ \}\begin{DoxyCompactList}\small\item\em Different cardtypes the pn532 can read. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_a797e9b369243da9544ccef93e9e5e7c1}\label{namespacenfc_1_1pn532_1_1general_a797e9b369243da9544ccef93e9e5e7c1}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Pn532\+Address} = 0x48 $>$$>$ 1
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_afa4ef944e3885d3fd9aa3b7c1ac7ad4f}\label{namespacenfc_1_1pn532_1_1general_afa4ef944e3885d3fd9aa3b7c1ac7ad4f}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::buffer\+Size} = 64
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_addb970167fd15a09b4a0019dbb82534f}\label{namespacenfc_1_1pn532_1_1general_addb970167fd15a09b4a0019dbb82534f}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Preamble1} = 0x00
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_abceb1bc6e278d5605781176ad5f1ce35}\label{namespacenfc_1_1pn532_1_1general_abceb1bc6e278d5605781176ad5f1ce35}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Preamble2} = 0x\+FF
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_a42f8474a886617fac6a160a25130d448}\label{namespacenfc_1_1pn532_1_1general_a42f8474a886617fac6a160a25130d448}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Host\+To\+Pn532} = 0x\+D4
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_ad335e65d06d9369f91c45c9a91e8cae5}\label{namespacenfc_1_1pn532_1_1general_ad335e65d06d9369f91c45c9a91e8cae5}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Pn542\+To\+Host} = 0x\+D5
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_af61cf21682e68c4e2bdfa361dd063115}\label{namespacenfc_1_1pn532_1_1general_af61cf21682e68c4e2bdfa361dd063115}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Dummy\+Key} \mbox{[}$\,$\mbox{]} = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00\}
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_a315ea970635e02790ae668350830dc18}\label{namespacenfc_1_1pn532_1_1general_a315ea970635e02790ae668350830dc18}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Default\+Key} \mbox{[}$\,$\mbox{]} = \{0xff, 0xff, 0xff, 0xff, 0xff, 0xff\}
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_a74cba83c4e35a9b1c8373e11ec7d7f9c}\label{namespacenfc_1_1pn532_1_1general_a74cba83c4e35a9b1c8373e11ec7d7f9c}} 
+const uint16\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Mifare1k\+Size} = 1024
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_a6035983f0cceb7b190d5343dedce6c15}\label{namespacenfc_1_1pn532_1_1general_a6035983f0cceb7b190d5343dedce6c15}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Mifare1k\+Page\+Size} = 16
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1general_a45eea302467d6ed781fbfe4e5303eb48}\label{namespacenfc_1_1pn532_1_1general_a45eea302467d6ed781fbfe4e5303eb48}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::general\+::\+Mifare1k\+U\+I\+Dsize} = 4
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a32ec14eba3357a0687a430ceba345e6f}\label{namespacenfc_1_1pn532_1_1command_a32ec14eba3357a0687a430ceba345e6f}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+Perform\+Selftest} = 0x00
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_adcef5f2e53cd0253c5409128afd9f582}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_adcef5f2e53cd0253c5409128afd9f582}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+Communication\+Line\+Test} = 0x00
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_a8fc0e27466ac21394a89bece4a5c269c}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_a8fc0e27466ac21394a89bece4a5c269c}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+R\+O\+M\+Test} = 0x01
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_a820f529616ec7d1a770d2ae67608f058}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_a820f529616ec7d1a770d2ae67608f058}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+R\+A\+M\+Test} = 0x02
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_a943fc1d5735d01d9c4cdbf120d9e03e6}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_a943fc1d5735d01d9c4cdbf120d9e03e6}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+Polling\+Test\+To\+Target} = 0x04
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_adc10b2352634fdd1207f409ba23ebeb6}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_adc10b2352634fdd1207f409ba23ebeb6}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+Echo\+Back\+Test} = 0x05
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_aa41306a39891ee923961987238a589a9}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_aa41306a39891ee923961987238a589a9}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+Card\+Detection\+Test} = 0x06
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1diagnose_ab8ed4477775b19eea98f06da65c2c52f}\label{namespacenfc_1_1pn532_1_1command_1_1diagnose_ab8ed4477775b19eea98f06da65c2c52f}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::diagnose\+::\+Antenna\+Test} = 0x07
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a1f0c75df9b8bc5ac2c7b3968f30f0c5e}\label{namespacenfc_1_1pn532_1_1command_a1f0c75df9b8bc5ac2c7b3968f30f0c5e}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+Get\+Firmware\+Version} = 0x02
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a1b4754ca9cd79c88eae9e313165b89ac}\label{namespacenfc_1_1pn532_1_1command_a1b4754ca9cd79c88eae9e313165b89ac}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::get\+General\+Status} = 0x04
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_ac7cc7a6814d9d86880cc8e308260e693}\label{namespacenfc_1_1pn532_1_1command_ac7cc7a6814d9d86880cc8e308260e693}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::read\+Register} = 0x06
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_aea2468d639f848660dcae00199ba4f21}\label{namespacenfc_1_1pn532_1_1command_aea2468d639f848660dcae00199ba4f21}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::write\+Register} = 0x08
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_afe07758f7ac86edfae1d0bed5ce80e7c}\label{namespacenfc_1_1pn532_1_1command_afe07758f7ac86edfae1d0bed5ce80e7c}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::read\+G\+P\+IO} = 0x0C
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a45a5c5295cb76cfc15f4a6c9a36a8f15}\label{namespacenfc_1_1pn532_1_1command_a45a5c5295cb76cfc15f4a6c9a36a8f15}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::write\+G\+P\+IO} = 0x0E
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1GPIO_a6bcb3c35498d6509f17ae9c0a0848d50}\label{namespacenfc_1_1pn532_1_1command_1_1GPIO_a6bcb3c35498d6509f17ae9c0a0848d50}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+G\+P\+I\+O\+::validation\+Bit} = 0x80
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1GPIO_a5eeba6ca842e29f3f5525df9e4a506fb}\label{namespacenfc_1_1pn532_1_1command_1_1GPIO_a5eeba6ca842e29f3f5525df9e4a506fb}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+G\+P\+I\+O\+::p32} = 0x02
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1GPIO_a7e0133b87e9924e5d32899a2bb832c38}\label{namespacenfc_1_1pn532_1_1command_1_1GPIO_a7e0133b87e9924e5d32899a2bb832c38}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+G\+P\+I\+O\+::p34} = 0x04
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a3a12e6586558b163d6c976a9c9b0ed84}\label{namespacenfc_1_1pn532_1_1command_a3a12e6586558b163d6c976a9c9b0ed84}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::set\+Serial\+Baudrate} = 0x10
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_ae0658fe30470b3df3871ecc4a872ab3a}\label{namespacenfc_1_1pn532_1_1command_ae0658fe30470b3df3871ecc4a872ab3a}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+S\+A\+M\+Configuration} = 0x14
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1SAMmode_a64b69879681259b8813f3ef21cfcfcca}\label{namespacenfc_1_1pn532_1_1command_1_1SAMmode_a64b69879681259b8813f3ef21cfcfcca}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+S\+A\+Mmode\+::\+Normal\+\_\+mode} = 0x01
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1SAMmode_ae0506dfee39cf152a96b33c6c957cd37}\label{namespacenfc_1_1pn532_1_1command_1_1SAMmode_ae0506dfee39cf152a96b33c6c957cd37}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+S\+A\+Mmode\+::\+Virtual\+\_\+mode} = 0x02
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1SAMmode_a29b9f6ea20c0f39095c11d8a104af787}\label{namespacenfc_1_1pn532_1_1command_1_1SAMmode_a29b9f6ea20c0f39095c11d8a104af787}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+S\+A\+Mmode\+::\+Wired\+\_\+card} = 0x03
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1SAMmode_a6fbd926eca5ac36689a11b050b8c4acd}\label{namespacenfc_1_1pn532_1_1command_1_1SAMmode_a6fbd926eca5ac36689a11b050b8c4acd}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+S\+A\+Mmode\+::\+Dual\+\_\+card} = 0x04
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a35a1e049e7ede04c3333e8ca4ea850fa}\label{namespacenfc_1_1pn532_1_1command_a35a1e049e7ede04c3333e8ca4ea850fa}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+R\+F\+Configuration} = 0x32
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1RFItem_a9c80da3e62429d0e8953a0c8a953e120}\label{namespacenfc_1_1pn532_1_1command_1_1RFItem_a9c80da3e62429d0e8953a0c8a953e120}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+R\+F\+Item\+::\+R\+F\+Field} = 0x01
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1RFItem_a299b7eab472465cff453e9ac26731793}\label{namespacenfc_1_1pn532_1_1command_1_1RFItem_a299b7eab472465cff453e9ac26731793}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+R\+F\+Item\+::\+Timings} = 0x02
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1RFItem_a642bb15ff8b1ad9b522752d543343158}\label{namespacenfc_1_1pn532_1_1command_1_1RFItem_a642bb15ff8b1ad9b522752d543343158}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+R\+F\+Item\+::\+Max\+Retry\+Communication} = 0x04
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_1_1RFItem_ac1974af8b80f425dcbce29bed9045300}\label{namespacenfc_1_1pn532_1_1command_1_1RFItem_ac1974af8b80f425dcbce29bed9045300}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+R\+F\+Item\+::\+Max\+Retries} = 0x05
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_a277b57192cfa053471a7245a5d612abc}\label{namespacenfc_1_1pn532_1_1command_a277b57192cfa053471a7245a5d612abc}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+In\+List\+Passive\+Target} = 0x4A
+\item 
+\mbox{\Hypertarget{namespacenfc_1_1pn532_1_1command_aed733a6e58c28c5efca87874056f21f0}\label{namespacenfc_1_1pn532_1_1command_aed733a6e58c28c5efca87874056f21f0}} 
+const uint8\+\_\+t {\bfseries nfc\+::pn532\+::command\+::\+In\+Data\+Exchange} = 0x40
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Specific declarations for the nfc classes to use. 
+
+You can alter / add content of this file to your own liking. This file contains declarations for the pn532\textquotesingle{}s commands, mifare commands, statuscodes etc..
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

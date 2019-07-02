@@ -1,0 +1,45 @@
+\hypertarget{examples__mifare__classic_2increment_2main_8cpp}{}\section{examples\+\_\+mifare\+\_\+classic/increment/main.cpp File Reference}
+\label{examples__mifare__classic_2increment_2main_8cpp}\index{examples\+\_\+mifare\+\_\+classic/increment/main.\+cpp@{examples\+\_\+mifare\+\_\+classic/increment/main.\+cpp}}
+
+
+Example use of the nfc library to increment a value block on a Mifare classic 1k using the pn532.  
+
+
+{\ttfamily \#include \char`\"{}../../code/headers/pn532\+Oled.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{examples__mifare__classic_2increment_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{examples__mifare__classic_2increment_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example use of the nfc library to increment a value block on a Mifare classic 1k using the pn532. 
+
+This file will demonstrate how to use the nfc library to increment valueblock with the pn532
+
+Make sure the external G\+P\+IO pins of the pn532 are set to the proper protocol and match the protocol selected in this file.
+
+G\+P\+IO pin layout\+: ~\newline
+ P1 $\vert$ P2 = protocol\+: ~\newline
+ 0 $\vert$ 0 = U\+A\+RT ~\newline
+ 0 $\vert$ 1 = S\+PI ~\newline
+ 1 $\vert$ 0 = i2C ~\newline
+
+
+After the pn532 class has been made, the pn532 first needs to be initialised. The S\+AM (Security Access Module) needs to be deactivated in order to setup te pn532 as a normal card reader. The pn532 will indefinitely try to activate a card within it\textquotesingle{}s RF field when the set\+Max\+Retries(0x\+F\+F) command is used.
+
+After a card has entered the pn532\textquotesingle{}s rf field, the pn532 will try to authenticate the sector with the key specified in the declarations. After a succesfull authentication, it will continue to increment the value stored in the valueblock by a specified value
+
+The pn532 will first send out the increment command to the mifare classic. After a succesfull incrementation the page is not yet changed. The incrementation result is only temporarily stored in a specific buffer on the Mifare card. In order to transfer the data form the internal buffer to the page itself, the mifare\+Transfer() command needs to be executed.
+
+If this is succesfull, the valueblock is updated with its new value
+
+If one of the functions fails, it will return a statuscode other than pn532\+Status\+OK. The error cause can be deducted by comapring the given error code with the errors declared in\+: \hyperlink{declarations_8h}{declarations.\+h}
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

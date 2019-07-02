@@ -1,0 +1,172 @@
+\hypertarget{namespacestm32f103c8}{}\section{stm32f103c8 Namespace Reference}
+\label{namespacestm32f103c8}\index{stm32f103c8@{stm32f103c8}}
+
+
+hwlib H\+AL for the \hyperlink{namespacestm32f103c8}{stm32f103c8}  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstm32f103c8_1_1pin__in}{pin\+\_\+in}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classstm32f103c8_1_1pin__in}{pin\+\_\+in} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8} \end{DoxyCompactList}\item 
+class \hyperlink{classstm32f103c8_1_1pin__in__out}{pin\+\_\+in\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classstm32f103c8_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8} \end{DoxyCompactList}\item 
+class \hyperlink{classstm32f103c8_1_1pin__oc}{pin\+\_\+oc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classstm32f103c8_1_1pin__oc}{pin\+\_\+oc} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8} \end{DoxyCompactList}\item 
+class \hyperlink{classstm32f103c8_1_1pin__out}{pin\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classstm32f103c8_1_1pin__out}{pin\+\_\+out} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}\label{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}} 
+enum \hyperlink{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}{pins} \{ \newline
+{\bfseries a0}, 
+{\bfseries a1}, 
+{\bfseries a2}, 
+{\bfseries a3}, 
+\newline
+{\bfseries a4}, 
+{\bfseries a5}, 
+{\bfseries a6}, 
+{\bfseries a7}, 
+\newline
+{\bfseries a8}, 
+{\bfseries a9}, 
+{\bfseries a10}, 
+{\bfseries a11}, 
+\newline
+{\bfseries a12}, 
+{\bfseries a13}, 
+{\bfseries a14}, 
+{\bfseries a15}, 
+\newline
+{\bfseries b0}, 
+{\bfseries b1}, 
+{\bfseries b2}, 
+{\bfseries b3}, 
+\newline
+{\bfseries b4}, 
+{\bfseries b5}, 
+{\bfseries b6}, 
+{\bfseries b7}, 
+\newline
+{\bfseries b8}, 
+{\bfseries b9}, 
+{\bfseries b10}, 
+{\bfseries b11}, 
+\newline
+{\bfseries b12}, 
+{\bfseries b13}, 
+{\bfseries b14}, 
+{\bfseries b15}, 
+\newline
+{\bfseries c0}, 
+{\bfseries c1}, 
+{\bfseries c2}, 
+{\bfseries c3}, 
+\newline
+{\bfseries c4}, 
+{\bfseries c5}, 
+{\bfseries c6}, 
+{\bfseries c7}, 
+\newline
+{\bfseries c8}, 
+{\bfseries c9}, 
+{\bfseries c10}, 
+{\bfseries c11}, 
+\newline
+{\bfseries c12}, 
+{\bfseries c13}, 
+{\bfseries c14}, 
+{\bfseries c15}, 
+\newline
+{\bfseries led}
+ \}\begin{DoxyCompactList}\small\item\em G\+P\+IO pin names. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacestm32f103c8_a7690d875e87715532777680634201060}{ticks\+\_\+per\+\_\+us} ()
+\begin{DoxyCompactList}\small\item\em the number of ticks per us \end{DoxyCompactList}\item 
+uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacestm32f103c8_a3cee8ad2019972eede2f90456d5eb9e0}{now\+\_\+ticks} ()
+\begin{DoxyCompactList}\small\item\em returns the number of ticks since some fixed starting point \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestm32f103c8_ab6a4d37dccd20d9ddd6ef943fffeb114}{uart\+\_\+char\+\_\+available} ()
+\item 
+char \hyperlink{namespacestm32f103c8_ad5b6e620a169eb8f233dc3f158e15ac7}{uart\+\_\+getc} ()
+\item 
+void \hyperlink{namespacestm32f103c8_a3b4365830ed2e5f66b80cac899ed29d4}{uart\+\_\+putc} (char c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+hwlib H\+AL for the \hyperlink{namespacestm32f103c8}{stm32f103c8} 
+
+This namespace contains the hwlib implementation of the pins, timing and (software) U\+A\+RT output for the \hyperlink{namespacestm32f103c8}{stm32f103c8}.
+
+Initially, the chip runs from its H\+SI internal RC oscillator at 8 M\+Hz. The first wait call configures the chip to run at 72 M\+Hz, assuming an 8 M\+Hz crystal.
+
+The chip runs at 3.\+3 Volt and that is the level on its IO pins.
+
+References\+:
+\begin{DoxyItemize}
+\item \href{http://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf}{\tt R\+M0008 S\+T\+M32\+F1xxx reference manual} (pdf)
+\item \href{http://www.st.com/content/ccc/resource/technical/document/datasheet/33/d4/6f/1d/df/0b/4c/6d/CD00161566.pdf/files/CD00161566.pdf/jcr:content/translations/en.CD00161566.pdf}{\tt S\+T\+M32\+Fl03x8 datasheet} (pdf) 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacestm32f103c8_a3cee8ad2019972eede2f90456d5eb9e0}\label{namespacestm32f103c8_a3cee8ad2019972eede2f90456d5eb9e0}} 
+\index{stm32f103c8@{stm32f103c8}!now\+\_\+ticks@{now\+\_\+ticks}}
+\index{now\+\_\+ticks@{now\+\_\+ticks}!stm32f103c8@{stm32f103c8}}
+\subsubsection{\texorpdfstring{now\+\_\+ticks()}{now\_ticks()}}
+{\footnotesize\ttfamily uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} stm32f103c8\+::now\+\_\+ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the number of ticks since some fixed starting point 
+
+current time in clock ticks
+
+A call of this function returns the number of clock ticks since some arbitrary moment (in most cases the first call to this function). \mbox{\Hypertarget{namespacestm32f103c8_a7690d875e87715532777680634201060}\label{namespacestm32f103c8_a7690d875e87715532777680634201060}} 
+\index{stm32f103c8@{stm32f103c8}!ticks\+\_\+per\+\_\+us@{ticks\+\_\+per\+\_\+us}}
+\index{ticks\+\_\+per\+\_\+us@{ticks\+\_\+per\+\_\+us}!stm32f103c8@{stm32f103c8}}
+\subsubsection{\texorpdfstring{ticks\+\_\+per\+\_\+us()}{ticks\_per\_us()}}
+{\footnotesize\ttfamily uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} stm32f103c8\+::ticks\+\_\+per\+\_\+us (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the number of ticks per us 
+
+clock ticks per microsecond
+
+A call of this function returns the number of clock ticks (as returned by a \hyperlink{namespacestm32f103c8_a3cee8ad2019972eede2f90456d5eb9e0}{now\+\_\+ticks()} call) per microsecond. \mbox{\Hypertarget{namespacestm32f103c8_ab6a4d37dccd20d9ddd6ef943fffeb114}\label{namespacestm32f103c8_ab6a4d37dccd20d9ddd6ef943fffeb114}} 
+\index{stm32f103c8@{stm32f103c8}!uart\+\_\+char\+\_\+available@{uart\+\_\+char\+\_\+available}}
+\index{uart\+\_\+char\+\_\+available@{uart\+\_\+char\+\_\+available}!stm32f103c8@{stm32f103c8}}
+\subsubsection{\texorpdfstring{uart\+\_\+char\+\_\+available()}{uart\_char\_available()}}
+{\footnotesize\ttfamily bool stm32f103c8\+::uart\+\_\+char\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+console character available check
+
+This is the function used to check if the console (istream) input has a character available. The embedded targets provide an implementation that checks the serial port.
+
+This definition is weak, which allows an application to provide its own definition. \mbox{\Hypertarget{namespacestm32f103c8_ad5b6e620a169eb8f233dc3f158e15ac7}\label{namespacestm32f103c8_ad5b6e620a169eb8f233dc3f158e15ac7}} 
+\index{stm32f103c8@{stm32f103c8}!uart\+\_\+getc@{uart\+\_\+getc}}
+\index{uart\+\_\+getc@{uart\+\_\+getc}!stm32f103c8@{stm32f103c8}}
+\subsubsection{\texorpdfstring{uart\+\_\+getc()}{uart\_getc()}}
+{\footnotesize\ttfamily char stm32f103c8\+::uart\+\_\+getc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+console character input function
+
+This is the function used for console (istream) input. The embedded targets provide an implementation that reads from the serial port.
+
+This definition is weak, which allows an application to provide its own definition. \mbox{\Hypertarget{namespacestm32f103c8_a3b4365830ed2e5f66b80cac899ed29d4}\label{namespacestm32f103c8_a3b4365830ed2e5f66b80cac899ed29d4}} 
+\index{stm32f103c8@{stm32f103c8}!uart\+\_\+putc@{uart\+\_\+putc}}
+\index{uart\+\_\+putc@{uart\+\_\+putc}!stm32f103c8@{stm32f103c8}}
+\subsubsection{\texorpdfstring{uart\+\_\+putc()}{uart\_putc()}}
+{\footnotesize\ttfamily void stm32f103c8\+::uart\+\_\+putc (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+console character output function
+
+This is the function used for console (ostream) output. The embedded targets provide an implementation that writes to the serial port.
+
+This definition is weak, which allows an application to provide its own definition. 

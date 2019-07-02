@@ -1,0 +1,185 @@
+The (abstract) types \hyperlink{classhwlib_1_1istream}{hwlib\+::istream} istream and \hyperlink{classhwlib_1_1ostream}{hwlib\+::ostream} ostream are used to read and write characters.
+
+~\newline
+ 
+
+\hypertarget{graphics_xy}{}\section{xy}\label{graphics_xy}
+An \hyperlink{classhwlib_1_1xy}{xy} is a value type that stores two int\+\_\+\+\_\+fst16\+\_\+t values x and y. xy values can be added and subtracted, and can be multiplied and divided by an integer value. An xy can also be printed to an \hyperlink{classhwlib_1_1ostream}{ostream} using operator$<$$<$.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1xy_a7f7c8b3888ce9d2ba014b8d36a86abb1}{x} &x value \\\cline{1-2}
+\hyperlink{classhwlib_1_1xy_a6a665ea6d31ce71d9f3a533986744086}{y} &y value \\\cline{1-2}
+\hyperlink{classhwlib_1_1xy_ad653d6eed097bcab167f5da86c48da5e}{+} &adds two xy values \\\cline{1-2}
+\hyperlink{classhwlib_1_1xy_ad653d6eed097bcab167f5da86c48da5e}{-\/} &subtracts to xy values \\\cline{1-2}
+\hyperlink{classhwlib_1_1xy_ad653d6eed097bcab167f5da86c48da5e}{$\ast$} &multiplies the x and y value by an integer \\\cline{1-2}
+\hyperlink{classhwlib_1_1xy_aedcbff14cac98d6f7fe5d96bd26f2d6f}{/} &divides the x and y values by an integer \\\cline{1-2}
+$<$$<$ &prints an xy to an \hyperlink{classhwlib_1_1ostream}{ostream} \\\cline{1-2}
+\end{longtabu}
+The overloaded \hyperlink{structxy_af0ac2823653fbb02e47de4315fb20a49}{all()} function can be used to iterate over all (x,y) values within the (0 .. x-\/1, 0 .. y-\/1) range (in some unspecified order).
+
+~\newline
+ 
+
+\hypertarget{graphics_color}{}\section{color}\label{graphics_color}
+A \hyperlink{classhwlib_1_1color}{color} is a value type that stores a color as three 8-\/bit red, green and blue values, plus a \textquotesingle{}is\+\_\+transparent\textquotesingle{} flag. When the transparent flag is not set, the color values determine the color. When it is set, the color values have no meaning. An color can also be printed to an \hyperlink{classhwlib_1_1ostream}{ostream} using operator$<$$<$.
+
+Colors can be constructed, negated, and compared for equality or inequality.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1color_a2bb850a5013f0f4a78b29bd09444fb21}{is\+\_\+transparent} &transparency flag \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_a63b0cdaa1bc446995cc8b8724a2ab866}{rad} &red intensity \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_ab87f25b9aba71151e056b570e7304c89}{green} &green intensity \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_a9d57edec257fb2626157befb791a6a96}{blue} &blue intensity \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_a35fd6b9a03fa8f5b78bbf55052760bd3}{color(r,g,b)} &construct a color from its components \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}{color(v)} &construct a color from its 24-\/bit R\+GB value \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}{-\/} &yields the inverse of a color \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}{==} &tests for equality \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}{!=} &tests for inequality \\\cline{1-2}
+\hyperlink{classhwlib_1_1color_a4280fa2c98671d364a67f56cbd7ec609}{$<$$<$} &prints an xy to an \hyperlink{classhwlib_1_1ostream}{ostream} \\\cline{1-2}
+\end{longtabu}
+The following color constants are available\+:
+\begin{DoxyItemize}
+\item \hyperlink{namespacehwlib_aa9c056fa29bc9af9f55d4b774bb3898a}{black}
+\item white
+\item red
+\item green
+\item blue
+\item gray
+\item yellow
+\item cyan
+\item magenta
+\item transparent
+\item violet
+\item sienna
+\item purple
+\item pink
+\item silver
+\item brown
+\item salmon
+\end{DoxyItemize}
+
+~\newline
+ 
+
+\hypertarget{graphics_image}{}\section{image}\label{graphics_image}
+An \hyperlink{classhwlib_1_1image}{hwlib\+::image} image is an abstract class that defines an interface to a picture, that is\+: a rectangle of read-\/only pixels. An image is used to embed a picture in the application.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1image_af98b91ebc4718e987918dae845691296}{size} &size in pixels in x and y direction \\\cline{1-2}
+\hyperlink{classhwlib_1_1image_a03e601777443a100803fdb3b185231ee}{hwlib\+::image\+::operator\mbox{[}\mbox{]}} operator \mbox{[}\mbox{]} &the color of the pixel at location loc \\\cline{1-2}
+\end{longtabu}
+~\newline
+ 
+
+\hypertarget{graphics_font}{}\section{font}\label{graphics_font}
+An \hyperlink{classhwlib_1_1font}{hwlib\+::font} font is an abstract class that defines an interface to a set of pictures that show characters as a graphic images. A font is used to implement a character \hyperlink{classhwlib_1_1terminal}{terminal} on a graphic \hyperlink{classhwlib_1_1window}{hwlib\+::window} window.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1image_a03e601777443a100803fdb3b185231ee}{operator\mbox{[} c \mbox{]}} &returns the image for char c \\\cline{1-2}
+\end{longtabu}
+Two concrete built-\/in font classes are available\+:
+\begin{DoxyItemize}
+\item \hyperlink{classhwlib_1_1font__default__8x8}{hwlib\+::font\+\_\+default\+\_\+8x8} font\+\_\+default\+\_\+8x8
+\item \hyperlink{classhwlib_1_1font__default__16x16}{hwlib\+::font\+\_\+default\+\_\+16x16} font\+\_\+default\+\_\+16x16
+\end{DoxyItemize}
+
+The font\+\_\+default\+\_\+16x16 is not available on A\+V\+R8 targets because the A\+VR compiler can\textquotesingle{}t handle it.
+
+~\newline
+ 
+
+\hypertarget{graphics_window}{}\section{window}\label{graphics_window}
+An \hyperlink{classhwlib_1_1window}{hwlib\+::window} window is an abstract class that defines an interface to a graphics display. The display can be cleared, and a pixel can be set to a color.
+
+Window operations are (potentially) buffered\+: a subsequent \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush()} call is required in order for the previous operations to take effect.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}{size} &size of the display, in pixels in a x any direction \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}{background} &the background color \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}{foreground} &the foreground color \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{clear()} &write the background color to all pixels \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{clear(col)} &write color col to tall pixels \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a65122042afeb55e41e5c03b5c8e26fff}{write(loc, col)} &write color col to the pixel at loc \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a65122042afeb55e41e5c03b5c8e26fff}{write(loc, img)} &write image img to the location loc \\\cline{1-2}
+\hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush()} &flush all pending changes to the window \\\cline{1-2}
+\end{longtabu}
+The \hyperlink{classhwlib_1_1window__part}{window\+\_\+part} decorator creates a window in a rectangular part of another window.
+
+The \hyperlink{classhwlib_1_1window__invert}{window\+\_\+invert} decorator creates a window that writes inverted (the color of each pixel negated) to the underlying window.
+
+~\newline
+ 
+
+\hypertarget{graphics_drawables}{}\section{drawables}\label{graphics_drawables}
+A \hyperlink{classhwlib_1_1drawable}{hwlib\+::drawable} drawable is an abstract class that defines an interface for something that cab be drawn on a \hyperlink{classhwlib_1_1window}{hwlib\+::window} window.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attributes and operations }&\textbf{ meaning or effect  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start} &origin (top left corner) of where the drawable is to be drawn \\\cline{1-2}
+\hyperlink{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}{draw(w)} &draw the drawable on window w \\\cline{1-2}
+\end{longtabu}
+A \hyperlink{classhwlib_1_1line}{line} is a drawable. It is created by specifying its origin and its endpoint. A color can be specified. If none is, the foreground color of the window is used.
+
+A \hyperlink{classhwlib_1_1circle}{circle} is a drawable. It is created by specifying its midpoint and its radius A color can be specified. If none is, the foreground color of the window is used.
+
+~\newline
+ 
+
+\hypertarget{graphics_terminal_from}{}\section{terminal\+\_\+from}\label{graphics_terminal_from}
+A \hyperlink{classhwlib_1_1terminal__from}{terminal\+\_\+from} creates a character \hyperlink{classhwlib_1_1terminal}{terminal} from a window and a character \hyperlink{classhwlib_1_1font}{font}.
+
+~\newline
+ 

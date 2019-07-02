@@ -1,0 +1,67 @@
+\hypertarget{classsetupSendCommand}{}\section{setup\+Send\+Command Class Reference}
+\label{classsetupSendCommand}\index{setup\+Send\+Command@{setup\+Send\+Command}}
+
+
+\hyperlink{classsetupSendCommand}{setup\+Send\+Command}  
+
+
+
+
+{\ttfamily \#include $<$pn532\+Command.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsetupSendCommand_ab61ddb3490a81ce23199f38bf01c5474}{setup\+Send\+Command} (const uint8\+\_\+t $\ast$commands\+To\+Send, uint8\+\_\+t command\+Size)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classsetupSendCommand}{setup\+Send\+Command}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classsetupSendCommand_ac31e42b6848a7cee79b23924759753b9}{calculate\+Checksum} (const uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, int index, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Function to calculate the checksum of a command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetupSendCommand_aeab654e713acac334513eb7c6b1df207}\label{classsetupSendCommand_aeab654e713acac334513eb7c6b1df207}} 
+uint8\+\_\+t {\bfseries length}
+\item 
+\mbox{\Hypertarget{classsetupSendCommand_a8621e212594dd292d12ed8982290b155}\label{classsetupSendCommand_a8621e212594dd292d12ed8982290b155}} 
+uint8\+\_\+t {\bfseries start\+Command} = 4
+\item 
+\mbox{\Hypertarget{classsetupSendCommand_a905d7bb6c142fe21bbfb7f364c9193a6}\label{classsetupSendCommand_a905d7bb6c142fe21bbfb7f364c9193a6}} 
+uint8\+\_\+t {\bfseries finalbuffer} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classsetupSendCommand}{setup\+Send\+Command} 
+
+This is a data object that manages te setup of a send command for the pn532 A command\+Buffer can be up to 64 bytes long The appropriate constructors and operators are provided. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsetupSendCommand_ab61ddb3490a81ce23199f38bf01c5474}\label{classsetupSendCommand_ab61ddb3490a81ce23199f38bf01c5474}} 
+\index{setup\+Send\+Command@{setup\+Send\+Command}!setup\+Send\+Command@{setup\+Send\+Command}}
+\index{setup\+Send\+Command@{setup\+Send\+Command}!setup\+Send\+Command@{setup\+Send\+Command}}
+\subsubsection{\texorpdfstring{setup\+Send\+Command()}{setupSendCommand()}}
+{\footnotesize\ttfamily setup\+Send\+Command\+::setup\+Send\+Command (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{commands\+To\+Send,  }\item[{uint8\+\_\+t}]{command\+Size }\end{DoxyParamCaption})}
+
+
+
+Constructor for \hyperlink{classsetupSendCommand}{setup\+Send\+Command}. 
+
+This constructor manages the proper layout for a command that can be send to the pn532. It will add preambles, calculate the checksums, and calculate the proper commandsize. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetupSendCommand_ac31e42b6848a7cee79b23924759753b9}\label{classsetupSendCommand_ac31e42b6848a7cee79b23924759753b9}} 
+\index{setup\+Send\+Command@{setup\+Send\+Command}!calculate\+Checksum@{calculate\+Checksum}}
+\index{calculate\+Checksum@{calculate\+Checksum}!setup\+Send\+Command@{setup\+Send\+Command}}
+\subsubsection{\texorpdfstring{calculate\+Checksum()}{calculateChecksum()}}
+{\footnotesize\ttfamily uint8\+\_\+t setup\+Send\+Command\+::calculate\+Checksum (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{int}]{index,  }\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Function to calculate the checksum of a command. 
+
+The pn532 will use the This function will calculate the cecksum by adding all commands to each other. The checksum will be inverted and 1 will be added for the correct checksum 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{pn532Command_8h}{pn532\+Command.\+h}\item 
+code/src/\hyperlink{pn532Command_8cpp}{pn532\+Command.\+cpp}\end{DoxyCompactItemize}

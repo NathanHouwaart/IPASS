@@ -1,0 +1,47 @@
+\hypertarget{pn532Command_8h}{}\section{code/headers/pn532\+Command.h File Reference}
+\label{pn532Command_8h}\index{code/headers/pn532\+Command.\+h@{code/headers/pn532\+Command.\+h}}
+
+
+This file contains two data objects that handle and trim the outgoing and received commands of a pn532.  
+
+
+{\ttfamily \#include \char`\"{}../../hwlib/library/hwlib.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}declarations.\+h\char`\"{}}\newline
+Include dependency graph for pn532\+Command.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsetupSendCommand}{setup\+Send\+Command}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classsetupSendCommand}{setup\+Send\+Command} \end{DoxyCompactList}\item 
+class \hyperlink{classreceivedCommand}{received\+Command}
+\begin{DoxyCompactList}\small\item\em Receive\+Command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains two data objects that handle and trim the outgoing and received commands of a pn532. 
+
+This file provides data objects that help standardize the received pn532 commands to a fixed format. Normally, the pn532 sends a frame to the host controller with information in response to a command send. However, depending on what interface is used, the frame might look a little different.
+
+A general pn532 frame looks like\+:
+
+0x00, 0x00, 0x\+FF, L\+EN, L\+CS, T\+FI, P\+D0, P\+D1, P\+Dn, D\+CS, 0x00
+
+Where\+:
+\begin{DoxyItemize}
+\item 0x00, 0x00, 0x\+FF = preamble (start of a command)
+\item L\+EN = Length of the receiven command
+\item L\+CS = Checksum of lenght
+\item T\+FI = Frame identifier ( D4\+: host -\/$>$ pn532. D5\+: pn542 -\/$>$ host)
+\item P\+D0, P\+D1, P\+Dn = Packed data
+\item D\+CS = Packed data Checksum
+\item 0x00 = Postamble (end of a command)
+\end{DoxyItemize}
+
+For more detailled information, please refer to the user manual\+: \href{https://www.nxp.com/docs/en/user-guide/141520.pdf}{\tt https\+://www.\+nxp.\+com/docs/en/user-\/guide/141520.\+pdf} P. 28 -\/ 6.\+2.\+1.\+1
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

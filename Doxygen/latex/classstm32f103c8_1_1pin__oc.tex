@@ -1,0 +1,148 @@
+\hypertarget{classstm32f103c8_1_1pin__oc}{}\section{stm32f103c8\+:\+:pin\+\_\+oc Class Reference}
+\label{classstm32f103c8_1_1pin__oc}\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+
+
+\hyperlink{classstm32f103c8_1_1pin__oc}{pin\+\_\+oc} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8}  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/stm32f103c8.\+hpp$>$}
+
+
+
+Inheritance diagram for stm32f103c8\+:\+:pin\+\_\+oc\+:
+% FIG 0
+
+
+Collaboration diagram for stm32f103c8\+:\+:pin\+\_\+oc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstm32f103c8_1_1pin__oc_a3cc4f9798d977b88a71f27ba6419cfd6}{pin\+\_\+oc} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\hyperlink{classstm32f103c8_1_1pin__oc_a0a67da6f1d095169e5a82b25f3c9270b}{pin\+\_\+oc} (\hyperlink{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}{pins} name)
+\item 
+bool \hyperlink{classstm32f103c8_1_1pin__oc_ae733a459b1f10ca38ac20f2d60923833}{read} () override
+\item 
+void \hyperlink{classstm32f103c8_1_1pin__oc_a9e5f3ecc1c5aff4b4277ea33d26ef0c7}{write} (bool v) override
+\item 
+void \hyperlink{classstm32f103c8_1_1pin__oc_ac86dbc1c7430d2dbdee190ee87b2e35e}{flush} () override
+\item 
+void \hyperlink{classstm32f103c8_1_1pin__oc_a6f063df5c0c2a290ed095b26faab4aab}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classstm32f103c8_1_1pin__oc}{pin\+\_\+oc} implementation for an \hyperlink{namespacestm32f103c8}{stm32f103c8} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__oc_a3cc4f9798d977b88a71f27ba6419cfd6}\label{classstm32f103c8_1_1pin__oc_a3cc4f9798d977b88a71f27ba6419cfd6}} 
+\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily stm32f103c8\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f103c8}{stm32f103c8} \hyperlink{classstm32f103c8_1_1pin__oc}{pin\+\_\+oc} constructor
+
+Construct an \hyperlink{namespacestm32f103c8}{stm32f103c8} open-\/collector pin from its port and pin numbers.
+
+This constructor doesn\textquotesingle{}t set the pin value to high or low, the set function must be called to do so. \mbox{\Hypertarget{classstm32f103c8_1_1pin__oc_a0a67da6f1d095169e5a82b25f3c9270b}\label{classstm32f103c8_1_1pin__oc_a0a67da6f1d095169e5a82b25f3c9270b}} 
+\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily stm32f103c8\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{\hyperlink{namespacestm32f103c8_a69d642506db309a7e64295d35ec21ff6}{pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f103c8}{stm32f103c8} \hyperlink{classstm32f103c8_1_1pin__oc}{pin\+\_\+oc} constructor
+
+Construct an \hyperlink{namespacestm32f103c8}{stm32f103c8} open-\/collector pin from its blue-\/pill pin name.
+
+This constructor doesn\textquotesingle{}t set the pin value to high or low, the set function must be called to do so. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__oc_ac86dbc1c7430d2dbdee190ee87b2e35e}\label{classstm32f103c8_1_1pin__oc_ac86dbc1c7430d2dbdee190ee87b2e35e}} 
+\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}!flush@{flush}}
+\index{flush@{flush}!stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void stm32f103c8\+::pin\+\_\+oc\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__oc_ae733a459b1f10ca38ac20f2d60923833}\label{classstm32f103c8_1_1pin__oc_ae733a459b1f10ca38ac20f2d60923833}} 
+\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}!read@{read}}
+\index{read@{read}!stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool stm32f103c8\+::pin\+\_\+oc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classstm32f103c8_1_1pin__oc_a6f063df5c0c2a290ed095b26faab4aab}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__oc_a6f063df5c0c2a290ed095b26faab4aab}\label{classstm32f103c8_1_1pin__oc_a6f063df5c0c2a290ed095b26faab4aab}} 
+\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}!refresh@{refresh}}
+\index{refresh@{refresh}!stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void stm32f103c8\+::pin\+\_\+oc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classstm32f103c8_1_1pin__oc_ae733a459b1f10ca38ac20f2d60923833}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classstm32f103c8_1_1pin__oc_a9e5f3ecc1c5aff4b4277ea33d26ef0c7}\label{classstm32f103c8_1_1pin__oc_a9e5f3ecc1c5aff4b4277ea33d26ef0c7}} 
+\index{stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}!write@{write}}
+\index{write@{write}!stm32f103c8\+::pin\+\_\+oc@{stm32f103c8\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void stm32f103c8\+::pin\+\_\+oc\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classstm32f103c8_1_1pin__oc_ac86dbc1c7430d2dbdee190ee87b2e35e}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{hwlib\+::pin\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-stm32f103c8_8hpp}{hwlib-\/stm32f103c8.\+hpp}\end{DoxyCompactItemize}

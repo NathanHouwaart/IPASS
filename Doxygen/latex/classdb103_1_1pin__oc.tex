@@ -1,0 +1,136 @@
+\hypertarget{classdb103_1_1pin__oc}{}\section{db103\+:\+:pin\+\_\+oc Class Reference}
+\label{classdb103_1_1pin__oc}\index{db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}}
+
+
+\hyperlink{classdb103_1_1pin__oc}{pin\+\_\+oc} implementation for the L\+P\+C1114  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/db103.\+hpp$>$}
+
+
+
+Inheritance diagram for db103\+:\+:pin\+\_\+oc\+:
+% FIG 0
+
+
+Collaboration diagram for db103\+:\+:pin\+\_\+oc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdb103_1_1pin__oc_a7cd264bed695dc067ecde6e452b3592f}{pin\+\_\+oc} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\item 
+bool \hyperlink{classdb103_1_1pin__oc_ae48de2077c383bcab947278ee6564398}{read} () override
+\item 
+void \hyperlink{classdb103_1_1pin__oc_a77912a9a646cb67030854d69d911acbd}{write} (bool v) override
+\item 
+void \hyperlink{classdb103_1_1pin__oc_af033054181da84fd2392f611ca391ee3}{refresh} () override
+\item 
+void \hyperlink{classdb103_1_1pin__oc_a9aa19305905fe3a647fe1fa50a243dae}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdb103_1_1pin__oc}{pin\+\_\+oc} implementation for the L\+P\+C1114 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__oc_a7cd264bed695dc067ecde6e452b3592f}\label{classdb103_1_1pin__oc_a7cd264bed695dc067ecde6e452b3592f}} 
+\index{db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}}
+{\footnotesize\ttfamily db103\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+L\+P\+C1114 \hyperlink{classdb103_1_1pin__oc}{pin\+\_\+oc} constructor
+
+Constructor for an L\+P\+C1114 input pin.
+
+This constructor sets the pin to high (high-\/impedance). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdb103_1_1pin__oc_a9aa19305905fe3a647fe1fa50a243dae}\label{classdb103_1_1pin__oc_a9aa19305905fe3a647fe1fa50a243dae}} 
+\index{db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}!flush@{flush}}
+\index{flush@{flush}!db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+oc\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__oc_ae48de2077c383bcab947278ee6564398}\label{classdb103_1_1pin__oc_ae48de2077c383bcab947278ee6564398}} 
+\index{db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}!read@{read}}
+\index{read@{read}!db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool db103\+::pin\+\_\+oc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classdb103_1_1pin__oc_af033054181da84fd2392f611ca391ee3}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__oc_af033054181da84fd2392f611ca391ee3}\label{classdb103_1_1pin__oc_af033054181da84fd2392f611ca391ee3}} 
+\index{db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}!refresh@{refresh}}
+\index{refresh@{refresh}!db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+oc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdb103_1_1pin__oc_ae48de2077c383bcab947278ee6564398}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classdb103_1_1pin__oc_a77912a9a646cb67030854d69d911acbd}\label{classdb103_1_1pin__oc_a77912a9a646cb67030854d69d911acbd}} 
+\index{db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}!write@{write}}
+\index{write@{write}!db103\+::pin\+\_\+oc@{db103\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void db103\+::pin\+\_\+oc\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classdb103_1_1pin__oc_a9aa19305905fe3a647fe1fa50a243dae}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{hwlib\+::pin\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-db103_8hpp}{hwlib-\/db103.\+hpp}\end{DoxyCompactItemize}

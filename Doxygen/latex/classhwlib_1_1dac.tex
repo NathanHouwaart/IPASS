@@ -1,0 +1,64 @@
+\hypertarget{classhwlib_1_1dac}{}\section{hwlib\+:\+:dac Class Reference}
+\label{classhwlib_1_1dac}\index{hwlib\+::dac@{hwlib\+::dac}}
+
+
+{\ttfamily \#include $<$hwlib-\/dac.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1dac_a817d363b6abcd056bce2f0a4a514cb14}\label{classhwlib_1_1dac_a817d363b6abcd056bce2f0a4a514cb14}} 
+typedef uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1dac_a817d363b6abcd056bce2f0a4a514cb14}{dac\+\_\+value\+\_\+type}
+\begin{DoxyCompactList}\small\item\em the type of the result returned by \hyperlink{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}{write()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}{write} (\hyperlink{classhwlib_1_1dac_a817d363b6abcd056bce2f0a4a514cb14}{dac\+\_\+value\+\_\+type} x)=0
+\item 
+virtual void \hyperlink{classhwlib_1_1dac_ab25a6ae2d86b0bec3afdecf3d22faf67}{flush} ()=0
+\item 
+\mbox{\Hypertarget{classhwlib_1_1dac_ab07c4b69fb42aa080d94714bc06f0ab9}\label{classhwlib_1_1dac_ab07c4b69fb42aa080d94714bc06f0ab9}} 
+\hyperlink{classhwlib_1_1dac_ab07c4b69fb42aa080d94714bc06f0ab9}{dac} (uint\+\_\+fast8\+\_\+t n\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em specify the number of bits \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1dac_a031625f8cbcb88bebd48a76aa19bfcb5}\label{classhwlib_1_1dac_a031625f8cbcb88bebd48a76aa19bfcb5}} 
+const uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1dac_a031625f8cbcb88bebd48a76aa19bfcb5}{dac\+\_\+n\+\_\+bits}
+\begin{DoxyCompactList}\small\item\em the number of bits in the result returned by \hyperlink{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}{write()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1dac_ae0546b0bcfa18c53a37a0285dc77f04c}\label{classhwlib_1_1dac_ae0546b0bcfa18c53a37a0285dc77f04c}} 
+const uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1dac_ae0546b0bcfa18c53a37a0285dc77f04c}{dac\+\_\+max\+\_\+value}
+\begin{DoxyCompactList}\small\item\em the maximum value that can be returned by \hyperlink{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}{write()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D/A output interface
+
+This class abstracts the interface to a D\+AC (Digital to Analog Converter). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1dac_ab25a6ae2d86b0bec3afdecf3d22faf67}\label{classhwlib_1_1dac_ab25a6ae2d86b0bec3afdecf3d22faf67}} 
+\index{hwlib\+::dac@{hwlib\+::dac}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::dac@{hwlib\+::dac}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily virtual void hwlib\+::dac\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+flush the write buffer
+
+This function flushes the write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. \mbox{\Hypertarget{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}\label{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}} 
+\index{hwlib\+::dac@{hwlib\+::dac}!write@{write}}
+\index{write@{write}!hwlib\+::dac@{hwlib\+::dac}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void hwlib\+::dac\+::write (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1dac_a817d363b6abcd056bce2f0a4a514cb14}{dac\+\_\+value\+\_\+type}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+write a value to the D/A output
+
+This writes a digital value to the D/A converter, which causes the corresponding analog value to appear on the output pin.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1dac_ab25a6ae2d86b0bec3afdecf3d22faf67}{flush()} call. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-dac_8hpp}{hwlib-\/dac.\+hpp}\end{DoxyCompactItemize}

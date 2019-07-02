@@ -1,0 +1,116 @@
+\hypertarget{hwlib-defines_8hpp}{}\section{code/hwlib/library/core/hwlib-\/defines.hpp File Reference}
+\label{hwlib-defines_8hpp}\index{code/hwlib/library/core/hwlib-\/defines.\+hpp@{code/hwlib/library/core/hwlib-\/defines.\+hpp}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacehwlib}{hwlib}
+\begin{DoxyCompactList}\small\item\em hwlib library \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_aef311f1f416fdcbd1fa22376dcc01029}{H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((noreturn))
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((weak))
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_a2bec10dcdff9c6b29f603813007f2ffa}{H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((never\+\_\+inline))
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_a360fe3b1713068844a760bed1aa1384a}{H\+W\+L\+I\+B\+\_\+\+H\+E\+RE}~H\+W\+L\+I\+B\+\_\+\+H\+E\+R\+E2( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_a536d8e892418f0e4127db75a6f653add}{H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE}
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_aad56b336cfbb41a3f3c76aa44ea90af2}{H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL}(a,  b)~hwlib\+::\+\_\+equal( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \#a, \#b, a, b );
+\item 
+\#define \hyperlink{hwlib-defines_8hpp_a6023302b4614de7cfe0d8596b3ecec13}{H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE}~115200
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hwlib-defines_8hpp_a6023302b4614de7cfe0d8596b3ecec13}\label{hwlib-defines_8hpp_a6023302b4614de7cfe0d8596b3ecec13}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}
+\index{H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE}{HWLIB\_BAUDRATE}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE~115200}
+
+console baudrate
+
+When no H\+W\+L\+I\+B\+\_\+\+B\+A\+U\+D\+R\+A\+TE is defined, it will default to 1200 baud. \mbox{\Hypertarget{hwlib-defines_8hpp_a360fe3b1713068844a760bed1aa1384a}\label{hwlib-defines_8hpp_a360fe3b1713068844a760bed1aa1384a}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+H\+E\+RE@{H\+W\+L\+I\+B\+\_\+\+H\+E\+RE}}
+\index{H\+W\+L\+I\+B\+\_\+\+H\+E\+RE@{H\+W\+L\+I\+B\+\_\+\+H\+E\+RE}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+H\+E\+RE}{HWLIB\_HERE}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+H\+E\+RE~H\+W\+L\+I\+B\+\_\+\+H\+E\+R\+E2( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )}
+
+\mbox{[}file-\/name\+:line-\/number\mbox{]} macro
+
+The macro H\+W\+L\+I\+B\+\_\+\+H\+E\+RE translates to a newline, the file-\/name, \char`\"{}\+:\char`\"{}, and the line-\/number of the place where the H\+W\+L\+I\+B\+\_\+\+H\+E\+RE macro appears. This can be usefull for debug logging. It is used by H\+L\+W\+I\+B\+\_\+\+T\+R\+A\+CE. \mbox{\Hypertarget{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}\label{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE@{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE}}
+\index{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE@{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE}{HWLIB\_INLINE}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE~\+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))}
+
+mark a function definition as to be (always) inlined
+
+Sometimes a function should always be inlined, for instance because it is called only once, or because inlining it will produce better code.
+
+Use this attribute with care, because it can lead to much larger code.
+
+This must be done by a macro because Doxygen can\textquotesingle{}t handle {\bfseries attribute}. \mbox{\Hypertarget{hwlib-defines_8hpp_a2bec10dcdff9c6b29f603813007f2ffa}\label{hwlib-defines_8hpp_a2bec10dcdff9c6b29f603813007f2ffa}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE@{H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE}}
+\index{H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE@{H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE}{HWLIB\_NOINLINE}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+N\+O\+I\+N\+L\+I\+NE~\+\_\+\+\_\+attribute\+\_\+\+\_\+((never\+\_\+inline))}
+
+mark a function definition as to be never inlined
+
+Sometimes a function should not be inlined, for instance because inlining would affect it timing.
+
+Use this attribute with care, in most cases the decision to inline or not should be left to the compiler.
+
+This must be done by a macro because Doxygen can\textquotesingle{}t handle {\bfseries attribute}. \mbox{\Hypertarget{hwlib-defines_8hpp_aef311f1f416fdcbd1fa22376dcc01029}\label{hwlib-defines_8hpp_aef311f1f416fdcbd1fa22376dcc01029}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN@{H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN}}
+\index{H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN@{H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN}{HWLIB\_NORETURN}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+N\+O\+R\+E\+T\+U\+RN~\+\_\+\+\_\+attribute\+\_\+\+\_\+((noreturn))}
+
+mark a function declaration as never returning
+
+This is useful when other code relies a function not to return. It can also enable the compiler to generate slightly better code.
+
+This must be done by a macro because Doxygen can\textquotesingle{}t handle {\bfseries attribute}. \mbox{\Hypertarget{hwlib-defines_8hpp_aad56b336cfbb41a3f3c76aa44ea90af2}\label{hwlib-defines_8hpp_aad56b336cfbb41a3f3c76aa44ea90af2}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL@{H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL}}
+\index{H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL@{H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL}{HWLIB\_TEST\_EQUAL}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~hwlib\+::\+\_\+equal( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \#a, \#b, a, b );}
+
+equality test macro
+
+The H\+W\+L\+I\+B\+\_\+\+T\+E\+S\+T\+\_\+\+E\+Q\+U\+AL checks whether the two parameters compare equal. If not, it outputs a messages that tries to identify the problem. This is meant for use in test scripts. \mbox{\Hypertarget{hwlib-defines_8hpp_a536d8e892418f0e4127db75a6f653add}\label{hwlib-defines_8hpp_a536d8e892418f0e4127db75a6f653add}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE@{H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE}}
+\index{H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE@{H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE}{HWLIB\_TRACE}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(                                 \(\backslash\)
+   \hyperlink{namespacehwlib_a7de728368e57486f51717f911401a604}{::hwlib::cout} << \textcolor{stringliteral}{"\(\backslash\)n"} <<                           \(\backslash\)
+   \hyperlink{namespacehwlib_ab8f3a2357c88d53861c09dbd17f14f1b}{::hwlib::dec} << \hyperlink{hwlib-defines_8hpp_a360fe3b1713068844a760bed1aa1384a}{HWLIB\_HERE} << \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{hwlib::flush} )       \(\backslash\)
+\end{DoxyCode}
+trace macro
+
+The H\+W\+L\+I\+B\+\_\+\+T\+R\+A\+CE macro can be used like \hyperlink{namespacehwlib_a7de728368e57486f51717f911401a604}{hwlib\+::cout} to print to, but what is printed will be prefixed with a newfile and the H\+W\+L\+I\+B\+\_\+\+H\+E\+RE string. \mbox{\Hypertarget{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}\label{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}} 
+\index{hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}!H\+W\+L\+I\+B\+\_\+\+W\+E\+AK@{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK}}
+\index{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK@{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK}!hwlib-\/defines.\+hpp@{hwlib-\/defines.\+hpp}}
+\subsubsection{\texorpdfstring{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK}{HWLIB\_WEAK}}
+{\footnotesize\ttfamily \#define H\+W\+L\+I\+B\+\_\+\+W\+E\+AK~\+\_\+\+\_\+attribute\+\_\+\+\_\+((weak))}
+
+mark a function definition as weak
+
+This allowed the function definition to be overruled by an (often application-\/defined) replacement.
+
+This attribute also makes it possible to put a function definition in a header, because all but one of the definitions will be eliminated by the linker.
+
+This must be done by a macro because Doxygen can\textquotesingle{}t handle {\bfseries attribute}.
+
+Min\+GW doesn\textquotesingle{}t handle this correctly, hence redefining a weak symbol (as used by the rtos) won\textquotesingle{}t work with Min\+GW. 

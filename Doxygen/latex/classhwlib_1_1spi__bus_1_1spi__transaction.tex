@@ -1,0 +1,124 @@
+\hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction}{}\section{hwlib\+:\+:spi\+\_\+bus\+:\+:spi\+\_\+transaction Class Reference}
+\label{classhwlib_1_1spi__bus_1_1spi__transaction}\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+
+
+{\ttfamily \#include $<$hwlib-\/spi.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a7f88f6495a59e3f33ae1439f96efd579}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a7f88f6495a59e3f33ae1439f96efd579}} 
+void {\bfseries end\+Transaction} ()
+\item 
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_a4ee28fb69390f3e7bd6f70288e602227}{write\+\_\+and\+\_\+read} (const size\+\_\+t n, const uint8\+\_\+t data\+\_\+out\mbox{[}$\,$\mbox{]}, uint8\+\_\+t data\+\_\+in\mbox{[}$\,$\mbox{]})
+\item 
+{\footnotesize template$<$size\+\_\+t n$>$ }\\void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_ac80ff882385930ec4a85952a4a17f89e}{write\+\_\+and\+\_\+read} (const std\+::array$<$ uint8\+\_\+t, n $>$ \&data\+\_\+out, std\+::array$<$ uint8\+\_\+t, n $>$ \&data\+\_\+in)
+\item 
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_a53219b4fcfef256728024ef010c71bb8}{write} (const size\+\_\+t n, const uint8\+\_\+t data\+\_\+out\mbox{[}$\,$\mbox{]})
+\item 
+{\footnotesize template$<$size\+\_\+t n$>$ }\\void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_a2a877f3b53b777630f7ac1fe0dde4b43}{write} (const std\+::array$<$ uint8\+\_\+t, n $>$ \&data\+\_\+out)
+\item 
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_a5a9e7385743ee94b8316f602c7050044}{write} (const uint8\+\_\+t d)
+\item 
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_a917b24c83ca922c30d31c1d1f8baf773}{read} (const size\+\_\+t n, uint8\+\_\+t data\+\_\+in\mbox{[}$\,$\mbox{]})
+\item 
+{\footnotesize template$<$size\+\_\+t n$>$ }\\void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_a4c1968dd719d580abbd8752262c5b8c3}{read} (std\+::array$<$ uint8\+\_\+t, n $>$ \&data\+\_\+in)
+\item 
+uint8\+\_\+t \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} \hyperlink{classhwlib_1_1spi__bus_1_1spi__transaction_add2f3681b4455fe22109192d5fe3d9d5}{read\+\_\+byte} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_ad37893f774497c4f6cdbacbefd620532}\label{classhwlib_1_1spi__bus_1_1spi__transaction_ad37893f774497c4f6cdbacbefd620532}} 
+class {\bfseries spi\+\_\+bus}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+spi transaction object
+
+A S\+PI transaction object is created (adn destructed) for each S\+PI transaction. When a S\+PI transaction object is is constructed, When the object is destructed, the sel pin is deselected.
+
+While the transaction object exists, its functions can be used to transfer data to and from the peripheral. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a917b24c83ca922c30d31c1d1f8baf773}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a917b24c83ca922c30d31c1d1f8baf773}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!read@{read}}
+\index{read@{read}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::read (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{uint8\+\_\+t}]{data\+\_\+in\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read data (raw array)
+
+This function reads n bytes from the peripheral into data\+\_\+in.
+
+This function uses an unsafe (raw array) interface. Prefer to use a function that uses std\+::array$<$$>$ instead. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a4c1968dd719d580abbd8752262c5b8c3}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a4c1968dd719d580abbd8752262c5b8c3}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!read@{read}}
+\index{read@{read}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::read (\begin{DoxyParamCaption}\item[{std\+::array$<$ uint8\+\_\+t, n $>$ \&}]{data\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read data (std\+::array$<$$>$)
+
+This function reads n bytes from the peripheral into data\+\_\+in. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_add2f3681b4455fe22109192d5fe3d9d5}\label{classhwlib_1_1spi__bus_1_1spi__transaction_add2f3681b4455fe22109192d5fe3d9d5}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!read\+\_\+byte@{read\+\_\+byte}}
+\index{read\+\_\+byte@{read\+\_\+byte}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{read\+\_\+byte()}{read\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::read\+\_\+byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read a single byte
+
+This function reads and returns a single byte. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a53219b4fcfef256728024ef010c71bb8}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a53219b4fcfef256728024ef010c71bb8}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!write@{write}}
+\index{write@{write}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::write (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const uint8\+\_\+t}]{data\+\_\+out\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write data (raw array)
+
+This function writes n bytes from data\+\_\+out to the peripheral.
+
+This function uses an unsafe (raw array) interface. Prefer to use a function that uses std\+::array$<$$>$ instead. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a2a877f3b53b777630f7ac1fe0dde4b43}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a2a877f3b53b777630f7ac1fe0dde4b43}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!write@{write}}
+\index{write@{write}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::write (\begin{DoxyParamCaption}\item[{const std\+::array$<$ uint8\+\_\+t, n $>$ \&}]{data\+\_\+out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write data (std\+:array$<$$>$)
+
+This function writes the data from data\+\_\+out to the peripheral. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a5a9e7385743ee94b8316f602c7050044}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a5a9e7385743ee94b8316f602c7050044}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!write@{write}}
+\index{write@{write}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write data (uint8\+\_\+t)
+
+This function writes a single byte of data to the peripheral. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_a4ee28fb69390f3e7bd6f70288e602227}\label{classhwlib_1_1spi__bus_1_1spi__transaction_a4ee28fb69390f3e7bd6f70288e602227}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!write\+\_\+and\+\_\+read@{write\+\_\+and\+\_\+read}}
+\index{write\+\_\+and\+\_\+read@{write\+\_\+and\+\_\+read}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write\+\_\+and\+\_\+read()}{write\_and\_read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::write\+\_\+and\+\_\+read (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n,  }\item[{const uint8\+\_\+t}]{data\+\_\+out\mbox{[}$\,$\mbox{]},  }\item[{uint8\+\_\+t}]{data\+\_\+in\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read and write data (raw arrays)
+
+This function simultaneously writes n bytes from data\+\_\+out to the peripheral and reads n bytes from the peripheral into data\+\_\+in.
+
+This function uses an unsafe (raw array) interface. Prefer to use a function that uses std\+::array$<$$>$ instead.
+
+When data\+\_\+out is nullptr, 0 bits are written. When data\+\_\+in is nullptr, the bits that are read are ignored. \mbox{\Hypertarget{classhwlib_1_1spi__bus_1_1spi__transaction_ac80ff882385930ec4a85952a4a17f89e}\label{classhwlib_1_1spi__bus_1_1spi__transaction_ac80ff882385930ec4a85952a4a17f89e}} 
+\index{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}!write\+\_\+and\+\_\+read@{write\+\_\+and\+\_\+read}}
+\index{write\+\_\+and\+\_\+read@{write\+\_\+and\+\_\+read}!hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction@{hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction}}
+\subsubsection{\texorpdfstring{write\+\_\+and\+\_\+read()}{write\_and\_read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+void \hyperlink{hwlib-defines_8hpp_a520a8905adc71f1757aea4ce05183585}{H\+W\+L\+I\+B\+\_\+\+I\+N\+L\+I\+NE} hwlib\+::spi\+\_\+bus\+::spi\+\_\+transaction\+::write\+\_\+and\+\_\+read (\begin{DoxyParamCaption}\item[{const std\+::array$<$ uint8\+\_\+t, n $>$ \&}]{data\+\_\+out,  }\item[{std\+::array$<$ uint8\+\_\+t, n $>$ \&}]{data\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read and write data (std\+::array$<$$>$\textquotesingle{}s)
+
+This function simultaneously writes the data from data\+\_\+out to the peripheral and reads from the peripheral into data\+\_\+in. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-spi_8hpp}{hwlib-\/spi.\+hpp}\end{DoxyCompactItemize}

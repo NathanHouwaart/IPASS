@@ -1,0 +1,248 @@
+\hypertarget{classhwlib_1_1window}{}\section{hwlib\+:\+:window Class Reference}
+\label{classhwlib_1_1window}\index{hwlib\+::window@{hwlib\+::window}}
+
+
+a graphics window  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/graphics.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:window\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:window\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1window_a5acfb1afba5adade79ae1576831128f1}\label{classhwlib_1_1window_a5acfb1afba5adade79ae1576831128f1}} 
+\hyperlink{classhwlib_1_1window_a5acfb1afba5adade79ae1576831128f1}{window} (\hyperlink{classhwlib_1_1location}{location} \hyperlink{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}{size}, \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}{foreground}, \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}{background})
+\begin{DoxyCompactList}\small\item\em construct a window by specifying its size and foreground and background colors. \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1window_a65122042afeb55e41e5c03b5c8e26fff}{write} (\hyperlink{classhwlib_1_1location}{location} pos, \hyperlink{classhwlib_1_1color}{color} col)
+\begin{DoxyCompactList}\small\item\em write a pixel \end{DoxyCompactList}\item 
+virtual void \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush} ()
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1window_ac87b3f0e82ab260f95a68e76f827d03b}{write} (\hyperlink{classhwlib_1_1location}{location} pos, const \hyperlink{classhwlib_1_1image}{image} \&img)
+\begin{DoxyCompactList}\small\item\em write a rectangle of pixels \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1window_ac90b74315df62b9952ce2ee3af95825b}\label{classhwlib_1_1window_ac90b74315df62b9952ce2ee3af95825b}} 
+void {\bfseries write} (\hyperlink{classhwlib_1_1location}{location} pos)
+\item 
+virtual void \hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear the window \end{DoxyCompactList}\item 
+\hyperlink{classhwlib_1_1window_a41696e8593067bcd0f55525a56d7adb7}{window} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}{size}, \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}{foreground}=white, \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}{background}=\hyperlink{namespacehwlib_aa9c056fa29bc9af9f55d4b774bb3898a}{black})
+\item 
+virtual void \hyperlink{classhwlib_1_1window_ace994a6b215325973cdcea5c5519955c}{flush} ()=0
+\item 
+void \hyperlink{classhwlib_1_1window_a53cdf4933161d82ba6d24140c69c3335}{write} (\hyperlink{classhwlib_1_1xy}{xy} pos, const \hyperlink{classhwlib_1_1image}{image} \&img)
+\item 
+virtual void \hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{clear} ()
+\item 
+virtual void \hyperlink{classhwlib_1_1window_af4c20108781e8e182008a961d6613532}{clear} (\hyperlink{classhwlib_1_1color}{color} col)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classhwlib_1_1window_af71f072f7b94f82647fc582b053d4576}{write} (\hyperlink{classhwlib_1_1xy}{xy} pos, \hyperlink{classhwlib_1_1color}{color} col)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1window_aa016a1cfaa02b1f1e95e5f4bd4be6e1e}\label{classhwlib_1_1window_aa016a1cfaa02b1f1e95e5f4bd4be6e1e}} 
+void {\bfseries write} (\hyperlink{classhwlib_1_1xy}{xy} pos)
+\end{DoxyCompactItemize}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classhwlib_1_1location}{location} \hyperlink{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}{size}
+\begin{DoxyCompactList}\small\item\em the size of the window \end{DoxyCompactList}\item 
+\hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}{foreground}
+\begin{DoxyCompactList}\small\item\em the foreground color of the window \end{DoxyCompactList}\item 
+\hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}{background}
+\begin{DoxyCompactList}\small\item\em the background color of the window \end{DoxyCompactList}\item 
+const \hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1window_a4bcb3ccedcd692af6760c3dcb332c659}{size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a graphics window 
+
+This class abstracts the interface to a graphic window.
+
+a graphics window
+
+This class abstracts the interface to a graphic window.
+
+Window operations (clear, write) can be buffered. A \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush()} call is required to make sure that all previous operations take effect. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1window_a41696e8593067bcd0f55525a56d7adb7}\label{classhwlib_1_1window_a41696e8593067bcd0f55525a56d7adb7}} 
+\index{hwlib\+::window@{hwlib\+::window}!window@{window}}
+\index{window@{window}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{window()}{window()}}
+{\footnotesize\ttfamily hwlib\+::window\+::window (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{size,  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{foreground = {\ttfamily white},  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{background = {\ttfamily \hyperlink{namespacehwlib_aa9c056fa29bc9af9f55d4b774bb3898a}{black}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct a window by specifying its size and foreground and background colors.
+
+The default is white foreground on black background 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}\label{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}} 
+\index{hwlib\+::window@{hwlib\+::window}!clear@{clear}}
+\index{clear@{clear}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void hwlib\+::window\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+clear the window
+
+This function clears the windows by writing the background color to all pixels. The default implementation writes to all pixels in sequence. A concrete window can provide a faster implementation. 
+
+Reimplemented in \hyperlink{classhwlib_1_1glcd__oled__buffered_a1df3ca6d163e33b2edf1242acf47342a}{hwlib\+::glcd\+\_\+oled\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__spi__128x64__direct__res__dc__cs_afebf8245a39c31859ef21eae3d9deb69}{hwlib\+::glcd\+\_\+oled\+\_\+spi\+\_\+128x64\+\_\+direct\+\_\+res\+\_\+dc\+\_\+cs}, \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__direct_a283c1ff2e898f5f2b23dfdce6209b55e}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+direct}, and \hyperlink{classhwlib_1_1glcd__5510_a533b2663e151bee909543d0038b2cb4d}{hwlib\+::glcd\+\_\+5510}.
+
+\mbox{\Hypertarget{classhwlib_1_1window_af4c20108781e8e182008a961d6613532}\label{classhwlib_1_1window_af4c20108781e8e182008a961d6613532}} 
+\index{hwlib\+::window@{hwlib\+::window}!clear@{clear}}
+\index{clear@{clear}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void hwlib\+::window\+::clear (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1color}{color}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+clear the window
+
+This function clears the windows by writing the specified color to all pixels. The default implementation writes to all pixels in sequence. A concrete window can provide a faster implementation. \mbox{\Hypertarget{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}\label{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}} 
+\index{hwlib\+::window@{hwlib\+::window}!clear@{clear}}
+\index{clear@{clear}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual void hwlib\+::window\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+clear the window 
+
+This function clears the windows by writing the background color to all pixels. The default implementation writes to all pixels in sequence. A concrete window can probably provide a faster implementation.
+
+When buffering is specified ( buf == buffered ) the actual clearing can be delayed until the next \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush()} call. 
+
+Reimplemented in \hyperlink{classhwlib_1_1glcd__oled__buffered_a1df3ca6d163e33b2edf1242acf47342a}{hwlib\+::glcd\+\_\+oled\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__spi__128x64__direct__res__dc__cs_afebf8245a39c31859ef21eae3d9deb69}{hwlib\+::glcd\+\_\+oled\+\_\+spi\+\_\+128x64\+\_\+direct\+\_\+res\+\_\+dc\+\_\+cs}, \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__direct_a283c1ff2e898f5f2b23dfdce6209b55e}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+direct}, and \hyperlink{classhwlib_1_1glcd__5510_a533b2663e151bee909543d0038b2cb4d}{hwlib\+::glcd\+\_\+5510}.
+
+\mbox{\Hypertarget{classhwlib_1_1window_ace994a6b215325973cdcea5c5519955c}\label{classhwlib_1_1window_ace994a6b215325973cdcea5c5519955c}} 
+\index{hwlib\+::window@{hwlib\+::window}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{flush()}{flush()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void hwlib\+::window\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+flush the pixel buffer
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Implemented in \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__fast__buffered_a799b9725f8b535d8fe22b18ffd98af8e}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+fast\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__buffered_aa2f62fb4a54ea1cfa9f608e703fd046e}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}{hwlib\+::glcd\+\_\+oled\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__spi__128x64__direct__res__dc__cs_ada856fccd0e72f8e95172e1aa901024c}{hwlib\+::glcd\+\_\+oled\+\_\+spi\+\_\+128x64\+\_\+direct\+\_\+res\+\_\+dc\+\_\+cs}, \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__direct_a65a496d65b3a99fe9334e0981b706533}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+direct}, \hyperlink{classhwlib_1_1glcd__oled_a58e191e5350f349facee130513a08b75}{hwlib\+::glcd\+\_\+oled}, \hyperlink{classhwlib_1_1glcd__5510_ac53cb29b0973166ae3f54940a71317bf}{hwlib\+::glcd\+\_\+5510}, \hyperlink{classhwlib_1_1glcd__oled__spi_a4bed9116dda2cc6752ac5447a834fa0f}{hwlib\+::glcd\+\_\+oled\+\_\+spi}, \hyperlink{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}{hwlib\+::target\+::window}, and \hyperlink{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}{hwlib\+::target\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}\label{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}} 
+\index{hwlib\+::window@{hwlib\+::window}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{flush()}{flush()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void hwlib\+::window\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented in \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__fast__buffered_a799b9725f8b535d8fe22b18ffd98af8e}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+fast\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__buffered_aa2f62fb4a54ea1cfa9f608e703fd046e}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__buffered_a68ed87e12c7f7ed0abe621b14af9d604}{hwlib\+::glcd\+\_\+oled\+\_\+buffered}, \hyperlink{classhwlib_1_1glcd__oled__spi__128x64__direct__res__dc__cs_ada856fccd0e72f8e95172e1aa901024c}{hwlib\+::glcd\+\_\+oled\+\_\+spi\+\_\+128x64\+\_\+direct\+\_\+res\+\_\+dc\+\_\+cs}, \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__direct_a65a496d65b3a99fe9334e0981b706533}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+direct}, \hyperlink{classhwlib_1_1glcd__oled_a58e191e5350f349facee130513a08b75}{hwlib\+::glcd\+\_\+oled}, \hyperlink{classhwlib_1_1glcd__5510_ac53cb29b0973166ae3f54940a71317bf}{hwlib\+::glcd\+\_\+5510}, \hyperlink{classhwlib_1_1glcd__oled__spi_a4bed9116dda2cc6752ac5447a834fa0f}{hwlib\+::glcd\+\_\+oled\+\_\+spi}, \hyperlink{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}{hwlib\+::target\+::window}, and \hyperlink{classhwlib_1_1target_1_1window_a00ef1d2bba8684306ee8051fbf469900}{hwlib\+::target\+::window}.
+
+\mbox{\Hypertarget{classhwlib_1_1window_af71f072f7b94f82647fc582b053d4576}\label{classhwlib_1_1window_af71f072f7b94f82647fc582b053d4576}} 
+\index{hwlib\+::window@{hwlib\+::window}!write@{write}}
+\index{write@{write}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void hwlib\+::window\+::write (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{pos,  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write a pixel
+
+This function writes a the color col to the pixel at location pos. If either the color is transparent, or the location is outside the window the call has no effect. When no color is specified, the window\textquotesingle{}s foreground color is used. \mbox{\Hypertarget{classhwlib_1_1window_a53cdf4933161d82ba6d24140c69c3335}\label{classhwlib_1_1window_a53cdf4933161d82ba6d24140c69c3335}} 
+\index{hwlib\+::window@{hwlib\+::window}!write@{write}}
+\index{write@{write}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void hwlib\+::window\+::write (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{pos,  }\item[{const \hyperlink{classhwlib_1_1image}{image} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write a rectangle of pixels
+
+This function writes a rectangle of pixels, as specified by img, at location pos. \mbox{\Hypertarget{classhwlib_1_1window_a65122042afeb55e41e5c03b5c8e26fff}\label{classhwlib_1_1window_a65122042afeb55e41e5c03b5c8e26fff}} 
+\index{hwlib\+::window@{hwlib\+::window}!write@{write}}
+\index{write@{write}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void hwlib\+::window\+::write (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1location}{location}}]{pos,  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+write a pixel 
+
+This function writes a the color col to the pixel at location loc. If either the color is transparent, or the location is outside the window the call has no effect. When no color is specificied, the window\textquotesingle{}s foreground color is used.
+
+When buffering is specified ( buf == buffered ) the actual writing can be delayed until the next \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush()} call. \mbox{\Hypertarget{classhwlib_1_1window_ac87b3f0e82ab260f95a68e76f827d03b}\label{classhwlib_1_1window_ac87b3f0e82ab260f95a68e76f827d03b}} 
+\index{hwlib\+::window@{hwlib\+::window}!write@{write}}
+\index{write@{write}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void hwlib\+::window\+::write (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1location}{location}}]{pos,  }\item[{const \hyperlink{classhwlib_1_1image}{image} \&}]{img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+write a rectangle of pixels 
+
+This function writes a rectangle of pixels, as specified by img, at location pos.
+
+When buffering is specified ( buf == buffered ) the actual writing can be delayed until the next \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{flush()} call. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}\label{classhwlib_1_1window_a1ca47e79ec54ea8b2f38b41b42593d2d}} 
+\index{hwlib\+::window@{hwlib\+::window}!background@{background}}
+\index{background@{background}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1color}{color} hwlib\+::window\+::background}
+
+
+
+the background color of the window 
+
+This is the color use by the \hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{clear()} function.
+
+the background color of the window
+
+This is the color use by the \hyperlink{classhwlib_1_1window_a5e781163353ce26cb4dc5b2cbe40ad05}{clear()} function. \mbox{\Hypertarget{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}\label{classhwlib_1_1window_a812e3bf440309bf3280d34fa04eeb718}} 
+\index{hwlib\+::window@{hwlib\+::window}!foreground@{foreground}}
+\index{foreground@{foreground}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{foreground}{foreground}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1color}{color} hwlib\+::window\+::foreground}
+
+
+
+the foreground color of the window 
+
+This color could be used to draw graphics.
+
+the foreground color of the window
+
+This color could be used to draw monochrome graphics. \mbox{\Hypertarget{classhwlib_1_1window_a4bcb3ccedcd692af6760c3dcb332c659}\label{classhwlib_1_1window_a4bcb3ccedcd692af6760c3dcb332c659}} 
+\index{hwlib\+::window@{hwlib\+::window}!size@{size}}
+\index{size@{size}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{size}{size}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{classhwlib_1_1xy}{xy} hwlib\+::window\+::size}
+
+the size of the window
+
+This is the size of the window\+: the number of pixels in the x and y direction. \mbox{\Hypertarget{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}\label{classhwlib_1_1window_ad2ad5281c9c09d18010b19cb807d3eaa}} 
+\index{hwlib\+::window@{hwlib\+::window}!size@{size}}
+\index{size@{size}!hwlib\+::window@{hwlib\+::window}}
+\subsubsection{\texorpdfstring{size}{size}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{classhwlib_1_1location}{location} hwlib\+::window\+::size}
+
+
+
+the size of the window 
+
+This is the size of the window\+: the number of pixels in the x and y direction. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-graphics_8hpp}{hwlib-\/graphics.\+hpp}\item 
+code/hwlib/library/graphics/\hyperlink{hwlib-graphics-window_8hpp}{hwlib-\/graphics-\/window.\+hpp}\end{DoxyCompactItemize}

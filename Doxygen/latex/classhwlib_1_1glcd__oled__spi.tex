@@ -1,0 +1,44 @@
+\hypertarget{classhwlib_1_1glcd__oled__spi}{}\section{hwlib\+:\+:glcd\+\_\+oled\+\_\+spi Class Reference}
+\label{classhwlib_1_1glcd__oled__spi}\index{hwlib\+::glcd\+\_\+oled\+\_\+spi@{hwlib\+::glcd\+\_\+oled\+\_\+spi}}
+
+
+Inheritance diagram for hwlib\+:\+:glcd\+\_\+oled\+\_\+spi\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:glcd\+\_\+oled\+\_\+spi\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classhwlib_1_1glcd__oled__spi_a4bed9116dda2cc6752ac5447a834fa0f}{flush} ()
+\begin{DoxyCompactList}\small\item\em flush the pixel buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__spi_ab66e790d8e3ebf4ed7e78f34dff1cfb8}\label{classhwlib_1_1glcd__oled__spi_ab66e790d8e3ebf4ed7e78f34dff1cfb8}} 
+void {\bfseries clear} (buffering buf=buffering\+::unbuffered) override
+\item 
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__spi_aa6ce9f602ab5b789ae3ad1d612d43f83}\label{classhwlib_1_1glcd__oled__spi_aa6ce9f602ab5b789ae3ad1d612d43f83}} 
+{\bfseries glcd\+\_\+oled\+\_\+spi} (\hyperlink{classhwlib_1_1spi__bus}{spi\+\_\+bus} \&bus, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&cs, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&dc, \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} \&reset)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1glcd__oled__spi_a4bed9116dda2cc6752ac5447a834fa0f}\label{classhwlib_1_1glcd__oled__spi_a4bed9116dda2cc6752ac5447a834fa0f}} 
+\index{hwlib\+::glcd\+\_\+oled\+\_\+spi@{hwlib\+::glcd\+\_\+oled\+\_\+spi}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::glcd\+\_\+oled\+\_\+spi@{hwlib\+::glcd\+\_\+oled\+\_\+spi}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::glcd\+\_\+oled\+\_\+spi\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+flush the pixel buffer 
+
+This function fluhses the pixel buffer\+: it writes pixels that have not yet been written. Flushing might occur as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1window_a2b654a98872d174173e1df24a444c949}{hwlib\+::window}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/chris/\hyperlink{glcd-oled-spi_8hpp}{glcd-\/oled-\/spi.\+hpp}\end{DoxyCompactItemize}

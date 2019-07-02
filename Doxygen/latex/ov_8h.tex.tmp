@@ -1,0 +1,28 @@
+\hypertarget{ov_8h}{}\section{application/code/headers/ov.h File Reference}
+\label{ov_8h}\index{application/code/headers/ov.\+h@{application/code/headers/ov.\+h}}
+
+
+abstract OV tracker class  
+
+
+{\ttfamily \#include \char`\"{}stations.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for ov.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classovTracker}{ov\+Tracker}
+\begin{DoxyCompactList}\small\item\em Abstract OV class with build in calculation functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+abstract OV tracker class 
+
+Abstract OV class for storing cardata and manipulating valueblocks
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

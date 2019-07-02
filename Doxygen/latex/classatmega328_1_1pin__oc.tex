@@ -1,0 +1,136 @@
+\hypertarget{classatmega328_1_1pin__oc}{}\section{atmega328\+:\+:pin\+\_\+oc Class Reference}
+\label{classatmega328_1_1pin__oc}\index{atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}}
+
+
+\hyperlink{classatmega328_1_1pin__oc}{pin\+\_\+oc} implementation for a A\+T\+Mega328P  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/atmega328.\+hpp$>$}
+
+
+
+Inheritance diagram for atmega328\+:\+:pin\+\_\+oc\+:
+% FIG 0
+
+
+Collaboration diagram for atmega328\+:\+:pin\+\_\+oc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classatmega328_1_1pin__oc_a53c3878f8ede2967888513bd18350444}{pin\+\_\+oc} (uint8\+\_\+t port\+\_\+number, uint8\+\_\+t pin\+\_\+number)
+\item 
+bool \hyperlink{classatmega328_1_1pin__oc_a89733673f7d2e2e96b2b71dbabf4505a}{read} () override
+\item 
+void \hyperlink{classatmega328_1_1pin__oc_a9eb229792f730515636057cd97609b43}{write} (bool v) override
+\item 
+void \hyperlink{classatmega328_1_1pin__oc_a1768ece62a74ed6f657427cb0db5b5e3}{refresh} () override
+\item 
+void \hyperlink{classatmega328_1_1pin__oc_a3eb816793385d952d5fb00f473b07349}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classatmega328_1_1pin__oc}{pin\+\_\+oc} implementation for a A\+T\+Mega328P 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classatmega328_1_1pin__oc_a53c3878f8ede2967888513bd18350444}\label{classatmega328_1_1pin__oc_a53c3878f8ede2967888513bd18350444}} 
+\index{atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}}
+{\footnotesize\ttfamily atmega328\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port\+\_\+number,  }\item[{uint8\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{classatmega328_1_1pin__oc}{pin\+\_\+oc} constructor
+
+The port\+\_\+number and pin\+\_\+number refer to the chip, not to the Arduino board pin names.
+
+This constructor sets the pin to high (high-\/impedance). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classatmega328_1_1pin__oc_a3eb816793385d952d5fb00f473b07349}\label{classatmega328_1_1pin__oc_a3eb816793385d952d5fb00f473b07349}} 
+\index{atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}!flush@{flush}}
+\index{flush@{flush}!atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void atmega328\+::pin\+\_\+oc\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classatmega328_1_1pin__oc_a89733673f7d2e2e96b2b71dbabf4505a}\label{classatmega328_1_1pin__oc_a89733673f7d2e2e96b2b71dbabf4505a}} 
+\index{atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}!read@{read}}
+\index{read@{read}!atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool atmega328\+::pin\+\_\+oc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classatmega328_1_1pin__oc_a1768ece62a74ed6f657427cb0db5b5e3}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classatmega328_1_1pin__oc_a1768ece62a74ed6f657427cb0db5b5e3}\label{classatmega328_1_1pin__oc_a1768ece62a74ed6f657427cb0db5b5e3}} 
+\index{atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}!refresh@{refresh}}
+\index{refresh@{refresh}!atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void atmega328\+::pin\+\_\+oc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classatmega328_1_1pin__oc_a89733673f7d2e2e96b2b71dbabf4505a}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classatmega328_1_1pin__oc_a9eb229792f730515636057cd97609b43}\label{classatmega328_1_1pin__oc_a9eb229792f730515636057cd97609b43}} 
+\index{atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}!write@{write}}
+\index{write@{write}!atmega328\+::pin\+\_\+oc@{atmega328\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void atmega328\+::pin\+\_\+oc\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classatmega328_1_1pin__oc_a3eb816793385d952d5fb00f473b07349}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{hwlib\+::pin\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-atmega328_8hpp}{hwlib-\/atmega328.\+hpp}\end{DoxyCompactItemize}

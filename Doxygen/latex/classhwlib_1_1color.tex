@@ -1,0 +1,170 @@
+\hypertarget{classhwlib_1_1color}{}\section{hwlib\+:\+:color Class Reference}
+\label{classhwlib_1_1color}\index{hwlib\+::color@{hwlib\+::color}}
+
+
+graphics color  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/graphics.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1color_a845e1e2526d372640adb44cf98e8f3f4}{rgb} () const
+\begin{DoxyCompactList}\small\item\em the 3-\/byte R\+GB representation of the color \end{DoxyCompactList}\item 
+constexpr \hyperlink{classhwlib_1_1color_a028860f5b8005968cd5e175a7d297b7a}{color} (uint8\+\_\+t \hyperlink{classhwlib_1_1color_a63b0cdaa1bc446995cc8b8724a2ab866}{red}, uint8\+\_\+t \hyperlink{classhwlib_1_1color_ab87f25b9aba71151e056b570e7304c89}{green}, uint8\+\_\+t \hyperlink{classhwlib_1_1color_a9d57edec257fb2626157befb791a6a96}{blue}, bool transparent=false)
+\begin{DoxyCompactList}\small\item\em construct a color from its R\+GB components \end{DoxyCompactList}\item 
+constexpr \hyperlink{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}{color} (uint\+\_\+fast32\+\_\+t rgb32=0)
+\begin{DoxyCompactList}\small\item\em constructs a color from a three-\/byte integer value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}\label{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}} 
+constexpr \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}{operator-\/} (void) const
+\begin{DoxyCompactList}\small\item\em return the negative of a color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}\label{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}} 
+constexpr bool \hyperlink{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}{operator==} (const \hyperlink{classhwlib_1_1color}{color} c) const
+\begin{DoxyCompactList}\small\item\em reports whether two colors are equal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}\label{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}} 
+constexpr bool \hyperlink{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}{operator!=} (const \hyperlink{classhwlib_1_1color}{color} c) const
+\begin{DoxyCompactList}\small\item\em reports whether two colors are unequal \end{DoxyCompactList}\item 
+uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1color_a845e1e2526d372640adb44cf98e8f3f4}{rgb} () const
+\item 
+constexpr \hyperlink{classhwlib_1_1color_a35fd6b9a03fa8f5b78bbf55052760bd3}{color} (uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1color_a63b0cdaa1bc446995cc8b8724a2ab866}{red}, uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1color_ab87f25b9aba71151e056b570e7304c89}{green}, uint\+\_\+fast32\+\_\+t \hyperlink{classhwlib_1_1color_a9d57edec257fb2626157befb791a6a96}{blue}, bool transparent=false)
+\item 
+constexpr \hyperlink{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}{color} (uint\+\_\+fast32\+\_\+t rgb32=0)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}\label{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}} 
+constexpr \hyperlink{classhwlib_1_1color}{color} \hyperlink{classhwlib_1_1color_a6461f61a4b0e1b5058b765eed55aeec7}{operator-\/} (void) const
+\begin{DoxyCompactList}\small\item\em return the negative of a color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}\label{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}} 
+constexpr bool \hyperlink{classhwlib_1_1color_a3d40dc7bb1585a139e28ca29fa77d5ac}{operator==} (const \hyperlink{classhwlib_1_1color}{color} c) const
+\begin{DoxyCompactList}\small\item\em reports whether two colors are equal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}\label{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}} 
+constexpr bool \hyperlink{classhwlib_1_1color_af4c0560e4fbd233b4a2fbc922ed5528a}{operator!=} (const \hyperlink{classhwlib_1_1color}{color} c) const
+\begin{DoxyCompactList}\small\item\em reports whether two colors are unequal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classhwlib_1_1color_a2bb850a5013f0f4a78b29bd09444fb21}{is\+\_\+transparent}
+\begin{DoxyCompactList}\small\item\em the transparency of the color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_a63b0cdaa1bc446995cc8b8724a2ab866}\label{classhwlib_1_1color_a63b0cdaa1bc446995cc8b8724a2ab866}} 
+uint8\+\_\+t \hyperlink{classhwlib_1_1color_a63b0cdaa1bc446995cc8b8724a2ab866}{red}
+\begin{DoxyCompactList}\small\item\em the R\+ED attribute (part) of the color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_ab87f25b9aba71151e056b570e7304c89}\label{classhwlib_1_1color_ab87f25b9aba71151e056b570e7304c89}} 
+uint8\+\_\+t \hyperlink{classhwlib_1_1color_ab87f25b9aba71151e056b570e7304c89}{green}
+\begin{DoxyCompactList}\small\item\em the G\+R\+E\+EN attribute (part) of the color \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1color_a9d57edec257fb2626157befb791a6a96}\label{classhwlib_1_1color_a9d57edec257fb2626157befb791a6a96}} 
+uint8\+\_\+t \hyperlink{classhwlib_1_1color_a9d57edec257fb2626157befb791a6a96}{blue}
+\begin{DoxyCompactList}\small\item\em the B\+L\+UE attribute (part) of the color \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1ostream}{ostream} \& \hyperlink{classhwlib_1_1color_a4280fa2c98671d364a67f56cbd7ec609}{operator$<$$<$} (\hyperlink{classhwlib_1_1ostream}{ostream} \&lhs, \hyperlink{classhwlib_1_1color}{color} rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+graphics color 
+
+This class abstracts a color as used in a graphics window. A color is represented by 3 R\+GB bytes an a transparency flag.
+
+color
+
+This class abstracts a color as used in a graphics window. A color is represented by 3 R\+GB bytes an a transparency flag. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1color_a028860f5b8005968cd5e175a7d297b7a}\label{classhwlib_1_1color_a028860f5b8005968cd5e175a7d297b7a}} 
+\index{hwlib\+::color@{hwlib\+::color}!color@{color}}
+\index{color@{color}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily constexpr hwlib\+::color\+::color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{red,  }\item[{uint8\+\_\+t}]{green,  }\item[{uint8\+\_\+t}]{blue,  }\item[{bool}]{transparent = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+construct a color from its R\+GB components 
+
+The transparency flag can be specified, but better use the transparent constant.
+
+The arguments are integers, but they are clipped to the 0..255 range by the constructor. \mbox{\Hypertarget{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}\label{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}} 
+\index{hwlib\+::color@{hwlib\+::color}!color@{color}}
+\index{color@{color}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily constexpr hwlib\+::color\+::color (\begin{DoxyParamCaption}\item[{uint\+\_\+fast32\+\_\+t}]{rgb32 = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructs a color from a three-\/byte integer value 
+
+For instance, color( 0x\+F\+F00\+F\+F ) is magenta. \mbox{\Hypertarget{classhwlib_1_1color_a35fd6b9a03fa8f5b78bbf55052760bd3}\label{classhwlib_1_1color_a35fd6b9a03fa8f5b78bbf55052760bd3}} 
+\index{hwlib\+::color@{hwlib\+::color}!color@{color}}
+\index{color@{color}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily constexpr hwlib\+::color\+::color (\begin{DoxyParamCaption}\item[{uint\+\_\+fast32\+\_\+t}]{red,  }\item[{uint\+\_\+fast32\+\_\+t}]{green,  }\item[{uint\+\_\+fast32\+\_\+t}]{blue,  }\item[{bool}]{transparent = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct a color from its R\+GB components
+
+The transparency flag can be specified, but better use the transparent constant.
+
+The arguments are integers, but they are clipped to the 0..255 range by the constructor. \mbox{\Hypertarget{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}\label{classhwlib_1_1color_aa8d2263ebf5efe2221171217166a669f}} 
+\index{hwlib\+::color@{hwlib\+::color}!color@{color}}
+\index{color@{color}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily constexpr hwlib\+::color\+::color (\begin{DoxyParamCaption}\item[{uint\+\_\+fast32\+\_\+t}]{rgb32 = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructs a color from a three-\/byte integer value
+
+For instance, color( 0x\+F\+F00\+F\+F ) is magenta. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1color_a845e1e2526d372640adb44cf98e8f3f4}\label{classhwlib_1_1color_a845e1e2526d372640adb44cf98e8f3f4}} 
+\index{hwlib\+::color@{hwlib\+::color}!rgb@{rgb}}
+\index{rgb@{rgb}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{rgb()}{rgb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint\+\_\+fast32\+\_\+t hwlib\+::color\+::rgb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+the 3-\/byte R\+GB representation of the color
+
+This function returns the R\+GB representation of the color. For a transparent color, the returned value will not be meaningful. \mbox{\Hypertarget{classhwlib_1_1color_a845e1e2526d372640adb44cf98e8f3f4}\label{classhwlib_1_1color_a845e1e2526d372640adb44cf98e8f3f4}} 
+\index{hwlib\+::color@{hwlib\+::color}!rgb@{rgb}}
+\index{rgb@{rgb}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{rgb()}{rgb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint\+\_\+fast32\+\_\+t hwlib\+::color\+::rgb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+the 3-\/byte R\+GB representation of the color 
+
+This function returns the R\+GB reprsentation of the color. For a transparent color, the returned value will not be meaningfull. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1color_a4280fa2c98671d364a67f56cbd7ec609}\label{classhwlib_1_1color_a4280fa2c98671d364a67f56cbd7ec609}} 
+\index{hwlib\+::color@{hwlib\+::color}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1ostream}{ostream}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1ostream}{ostream} \&}]{lhs,  }\item[{\hyperlink{classhwlib_1_1color}{color}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+print a color pair
+
+An color is printed in \mbox{[}N\+N\+NN,N\+N\+NN,N\+N\+NN\mbox{]} format, or \mbox{[}transparent\mbox{]}. The N\+N\+NN\textquotesingle{}s are the hexadecimal value of the red, green and blue components. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classhwlib_1_1color_a2bb850a5013f0f4a78b29bd09444fb21}\label{classhwlib_1_1color_a2bb850a5013f0f4a78b29bd09444fb21}} 
+\index{hwlib\+::color@{hwlib\+::color}!is\+\_\+transparent@{is\+\_\+transparent}}
+\index{is\+\_\+transparent@{is\+\_\+transparent}!hwlib\+::color@{hwlib\+::color}}
+\subsubsection{\texorpdfstring{is\+\_\+transparent}{is\_transparent}}
+{\footnotesize\ttfamily bool hwlib\+::color\+::is\+\_\+transparent}
+
+
+
+the transparency of the color 
+
+When a color is tranparent, the read green and blue atrributes are meaningless.
+
+the transparency of the color
+
+When a color is transparent, the read green and blue atrributes are meaningless. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-graphics_8hpp}{hwlib-\/graphics.\+hpp}\item 
+code/hwlib/library/graphics/\hyperlink{hwlib-graphics-color_8hpp}{hwlib-\/graphics-\/color.\+hpp}\end{DoxyCompactItemize}

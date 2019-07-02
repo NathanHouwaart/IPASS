@@ -1,0 +1,101 @@
+\hypertarget{classhwlib_1_1keypad}{}\section{hwlib\+:\+:keypad$<$ N $>$ Class Template Reference}
+\label{classhwlib_1_1keypad}\index{hwlib\+::keypad$<$ N $>$@{hwlib\+::keypad$<$ N $>$}}
+
+
+istream from a \hyperlink{classhwlib_1_1matrix__of__switches}{matrix\+\_\+of\+\_\+switches}  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/matrix-\/keypad.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:keypad$<$ N $>$\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:keypad$<$ N $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1keypad_a6bb965d7739192e6868a392697b6863c}{keypad} (\hyperlink{classhwlib_1_1matrix__of__switches}{matrix\+\_\+of\+\_\+switches} \&matrix, const char $\ast$translation\+\_\+string)
+\begin{DoxyCompactList}\small\item\em create a keypad from a switch matrix and a translation string \end{DoxyCompactList}\item 
+char \hyperlink{classhwlib_1_1keypad_a34f0f6c0cea1702e84b9f20a9379d8a8}{pressed} ()
+\begin{DoxyCompactList}\small\item\em return a press character or \textquotesingle{}\textbackslash{}0\textquotesingle{} for none \end{DoxyCompactList}\item 
+bool \hyperlink{classhwlib_1_1keypad_a9bef86eba2e6ac84c014a1577f44cd9c}{char\+\_\+available} () override
+\begin{DoxyCompactList}\small\item\em return whether a character is available \end{DoxyCompactList}\item 
+char \hyperlink{classhwlib_1_1keypad_aa2a2ab2fca1de5daa5587b3433c8e74a}{getc} () override
+\begin{DoxyCompactList}\small\item\em return the next available character \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int N$>$\newline
+class hwlib\+::keypad$<$ N $>$}
+
+istream from a \hyperlink{classhwlib_1_1matrix__of__switches}{matrix\+\_\+of\+\_\+switches} 
+
+This class template turns a keypad matrix into an istream (a character input stream). The template parameter is the number of characters in the translation string. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1keypad_a6bb965d7739192e6868a392697b6863c}\label{classhwlib_1_1keypad_a6bb965d7739192e6868a392697b6863c}} 
+\index{hwlib\+::keypad@{hwlib\+::keypad}!keypad@{keypad}}
+\index{keypad@{keypad}!hwlib\+::keypad@{hwlib\+::keypad}}
+\subsubsection{\texorpdfstring{keypad()}{keypad()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+\hyperlink{classhwlib_1_1keypad}{hwlib\+::keypad}$<$ N $>$\+::\hyperlink{classhwlib_1_1keypad}{keypad} (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1matrix__of__switches}{matrix\+\_\+of\+\_\+switches} \&}]{matrix,  }\item[{const char $\ast$}]{translation\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create a keypad from a switch matrix and a translation string 
+
+The translation string translates a pressed key to a character. The characters in the string correspond to the keys starting at the top left (1,1), proceeding colum-\/first. Excess characters in the translation string are ignored, and excess keys are translated to \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1keypad_a9bef86eba2e6ac84c014a1577f44cd9c}\label{classhwlib_1_1keypad_a9bef86eba2e6ac84c014a1577f44cd9c}} 
+\index{hwlib\+::keypad@{hwlib\+::keypad}!char\+\_\+available@{char\+\_\+available}}
+\index{char\+\_\+available@{char\+\_\+available}!hwlib\+::keypad@{hwlib\+::keypad}}
+\subsubsection{\texorpdfstring{char\+\_\+available()}{char\_available()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+bool \hyperlink{classhwlib_1_1keypad}{hwlib\+::keypad}$<$ N $>$\+::char\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return whether a character is available 
+
+This function checks whether a next character is available. When it returns true, an (immediately) following \hyperlink{classhwlib_1_1keypad_aa2a2ab2fca1de5daa5587b3433c8e74a}{getc()} call will not block. 
+
+Reimplemented from \hyperlink{classhwlib_1_1istream_a77c1ce784f42922cd4758f2d8a6c59b3}{hwlib\+::istream}.
+
+\mbox{\Hypertarget{classhwlib_1_1keypad_aa2a2ab2fca1de5daa5587b3433c8e74a}\label{classhwlib_1_1keypad_aa2a2ab2fca1de5daa5587b3433c8e74a}} 
+\index{hwlib\+::keypad@{hwlib\+::keypad}!getc@{getc}}
+\index{getc@{getc}!hwlib\+::keypad@{hwlib\+::keypad}}
+\subsubsection{\texorpdfstring{getc()}{getc()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+char \hyperlink{classhwlib_1_1keypad}{hwlib\+::keypad}$<$ N $>$\+::getc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return the next available character 
+
+This function returns the next available character, if necessary it will block waiting for it. Bouncing is suppressed by checking the keypad matrix at most once every 50 ms. 
+
+Implements \hyperlink{classhwlib_1_1istream_a9a260f800b08d4788b9e399f65d1c728}{hwlib\+::istream}.
+
+\mbox{\Hypertarget{classhwlib_1_1keypad_a34f0f6c0cea1702e84b9f20a9379d8a8}\label{classhwlib_1_1keypad_a34f0f6c0cea1702e84b9f20a9379d8a8}} 
+\index{hwlib\+::keypad@{hwlib\+::keypad}!pressed@{pressed}}
+\index{pressed@{pressed}!hwlib\+::keypad@{hwlib\+::keypad}}
+\subsubsection{\texorpdfstring{pressed()}{pressed()}}
+{\footnotesize\ttfamily template$<$int N$>$ \\
+char \hyperlink{classhwlib_1_1keypad}{hwlib\+::keypad}$<$ N $>$\+::pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return a press character or \textquotesingle{}\textbackslash{}0\textquotesingle{} for none 
+
+This function returns the character corresponding to a switch that is closed, or \textquotesingle{}\textbackslash{}0\textquotesingle{} when no switch is closed (or a switch is closed that has no translation). This function doesn\textquotesingle{}t suppress bouncing. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{hwlib-matrix-keypad_8hpp}{hwlib-\/matrix-\/keypad.\+hpp}\end{DoxyCompactItemize}

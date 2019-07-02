@@ -1,0 +1,130 @@
+\hypertarget{classcommunication_1_1i2c}{}\section{communication\+:\+:i2c Class Reference}
+\label{classcommunication_1_1i2c}\index{communication\+::i2c@{communication\+::i2c}}
+
+
+\hyperlink{classcommunication_1_1i2c}{i2c} implementation of the abstract protocol class  
+
+
+
+
+{\ttfamily \#include $<$interface.\+h$>$}
+
+
+
+Inheritance diagram for communication\+:\+:i2c\+:
+% FIG 0
+
+
+Collaboration diagram for communication\+:\+:i2c\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommunication_1_1i2c_a87bea8199d070f323db519bc061b2944}{i2c} (const uint\+\_\+fast8\+\_\+t adress, hwlib\+::i2c\+\_\+bus \&bus, hwlib\+::pin\+\_\+in \&irq)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{classcommunication_1_1i2c}{i2c} class. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1i2c_a342b43822a50e1837ac7c677083c7f39}{wake\+Up} () override
+\begin{DoxyCompactList}\small\item\em This Funtion will wake up / initialise the \hyperlink{classcommunication_1_1i2c}{i2c} bus / chip for communication. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1i2c_ad529784d80abf5e8bd493f578503e8e8}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, uint8\+\_\+t n\+Bytes)
+\begin{DoxyCompactList}\small\item\em This function sends n\+Bytes from the initialised adress over the \hyperlink{classcommunication_1_1i2c}{i2c} protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1i2c_a112282cf4a6500581c8e252ff2348fea}{receive\+Data} (uint8\+\_\+t $\ast$receive\+Buffer, uint8\+\_\+t n\+Bytes)
+\begin{DoxyCompactList}\small\item\em This function receives data from the initialised adress over the \hyperlink{classcommunication_1_1i2c}{i2c} protocol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1i2c_ae52172877163dd81dd4f403af2cab4da}\label{classcommunication_1_1i2c_ae52172877163dd81dd4f403af2cab4da}} 
+const uint\+\_\+fast8\+\_\+t {\bfseries adress}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1i2c_ad13076f35c929f3e5b7d6e7a4a6b98ac}\label{classcommunication_1_1i2c_ad13076f35c929f3e5b7d6e7a4a6b98ac}} 
+hwlib\+::i2c\+\_\+bus \& {\bfseries bus}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1i2c_a18f6d07d153f07337b7368c4aba36a41}\label{classcommunication_1_1i2c_a18f6d07d153f07337b7368c4aba36a41}} 
+hwlib\+::pin\+\_\+in \& {\bfseries irq}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classcommunication_1_1i2c}{i2c} implementation of the abstract protocol class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcommunication_1_1i2c_a87bea8199d070f323db519bc061b2944}\label{classcommunication_1_1i2c_a87bea8199d070f323db519bc061b2944}} 
+\index{communication\+::i2c@{communication\+::i2c}!i2c@{i2c}}
+\index{i2c@{i2c}!communication\+::i2c@{communication\+::i2c}}
+\subsubsection{\texorpdfstring{i2c()}{i2c()}}
+{\footnotesize\ttfamily communication\+::i2c\+::i2c (\begin{DoxyParamCaption}\item[{const uint\+\_\+fast8\+\_\+t}]{adress,  }\item[{hwlib\+::i2c\+\_\+bus \&}]{bus,  }\item[{hwlib\+::pin\+\_\+in \&}]{irq }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \hyperlink{classcommunication_1_1i2c}{i2c} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adress} & The \hyperlink{classcommunication_1_1i2c}{i2c} adress of the chip that needs to be communicated with \\
+\hline
+{\em bus} & A reference to a hwlib\+::i2c\+\_\+bus @ param irq Address of the irq pin needed by the pn532 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommunication_1_1i2c_a112282cf4a6500581c8e252ff2348fea}\label{classcommunication_1_1i2c_a112282cf4a6500581c8e252ff2348fea}} 
+\index{communication\+::i2c@{communication\+::i2c}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!communication\+::i2c@{communication\+::i2c}}
+\subsubsection{\texorpdfstring{receive\+Data()}{receiveData()}}
+{\footnotesize\ttfamily void communication\+::i2c\+::receive\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{receive\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function receives data from the initialised adress over the \hyperlink{classcommunication_1_1i2c}{i2c} protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receive\+Buffer} & Pointer to the start of the receive\+Buffer where data can be stored in \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to be received over \hyperlink{classcommunication_1_1i2c}{i2c} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcommunication_1_1protocol_ad0d43530ae3db2b14a6e9c1f77aa530a}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1i2c_ad529784d80abf5e8bd493f578503e8e8}\label{classcommunication_1_1i2c_ad529784d80abf5e8bd493f578503e8e8}} 
+\index{communication\+::i2c@{communication\+::i2c}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!communication\+::i2c@{communication\+::i2c}}
+\subsubsection{\texorpdfstring{send\+Data()}{sendData()}}
+{\footnotesize\ttfamily void communication\+::i2c\+::send\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{command\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function sends n\+Bytes from the initialised adress over the \hyperlink{classcommunication_1_1i2c}{i2c} protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffer} & Pointer to the start of the commandbuffer that needs to be send \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to be send over \hyperlink{classcommunication_1_1i2c}{i2c} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcommunication_1_1protocol_a1745c4aac1b27bac2d350be54fedc388}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1i2c_a342b43822a50e1837ac7c677083c7f39}\label{classcommunication_1_1i2c_a342b43822a50e1837ac7c677083c7f39}} 
+\index{communication\+::i2c@{communication\+::i2c}!wake\+Up@{wake\+Up}}
+\index{wake\+Up@{wake\+Up}!communication\+::i2c@{communication\+::i2c}}
+\subsubsection{\texorpdfstring{wake\+Up()}{wakeUp()}}
+{\footnotesize\ttfamily void communication\+::i2c\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This Funtion will wake up / initialise the \hyperlink{classcommunication_1_1i2c}{i2c} bus / chip for communication. 
+
+Function will send the \hyperlink{classcommunication_1_1i2c}{i2c} adress over the interface to wake the chip if it is in sleep mode 
+
+Implements \hyperlink{classcommunication_1_1protocol_aefe3def7b92b2eae8c98bfc542e27078}{communication\+::protocol}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{interface_8h}{interface.\+h}\item 
+code/src/\hyperlink{interface_8cpp}{interface.\+cpp}\end{DoxyCompactItemize}

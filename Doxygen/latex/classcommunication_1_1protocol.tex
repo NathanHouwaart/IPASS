@@ -1,0 +1,94 @@
+\hypertarget{classcommunication_1_1protocol}{}\section{communication\+:\+:protocol Class Reference}
+\label{classcommunication_1_1protocol}\index{communication\+::protocol@{communication\+::protocol}}
+
+
+Abstract protocol class.  
+
+
+
+
+{\ttfamily \#include $<$interface.\+h$>$}
+
+
+
+Inheritance diagram for communication\+:\+:protocol\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1protocol_aefe3def7b92b2eae8c98bfc542e27078}\label{classcommunication_1_1protocol_aefe3def7b92b2eae8c98bfc542e27078}} 
+virtual void \hyperlink{classcommunication_1_1protocol_aefe3def7b92b2eae8c98bfc542e27078}{wake\+Up} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract function to wakeup / initialise a protocol. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classcommunication_1_1protocol_a1745c4aac1b27bac2d350be54fedc388}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, uint8\+\_\+t n\+Bytes)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to send data over the given protocol. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classcommunication_1_1protocol_ad0d43530ae3db2b14a6e9c1f77aa530a}{receive\+Data} (uint8\+\_\+t $\ast$receive\+Buffer, uint8\+\_\+t n\+Bytes)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to receive data over the given protocol. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classcommunication_1_1protocol_a09be73a92665c2adb539d20b754ce19c}{end\+Transaction} ()
+\begin{DoxyCompactList}\small\item\em Function to end a specific protocol transaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract protocol class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommunication_1_1protocol_a09be73a92665c2adb539d20b754ce19c}\label{classcommunication_1_1protocol_a09be73a92665c2adb539d20b754ce19c}} 
+\index{communication\+::protocol@{communication\+::protocol}!end\+Transaction@{end\+Transaction}}
+\index{end\+Transaction@{end\+Transaction}!communication\+::protocol@{communication\+::protocol}}
+\subsubsection{\texorpdfstring{end\+Transaction()}{endTransaction()}}
+{\footnotesize\ttfamily virtual void communication\+::protocol\+::end\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to end a specific protocol transaction. 
+
+This function is implemented because some chips do not work with the provided hwlib bit banged default implementations The deconstructor there will cause some chips to not receive data properly Therefore this function is not mandatory to implement 
+
+Reimplemented in \hyperlink{classcommunication_1_1spi_a9d10ed759010fef5c687b4f8e63a14f6}{communication\+::spi}.
+
+\mbox{\Hypertarget{classcommunication_1_1protocol_ad0d43530ae3db2b14a6e9c1f77aa530a}\label{classcommunication_1_1protocol_ad0d43530ae3db2b14a6e9c1f77aa530a}} 
+\index{communication\+::protocol@{communication\+::protocol}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!communication\+::protocol@{communication\+::protocol}}
+\subsubsection{\texorpdfstring{receive\+Data()}{receiveData()}}
+{\footnotesize\ttfamily virtual void communication\+::protocol\+::receive\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{receive\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to receive data over the given protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receive\+Buffer} & Pointer to the start of the receive\+Buffer where data can be stored in \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to be received over the given protocol \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classcommunication_1_1uart_a37a51dcb95fb5178b5fa441acd437ae4}{communication\+::uart}, \hyperlink{classcommunication_1_1spi_a42344d234d3f53829a3edac3949934de}{communication\+::spi}, and \hyperlink{classcommunication_1_1i2c_a112282cf4a6500581c8e252ff2348fea}{communication\+::i2c}.
+
+\mbox{\Hypertarget{classcommunication_1_1protocol_a1745c4aac1b27bac2d350be54fedc388}\label{classcommunication_1_1protocol_a1745c4aac1b27bac2d350be54fedc388}} 
+\index{communication\+::protocol@{communication\+::protocol}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!communication\+::protocol@{communication\+::protocol}}
+\subsubsection{\texorpdfstring{send\+Data()}{sendData()}}
+{\footnotesize\ttfamily virtual void communication\+::protocol\+::send\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{command\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to send data over the given protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffer} & Pointer to the start of the commandbuffer that needs to be send \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to send \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classcommunication_1_1uart_a915087d1f825171d705801de0981b151}{communication\+::uart}, \hyperlink{classcommunication_1_1spi_a4b0a72ad237253179cff221d92711596}{communication\+::spi}, and \hyperlink{classcommunication_1_1i2c_ad529784d80abf5e8bd493f578503e8e8}{communication\+::i2c}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{interface_8h}{interface.\+h}\end{DoxyCompactItemize}

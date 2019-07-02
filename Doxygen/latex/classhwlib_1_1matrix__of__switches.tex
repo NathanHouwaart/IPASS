@@ -1,0 +1,64 @@
+\hypertarget{classhwlib_1_1matrix__of__switches}{}\section{hwlib\+:\+:matrix\+\_\+of\+\_\+switches Class Reference}
+\label{classhwlib_1_1matrix__of__switches}\index{hwlib\+::matrix\+\_\+of\+\_\+switches@{hwlib\+::matrix\+\_\+of\+\_\+switches}}
+
+
+matrix of switches (keypad) interface  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/matrix-\/keypad.\+hpp$>$}
+
+
+
+Collaboration diagram for hwlib\+:\+:matrix\+\_\+of\+\_\+switches\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1matrix__of__switches_a7b6df331ad1f31001ec0ab3ac51ecbc9}{matrix\+\_\+of\+\_\+switches} (\hyperlink{classhwlib_1_1port__oc}{port\+\_\+oc} \&output, \hyperlink{classhwlib_1_1port__in}{port\+\_\+in} \&input)
+\begin{DoxyCompactList}\small\item\em create a matrix interface from the row and column pins \end{DoxyCompactList}\item 
+bool \hyperlink{classhwlib_1_1matrix__of__switches_a7af15bdf772a3c90818e79b6b69c85c0}{switch\+\_\+is\+\_\+closed\+\_\+at} (\hyperlink{classhwlib_1_1xy}{xy} v)
+\begin{DoxyCompactList}\small\item\em test whether a particular switch is closed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1matrix__of__switches_af9338e1f86b6d89cedd21ec38d0559a0}\label{classhwlib_1_1matrix__of__switches_af9338e1f86b6d89cedd21ec38d0559a0}} 
+\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1matrix__of__switches_af9338e1f86b6d89cedd21ec38d0559a0}{size}
+\begin{DoxyCompactList}\small\item\em the number of columns and rows \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+matrix of switches (keypad) interface 
+
+This class interfaces to a matrix of keys (switches). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1matrix__of__switches_a7b6df331ad1f31001ec0ab3ac51ecbc9}\label{classhwlib_1_1matrix__of__switches_a7b6df331ad1f31001ec0ab3ac51ecbc9}} 
+\index{hwlib\+::matrix\+\_\+of\+\_\+switches@{hwlib\+::matrix\+\_\+of\+\_\+switches}!matrix\+\_\+of\+\_\+switches@{matrix\+\_\+of\+\_\+switches}}
+\index{matrix\+\_\+of\+\_\+switches@{matrix\+\_\+of\+\_\+switches}!hwlib\+::matrix\+\_\+of\+\_\+switches@{hwlib\+::matrix\+\_\+of\+\_\+switches}}
+\subsubsection{\texorpdfstring{matrix\+\_\+of\+\_\+switches()}{matrix\_of\_switches()}}
+{\footnotesize\ttfamily hwlib\+::matrix\+\_\+of\+\_\+switches\+::matrix\+\_\+of\+\_\+switches (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1port__oc}{port\+\_\+oc} \&}]{output,  }\item[{\hyperlink{classhwlib_1_1port__in}{port\+\_\+in} \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create a matrix interface from the row and column pins 
+
+This constructor creates a matrix interface from the ports that contain the pins that connect to the columns (x direction) and the columns (y direction). The column pins must be an open-\/collector port, the row pins must be an input port that has (internal or external) pull-\/up resistors. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1matrix__of__switches_a7af15bdf772a3c90818e79b6b69c85c0}\label{classhwlib_1_1matrix__of__switches_a7af15bdf772a3c90818e79b6b69c85c0}} 
+\index{hwlib\+::matrix\+\_\+of\+\_\+switches@{hwlib\+::matrix\+\_\+of\+\_\+switches}!switch\+\_\+is\+\_\+closed\+\_\+at@{switch\+\_\+is\+\_\+closed\+\_\+at}}
+\index{switch\+\_\+is\+\_\+closed\+\_\+at@{switch\+\_\+is\+\_\+closed\+\_\+at}!hwlib\+::matrix\+\_\+of\+\_\+switches@{hwlib\+::matrix\+\_\+of\+\_\+switches}}
+\subsubsection{\texorpdfstring{switch\+\_\+is\+\_\+closed\+\_\+at()}{switch\_is\_closed\_at()}}
+{\footnotesize\ttfamily bool hwlib\+::matrix\+\_\+of\+\_\+switches\+::switch\+\_\+is\+\_\+closed\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1xy}{xy}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+test whether a particular switch is closed 
+
+This function returns whether the switch at column x and row y is closed. It doesn\textquotesingle{}t suppress bouncing. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/peripherals/\hyperlink{hwlib-matrix-keypad_8hpp}{hwlib-\/matrix-\/keypad.\+hpp}\end{DoxyCompactItemize}

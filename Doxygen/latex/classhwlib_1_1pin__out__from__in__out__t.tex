@@ -1,0 +1,73 @@
+\hypertarget{classhwlib_1_1pin__out__from__in__out__t}{}\section{hwlib\+:\+:pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__out__from__in__out__t}\index{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/from-\/pin.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__out__from__in__out__t_a23c4b3e64953334f291002307317fc49}\label{classhwlib_1_1pin__out__from__in__out__t_a23c4b3e64953334f291002307317fc49}} 
+\hyperlink{classhwlib_1_1pin__out__from__in__out__t_a23c4b3e64953334f291002307317fc49}{pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t} (\hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} \&slave)
+\begin{DoxyCompactList}\small\item\em construct from a \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out} \end{DoxyCompactList}\item 
+void \hyperlink{classhwlib_1_1pin__out__from__in__out__t_a6171cefa50ff9db91e17eb6e1d8a3d74}{write} (bool x) override
+\item 
+void \hyperlink{classhwlib_1_1pin__out__from__in__out__t_a7b2e19b1916d922557ab2881b92085f3}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} constructed from a \hyperlink{classhwlib_1_1pin__in__out}{pin\+\_\+in\+\_\+out}
+
+The preferred way to use this class is through the overloaded constructor function \hyperlink{namespacehwlib_aa1e6aac16c5ac14715e165b463ec6a46}{pin\+\_\+out\+\_\+from()}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__out__from__in__out__t_a7b2e19b1916d922557ab2881b92085f3}\label{classhwlib_1_1pin__out__from__in__out__t_a7b2e19b1916d922557ab2881b92085f3}} 
+\index{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{hwlib\+::pin\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__out__from__in__out__t_a6171cefa50ff9db91e17eb6e1d8a3d74}\label{classhwlib_1_1pin__out__from__in__out__t_a6171cefa50ff9db91e17eb6e1d8a3d74}} 
+\index{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}!write@{write}}
+\index{write@{write}!hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+out\+\_\+from\+\_\+in\+\_\+out\+\_\+t\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1pin__out__from__in__out__t_a7b2e19b1916d922557ab2881b92085f3}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-from-pin_8hpp}{hwlib-\/pin-\/from-\/pin.\+hpp}\end{DoxyCompactItemize}

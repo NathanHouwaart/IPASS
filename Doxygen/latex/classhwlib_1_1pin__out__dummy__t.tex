@@ -1,0 +1,73 @@
+\hypertarget{classhwlib_1_1pin__out__dummy__t}{}\section{hwlib\+:\+:pin\+\_\+out\+\_\+dummy\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__out__dummy__t}\index{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t}}
+
+
+a dummy (do-\/nothing) \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} class  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/dummies.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+out\+\_\+dummy\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+out\+\_\+dummy\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classhwlib_1_1pin__out__dummy__t_a155ff6021cfacdbed10f34ec1aef1630}{write} (bool v) override
+\item 
+void \hyperlink{classhwlib_1_1pin__out__dummy__t_ac8513bd390f0315c544f8c2e299df3d6}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a dummy (do-\/nothing) \hyperlink{classhwlib_1_1pin__out}{pin\+\_\+out} class 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__out__dummy__t_ac8513bd390f0315c544f8c2e299df3d6}\label{classhwlib_1_1pin__out__dummy__t_ac8513bd390f0315c544f8c2e299df3d6}} 
+\index{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_ac22910317477a52431a44e7e3c66fc57}{hwlib\+::pin\+\_\+out}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__out__dummy__t_a155ff6021cfacdbed10f34ec1aef1630}\label{classhwlib_1_1pin__out__dummy__t_a155ff6021cfacdbed10f34ec1aef1630}} 
+\index{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t}!write@{write}}
+\index{write@{write}!hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t@{hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+out\+\_\+dummy\+\_\+t\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classhwlib_1_1pin__out__dummy__t_ac8513bd390f0315c544f8c2e299df3d6}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__out_a8d260a70e503dcfb81987c408e170300}{hwlib\+::pin\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-dummies_8hpp}{hwlib-\/pin-\/dummies.\+hpp}\end{DoxyCompactItemize}

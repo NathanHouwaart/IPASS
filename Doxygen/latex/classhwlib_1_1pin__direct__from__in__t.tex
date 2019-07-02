@@ -1,0 +1,75 @@
+\hypertarget{classhwlib_1_1pin__direct__from__in__t}{}\section{hwlib\+:\+:pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t Class Reference}
+\label{classhwlib_1_1pin__direct__from__in__t}\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t}}
+
+
+{\ttfamily \#include $<$hwlib-\/pin-\/direct.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__in__t_a26dc24804d3f6c79a78266d3716e1094}\label{classhwlib_1_1pin__direct__from__in__t_a26dc24804d3f6c79a78266d3716e1094}} 
+\hyperlink{classhwlib_1_1pin__direct__from__in__t_a26dc24804d3f6c79a78266d3716e1094}{pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t} (\hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} \&slave)
+\begin{DoxyCompactList}\small\item\em construct from a \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} \end{DoxyCompactList}\item 
+bool \hyperlink{classhwlib_1_1pin__direct__from__in__t_aa0f886a0c110b2bd259c6d3d25e50ee3}{read} () override
+\item 
+void \hyperlink{classhwlib_1_1pin__direct__from__in__t_a20c81ad1110ed11c39c4f555c74e7e3a}{refresh} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a direct-\/effect \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in}
+
+This is a version of \hyperlink{classhwlib_1_1pin__in}{pin\+\_\+in} where the various operations have direct (immediate) effect\+: no refresh calls needed. This have a negative effect on the execution time.
+
+The preferred way to use this class is through the overloaded constructor function \hyperlink{namespacehwlib_a43941b7f246ad934ee43dbfa0f5c8b5a}{direct()}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__in__t_aa0f886a0c110b2bd259c6d3d25e50ee3}\label{classhwlib_1_1pin__direct__from__in__t_aa0f886a0c110b2bd259c6d3d25e50ee3}} 
+\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t}!read@{read}}
+\index{read@{read}!hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classhwlib_1_1pin__direct__from__in__t_a20c81ad1110ed11c39c4f555c74e7e3a}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in_ad071bd2e17bb4af51390f6cbb728a194}{hwlib\+::pin\+\_\+in}.
+
+\mbox{\Hypertarget{classhwlib_1_1pin__direct__from__in__t_a20c81ad1110ed11c39c4f555c74e7e3a}\label{classhwlib_1_1pin__direct__from__in__t_a20c81ad1110ed11c39c4f555c74e7e3a}} 
+\index{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t}!refresh@{refresh}}
+\index{refresh@{refresh}!hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t@{hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void hwlib\+::pin\+\_\+direct\+\_\+from\+\_\+in\+\_\+t\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classhwlib_1_1pin__direct__from__in__t_aa0f886a0c110b2bd259c6d3d25e50ee3}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Reimplemented from \hyperlink{classhwlib_1_1pin__in_a3fb1bfb1ec962bb6d31a5e865f0d0acb}{hwlib\+::pin\+\_\+in}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/pins/\hyperlink{hwlib-pin-direct_8hpp}{hwlib-\/pin-\/direct.\+hpp}\end{DoxyCompactItemize}

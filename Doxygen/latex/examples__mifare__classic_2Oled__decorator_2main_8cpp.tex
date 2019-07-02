@@ -1,0 +1,68 @@
+\hypertarget{examples__mifare__classic_2Oled__decorator_2main_8cpp}{}\section{examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.cpp File Reference}
+\label{examples__mifare__classic_2Oled__decorator_2main_8cpp}\index{examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.\+cpp@{examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.\+cpp}}
+
+
+Example use of the nfc oled decorator to integrate an oled display with the pn532.  
+
+
+{\ttfamily \#include \char`\"{}../../code/headers/pn532\+Oled.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{examples__mifare__classic_2Oled__decorator_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example use of the nfc oled decorator to integrate an oled display with the pn532. 
+
+This file will demonstrate how to use the nfc oled decorator to integrate an oled display with the pn532
+
+Make sure the external G\+P\+IO pins of the pn532 are set to the proper protocol and match the protocol selected in this file.
+
+G\+P\+IO pin layout\+: ~\newline
+ P1 $\vert$ P2 = protocol\+: ~\newline
+ 0 $\vert$ 0 = U\+A\+RT ~\newline
+ 0 $\vert$ 1 = S\+PI ~\newline
+ 1 $\vert$ 0 = i2C ~\newline
+
+
+In order to use an oled display in combination with the nfc chip, the class \hyperlink{classnfc_1_1NfcOled}{nfc\+::\+Nfc\+Oled} can be used. This class takes three agruments in it\textquotesingle{}s constructor\+:
+\begin{DoxyItemize}
+\item The already made N\+FC chip class ( \hyperlink{classnfc_1_1PN532__chip}{nfc\+::\+P\+N532\+\_\+chip} )
+\item A display class that communicates with the display ( hwlib\+::terminal\+\_\+from )
+\item A protocol . This variable is not used, but is needed to instantiate the decorator
+\end{DoxyItemize}
+
+Functions that write to the display by default\+:
+\begin{DoxyItemize}
+\item N\+F\+C-\/$>$Init()
+\item N\+F\+C-\/$>$perform\+Self\+Test()
+\item N\+F\+C-\/$>$get\+General\+Status()
+\item N\+F\+C-\/$>$get\+Firmware\+Version()
+\item N\+F\+C-\/$>$S\+A\+M\+Configuration()
+\item N\+F\+C-\/$>$R\+F\+Field()
+\item N\+F\+C-\/$>$detect\+Card()
+\item N\+F\+C-\/$>$mifare\+Authenticate()
+\item N\+F\+C-\/$>$mifare\+Read\+Card()
+\item N\+F\+C-\/$>$mifare\+Make\+Value\+Block()
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The content that is written to the display can be changed / altered in the \hyperlink{pn532Oled_8cpp}{pn532\+Oled.\+cpp} file. When you do, just make sure there is a hwlib\+::wait\+\_\+ms( x ) after you write to the oled. Otherwise the contend will be overwritten too quickly in order to read it.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{examples__mifare__classic_2Oled__decorator_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{examples__mifare__classic_2Oled__decorator_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.\+cpp@{examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.\+cpp}!main@{main}}
+\index{main@{main}!examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.\+cpp@{examples\+\_\+mifare\+\_\+classic/\+Oled\+\_\+decorator/main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ -\/-\/-\/-\/--- \hyperlink{classnfc_1_1NfcOled}{nfc\+::\+Nfc\+Oled} instead of \hyperlink{classnfc_1_1PN532__chip}{nfc\+::\+P\+N532\+\_\+chip} 

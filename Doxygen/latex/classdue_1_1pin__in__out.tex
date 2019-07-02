@@ -1,0 +1,172 @@
+\hypertarget{classdue_1_1pin__in__out}{}\section{due\+:\+:pin\+\_\+in\+\_\+out Class Reference}
+\label{classdue_1_1pin__in__out}\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+
+
+\hyperlink{classdue_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for a A\+T\+S\+A\+M3\+X8E  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/arduino-\/due.\+hpp$>$}
+
+
+
+Inheritance diagram for due\+:\+:pin\+\_\+in\+\_\+out\+:
+% FIG 0
+
+
+Collaboration diagram for due\+:\+:pin\+\_\+in\+\_\+out\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdue_1_1pin__in__out_a1673814fdfa3f4c152be2b5aa08974cd}{pin\+\_\+in\+\_\+out} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\hyperlink{classdue_1_1pin__in__out_a228da28eb609b180235db2a0ed249469}{pin\+\_\+in\+\_\+out} (\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins} name)
+\item 
+void \hyperlink{classdue_1_1pin__in__out_a2ca0c81a7e1059a171c997d5015d99ea}{direction\+\_\+set\+\_\+input} () override
+\item 
+bool \hyperlink{classdue_1_1pin__in__out_a864093a15647637d71ecd8ded27ba4f8}{read} () override
+\item 
+void \hyperlink{classdue_1_1pin__in__out_a45f7cf2e7f71638337f82ecf1852f884}{direction\+\_\+set\+\_\+output} () override
+\item 
+void \hyperlink{classdue_1_1pin__in__out_aa6782f78c09d67ce8ded0aaf3e4f5c02}{write} (bool v) override
+\item 
+void \hyperlink{classdue_1_1pin__in__out_af138c21a34306d3421e0b961bf9406a1}{flush} () override
+\item 
+void \hyperlink{classdue_1_1pin__in__out_ab9fc7183f352e0b19004779803cd5950}{refresh} () override
+\item 
+void \hyperlink{classdue_1_1pin__in__out_aa56ac6fe5ef886f6c88eb7562ecccfca}{direction\+\_\+flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classdue_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for a A\+T\+S\+A\+M3\+X8E 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__in__out_a1673814fdfa3f4c152be2b5aa08974cd}\label{classdue_1_1pin__in__out_a1673814fdfa3f4c152be2b5aa08974cd}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!pin\+\_\+in\+\_\+out@{pin\+\_\+in\+\_\+out}}
+\index{pin\+\_\+in\+\_\+out@{pin\+\_\+in\+\_\+out}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+in\+\_\+out()}{pin\_in\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+in\+\_\+out\+::pin\+\_\+in\+\_\+out (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} constructor
+
+Constructor for a A\+T\+S\+A\+M3\+X8E input pin.
+
+The port\+\_\+number and pin\+\_\+number refer to the chip, not to the Arduino board pin names.
+
+This constructor doesn\textquotesingle{}t set the pin direction to input or output, a direction\+\_\+set function must be called to do so. \mbox{\Hypertarget{classdue_1_1pin__in__out_a228da28eb609b180235db2a0ed249469}\label{classdue_1_1pin__in__out_a228da28eb609b180235db2a0ed249469}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!pin\+\_\+in\+\_\+out@{pin\+\_\+in\+\_\+out}}
+\index{pin\+\_\+in\+\_\+out@{pin\+\_\+in\+\_\+out}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{pin\+\_\+in\+\_\+out()}{pin\_in\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily due\+::pin\+\_\+in\+\_\+out\+::pin\+\_\+in\+\_\+out (\begin{DoxyParamCaption}\item[{\hyperlink{namespacedue_a8ffa3ec309934ff9db34317e504bcc92}{pins}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Arduino Due \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} constructor from a Due pin name
+
+This call creates a \hyperlink{classdue_1_1pin__out}{pin\+\_\+out} from an Arduino Due pin name.
+
+This constructor doesn\textquotesingle{}t set the pin direction to input or output, a direction\+\_\+set function must be called to do so. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdue_1_1pin__in__out_aa56ac6fe5ef886f6c88eb7562ecccfca}\label{classdue_1_1pin__in__out_aa56ac6fe5ef886f6c88eb7562ecccfca}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!direction\+\_\+flush@{direction\+\_\+flush}}
+\index{direction\+\_\+flush@{direction\+\_\+flush}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+flush()}{direction\_flush()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush the direction
+
+Calling this function flushes the direction as set by the last call to \hyperlink{classdue_1_1pin__in__out_a2ca0c81a7e1059a171c997d5015d99ea}{direction\+\_\+set\+\_\+input()} or \hyperlink{classdue_1_1pin__in__out_a45f7cf2e7f71638337f82ecf1852f884}{direction\+\_\+set\+\_\+output()} to the pin. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a86ef2b296683d8c0133280075c82cb51}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in__out_a2ca0c81a7e1059a171c997d5015d99ea}\label{classdue_1_1pin__in__out_a2ca0c81a7e1059a171c997d5015d99ea}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}}
+\index{direction\+\_\+set\+\_\+input@{direction\+\_\+set\+\_\+input}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+input()}{direction\_set\_input()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to input
+
+Calling this function sets the pin identified by p to input.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a54ce1a5086d3c9e7b868511b1d46acd0}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in__out_a45f7cf2e7f71638337f82ecf1852f884}\label{classdue_1_1pin__in__out_a45f7cf2e7f71638337f82ecf1852f884}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}}
+\index{direction\+\_\+set\+\_\+output@{direction\+\_\+set\+\_\+output}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{direction\+\_\+set\+\_\+output()}{direction\_set\_output()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+\_\+out\+::direction\+\_\+set\+\_\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set the direction of a pin to output
+
+Calling this function sets the pin identified by p to output.
+
+The actual changing of the direction can be postponed to the next direction\+\_\+output\+\_\+flush(0 call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_ad08a5f5e9a4c3aadaa7c665b98f2418e}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in__out_af138c21a34306d3421e0b961bf9406a1}\label{classdue_1_1pin__in__out_af138c21a34306d3421e0b961bf9406a1}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!flush@{flush}}
+\index{flush@{flush}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+\_\+out\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a5207c9e30f0c88e4c052952397c2da88}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in__out_a864093a15647637d71ecd8ded27ba4f8}\label{classdue_1_1pin__in__out_a864093a15647637d71ecd8ded27ba4f8}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!read@{read}}
+\index{read@{read}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool due\+::pin\+\_\+in\+\_\+out\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classdue_1_1pin__in__out_ab9fc7183f352e0b19004779803cd5950}{refresh()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a5caebc7ab9fe49b7e020b89f0a2cf892}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in__out_ab9fc7183f352e0b19004779803cd5950}\label{classdue_1_1pin__in__out_ab9fc7183f352e0b19004779803cd5950}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!refresh@{refresh}}
+\index{refresh@{refresh}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+\_\+out\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classdue_1_1pin__in__out_a864093a15647637d71ecd8ded27ba4f8}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_a8815baac4e5193ec68795956f5e363a6}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+\mbox{\Hypertarget{classdue_1_1pin__in__out_aa6782f78c09d67ce8ded0aaf3e4f5c02}\label{classdue_1_1pin__in__out_aa6782f78c09d67ce8ded0aaf3e4f5c02}} 
+\index{due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}!write@{write}}
+\index{write@{write}!due\+::pin\+\_\+in\+\_\+out@{due\+::pin\+\_\+in\+\_\+out}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void due\+::pin\+\_\+in\+\_\+out\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classdue_1_1pin__in__out_af138c21a34306d3421e0b961bf9406a1}{flush()} call. 
+
+Implements \hyperlink{classhwlib_1_1pin__in__out_aa5e2adcb5707f86c20b6306fc09f1582}{hwlib\+::pin\+\_\+in\+\_\+out}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/targets/\hyperlink{hwlib-arduino-due_8hpp}{hwlib-\/arduino-\/due.\+hpp}\end{DoxyCompactItemize}

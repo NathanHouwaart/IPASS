@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="nfc::cardKeys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structnfc_1_1cardKeys.html",tooltip="A struct containing all 32 keys of a mifare classic 1k. Can be altered based on own card setting..."];
+}

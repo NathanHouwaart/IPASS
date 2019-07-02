@@ -1,0 +1,54 @@
+\hypertarget{classhwlib_1_1istream__mux}{}\section{hwlib\+:\+:istream\+\_\+mux Class Reference}
+\label{classhwlib_1_1istream__mux}\index{hwlib\+::istream\+\_\+mux@{hwlib\+::istream\+\_\+mux}}
+
+
+Inheritance diagram for hwlib\+:\+:istream\+\_\+mux\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:istream\+\_\+mux\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1istream__mux_ae0a09ad68e9693098281f32a60c3d9a6}\label{classhwlib_1_1istream__mux_ae0a09ad68e9693098281f32a60c3d9a6}} 
+{\bfseries ostream\+\_\+mux} (\hyperlink{classhwlib_1_1ostream}{ostream} \&minion)
+\item 
+void \hyperlink{classhwlib_1_1istream__mux_a34deb0a6755b04923c4c8206452af37b}{putc} (char x) override
+\item 
+void \hyperlink{classhwlib_1_1istream__mux_a33f8cfde26e1c3dcf2867c2e0fce3582}{flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1istream__mux_a33f8cfde26e1c3dcf2867c2e0fce3582}\label{classhwlib_1_1istream__mux_a33f8cfde26e1c3dcf2867c2e0fce3582}} 
+\index{hwlib\+::istream\+\_\+mux@{hwlib\+::istream\+\_\+mux}!flush@{flush}}
+\index{flush@{flush}!hwlib\+::istream\+\_\+mux@{hwlib\+::istream\+\_\+mux}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void hwlib\+::istream\+\_\+mux\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+flush
+
+This function waits until all characters are realy written to whatever is their destination.
+
+Writing the flush constant has the same effect as calling \hyperlink{classhwlib_1_1istream__mux_a33f8cfde26e1c3dcf2867c2e0fce3582}{flush()}. 
+
+Implements \hyperlink{classhwlib_1_1ostream_a5f43f08159d2733e02805f134598f96a}{hwlib\+::ostream}.
+
+\mbox{\Hypertarget{classhwlib_1_1istream__mux_a34deb0a6755b04923c4c8206452af37b}\label{classhwlib_1_1istream__mux_a34deb0a6755b04923c4c8206452af37b}} 
+\index{hwlib\+::istream\+\_\+mux@{hwlib\+::istream\+\_\+mux}!putc@{putc}}
+\index{putc@{putc}!hwlib\+::istream\+\_\+mux@{hwlib\+::istream\+\_\+mux}}
+\subsubsection{\texorpdfstring{putc()}{putc()}}
+{\footnotesize\ttfamily void hwlib\+::istream\+\_\+mux\+::putc (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+char output function
+
+This function is called by the other functions to output each character. 
+
+Implements \hyperlink{classhwlib_1_1ostream_a3b2b77c9e933b76bd6ddd85b9883a31b}{hwlib\+::ostream}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/char-\/io/\hyperlink{hwlib-stream-mux_8hpp}{hwlib-\/stream-\/mux.\+hpp}\end{DoxyCompactItemize}

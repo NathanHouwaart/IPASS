@@ -1,0 +1,91 @@
+Hwlib makes it possible to program micro-\/controllers in classic Object Oriented style (using objects, inhertitance, virtuals, etc). It provides abstract interfaces to the basic low-\/level things found in a micro-\/controller like pins, ports and A/D interfaces, and implementations of these things for a few targets.
+
+Hwlib is used in a number of C++ courses
+\begin{DoxyItemize}
+\item as library for the examples
+\item as library for use in homework assignments
+\item as a style example for hardware OO interfacing
+\end{DoxyItemize}
+
+Hwlib is meant to be usable and understandable by users with (only) a basic knowledge of C++, specifically\+:
+\begin{DoxyItemize}
+\item basic C\+: types, expressions, control, functions, pointers, declaration versus definition, use of header files
+\item char, short, int, long versus uint\+N\+\_\+t, uint\+\_\+fast\+N\+\_\+t
+\item struct, class, public, private, protected, static
+\item constructors (incl. delegation), destructors
+\item inheritance, virtual, abstract interface, override, final
+\item const, constexpr
+\item static\+\_\+cast$<$$>$
+\item std\+::array$<$$>$
+\item references, object lifetime (danger of dangling references)
+\item for(\+:) used with arrays
+\item the effect of {\bfseries attribute}((weak))
+\item use of $<$$<$ and $>$$>$ for output and input
+\end{DoxyItemize}
+
+The following design patterns are used (extensively) within hwlib\+:
+\begin{DoxyItemize}
+\item adapter, decorator, composite, proxy (grouped because these are variations of the same basic idea)
+\item non-\/virtual interface (N\+VI)
+\item dependency injection
+\item proxy
+\item creator functions
+\end{DoxyItemize}
+
+The following C++ features are deliberately {\itshape not} used, because they are eiter too advanced, or not appropriate for use on small micro-\/controllers\+:
+\begin{DoxyItemize}
+\item dynamic memory (new, delete, S\+TL containers)
+\item exception handling (throw, try ... catch)
+\item templates (except static\+\_\+cast$<$$>$, and string$<$\+N$>$) (except for \hyperlink{classhwlib_1_1string}{hwlib\+::string})
+\item R\+T\+TI, dynamic\+\_\+cast
+\end{DoxyItemize}
+
+Hwlib must be effective on micro-\/controllers with different word sizes. Hence plain int types are (almost) never used, instead the likes of uint\+\_\+fast8\+\_\+t are used.
+
+Hwlib is {\itshape not} meant to be the most effective (fast, compact) library for close-\/to-\/the-\/hardware programming, because that requires templates and concepts, which are not appropriate for (relatively) new C++ programmers. Hwcpp library is my (ongoing) attempt to fill that niche.
+
+Hwlib makes it possible to program micro-\/controllers in classic Object Oriented style (using objects, inhertitance, virtuals, etc). It provides abstract interfaces to the basic low-\/level things found in a micro-\/controller like pins, ports and A/D interfaces, and implementations of these things for a few targets.
+
+Hwlib is used in a number of C++ courses
+\begin{DoxyItemize}
+\item as library for the examples
+\item as library for use in homework assignments
+\item as a style example for hardware OO interfacing
+\end{DoxyItemize}
+
+Hwlib is meant to be usable and understandable by users with (only) a basic knowledge of C++, specifically\+:
+\begin{DoxyItemize}
+\item basic C\+: types, expressions, control, functions, pointers, declaration versus definition, use of header files
+\item char, short, int, long versus uint\+N\+\_\+t, uint\+\_\+fast\+N\+\_\+t
+\item struct, class, public, private, protected, static
+\item constructors (incl. delegation), destructors
+\item inheritance, virtual, abstract interface, override, final
+\item const, constexpr
+\item static\+\_\+cast$<$$>$
+\item std\+::array$<$$>$
+\item references, object lifetime (danger of dangling references)
+\item for(\+:) used with arrays
+\item the effect of {\bfseries attribute}((weak))
+\item use of $<$$<$ and $>$$>$ for output and input
+\end{DoxyItemize}
+
+The following design patterns are used (extensively) within hwlib\+:
+\begin{DoxyItemize}
+\item adapter, decorator, composite, proxy (grouped because these are variations of the same basic idea)
+\item non-\/virtual interface (N\+VI)
+\item dependency injection
+\item proxy
+\item creator functions
+\end{DoxyItemize}
+
+The following C++ features are deliberately {\itshape not} used, because they are eiter too advanced, or not appropriate for use on small micro-\/controllers\+:
+\begin{DoxyItemize}
+\item dynamic memory (new, delete, S\+TL containers)
+\item exception handling (throw, try ... catch)
+\item templates (except static\+\_\+cast$<$$>$, and string$<$\+N$>$) (except for \hyperlink{classhwlib_1_1string}{hwlib\+::string})
+\item R\+T\+TI, dynamic\+\_\+cast
+\end{DoxyItemize}
+
+Hwlib must be effective on micro-\/controllers with different word sizes. Hence plain int types are (almost) never used, instead the likes of uint\+\_\+fast8\+\_\+t are used.
+
+Hwlib is {\itshape not} meant to be the most effective (fast, compact) library for close-\/to-\/the-\/hardware programming, because that requires templates and concepts, which are not appropriate for (relatively) new C++ programmers. Instead it aims to make close-\/to-\/the-\/hardware programming, understandable for those who understand classic (virtual-\/based) C++ O0. 

@@ -1,0 +1,146 @@
+\hypertarget{classcommunication_1_1spi}{}\section{communication\+:\+:spi Class Reference}
+\label{classcommunication_1_1spi}\index{communication\+::spi@{communication\+::spi}}
+
+
+spi implementation of the abstract protocol class  
+
+
+
+
+{\ttfamily \#include $<$interface.\+h$>$}
+
+
+
+Inheritance diagram for communication\+:\+:spi\+:
+% FIG 0
+
+
+Collaboration diagram for communication\+:\+:spi\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommunication_1_1spi_a60e6796f1d142783105b9016e782fbc2}{spi} (hwlib\+::spi\+\_\+bus \&bus, hwlib\+::pin\+\_\+out \&sel, hwlib\+::pin\+\_\+in \&irq)
+\begin{DoxyCompactList}\small\item\em Constructor of the spi class. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1spi_a7bc104e72a3f9efc946ef5ffdebfcc2a}{wake\+Up} () override
+\begin{DoxyCompactList}\small\item\em This Funtion will wake up / initialise the spi bus / chip for communication. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1spi_a4b0a72ad237253179cff221d92711596}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, uint8\+\_\+t n\+Bytes) override
+\begin{DoxyCompactList}\small\item\em This function sends n\+Bytes to the chip connected to the sel pin over the spi protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1spi_a42344d234d3f53829a3edac3949934de}{receive\+Data} (uint8\+\_\+t $\ast$receive\+Buffer, uint8\+\_\+t n\+Bytes) override
+\begin{DoxyCompactList}\small\item\em This function receives n\+Bytes from the chip connected to the sel pin over the spi protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classcommunication_1_1spi_a9d10ed759010fef5c687b4f8e63a14f6}{end\+Transaction} () override
+\begin{DoxyCompactList}\small\item\em This fucntion will end the transaction of the sel chip. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1spi_aff856ee2a9c21ed9d21db799803ba5b7}\label{classcommunication_1_1spi_aff856ee2a9c21ed9d21db799803ba5b7}} 
+hwlib\+::spi\+\_\+bus \& {\bfseries bus}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1spi_ad2c7ba1b50ddf6df08778ed9de3815ca}\label{classcommunication_1_1spi_ad2c7ba1b50ddf6df08778ed9de3815ca}} 
+hwlib\+::pin\+\_\+in \& {\bfseries irq}
+\item 
+\mbox{\Hypertarget{classcommunication_1_1spi_af6fab0d81743fe0e0bfa9c34ada8506a}\label{classcommunication_1_1spi_af6fab0d81743fe0e0bfa9c34ada8506a}} 
+hwlib\+::pin\+\_\+out \& {\bfseries sel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+spi implementation of the abstract protocol class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcommunication_1_1spi_a60e6796f1d142783105b9016e782fbc2}\label{classcommunication_1_1spi_a60e6796f1d142783105b9016e782fbc2}} 
+\index{communication\+::spi@{communication\+::spi}!spi@{spi}}
+\index{spi@{spi}!communication\+::spi@{communication\+::spi}}
+\subsubsection{\texorpdfstring{spi()}{spi()}}
+{\footnotesize\ttfamily communication\+::spi\+::spi (\begin{DoxyParamCaption}\item[{hwlib\+::spi\+\_\+bus \&}]{bus,  }\item[{hwlib\+::pin\+\_\+out \&}]{sel,  }\item[{hwlib\+::pin\+\_\+in \&}]{irq }\end{DoxyParamCaption})}
+
+
+
+Constructor of the spi class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus} & A reference to a hwlib\+::spi\+\_\+bus \\
+\hline
+{\em sel} & Slave\+Select pin the chip is connected to @ param irq Address of the irq pin needed by the pn532 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommunication_1_1spi_a9d10ed759010fef5c687b4f8e63a14f6}\label{classcommunication_1_1spi_a9d10ed759010fef5c687b4f8e63a14f6}} 
+\index{communication\+::spi@{communication\+::spi}!end\+Transaction@{end\+Transaction}}
+\index{end\+Transaction@{end\+Transaction}!communication\+::spi@{communication\+::spi}}
+\subsubsection{\texorpdfstring{end\+Transaction()}{endTransaction()}}
+{\footnotesize\ttfamily void communication\+::spi\+::end\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This fucntion will end the transaction of the sel chip. 
+
+It will acheive this by rising the sel pin again after all data has been send 
+
+Reimplemented from \hyperlink{classcommunication_1_1protocol_a09be73a92665c2adb539d20b754ce19c}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1spi_a42344d234d3f53829a3edac3949934de}\label{classcommunication_1_1spi_a42344d234d3f53829a3edac3949934de}} 
+\index{communication\+::spi@{communication\+::spi}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!communication\+::spi@{communication\+::spi}}
+\subsubsection{\texorpdfstring{receive\+Data()}{receiveData()}}
+{\footnotesize\ttfamily void communication\+::spi\+::receive\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{receive\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function receives n\+Bytes from the chip connected to the sel pin over the spi protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receive\+Buffer} & Pointer to the start of the receive\+Buffer where data can be stored in \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to be received over spi \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcommunication_1_1protocol_ad0d43530ae3db2b14a6e9c1f77aa530a}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1spi_a4b0a72ad237253179cff221d92711596}\label{classcommunication_1_1spi_a4b0a72ad237253179cff221d92711596}} 
+\index{communication\+::spi@{communication\+::spi}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!communication\+::spi@{communication\+::spi}}
+\subsubsection{\texorpdfstring{send\+Data()}{sendData()}}
+{\footnotesize\ttfamily void communication\+::spi\+::send\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{command\+Buffer,  }\item[{uint8\+\_\+t}]{n\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function sends n\+Bytes to the chip connected to the sel pin over the spi protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffer} & Pointer to the start of the commandbuffer that needs to be send \\
+\hline
+{\em n\+Bytes} & Amount of bytes that need to send over spi \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classcommunication_1_1protocol_a1745c4aac1b27bac2d350be54fedc388}{communication\+::protocol}.
+
+\mbox{\Hypertarget{classcommunication_1_1spi_a7bc104e72a3f9efc946ef5ffdebfcc2a}\label{classcommunication_1_1spi_a7bc104e72a3f9efc946ef5ffdebfcc2a}} 
+\index{communication\+::spi@{communication\+::spi}!wake\+Up@{wake\+Up}}
+\index{wake\+Up@{wake\+Up}!communication\+::spi@{communication\+::spi}}
+\subsubsection{\texorpdfstring{wake\+Up()}{wakeUp()}}
+{\footnotesize\ttfamily void communication\+::spi\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This Funtion will wake up / initialise the spi bus / chip for communication. 
+
+Function will send a quick pulse on the sel pin to wake up the connected chip if it was asleep 
+
+Implements \hyperlink{classcommunication_1_1protocol_aefe3def7b92b2eae8c98bfc542e27078}{communication\+::protocol}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{interface_8h}{interface.\+h}\item 
+code/src/\hyperlink{interface_8cpp}{interface.\+cpp}\end{DoxyCompactItemize}

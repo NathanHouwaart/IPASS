@@ -1,0 +1,71 @@
+\hypertarget{classhwlib_1_1istream}{}\section{hwlib\+:\+:istream Class Reference}
+\label{classhwlib_1_1istream}\index{hwlib\+::istream@{hwlib\+::istream}}
+
+
+{\ttfamily \#include $<$hwlib-\/istream.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:istream\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1istream_a77c1ce784f42922cd4758f2d8a6c59b3}\label{classhwlib_1_1istream_a77c1ce784f42922cd4758f2d8a6c59b3}} 
+virtual bool \hyperlink{classhwlib_1_1istream_a77c1ce784f42922cd4758f2d8a6c59b3}{char\+\_\+available} ()
+\begin{DoxyCompactList}\small\item\em reports whether a character is available \end{DoxyCompactList}\item 
+virtual char \hyperlink{classhwlib_1_1istream_a9a260f800b08d4788b9e399f65d1c728}{getc} ()=0
+\item 
+virtual char \hyperlink{classhwlib_1_1istream_aa4ff0ebb0bd23b9fb765520aa49416f4}{getc\+\_\+nowait} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1istream}{istream} \& \hyperlink{classhwlib_1_1istream_a88dabf0f321a5f098ede5ee108d0a92b}{operator$>$$>$} (\hyperlink{classhwlib_1_1istream}{istream} \&stream, char \&x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+character input interface
+
+This class is a minimal std\+::istream work-\/alike for small embedded systems. (as yet, only reading a single character is supported)
+
+This class is abstract\+: a concrete subclass must implement \hyperlink{classhwlib_1_1istream_a9a260f800b08d4788b9e399f65d1c728}{getc()}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1istream_a9a260f800b08d4788b9e399f65d1c728}\label{classhwlib_1_1istream_a9a260f800b08d4788b9e399f65d1c728}} 
+\index{hwlib\+::istream@{hwlib\+::istream}!getc@{getc}}
+\index{getc@{getc}!hwlib\+::istream@{hwlib\+::istream}}
+\subsubsection{\texorpdfstring{getc()}{getc()}}
+{\footnotesize\ttfamily virtual char hwlib\+::istream\+::getc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+read and return a single character or \textquotesingle{}\textbackslash{}0\textquotesingle{}
+
+This function reads and returns a single character. When no character is available it waits for one. 
+
+Implemented in \hyperlink{classhwlib_1_1keypad_aa2a2ab2fca1de5daa5587b3433c8e74a}{hwlib\+::keypad$<$ N $>$}.
+
+\mbox{\Hypertarget{classhwlib_1_1istream_aa4ff0ebb0bd23b9fb765520aa49416f4}\label{classhwlib_1_1istream_aa4ff0ebb0bd23b9fb765520aa49416f4}} 
+\index{hwlib\+::istream@{hwlib\+::istream}!getc\+\_\+nowait@{getc\+\_\+nowait}}
+\index{getc\+\_\+nowait@{getc\+\_\+nowait}!hwlib\+::istream@{hwlib\+::istream}}
+\subsubsection{\texorpdfstring{getc\+\_\+nowait()}{getc\_nowait()}}
+{\footnotesize\ttfamily virtual char hwlib\+::istream\+::getc\+\_\+nowait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+read and return a single character or \textquotesingle{}\textbackslash{}0\textquotesingle{}
+
+This function reads and returns a single character when one is available, otherwise it returns \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1istream_a88dabf0f321a5f098ede5ee108d0a92b}\label{classhwlib_1_1istream_a88dabf0f321a5f098ede5ee108d0a92b}} 
+\index{hwlib\+::istream@{hwlib\+::istream}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!hwlib\+::istream@{hwlib\+::istream}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \hyperlink{classhwlib_1_1istream}{istream}\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1istream}{istream} \&}]{stream,  }\item[{char \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+input operator for char
+
+This function reads and \textquotesingle{}returns\textquotesingle{} a single character. When no character is available it waits for one. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/char-\/io/\hyperlink{hwlib-istream_8hpp}{hwlib-\/istream.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{classreceivedCommand}{}\section{received\+Command Class Reference}
+\label{classreceivedCommand}\index{received\+Command@{received\+Command}}
+
+
+Receive\+Command.  
+
+
+
+
+{\ttfamily \#include $<$pn532\+Command.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classreceivedCommand_afb5a185c80e16ed6fa13c3fad7166e2a}{received\+Command} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for a received command. \end{DoxyCompactList}\item 
+\hyperlink{classreceivedCommand_a3bfe79f6fc149ea4c2f42a86fe5081cb}{received\+Command} (const uint8\+\_\+t $\ast$receive\+BufferP, uint8\+\_\+t buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classreceivedCommand}{received\+Command}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classreceivedCommand_a615a15c23ead55d519facf8834f4b772}\label{classreceivedCommand_a615a15c23ead55d519facf8834f4b772}} 
+uint8\+\_\+t {\bfseries length}
+\item 
+\mbox{\Hypertarget{classreceivedCommand_ac6bc59f8d3cd3c398a684e7dae7aedeb}\label{classreceivedCommand_ac6bc59f8d3cd3c398a684e7dae7aedeb}} 
+bool {\bfseries is\+Succes}
+\item 
+\mbox{\Hypertarget{classreceivedCommand_af5fbdfb7119f355bca7ae8f42f0116d1}\label{classreceivedCommand_af5fbdfb7119f355bca7ae8f42f0116d1}} 
+uint8\+\_\+t {\bfseries final\+Buffer} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Receive\+Command. 
+
+This data object manages the received command from a pn532. The command buffer can be up to 64 bytes long. The appropriate constructors and operators are provided 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classreceivedCommand_afb5a185c80e16ed6fa13c3fad7166e2a}\label{classreceivedCommand_afb5a185c80e16ed6fa13c3fad7166e2a}} 
+\index{received\+Command@{received\+Command}!received\+Command@{received\+Command}}
+\index{received\+Command@{received\+Command}!received\+Command@{received\+Command}}
+\subsubsection{\texorpdfstring{received\+Command()}{receivedCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily received\+Command\+::received\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor for a received command. 
+
+Since no command has been received, is\+Succes will be false \mbox{\Hypertarget{classreceivedCommand_a3bfe79f6fc149ea4c2f42a86fe5081cb}\label{classreceivedCommand_a3bfe79f6fc149ea4c2f42a86fe5081cb}} 
+\index{received\+Command@{received\+Command}!received\+Command@{received\+Command}}
+\index{received\+Command@{received\+Command}!received\+Command@{received\+Command}}
+\subsubsection{\texorpdfstring{received\+Command()}{receivedCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily received\+Command\+::received\+Command (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{receive\+BufferP,  }\item[{uint8\+\_\+t}]{buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+Constructor for \hyperlink{classreceivedCommand}{received\+Command}. 
+
+This constructor manages the proper layout for a command that the pn532 has send to the host controller. It will check wether the command has been succesfully received. It will remove preambles and trim the command to the correct size 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{pn532Command_8h}{pn532\+Command.\+h}\item 
+code/src/\hyperlink{pn532Command_8cpp}{pn532\+Command.\+cpp}\end{DoxyCompactItemize}

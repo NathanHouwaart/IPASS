@@ -1,0 +1,60 @@
+\hypertarget{classhwlib_1_1i2c__read__transaction}{}\section{hwlib\+:\+:i2c\+\_\+read\+\_\+transaction Class Reference}
+\label{classhwlib_1_1i2c__read__transaction}\index{hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}}
+
+
+{\ttfamily \#include $<$hwlib-\/i2c.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1i2c__read__transaction_ac88e81cebe07d775147379f080867550}\label{classhwlib_1_1i2c__read__transaction_ac88e81cebe07d775147379f080867550}} 
+\hyperlink{classhwlib_1_1i2c__read__transaction_ac88e81cebe07d775147379f080867550}{i2c\+\_\+read\+\_\+transaction} (\hyperlink{classhwlib_1_1i2c__primitives}{i2c\+\_\+primitives} \&primitives, uint\+\_\+fast8\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em create (start) a read transaction \end{DoxyCompactList}\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1i2c__read__transaction_a624e7979dcf697e748955bace4cf2273}{read} (uint8\+\_\+t \&data)
+\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{classhwlib_1_1i2c__read__transaction_a404a7d9db0ddd18aaeac84b266e89f9e}{read\+\_\+byte} ()
+\item 
+void \hyperlink{classhwlib_1_1i2c__read__transaction_a4c886112d92dddb502cb18a18c3a385f}{read} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{classhwlib_1_1i2c__read__transaction_af1fab5e9582c503f62e257b3af739220}\label{classhwlib_1_1i2c__read__transaction_af1fab5e9582c503f62e257b3af739220}} 
+\hyperlink{classhwlib_1_1i2c__read__transaction_af1fab5e9582c503f62e257b3af739220}{$\sim$i2c\+\_\+read\+\_\+transaction} ()
+\begin{DoxyCompactList}\small\item\em terminate (close) the read transaction \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+i2c bus read transaction class
+
+This class abstracts a read transaction. The read transaction is in progress for as long as this object exists. Multiple read calls can be done on the object. The destructor will close the transaction. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1i2c__read__transaction_a624e7979dcf697e748955bace4cf2273}\label{classhwlib_1_1i2c__read__transaction_a624e7979dcf697e748955bace4cf2273}} 
+\index{hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}!read@{read}}
+\index{read@{read}!hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint\+\_\+fast8\+\_\+t hwlib\+::i2c\+\_\+read\+\_\+transaction\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read a single bytes
+
+This function reads a single byte from the slave \mbox{\Hypertarget{classhwlib_1_1i2c__read__transaction_a4c886112d92dddb502cb18a18c3a385f}\label{classhwlib_1_1i2c__read__transaction_a4c886112d92dddb502cb18a18c3a385f}} 
+\index{hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}!read@{read}}
+\index{read@{read}!hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}}
+\subsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void hwlib\+::i2c\+\_\+read\+\_\+transaction\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read bytes
+
+This function reads n bytes from the slave to data\mbox{[}\mbox{]}.
+
+Note that n is a byte, hence the maximum number of bytes per call is 255. \mbox{\Hypertarget{classhwlib_1_1i2c__read__transaction_a404a7d9db0ddd18aaeac84b266e89f9e}\label{classhwlib_1_1i2c__read__transaction_a404a7d9db0ddd18aaeac84b266e89f9e}} 
+\index{hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}!read\+\_\+byte@{read\+\_\+byte}}
+\index{read\+\_\+byte@{read\+\_\+byte}!hwlib\+::i2c\+\_\+read\+\_\+transaction@{hwlib\+::i2c\+\_\+read\+\_\+transaction}}
+\subsubsection{\texorpdfstring{read\+\_\+byte()}{read\_byte()}}
+{\footnotesize\ttfamily uint\+\_\+fast8\+\_\+t hwlib\+::i2c\+\_\+read\+\_\+transaction\+::read\+\_\+byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+read a single bytes
+
+This function reads and returns a single byte from the slave 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-i2c_8hpp}{hwlib-\/i2c.\+hpp}\end{DoxyCompactItemize}

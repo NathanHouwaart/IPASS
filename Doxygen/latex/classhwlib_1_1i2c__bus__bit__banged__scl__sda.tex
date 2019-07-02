@@ -1,0 +1,47 @@
+\hypertarget{classhwlib_1_1i2c__bus__bit__banged__scl__sda}{}\section{hwlib\+:\+:i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda Class Reference}
+\label{classhwlib_1_1i2c__bus__bit__banged__scl__sda}\index{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda@{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda}}
+
+
+{\ttfamily \#include $<$hwlib-\/i2c.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwlib_1_1i2c__bus__bit__banged__scl__sda_aff6b11113640da8c8f04b60081bef5ae}{i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda} (\hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \&scl, \hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \&sda)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+bit-\/banged i2c bus implementation
+
+This class implements a bit-\/banged master interface to an I2C bus. Limitations\+:
+\begin{DoxyItemize}
+\item only the 7-\/bit address format is supported
+\item clock stretching by the slave is not supporte
+\item only a single master is supported
+\item the speed is fixed at $\sim$ 100 k\+Hz or somewhat lower 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwlib_1_1i2c__bus__bit__banged__scl__sda_aff6b11113640da8c8f04b60081bef5ae}\label{classhwlib_1_1i2c__bus__bit__banged__scl__sda_aff6b11113640da8c8f04b60081bef5ae}} 
+\index{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda@{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda}!i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda@{i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda}}
+\index{i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda@{i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda}!hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda@{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda}}
+\subsubsection{\texorpdfstring{i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda()}{i2c\_bus\_bit\_banged\_scl\_sda()}}
+{\footnotesize\ttfamily hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \&}]{scl,  }\item[{\hyperlink{classhwlib_1_1pin__oc}{pin\+\_\+oc} \&}]{sda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construct a bit-\/banged I2C bus from the scl and sda pins
+
+This constructor creates a bit-\/banged I2C bus master from the scl and sda pins. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/library/core/\hyperlink{hwlib-i2c_8hpp}{hwlib-\/i2c.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{namespacedb103}{}\section{db103 Namespace Reference}
+\label{namespacedb103}\index{db103@{db103}}
+
+
+hwlib H\+AL for the D\+B103 board  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classdb103_1_1pin__adc}{pin\+\_\+adc}
+\begin{DoxyCompactList}\small\item\em adc implementation for an L\+P\+C1114 \end{DoxyCompactList}\item 
+class \hyperlink{classdb103_1_1pin__in}{pin\+\_\+in}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdb103_1_1pin__in}{pin\+\_\+in} implementation for the L\+P\+C1114 \end{DoxyCompactList}\item 
+class \hyperlink{classdb103_1_1pin__in__out}{pin\+\_\+in\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdb103_1_1pin__in__out}{pin\+\_\+in\+\_\+out} implementation for the L\+P\+C1114 \end{DoxyCompactList}\item 
+class \hyperlink{classdb103_1_1pin__oc}{pin\+\_\+oc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdb103_1_1pin__oc}{pin\+\_\+oc} implementation for the L\+P\+C1114 \end{DoxyCompactList}\item 
+class \hyperlink{classdb103_1_1pin__out}{pin\+\_\+out}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classdb103_1_1pin__out}{pin\+\_\+out} implementation for the L\+P\+C1114 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+hwlib H\+AL for the D\+B103 board 
+
+ and (sotware) U\+A\+RT output for the D\+B103 board (L\+P\+C1114\+F\+N28/102 chip). The chip runs at its default speed of 12 M\+Hz, from its internal RC oscillator.
+
+The port and pin parameters to the constructors of the pin classes refer to the L\+P\+C1114 ports and pins, as shown on the D\+B103 P\+CB.
+
+The chip runs at 3.\+3 Volt and that is the level on its IO pins.
+
+This implementation doesn\textquotesingle{}t (yet) offer\+:
+\begin{DoxyItemize}
+\item hardware U\+A\+RT
+\item full C\+PU speed (48 M\+Hz)
+\item hardware S\+PI
+\end{DoxyItemize}
+
+References\+:
+\begin{DoxyItemize}
+\item \href{http://www.nxp.com/documents/user_manual/UM10398.pdf}{\tt L\+P\+C1114 user manual} (pdf) 
+\end{DoxyItemize}

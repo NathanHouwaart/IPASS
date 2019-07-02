@@ -1,0 +1,10 @@
+digraph "hwlib::glcd_oled_i2c_128x64_buffered"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="hwlib::glcd_oled_i2c\l_128x64_buffered",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="hwlib::ssd1306_i2c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1ssd1306__i2c.html"];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="hwlib::window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhwlib_1_1window.html",tooltip="a graphics window "];
+}

@@ -1,0 +1,85 @@
+\hypertarget{classhwlib_1_1drawable}{}\section{hwlib\+:\+:drawable Class Reference}
+\label{classhwlib_1_1drawable}\index{hwlib\+::drawable@{hwlib\+::drawable}}
+
+
+interface to an drawable object  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/graphics.\+hpp$>$}
+
+
+
+Inheritance diagram for hwlib\+:\+:drawable\+:
+% FIG 0
+
+
+Collaboration diagram for hwlib\+:\+:drawable\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1drawable_a48f84ea64249fe67f726e9631d149d66}\label{classhwlib_1_1drawable_a48f84ea64249fe67f726e9631d149d66}} 
+\hyperlink{classhwlib_1_1drawable_a48f84ea64249fe67f726e9631d149d66}{drawable} (\hyperlink{classhwlib_1_1location}{location} \hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start})
+\begin{DoxyCompactList}\small\item\em create a drawable object by bsupplying its (initial) location \end{DoxyCompactList}\item 
+virtual void \hyperlink{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}{draw} (\hyperlink{classhwlib_1_1window}{window} \&w)=0
+\begin{DoxyCompactList}\small\item\em interface to draw the object buffered \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1drawable_a0cd21b5481bb137cd2fbcae1a7ee304e}\label{classhwlib_1_1drawable_a0cd21b5481bb137cd2fbcae1a7ee304e}} 
+\hyperlink{classhwlib_1_1drawable_a0cd21b5481bb137cd2fbcae1a7ee304e}{drawable} (\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start})
+\begin{DoxyCompactList}\small\item\em create a drawable object by supplying its (initial) location \end{DoxyCompactList}\item 
+virtual void \hyperlink{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}{draw} (\hyperlink{classhwlib_1_1window}{window} \&w)=0
+\begin{DoxyCompactList}\small\item\em interface to draw the object buffered \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}\label{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}} 
+\hyperlink{classhwlib_1_1location}{location} \hyperlink{classhwlib_1_1drawable_a6c31bc9303840a4317d3c95250c357ce}{start}
+\begin{DoxyCompactList}\small\item\em the location where the object is drawn \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwlib_1_1drawable_a917eb67b8a33a5ffae2d5d3246943467}\label{classhwlib_1_1drawable_a917eb67b8a33a5ffae2d5d3246943467}} 
+\hyperlink{classhwlib_1_1xy}{xy} \hyperlink{classhwlib_1_1drawable_a917eb67b8a33a5ffae2d5d3246943467}{start}
+\begin{DoxyCompactList}\small\item\em the location where the object is drawn \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+interface to an drawable object 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}\label{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}} 
+\index{hwlib\+::drawable@{hwlib\+::drawable}!draw@{draw}}
+\index{draw@{draw}!hwlib\+::drawable@{hwlib\+::drawable}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void hwlib\+::drawable\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1window}{window} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+interface to draw the object buffered 
+
+You must supply the window.
+
+If buffering is specified, the actuial drawing can be delayed until \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} is aclled. 
+
+Implemented in \hyperlink{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}{hwlib\+::circle}, \hyperlink{classhwlib_1_1line_a0a30c7c7e88377aada5ee1ec422bfc84}{hwlib\+::line}, \hyperlink{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}{hwlib\+::circle}, and \hyperlink{classhwlib_1_1line_a0a30c7c7e88377aada5ee1ec422bfc84}{hwlib\+::line}.
+
+\mbox{\Hypertarget{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}\label{classhwlib_1_1drawable_ac9ea0de52a14d9024cb34110f794ac28}} 
+\index{hwlib\+::drawable@{hwlib\+::drawable}!draw@{draw}}
+\index{draw@{draw}!hwlib\+::drawable@{hwlib\+::drawable}}
+\subsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void hwlib\+::drawable\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{classhwlib_1_1window}{window} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+interface to draw the object buffered 
+
+You must supply the window.
+
+If buffering is specified, the actuial drawing can be delayed until \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} is aclled. 
+
+Implemented in \hyperlink{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}{hwlib\+::circle}, \hyperlink{classhwlib_1_1line_a0a30c7c7e88377aada5ee1ec422bfc84}{hwlib\+::line}, \hyperlink{classhwlib_1_1circle_a7a4d6bbd0692b757eee4615a8c5ea9f4}{hwlib\+::circle}, and \hyperlink{classhwlib_1_1line_a0a30c7c7e88377aada5ee1ec422bfc84}{hwlib\+::line}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-graphics_8hpp}{hwlib-\/graphics.\+hpp}\item 
+code/hwlib/library/graphics/\hyperlink{hwlib-graphics-drawables_8hpp}{hwlib-\/graphics-\/drawables.\+hpp}\end{DoxyCompactItemize}

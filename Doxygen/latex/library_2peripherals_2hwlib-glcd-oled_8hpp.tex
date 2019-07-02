@@ -1,0 +1,84 @@
+\hypertarget{library_2peripherals_2hwlib-glcd-oled_8hpp}{}\section{code/hwlib/library/peripherals/hwlib-\/glcd-\/oled.hpp File Reference}
+\label{library_2peripherals_2hwlib-glcd-oled_8hpp}\index{code/hwlib/library/peripherals/hwlib-\/glcd-\/oled.\+hpp@{code/hwlib/library/peripherals/hwlib-\/glcd-\/oled.\+hpp}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classhwlib_1_1ssd1306__i2c}{hwlib\+::ssd1306\+\_\+i2c}
+\item 
+class \hyperlink{classhwlib_1_1ssd1306__spi__res__dc__cs}{hwlib\+::ssd1306\+\_\+spi\+\_\+res\+\_\+dc\+\_\+cs}
+\item 
+class \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__direct}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+direct}
+\begin{DoxyCompactList}\small\item\em buffered oled window \end{DoxyCompactList}\item 
+class \hyperlink{classhwlib_1_1glcd__oled__spi__128x64__direct__res__dc__cs}{hwlib\+::glcd\+\_\+oled\+\_\+spi\+\_\+128x64\+\_\+direct\+\_\+res\+\_\+dc\+\_\+cs}
+\begin{DoxyCompactList}\small\item\em buffered oled window \end{DoxyCompactList}\item 
+class \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__buffered}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered}
+\begin{DoxyCompactList}\small\item\em buffered oled window \end{DoxyCompactList}\item 
+class \hyperlink{classhwlib_1_1glcd__oled__i2c__128x64__fast__buffered}{hwlib\+::glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+fast\+\_\+buffered}
+\begin{DoxyCompactList}\small\item\em buffered oled window \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacehwlib}{hwlib}
+\begin{DoxyCompactList}\small\item\em hwlib library \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacehwlib_acfb754055c5d4981e94b750203dcca3a}\label{namespacehwlib_acfb754055c5d4981e94b750203dcca3a}} 
+using {\bfseries hwlib\+::glcd\+\_\+oled} = glcd\+\_\+oled\+\_\+i2c\+\_\+128x64\+\_\+buffered
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacehwlib_a9dcd26ad4dc21c1a72b57fb76f65e811}{hwlib\+::ssd1306\+\_\+commands} \+: uint8\+\_\+t \{ \newline
+{\bfseries set\+\_\+contrast} = 0x81, 
+{\bfseries display\+\_\+all\+\_\+on\+\_\+resume} = 0xa4, 
+{\bfseries display\+\_\+all\+\_\+on} = 0xa5, 
+{\bfseries normal\+\_\+display} = 0xa6, 
+\newline
+{\bfseries invert\+\_\+display} = 0xa7, 
+{\bfseries display\+\_\+off} = 0xae, 
+{\bfseries display\+\_\+on} = 0xaf, 
+{\bfseries set\+\_\+display\+\_\+offset} = 0xd3, 
+\newline
+{\bfseries set\+\_\+compins} = 0xda, 
+{\bfseries set\+\_\+vcom\+\_\+detect} = 0xdb, 
+{\bfseries set\+\_\+display\+\_\+clock\+\_\+div} = 0xd5, 
+{\bfseries set\+\_\+precharge} = 0xd9, 
+\newline
+{\bfseries set\+\_\+multiplex} = 0xa8, 
+{\bfseries set\+\_\+low\+\_\+column} = 0x00, 
+{\bfseries set\+\_\+high\+\_\+column} = 0x10, 
+{\bfseries set\+\_\+start\+\_\+line} = 0x40, 
+\newline
+{\bfseries memory\+\_\+mode} = 0x20, 
+{\bfseries column\+\_\+addr} = 0x21, 
+{\bfseries page\+\_\+addr} = 0x22, 
+{\bfseries com\+\_\+scan\+\_\+inc} = 0xc0, 
+\newline
+{\bfseries com\+\_\+scan\+\_\+dec} = 0xc8, 
+{\bfseries seg\+\_\+remap} = 0xa0, 
+{\bfseries charge\+\_\+pump} = 0x8d, 
+{\bfseries external\+\_\+vcc} = 0x01, 
+\newline
+{\bfseries switch\+\_\+cap\+\_\+vcc} = 0x02, 
+{\bfseries activate\+\_\+scroll} = 0x2f, 
+{\bfseries deactivate\+\_\+scroll} = 0x2e, 
+{\bfseries set\+\_\+vertical\+\_\+scroll\+\_\+area} = 0xa3, 
+\newline
+{\bfseries right\+\_\+horizontal\+\_\+scroll} = 0x26, 
+{\bfseries left\+\_\+horizontal\+\_\+scroll} = 0x27, 
+{\bfseries vertical\+\_\+and\+\_\+right\+\_\+horizontal\+\_\+scroll} = 0x29, 
+{\bfseries vertical\+\_\+and\+\_\+left\+\_\+horizontal\+\_\+scroll} = 0x2A
+ \}\begin{DoxyCompactList}\small\item\em Oled B/W graphics L\+CD. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacehwlib_a91ba83b9f601b9e5a9d870a7355cd234}\label{namespacehwlib_a91ba83b9f601b9e5a9d870a7355cd234}} 
+constexpr uint8\+\_\+t \hyperlink{namespacehwlib_a91ba83b9f601b9e5a9d870a7355cd234}{hwlib\+::ssd1306\+\_\+cmd\+\_\+prefix} = 0x80
+\begin{DoxyCompactList}\small\item\em value to send over i2c before a command \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacehwlib_a7a3622c80f998f1fd9e27f9e07e8f55c}\label{namespacehwlib_a7a3622c80f998f1fd9e27f9e07e8f55c}} 
+constexpr uint8\+\_\+t \hyperlink{namespacehwlib_a7a3622c80f998f1fd9e27f9e07e8f55c}{hwlib\+::ssd1306\+\_\+data\+\_\+prefix} = 0x40
+\begin{DoxyCompactList}\small\item\em value to send over i2c before a command \end{DoxyCompactList}\item 
+constexpr const uint8\+\_\+t \hyperlink{namespacehwlib_ab32aa8b496b969a1ae47bab09a2c2937}{hwlib\+::ssd1306\+\_\+initialization} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em S\+S\+D1306 chip initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{hwlib-frdm-kl27z_8hpp}{}\section{code/hwlib/attic/hwlib-\/frdm-\/kl27z.hpp File Reference}
+\label{hwlib-frdm-kl27z_8hpp}\index{code/hwlib/attic/hwlib-\/frdm-\/kl27z.\+hpp@{code/hwlib/attic/hwlib-\/frdm-\/kl27z.\+hpp}}
+{\ttfamily \#include \char`\"{}M\+K\+L27\+Z644.\+h\char`\"{}}\newline
+Include dependency graph for hwlib-\/frdm-\/kl27z.hpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfrdm__kl27z_1_1pin__in}{frdm\+\_\+kl27z\+::pin\+\_\+in}
+\item 
+class \hyperlink{classfrdm__kl27z_1_1pin__out}{frdm\+\_\+kl27z\+::pin\+\_\+out}
+\item 
+class \hyperlink{classfrdm__kl27z_1_1pin__in__out}{frdm\+\_\+kl27z\+::pin\+\_\+in\+\_\+out}
+\item 
+class \hyperlink{classfrdm__kl27z_1_1pin__oc}{frdm\+\_\+kl27z\+::pin\+\_\+oc}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacehwlib}{hwlib}
+\begin{DoxyCompactList}\small\item\em hwlib library \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hwlib-frdm-kl27z_8hpp_a563eefe85dbf924f38451ca4daeb5c8e}\label{hwlib-frdm-kl27z_8hpp_a563eefe85dbf924f38451ca4daeb5c8e}} 
+P\+O\+R\+T\+\_\+\+Type \& {\bfseries frdm\+\_\+kl27z\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak)) port\+\_\+registers(uint32\+\_\+t port)
+\item 
+uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{hwlib-frdm-kl27z_8hpp_a3a22a56400f28b8eb02535cb389b740a}{frdm\+\_\+kl27z\+::ticks\+\_\+per\+\_\+us} ()
+\item 
+uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{hwlib-frdm-kl27z_8hpp_a892420fb0c3e0a9ceaa1536d2584b196}{frdm\+\_\+kl27z\+::now\+\_\+ticks} ()
+\begin{DoxyCompactList}\small\item\em returns the number of ticks since some fixed starting point \end{DoxyCompactList}\item 
+void \hyperlink{namespacehwlib_a9c01a1d0319f5eadd8926e66aea19aa0}{hwlib\+::wait\+\_\+ns} (int\+\_\+fast32\+\_\+t n)
+\item 
+void \hyperlink{namespacehwlib_a0096b739fc566c896366ecbd3113cc1e}{hwlib\+::wait\+\_\+us} (int\+\_\+fast32\+\_\+t n)
+\item 
+void \hyperlink{namespacehwlib_a6119aa5d3034176aa1515ef4bb193044}{hwlib\+::wait\+\_\+ms} (int\+\_\+fast32\+\_\+t n)
+\item 
+void \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacehwlib_ae568ebef4b8d8a77cecae8cea595896f}{hwlib\+::uart\+\_\+putc} (char c)
+\item 
+bool \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacehwlib_aaf31868f62815d2e405ad90469ae50a5}{hwlib\+::uart\+\_\+char\+\_\+available} ()
+\item 
+char \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} \hyperlink{namespacehwlib_aa5ee60a7ff11cc49aba41f8be7f08a67}{hwlib\+::uart\+\_\+getc} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hwlib-frdm-kl27z_8hpp_file_a892420fb0c3e0a9ceaa1536d2584b196}\label{hwlib-frdm-kl27z_8hpp_file_a892420fb0c3e0a9ceaa1536d2584b196}} 
+\index{hwlib-\/frdm-\/kl27z.\+hpp@{hwlib-\/frdm-\/kl27z.\+hpp}!now\+\_\+ticks@{now\+\_\+ticks}}
+\index{now\+\_\+ticks@{now\+\_\+ticks}!hwlib-\/frdm-\/kl27z.\+hpp@{hwlib-\/frdm-\/kl27z.\+hpp}}
+\subsubsection{\texorpdfstring{now\+\_\+ticks()}{now\_ticks()}}
+{\footnotesize\ttfamily uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} frdm\+\_\+kl27z\+::now\+\_\+ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the number of ticks since some fixed starting point 
+
+current time in clock ticks
+
+A call of this function returns the number of clock ticks since some arbitrary moment (in most cases the first call to this function). \mbox{\Hypertarget{hwlib-frdm-kl27z_8hpp_file_a3a22a56400f28b8eb02535cb389b740a}\label{hwlib-frdm-kl27z_8hpp_file_a3a22a56400f28b8eb02535cb389b740a}} 
+\index{hwlib-\/frdm-\/kl27z.\+hpp@{hwlib-\/frdm-\/kl27z.\+hpp}!ticks\+\_\+per\+\_\+us@{ticks\+\_\+per\+\_\+us}}
+\index{ticks\+\_\+per\+\_\+us@{ticks\+\_\+per\+\_\+us}!hwlib-\/frdm-\/kl27z.\+hpp@{hwlib-\/frdm-\/kl27z.\+hpp}}
+\subsubsection{\texorpdfstring{ticks\+\_\+per\+\_\+us()}{ticks\_per\_us()}}
+{\footnotesize\ttfamily uint\+\_\+fast64\+\_\+t \hyperlink{hwlib-defines_8hpp_a04be4340016df60d6636c1d1c6d94fc9}{H\+W\+L\+I\+B\+\_\+\+W\+E\+AK} frdm\+\_\+kl27z\+::ticks\+\_\+per\+\_\+us (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+clock ticks per microsecond
+
+A call of this function returns the number of clock ticks (as returned by a \hyperlink{namespacehwlib_a004512830e68d72d8fd0e3153895e65b}{now\+\_\+ticks()} call) per microsecond. 

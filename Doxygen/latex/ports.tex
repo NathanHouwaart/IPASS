@@ -1,0 +1,120 @@
+A port is a collection of up to 8 \hyperlink{pins}{pins} of the same type (in, out, in\+\_\+out or oc) that are used (read, written, direction changed) together.
+
+~\newline
+ 
+
+\hypertarget{ports_port-types}{}\section{types}\label{ports_port-types}
+Similar to \hyperlink{pins}{pins}, there are four (abstract) types of ports\+:
+
+
+\begin{DoxyItemize}
+\item a \hyperlink{classhwlib_1_1port__in}{hwlib\+::port\+\_\+in} can only be used for input (read)
+\item a \hyperlink{classhwlib_1_1port__out}{hwlib\+::port\+\_\+out} can only be used for output (write)
+\item a \hyperlink{classhwlib_1_1port__in__out}{hwlib\+::port\+\_\+in\+\_\+out} can be used for input or output, but it must be configured for the appropriate direction (input or output) before it is used in either way.
+\item a \hyperlink{classhwlib_1_1port__oc}{hwlib\+::port\+\_\+oc} (open collector) can be used for input or output (without configuring it for a direction), but each pin in the port must have been written high before it can be meaningfully read.
+\end{DoxyItemize}
+
+~\newline
+ 
+
+\hypertarget{ports_port-from}{}\section{creating a port from pins}\label{ports_port-from}
+A port can be constructed from a list of (up to 8) pins of the same type by the hwlib\+::port\+\_\+from() constructor functions.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{ports_port-operation}{}\section{operations}\label{ports_port-operation}
+The next tables shows the operations that are available for each type of port.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ port type }&\textbf{ reading }&\textbf{ writing }&\textbf{ direction control  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ port type }&\textbf{ reading }&\textbf{ writing }&\textbf{ direction control  }\\\cline{1-4}
+\endhead
+\hyperlink{classhwlib_1_1port__in}{in} &\hyperlink{classhwlib_1_1port__in_a5d409eee35b766c844f7229fbe010545}{refresh()}, \hyperlink{classhwlib_1_1port__in_aa3aa277f9448c3ee493c56f05beb2ddb}{read()} &&\\\cline{1-4}
+\hyperlink{classhwlib_1_1port__out}{out} &&\hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{write()}, \hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{write()} &\\\cline{1-4}
+\hyperlink{classhwlib_1_1port__in__out}{in\+\_\+out} &\hyperlink{classhwlib_1_1port__in_a5d409eee35b766c844f7229fbe010545}{refresh()}, \hyperlink{classhwlib_1_1port__in_aa3aa277f9448c3ee493c56f05beb2ddb}{read()} &\hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{write()}, \hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{write()} &\hyperlink{classhwlib_1_1port__in__out_ac7a9611410ddb9fd5d8e2dd15bff0a3f}{direction\+\_\+set\+\_\+input()}, \hyperlink{classhwlib_1_1port__in__out_a515b4a6bbde4f2df5bb11cda41234fe4}{direction\+\_\+set\+\_\+output()}, \hyperlink{classhwlib_1_1port__in__out_a431b79eee48a21a93978bfdf6620f800}{direction\+\_\+flush()} \\\cline{1-4}
+\hyperlink{classhwlib_1_1port__oc}{oc} &\hyperlink{classhwlib_1_1port__in_a5d409eee35b766c844f7229fbe010545}{refresh()}, \hyperlink{classhwlib_1_1port__in_aa3aa277f9448c3ee493c56f05beb2ddb}{read()} &\hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{write()}, \hyperlink{classhwlib_1_1port__out_a3644bf484ebe059ec5bf17fa43e0c01b}{write()} &\\\cline{1-4}
+\end{longtabu}
+A read() returns a uint\+\_\+fast8\+\_\+t, a write() accepts a uint\+\_\+fast8\+\_\+t. The other calls take no parameters and return void.
+
+When a port is read from, the lowest bit of the value read was read from the first pin supplied to the port constructor, the second-\/lowest bit from the second pin, etc. Likewise, when a port is written to, the lowest bit of the value is written to the first pin supplied to the constructor, etc.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ For an \hyperlink{classhwlib_1_1port__in__out}{in\+\_\+out} port the direction must be set to input before a read() is done, and to output before a write() is done.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ As shown in the examples, a read() should be preceded by a refresh(), a write should be followed by a flush(), and a direction change should be followed by a \hyperlink{classhwlib_1_1port__in__out_a431b79eee48a21a93978bfdf6620f800}{direction\+\_\+flush()}, as explained in the page on \hyperlink{buffering}{buffering}.
+
+~\newline
+ 
+
+\hypertarget{ports_port-direct}{}\section{direct}\label{ports_port-direct}
+Port operations (read, write, direction\+\_\+set\+\_\+input, direction\+\_\+set\+\_\+output) are (potentially) \hyperlink{buffering}{buffered}.
+
+The \hyperlink{namespacehwlib_a43941b7f246ad934ee43dbfa0f5c8b5a}{direct()} creator function can be used to create a port that has read(), write() and direction\+\_\+set\+\_\+$\ast$() operations with direct effect.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{ports_port-invert}{}\section{invert}\label{ports_port-invert}
+The \hyperlink{namespacehwlib_ab619d7f70bb62112b2a04192f5103a24}{hwlib\+::invert} \hyperlink{namespacehwlib_ab619d7f70bb62112b2a04192f5103a24}{invert()} function constructs a new port from an existing one. When a value is written to this new port, the bitwise inverse of this value is written to the old pin. Likewise, when a value is read from the new port, the value is the bitwise inverse of the value read from the old port. The new port is of the same type (in, out, in\+\_\+out, oc) as the existing one from which it was created.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{ports_port-conversion}{}\section{conversion}\label{ports_port-conversion}
+Conversion functions are available that create a port of one type from one of another type. Of course, not all such conversions are possible.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ function }&\textbf{ accepted port types  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ function }&\textbf{ accepted port types  }\\\cline{1-2}
+\endhead
+port\+\_\+in\+\_\+from( port ) &in, in\+\_\+out, oc \\\cline{1-2}
+port\+\_\+out\+\_\+from( port ) &out, in\+\_\+out, oc \\\cline{1-2}
+port\+\_\+in\+\_\+out\+\_\+from( port ) &in\+\_\+out, oc \\\cline{1-2}
+port\+\_\+oc\+\_\+from( port ) &oc \\\cline{1-2}
+\end{longtabu}
+Unlike for the pin conversions, it is not possible to create a port\+\_\+oc from a port\+\_\+in\+\_\+out, because a port\+\_\+in\+\_\+out doesn\textquotesingle{}t allow for individual control of the pin directions.
+
+~\newline
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ ~\newline
+ 
+
+\hypertarget{ports_port-all}{}\section{All}\label{ports_port-all}
+The overloaded \hyperlink{structxy_af0ac2823653fbb02e47de4315fb20a49}{all()} function creates a single out pin from an out port. Writing a value to the single pin writes the value to all pins of the port. Flushing the single pin flushes the port.
+
+~\newline
+ 

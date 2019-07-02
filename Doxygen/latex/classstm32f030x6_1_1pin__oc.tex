@@ -1,0 +1,142 @@
+\hypertarget{classstm32f030x6_1_1pin__oc}{}\section{stm32f030x6\+:\+:pin\+\_\+oc Class Reference}
+\label{classstm32f030x6_1_1pin__oc}\index{stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}}
+
+
+\hyperlink{classstm32f030x6_1_1pin__oc}{pin\+\_\+oc} implementation for an \hyperlink{namespacestm32f030x6}{stm32f030x6}  
+
+
+
+
+{\ttfamily \#include $<$hwlib-\/stm32f030x6.\+hpp$>$}
+
+
+
+Inheritance diagram for stm32f030x6\+:\+:pin\+\_\+oc\+:
+% FIG 0
+
+
+Collaboration diagram for stm32f030x6\+:\+:pin\+\_\+oc\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstm32f030x6_1_1pin__oc_ad0c22cf306b23e62917d6610131ae5f7}{pin\+\_\+oc} (uint32\+\_\+t port\+\_\+number, uint32\+\_\+t pin\+\_\+number)
+\item 
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_a577488ae6474386647af2c5b7a08a65b}\label{classstm32f030x6_1_1pin__oc_a577488ae6474386647af2c5b7a08a65b}} 
+{\bfseries pin\+\_\+oc} (\hyperlink{namespacestm32f030x6_aec819db41bff19f45418c0d22e5ccecf}{pins} name)
+\item 
+bool \hyperlink{classstm32f030x6_1_1pin__oc_a97615ebdacdd8405e87f8f6440e5fce1}{read} () override
+\item 
+void \hyperlink{classstm32f030x6_1_1pin__oc_a08be59f5868ae70133e95d172318043b}{write} (bool v) override
+\item 
+void \hyperlink{classstm32f030x6_1_1pin__oc_afa293f1a0ee8f1cb4936521df144453e}{flush} ()) override
+\item 
+void \hyperlink{classstm32f030x6_1_1pin__oc_ab856468835abcd32a9161b94c789ec7d}{refresh} () override
+\item 
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_ab3241925a4e05ba4902cd37dbd9c997d}\label{classstm32f030x6_1_1pin__oc_ab3241925a4e05ba4902cd37dbd9c997d}} 
+void {\bfseries direction\+\_\+flush} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classstm32f030x6_1_1pin__oc}{pin\+\_\+oc} implementation for an \hyperlink{namespacestm32f030x6}{stm32f030x6} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_ad0c22cf306b23e62917d6610131ae5f7}\label{classstm32f030x6_1_1pin__oc_ad0c22cf306b23e62917d6610131ae5f7}} 
+\index{stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}!pin\+\_\+oc@{pin\+\_\+oc}}
+\index{pin\+\_\+oc@{pin\+\_\+oc}!stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{pin\+\_\+oc()}{pin\_oc()}}
+{\footnotesize\ttfamily stm32f030x6\+::pin\+\_\+oc\+::pin\+\_\+oc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port\+\_\+number,  }\item[{uint32\+\_\+t}]{pin\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hyperlink{namespacestm32f030x6}{stm32f030x6} \hyperlink{classstm32f030x6_1_1pin__oc}{pin\+\_\+oc} constructor
+
+Constructor for an \hyperlink{namespacestm32f030x6}{stm32f030x6} open-\/collector pin.
+
+This constructor doesn\textquotesingle{}t set the pin value to high or low, the set function must be called to do so. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_afa293f1a0ee8f1cb4936521df144453e}\label{classstm32f030x6_1_1pin__oc_afa293f1a0ee8f1cb4936521df144453e}} 
+\index{stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}!flush@{flush}}
+\index{flush@{flush}!stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void stm32f030x6\+::pin\+\_\+oc\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+flush the pin buffer
+
+This function flushes the pin write buffer\+: if the buffered value has not yet been written it is written to the pin. When the value has been written, it might be written again.
+
+The pin write buffer might also be flushed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a021036a4566c712e43250ddd28a85e54}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_a97615ebdacdd8405e87f8f6440e5fce1}\label{classstm32f030x6_1_1pin__oc_a97615ebdacdd8405e87f8f6440e5fce1}} 
+\index{stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}!read@{read}}
+\index{read@{read}!stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool stm32f030x6\+::pin\+\_\+oc\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+read the pin
+
+read the pin
+
+This function returns the level of the pin. When the pin level is high the value true is returned, when the pin level is low the value false is returned.
+
+The value that is read might be a buffered value, read no later than the last \hyperlink{classstm32f030x6_1_1pin__oc_ab856468835abcd32a9161b94c789ec7d}{refresh()} call.
+
+This function can be called after write( false ) has been called on the pin, but then the level will read low (false). Call write( true ) to let the line float (presumably pulled high by a pull-\/up resistor) to read the level put on the line by an external device. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a51180afd605add59b96105fa98e29f88}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_ab856468835abcd32a9161b94c789ec7d}\label{classstm32f030x6_1_1pin__oc_ab856468835abcd32a9161b94c789ec7d}} 
+\index{stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}!refresh@{refresh}}
+\index{refresh@{refresh}!stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void stm32f030x6\+::pin\+\_\+oc\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+refresh the pin buffer
+
+This function refreshes the contents of the read buffer that might be used by a buffered \hyperlink{classstm32f030x6_1_1pin__oc_a97615ebdacdd8405e87f8f6440e5fce1}{read()}.
+
+That buffer might also be refreshed as a side-\/effect of other operations. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a573740f6f790c5792efc9cdd44cc73b3}{hwlib\+::pin\+\_\+oc}.
+
+\mbox{\Hypertarget{classstm32f030x6_1_1pin__oc_a08be59f5868ae70133e95d172318043b}\label{classstm32f030x6_1_1pin__oc_a08be59f5868ae70133e95d172318043b}} 
+\index{stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}!write@{write}}
+\index{write@{write}!stm32f030x6\+::pin\+\_\+oc@{stm32f030x6\+::pin\+\_\+oc}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void stm32f030x6\+::pin\+\_\+oc\+::write (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+
+
+write the pin
+
+write the pin
+
+This function sets the level of the pin to the value v. A value of true makes the pin high, a value of false makes it low.
+
+The actual effect on the pin might be postponed until the next \hyperlink{classstm32f030x6_1_1pin__oc_afa293f1a0ee8f1cb4936521df144453e}{flush()} call.
+
+This function sets the level of the pin to the value v. A value of true makes the pin high-\/impedance (presumably pulled high by a pull-\/up resistor), a value of false makes it low. 
+
+Implements \hyperlink{classhwlib_1_1pin__oc_a4429dd7dc80858a213bb157f4ac5def3}{hwlib\+::pin\+\_\+oc}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/hwlib/attic/\hyperlink{hwlib-stm32f030x6_8hpp}{hwlib-\/stm32f030x6.\+hpp}\end{DoxyCompactItemize}

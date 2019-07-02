@@ -1,0 +1,39 @@
+\hypertarget{pn532_8h}{}\section{code/headers/pn532.h File Reference}
+\label{pn532_8h}\index{code/headers/pn532.\+h@{code/headers/pn532.\+h}}
+
+
+Implementation of the Abstract N\+FC interface for the pn532.  
+
+
+{\ttfamily \#include \char`\"{}nfc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pn532\+Command.\+h\char`\"{}}\newline
+Include dependency graph for pn532.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfc_1_1PN532__chip}{nfc\+::\+P\+N532\+\_\+chip}
+\begin{DoxyCompactList}\small\item\em Implementation of the \hyperlink{classnfc_1_1NFC}{N\+FC} class specificly for the pn532. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the Abstract N\+FC interface for the pn532. 
+
+This file provides an implementation of the Abstract N\+FC interface class that can be used by a pn532. \begin{DoxyNote}{Note}
+Not all commands that he pn532 provides are supported by this library, but the vast majority is implemented.
+\end{DoxyNote}
+This file contains detailled doxygen lines, but if a particulair function of thepn532 is not clear, plese refer to the user manual of this chip\+: \href{https://www.nxp.com/docs/en/user-guide/141520.pdf}{\tt https\+://www.\+nxp.\+com/docs/en/user-\/guide/141520.\+pdf}
+
+You can also refer to the application note in order to see how the pn532 is used to read cards/ etc\+: \href{https://www.nxp.com/docs/en/nxp/application-notes/AN133910.pdf}{\tt https\+://www.\+nxp.\+com/docs/en/nxp/application-\/notes/\+A\+N133910.\+pdf}
+
+The pn532 is manufactured by N\+X\+P®. All rights reserved
+
+P\+N532 N\+FC R\+F\+ID Module is a highly integrated transmission module for Near Field Communication at 13.\+56\+M\+Hz. With the mode switch on board, you can change easily between I2C, S\+PI, and U\+A\+RT modes. The integrated level shifter provides 3.\+3V or 5V working voltage for your choice. In addition, it supports R\+F\+ID reading and writing, and N\+FC function with Android phone, which makes it quite convenient for wireless connection. This module is equipped with two 3mm mounting holes, of which the small dimension makes it easy for using in your project! (source\+: \href{http://wiki.sunfounder.cc/index.php?title=PN532_NFC_RFID_Module}{\tt http\+://wiki.\+sunfounder.\+cc/index.\+php?title=\+P\+N532\+\_\+\+N\+F\+C\+\_\+\+R\+F\+I\+D\+\_\+\+Module} )
+
+Note\+: When your wiring is correct (no short circuit), the module may be a little heated, which is just normal for use.
+
+\begin{DoxyAuthor}{Author}
+Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
+\end{DoxyAuthor}

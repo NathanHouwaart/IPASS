@@ -1,0 +1,55 @@
+For efficiency, some operations are (potentially) buffered. A direct operation will have an immediate external effect (for output operations) or work on a fresh sample of the external conditions (for input operations). A buffered operation might have its effect delayed up to the next flush operation (output), or work on input that is as old as the most recent refresh() operation.
+
+Operations on pins, ports, A\+D-\/inputs, D\+A-\/outputs, character streams, graphic windows, etc. are by default (potentially) buffered. To ensure direct effects, all reads must be preceded by a refresh call, and all writes must be succeeded by a flush call
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ The \hyperlink{namespacehwlib_a43941b7f246ad934ee43dbfa0f5c8b5a}{direct()} decorator automates this, making the refresh() and flus() calls unnecessary.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ Using unbuffered operations can produce a significant speedup because the actual output operation is postponed, and can handle all pending changes in one go.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ For the O\+L\+ED the difference can be very large. Writing one pixel requires up to three operations\+:
+\begin{DoxyItemize}
+\item optionally set X address (7-\/byte I2C transaction)
+\item optionally set Y address (7-\/byte I2C transaction)
+\item write data byte (3-\/byte I2C transaction) For a direct operation this is done for each and every pixel.
+\end{DoxyItemize}
+
+The buffered graphics operations write to the in-\/memory pixel buffer, which is written out to the oled in one go by the flush operation. This is done in one I2C transaction, with some small overhead and 1024 data bytes. Hence a flush takes roughly the time it takes to write 60 pixels. For the S\+PI interface the single pixel write overhead is a little bit smaller because a S\+PI transfer has no command byte (hence each transfer takes 1 byte less).
+
+Character output to a graphic window is always buffered. The flush manipulator is required to write the pixels to the screen.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ For efficiency, some operations are (potentially) buffered. A direct operation will have an immediate external effect (for output operations) or work on a fresh sample of the external conditions (for input operations). A buffered operation might have its effect delayed up to the next flush operation (output), or work on input that is as old as the most recent refresh() operation.
+
+Operations on \hyperlink{pins}{pins}, \hyperlink{ports}{ports}, A\+D-\/inputs, D\+A-\/outputs, character streams, graphic windows, etc. are by default (potentially) buffered. To ensure direct effects, all reads must be preceded by a refresh call, and all writes must be succeeded by a flush call
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ The \hyperlink{namespacehwlib_a43941b7f246ad934ee43dbfa0f5c8b5a}{direct()} decorator automates this, making the refresh() and \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} calls unnecessary.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ Using buffered operations can produce a significant speedup because the actual output operation is postponed, and can handle all pending changes in one go.
+
+The pcf8574a is an i2c I/O extender that provided 8 open-\/collector pins. The \hyperlink{namespacehwlib_a1de5a49c6b1b8cd371e5444684018976}{hwlib\+::pcf8574a} class is buffered\+: when a value is written to a pin, it is actually written to a buffer in R\+AM. A flush call writes this buffer to the chip, but only when it has beenm written to since the last flush. When a flush call is done after each write, each flush writes to the chip. On a 12 M\+Hz L\+P\+C1114, four writes and flushes take 3.\+8 ms.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ When the \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} calls are done after the four write() calls, it all takes only 1.\+0 ms. Most of this is spent in the first \hyperlink{namespacehwlib_a648fe94ca9899747a632c23f97007732}{flush()} call, the others have nothing left to do.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}

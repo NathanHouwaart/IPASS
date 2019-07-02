@@ -1,0 +1,50 @@
+The (abstract) types \hyperlink{classhwlib_1_1adc}{adc} and \hyperlink{classhwlib_1_1dac}{dac} are used to read and write analog values.
+
+~\newline
+ 
+
+\hypertarget{analog_adc}{}\section{adc}\label{analog_adc}
+The \hyperlink{classhwlib_1_1adc}{hwlib\+::adc} adc is an abstract class that provides an interface to an Analog-\/to-\/\+Digital (A\+DC) converter. Targets that have an A\+DC, and A\+DC peripheral chips, provide this interface.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attrubutes and functions }&\textbf{ meaning  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attrubutes and functions }&\textbf{ meaning  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1adc_a1faacac0cc2f78e90652b17250cbe159}{adc\+\_\+value\+\_\+type} &the type returned by read() \\\cline{1-2}
+\hyperlink{classhwlib_1_1adc_a94a0df22c46f1958f7351585bbc073ea}{adc\+\_\+n\+\_\+bits} &the number of significant bits in the result returned by read() \\\cline{1-2}
+\hyperlink{classhwlib_1_1adc_ac39b506d3ae4eec08caa5aa7e69ab2fb}{read()} &returns the adc value \\\cline{1-2}
+\hyperlink{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}{refresh()} &makes sure the value returned by read() is up-\/to-\/date \\\cline{1-2}
+\end{longtabu}
+An adc is buffered\+: a call to \hyperlink{classhwlib_1_1adc_a5484571b18d647ec78ba97e94c7ed836}{refresh()} is needed to make sure that the value returned by read is up-\/to-\/date.
+
+~\newline
+ 
+
+\hypertarget{analog_dac}{}\section{dac}\label{analog_dac}
+The \hyperlink{classhwlib_1_1dac}{hwlib\+::dac} dac is an abstract class that provides an interface to an Digital-\/to-\/\+Analog (D\+AC) converter. Targets that have a D\+AC, and D\+AC peripheral chips, provide this interface.
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attrubutes and functions }&\textbf{ meaning  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ attrubutes and functions }&\textbf{ meaning  }\\\cline{1-2}
+\endhead
+\hyperlink{classhwlib_1_1dac_a817d363b6abcd056bce2f0a4a514cb14}{dac\+\_\+value\+\_\+type} &the type accepted by write() \\\cline{1-2}
+\hyperlink{classhwlib_1_1dac_a031625f8cbcb88bebd48a76aa19bfcb5}{dac\+\_\+n\+\_\+bits} &the number of significant bits in avlaue written by write() \\\cline{1-2}
+\hyperlink{classhwlib_1_1dac_ac1572029354d3334b053b4d4966b7208}{write(v)} &writes the value v to the D\+AC \\\cline{1-2}
+\hyperlink{classhwlib_1_1dac_ab25a6ae2d86b0bec3afdecf3d22faf67}{flush()} &makes sure the value written appears on the output \\\cline{1-2}
+\end{longtabu}
+An dac is bufffered\+: a call to \hyperlink{classhwlib_1_1dac_ab25a6ae2d86b0bec3afdecf3d22faf67}{flush() } is needed to make sure that a value that was written appears at the analog output.
+
+~\newline
+ 
