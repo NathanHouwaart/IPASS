@@ -347,6 +347,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sectorLocation</b>
     <tr><td class="paramname">display</td><td>Display that can be written to </td></tr>
     <tr><td class="paramname">pins</td><td>Station/ mode slection pins </td></tr>
     <tr><td class="paramname">price</td><td>Price per kilometer </td></tr>
+    <tr><td class="paramname">maxCardBalance</td><td>The max balance a card can have </td></tr>
+    <tr><td class="paramname">topUpValue</td><td>The value the card will be topped up with </td></tr>
     <tr><td class="paramname">AorB</td><td>Wether the user wants to autenticate the sector with keyA or keyB </td></tr>
     <tr><td class="paramname">valueBlockLocation</td><td>Number of the page where the value block is located </td></tr>
     <tr><td class="paramname">sectorLocation</td><td>Number of the sector trailer page that needs to be authenticated </td></tr>
@@ -617,7 +619,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sectorLocation</b>
 </div><div class="memdoc">
 
 <p>This function will read out the 8 GPIO pins to determine the current station. </p>
-<p>By reading the 8 gpio pins and storing them in a 8 bit value, </p><dl class="section return"><dt>Returns</dt><dd>uint8_t value of the pins read. </dd></dl>
+<p>By reading the 8 gpio pins and storing them in a 8 bit value, </p><dl class="section return"><dt>Returns</dt><dd>Mode the mode the pins are set in </dd></dl>
 
 <p>Implemented in <a class="el" href="classtrain.html#ae788938711f5940abc9ad9fa09a77011">train</a>.</p>
 
@@ -650,7 +652,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sectorLocation</b>
 <p>This function will set the mode of apllication. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uint8_t</td><td>mode </td></tr>
+    <tr><td class="paramname">newMode</td><td>newMode </td></tr>
   </table>
   </dd>
 </dl>
@@ -801,7 +803,7 @@ false card not properly formatted </dd></dl>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>application/code/headers/<a class="el" href="ov_8h_source.html">ov.h</a></li>
-<li>application/code/src/ov.cpp</li>
+<li>application/code/src/<a class="el" href="ov_8cpp.html">ov.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

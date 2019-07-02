@@ -64,6 +64,27 @@ can check in, out, tup up the card balance and travel to different stations.
 Constructor of a train class application. 
 
 This function will need all the data fields of the \hyperlink{classovTracker}{ov\+Tracker} supporter Upon initialising the \hyperlink{classovTracker}{ov\+Tracker} class, the train class will initialise itself by calling \hyperlink{classtrain_a52db26884bf0f979ad55ce92f3d2f159}{init()} 
+\begin{DoxyParams}{Parameters}
+{\em nfc} & pn532 chip class \\
+\hline
+{\em display} & Display that can be written to \\
+\hline
+{\em pins} & Station/ mode slection pins \\
+\hline
+{\em price} & Price per kilometer \\
+\hline
+{\em max\+Card\+Balance} & The max balance a card can have \\
+\hline
+{\em top\+Up\+Value} & The value the card will be topped up with \\
+\hline
+{\em AorB} & Wether the user wants to autenticate the sector with keyA or keyB \\
+\hline
+{\em value\+Block\+Location} & Number of the page where the value block is located \\
+\hline
+{\em sector\+Location} & Number of the sector trailer page that needs to be authenticated \\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classtrain_ab027ec1ad985772fbc8b5d65a34da7be}\label{classtrain_ab027ec1ad985772fbc8b5d65a34da7be}} 
@@ -270,5 +291,5 @@ Implements \hyperlink{classovTracker_a43dea6c5e524377f2190e59a7da85b51}{ov\+Trac
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-application/code/headers/train\+\_\+ov.\+h\item 
-application/code/src/train\+\_\+ov.\+cpp\end{DoxyCompactItemize}
+application/code/headers/\hyperlink{train__ov_8h}{train\+\_\+ov.\+h}\item 
+application/code/src/\hyperlink{train__ov_8cpp}{train\+\_\+ov.\+cpp}\end{DoxyCompactItemize}

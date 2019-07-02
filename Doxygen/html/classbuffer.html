@@ -65,28 +65,109 @@ $(function() {
 <div class="title">buffer&lt; n &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is a ringbuffer class that is supposed to store the received data from the UART bus.  
+ <a href="classbuffer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hardware__uart_8h_source.html">hardware_uart.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af167e2486ec566cacd9fc3d48bd42e80"><td class="memItemLeft" align="right" valign="top"><a id="af167e2486ec566cacd9fc3d48bd42e80"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#af167e2486ec566cacd9fc3d48bd42e80">buffer</a> ()</td></tr>
+<tr class="memdesc:af167e2486ec566cacd9fc3d48bd42e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default construcctor for the buffer. The buffer will initially be empty when created. <br /></td></tr>
+<tr class="separator:af167e2486ec566cacd9fc3d48bd42e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff92199fadb5da62646008c2fa7b3a07"><td class="memItemLeft" align="right" valign="top"><a id="aff92199fadb5da62646008c2fa7b3a07"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>returnBegin</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#aff92199fadb5da62646008c2fa7b3a07">returnBegin</a> ()</td></tr>
+<tr class="memdesc:aff92199fadb5da62646008c2fa7b3a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the begin index of the buffer. <br /></td></tr>
 <tr class="separator:aff92199fadb5da62646008c2fa7b3a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6ef03f00a09332e04e21f61bd216767"><td class="memItemLeft" align="right" valign="top"><a id="ae6ef03f00a09332e04e21f61bd216767"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>returnEnd</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#ae6ef03f00a09332e04e21f61bd216767">returnEnd</a> ()</td></tr>
+<tr class="memdesc:ae6ef03f00a09332e04e21f61bd216767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the end index of the buffer. <br /></td></tr>
 <tr class="separator:ae6ef03f00a09332e04e21f61bd216767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade7959181a0fe6c4dff38053a07b2ece"><td class="memItemLeft" align="right" valign="top"><a id="ade7959181a0fe6c4dff38053a07b2ece"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>returnSize</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#ade7959181a0fe6c4dff38053a07b2ece">returnSize</a> ()</td></tr>
+<tr class="memdesc:ade7959181a0fe6c4dff38053a07b2ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the buffer. <br /></td></tr>
 <tr class="separator:ade7959181a0fe6c4dff38053a07b2ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a581b60e734970b849182ecc150590f"><td class="memItemLeft" align="right" valign="top"><a id="a9a581b60e734970b849182ecc150590f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_back</b> (const uint8_t c)</td></tr>
+<tr class="memitem:a9a581b60e734970b849182ecc150590f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#a9a581b60e734970b849182ecc150590f">push_back</a> (const uint8_t c)</td></tr>
+<tr class="memdesc:a9a581b60e734970b849182ecc150590f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes back a character at the back of the buffer.  <a href="#a9a581b60e734970b849182ecc150590f">More...</a><br /></td></tr>
 <tr class="separator:a9a581b60e734970b849182ecc150590f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43392276a25538804cf08852d4bd54f6"><td class="memItemLeft" align="right" valign="top"><a id="a43392276a25538804cf08852d4bd54f6"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> ()</td></tr>
+<tr class="memitem:a43392276a25538804cf08852d4bd54f6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#a43392276a25538804cf08852d4bd54f6">pop</a> ()</td></tr>
+<tr class="memdesc:a43392276a25538804cf08852d4bd54f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the first element of the buffer and removes it.  <a href="#a43392276a25538804cf08852d4bd54f6">More...</a><br /></td></tr>
 <tr class="separator:a43392276a25538804cf08852d4bd54f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de5ff2f764dd574776d3292ca522a76"><td class="memItemLeft" align="right" valign="top"><a id="a3de5ff2f764dd574776d3292ca522a76"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbuffer.html#a3de5ff2f764dd574776d3292ca522a76">clear</a> ()</td></tr>
+<tr class="memdesc:a3de5ff2f764dd574776d3292ca522a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the buffer <br /></td></tr>
 <tr class="separator:a3de5ff2f764dd574776d3292ca522a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;size_t n&gt;<br />
+class buffer&lt; n &gt;</h3>
+
+<p>This is a ringbuffer class that is supposed to store the received data from the UART bus. </p>
+<p>This buffer is templated and can be decided at compile time. It is reccomended to make the buffer no larger than 255 bytes for speed purposes </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a43392276a25538804cf08852d4bd54f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43392276a25538804cf08852d4bd54f6">&#9670;&nbsp;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t <a class="el" href="classbuffer.html">buffer</a>&lt; n &gt;::pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the first element of the buffer and removes it. </p>
+<p>If the buffer has reached the end index of the buffer, it will wrap around and start at index 0 again and start popping characters form there </p>
+
+</div>
+</div>
+<a id="a9a581b60e734970b849182ecc150590f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a581b60e734970b849182ecc150590f">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t n&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classbuffer.html">buffer</a>&lt; n &gt;::push_back </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes back a character at the back of the buffer. </p>
+<p>If the buffer has reached the end index of the buffer, it will wrap around and start at index 0 again. This will possibly overwrite the characters already there </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>code/headers/<a class="el" href="hardware__uart_8h_source.html">hardware_uart.h</a></li>
 </ul>

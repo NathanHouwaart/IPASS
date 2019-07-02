@@ -147,6 +147,10 @@ Constructor for the \hyperlink{classovTracker}{ov\+Tracker} class.
 \hline
 {\em price} & Price per kilometer \\
 \hline
+{\em max\+Card\+Balance} & The max balance a card can have \\
+\hline
+{\em top\+Up\+Value} & The value the card will be topped up with \\
+\hline
 {\em AorB} & Wether the user wants to autenticate the sector with keyA or keyB \\
 \hline
 {\em value\+Block\+Location} & Number of the page where the value block is located \\
@@ -288,7 +292,7 @@ Implemented in \hyperlink{classtrain_a518b32482f1a5a32cc372b6679644b43}{train}.
 This function will read out the 8 G\+P\+IO pins to determine the current station. 
 
 By reading the 8 gpio pins and storing them in a 8 bit value, \begin{DoxyReturn}{Returns}
-uint8\+\_\+t value of the pins read. 
+Mode the mode the pins are set in 
 \end{DoxyReturn}
 
 
@@ -306,7 +310,7 @@ This function will set the mode of apllication.
 
 
 \begin{DoxyParams}{Parameters}
-{\em uint8\+\_\+t} & mode \\
+{\em new\+Mode} & new\+Mode \\
 \hline
 \end{DoxyParams}
 
@@ -393,4 +397,4 @@ Implemented in \hyperlink{classtrain_a4509fc35ff69717aab2636dd847981d4}{train}.
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 application/code/headers/\hyperlink{ov_8h}{ov.\+h}\item 
-application/code/src/ov.\+cpp\end{DoxyCompactItemize}
+application/code/src/\hyperlink{ov_8cpp}{ov.\+cpp}\end{DoxyCompactItemize}

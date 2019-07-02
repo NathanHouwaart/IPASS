@@ -2,35 +2,63 @@
 \label{classuart__abstract}\index{uart\+\_\+abstract@{uart\+\_\+abstract}}
 
 
+This is a pure abstract class of the hardware U\+A\+RT.  
+
+
+
+
+{\ttfamily \#include $<$hardware\+\_\+uart.\+h$>$}
+
+
+
 Inheritance diagram for uart\+\_\+abstract\+:
 % FIG 0
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classuart__abstract_a44203f54f9cdbe8c3ea71ad65d3be62b}\label{classuart__abstract_a44203f54f9cdbe8c3ea71ad65d3be62b}} 
-virtual void {\bfseries uart\+\_\+init} ()=0
-\item 
+virtual void \hyperlink{classuart__abstract_a44203f54f9cdbe8c3ea71ad65d3be62b}{uart\+\_\+init} ()=0
+\begin{DoxyCompactList}\small\item\em This function is used to initialise the U\+A\+RT bus. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classuart__abstract_a38f7efba4039c82f8c70a1891bb9a577}\label{classuart__abstract_a38f7efba4039c82f8c70a1891bb9a577}} 
-virtual int {\bfseries avialable} ()=0
-\item 
+virtual int \hyperlink{classuart__abstract_a38f7efba4039c82f8c70a1891bb9a577}{avialable} ()=0
+\begin{DoxyCompactList}\small\item\em Chekcs whether there is a character available in the ringbuffer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classuart__abstract_a8956fc6951a4b5860f0ef44b424929bb}\label{classuart__abstract_a8956fc6951a4b5860f0ef44b424929bb}} 
-virtual void {\bfseries send\+Byte} (const uint8\+\_\+t c)=0
-\item 
+virtual void \hyperlink{classuart__abstract_a8956fc6951a4b5860f0ef44b424929bb}{send\+Byte} (const uint8\+\_\+t c)=0
+\begin{DoxyCompactList}\small\item\em Sends a byte over the U\+A\+RT bus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuart__abstract_ac1029a0f07ce2f8880f2b388378bbfb4}\label{classuart__abstract_ac1029a0f07ce2f8880f2b388378bbfb4}} 
+virtual void \hyperlink{classuart__abstract_ac1029a0f07ce2f8880f2b388378bbfb4}{store\+Byte} (const char c)=0
+\begin{DoxyCompactList}\small\item\em Stores a byte in the ringbuffer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classuart__abstract_ad26f90ebb38ac73e23693cc5aafc3954}\label{classuart__abstract_ad26f90ebb38ac73e23693cc5aafc3954}} 
-virtual uint8\+\_\+t {\bfseries receive\+Byte} ()=0
-\item 
+virtual uint8\+\_\+t \hyperlink{classuart__abstract_ad26f90ebb38ac73e23693cc5aafc3954}{receive\+Byte} ()=0
+\begin{DoxyCompactList}\small\item\em Receives a byte form the U\+A\+RT bus. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classuart__abstract_a8a10405e3e52c8175899a443871c1598}\label{classuart__abstract_a8a10405e3e52c8175899a443871c1598}} 
-virtual bool {\bfseries uart\+\_\+has\+\_\+overrun} ()=0
-\item 
-\mbox{\Hypertarget{classuart__abstract_a5bef51a86d044af4537c975460d4aac2}\label{classuart__abstract_a5bef51a86d044af4537c975460d4aac2}} 
-virtual bool {\bfseries uart\+\_\+has\+\_\+rx\+\_\+error} ()=0
-\item 
+virtual bool \hyperlink{classuart__abstract_a8a10405e3e52c8175899a443871c1598}{uart\+\_\+has\+\_\+overrun} ()=0
+\begin{DoxyCompactList}\small\item\em A function to check whether the rx buffer has overrun. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classuart__abstract_a3d93d3e15a85df80fcef701552f91080}\label{classuart__abstract_a3d93d3e15a85df80fcef701552f91080}} 
-virtual bool {\bfseries rx\+Ready} ()=0
-\item 
+virtual bool \hyperlink{classuart__abstract_a3d93d3e15a85df80fcef701552f91080}{rx\+Ready} ()=0
+\begin{DoxyCompactList}\small\item\em A function to check whether the receive register is ready to be read from. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classuart__abstract_a701d4eec1363bec9a7677e3b1f6c68b3}\label{classuart__abstract_a701d4eec1363bec9a7677e3b1f6c68b3}} 
-virtual uint8\+\_\+t {\bfseries getC} ()=0
-\end{DoxyCompactItemize}
+virtual uint8\+\_\+t \hyperlink{classuart__abstract_a701d4eec1363bec9a7677e3b1f6c68b3}{getC} ()=0
+\begin{DoxyCompactList}\small\item\em Get a character from the ringbuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a pure abstract class of the hardware U\+A\+RT. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classuart__abstract_a44203f54f9cdbe8c3ea71ad65d3be62b}\label{classuart__abstract_a44203f54f9cdbe8c3ea71ad65d3be62b}} 
+\index{uart\+\_\+abstract@{uart\+\_\+abstract}!uart\+\_\+init@{uart\+\_\+init}}
+\index{uart\+\_\+init@{uart\+\_\+init}!uart\+\_\+abstract@{uart\+\_\+abstract}}
+\subsubsection{\texorpdfstring{uart\+\_\+init()}{uart\_init()}}
+{\footnotesize\ttfamily virtual void uart\+\_\+abstract\+::uart\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This function is used to initialise the U\+A\+RT bus. 
+
+In this function, the proper registers should be set in order to activate the harware uart bus on the host controller 
+
+Implemented in \hyperlink{classHardwareUart_a2425939b2fc43a8ff119687cf878fa05}{Hardware\+Uart}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

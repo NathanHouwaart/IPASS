@@ -4,5 +4,5 @@ digraph "nfc::PN532_chip"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node0 [label="nfc::PN532_chip",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="nfc::NFC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnfc_1_1NFC.html"];
+  Node1 [label="nfc::NFC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnfc_1_1NFC.html",tooltip="Pure abstract template class that can be implemented by any nfc reader. "];
 }

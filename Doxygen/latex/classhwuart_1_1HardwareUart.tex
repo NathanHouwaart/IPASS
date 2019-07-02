@@ -1,0 +1,92 @@
+\hypertarget{classhwuart_1_1HardwareUart}{}\section{hwuart\+:\+:Hardware\+Uart Class Reference}
+\label{classhwuart_1_1HardwareUart}\index{hwuart\+::\+Hardware\+Uart@{hwuart\+::\+Hardware\+Uart}}
+
+
+Implementation of the abstract U\+A\+RT class.  
+
+
+
+
+{\ttfamily \#include $<$hardware\+\_\+uart.\+h$>$}
+
+
+
+Inheritance diagram for hwuart\+:\+:Hardware\+Uart\+:
+% FIG 0
+
+
+Collaboration diagram for hwuart\+:\+:Hardware\+Uart\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhwuart_1_1HardwareUart_acb12d8b48f3b93a02bc8c8d2798628c0}{Hardware\+Uart} (int baudrate)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{classhwuart_1_1HardwareUart}{Hardware\+Uart} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_ad157ae997485682f74c5607dc7d2dc70}\label{classhwuart_1_1HardwareUart_ad157ae997485682f74c5607dc7d2dc70}} 
+void \hyperlink{classhwuart_1_1HardwareUart_ad157ae997485682f74c5607dc7d2dc70}{uart\+\_\+init} () override
+\begin{DoxyCompactList}\small\item\em Initialise the hardware uart on the host controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a33e37be3c5ca23f535a5ac0d5bc359ff}\label{classhwuart_1_1HardwareUart_a33e37be3c5ca23f535a5ac0d5bc359ff}} 
+int \hyperlink{classhwuart_1_1HardwareUart_a33e37be3c5ca23f535a5ac0d5bc359ff}{avialable} () override
+\begin{DoxyCompactList}\small\item\em Checks how many bytes are stored in the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a8cfad9b051ec4da22304d59695ac09cc}\label{classhwuart_1_1HardwareUart_a8cfad9b051ec4da22304d59695ac09cc}} 
+void \hyperlink{classhwuart_1_1HardwareUart_a8cfad9b051ec4da22304d59695ac09cc}{store\+Byte} (const char c) override
+\begin{DoxyCompactList}\small\item\em Stores a byte in the ringbuffer. \end{DoxyCompactList}\item 
+bool \hyperlink{classhwuart_1_1HardwareUart_a718748c857525adb450fff2b37b3506c}{uart\+\_\+has\+\_\+overrun} () override
+\begin{DoxyCompactList}\small\item\em Checks whether the rx buffer has overrun. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a2a7cc19a29ac50b51a400df07d015490}\label{classhwuart_1_1HardwareUart_a2a7cc19a29ac50b51a400df07d015490}} 
+uint8\+\_\+t \hyperlink{classhwuart_1_1HardwareUart_a2a7cc19a29ac50b51a400df07d015490}{receive\+Byte} () override
+\begin{DoxyCompactList}\small\item\em Receives a byte form the U\+A\+RT bus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a8bf7cbf7c39e18ea366f1da5681eee48}\label{classhwuart_1_1HardwareUart_a8bf7cbf7c39e18ea366f1da5681eee48}} 
+bool \hyperlink{classhwuart_1_1HardwareUart_a8bf7cbf7c39e18ea366f1da5681eee48}{rx\+Ready} () override
+\begin{DoxyCompactList}\small\item\em A function to check whether the receive register is ready to be read from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a219e2c41279163f6bc9140c1611d9649}\label{classhwuart_1_1HardwareUart_a219e2c41279163f6bc9140c1611d9649}} 
+uint8\+\_\+t \hyperlink{classhwuart_1_1HardwareUart_a219e2c41279163f6bc9140c1611d9649}{getC} () override
+\begin{DoxyCompactList}\small\item\em Get a character from the rungbuffer if available. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a75dc837ff190754864cd80a810f50999}\label{classhwuart_1_1HardwareUart_a75dc837ff190754864cd80a810f50999}} 
+void \hyperlink{classhwuart_1_1HardwareUart_a75dc837ff190754864cd80a810f50999}{send\+Byte} (const uint8\+\_\+t c) override
+\begin{DoxyCompactList}\small\item\em Send a byte over the U\+A\+RT bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the abstract U\+A\+RT class. 
+
+This will only implement T\+X3 \& R\+X3 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_acb12d8b48f3b93a02bc8c8d2798628c0}\label{classhwuart_1_1HardwareUart_acb12d8b48f3b93a02bc8c8d2798628c0}} 
+\index{hwuart\+::\+Hardware\+Uart@{hwuart\+::\+Hardware\+Uart}!Hardware\+Uart@{Hardware\+Uart}}
+\index{Hardware\+Uart@{Hardware\+Uart}!hwuart\+::\+Hardware\+Uart@{hwuart\+::\+Hardware\+Uart}}
+\subsubsection{\texorpdfstring{Hardware\+Uart()}{HardwareUart()}}
+{\footnotesize\ttfamily hwuart\+::\+Hardware\+Uart\+::\+Hardware\+Uart (\begin{DoxyParamCaption}\item[{int}]{baudrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of the \hyperlink{classhwuart_1_1HardwareUart}{Hardware\+Uart} class. 
+
+Once created it will initialise itself 
+\begin{DoxyParams}{Parameters}
+{\em baudrate} & The baudrate the bus needs to be set to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwuart_1_1HardwareUart_a718748c857525adb450fff2b37b3506c}\label{classhwuart_1_1HardwareUart_a718748c857525adb450fff2b37b3506c}} 
+\index{hwuart\+::\+Hardware\+Uart@{hwuart\+::\+Hardware\+Uart}!uart\+\_\+has\+\_\+overrun@{uart\+\_\+has\+\_\+overrun}}
+\index{uart\+\_\+has\+\_\+overrun@{uart\+\_\+has\+\_\+overrun}!hwuart\+::\+Hardware\+Uart@{hwuart\+::\+Hardware\+Uart}}
+\subsubsection{\texorpdfstring{uart\+\_\+has\+\_\+overrun()}{uart\_has\_overrun()}}
+{\footnotesize\ttfamily bool hwuart\+::\+Hardware\+Uart\+::uart\+\_\+has\+\_\+overrun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the rx buffer has overrun. 
+
+If overrun, it wil try to clear the register 
+
+Implements \hyperlink{classhwuart_1_1uart__abstract_a46106dfe7b7a87ad8541f15db8ca02f1}{hwuart\+::uart\+\_\+abstract}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{hardware__uart_8h}{hardware\+\_\+uart.\+h}\end{DoxyCompactItemize}

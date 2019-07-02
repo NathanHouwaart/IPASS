@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hardwareuart',['HardwareUart',['../classHardwareUart.html',1,'']]]
+  ['hardwareuart',['HardwareUart',['../classhwuart_1_1HardwareUart.html',1,'hwuart']]]
 ];

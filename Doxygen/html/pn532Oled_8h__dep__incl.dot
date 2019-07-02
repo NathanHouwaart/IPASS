@@ -8,13 +8,17 @@ digraph "code/headers/pn532Oled.h"
   Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 [label="application/code/headers/ov.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ov_8h.html",tooltip="abstract OV tracker class "];
   Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node13 [label="application/code/headers\l/train_ov.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train__ov_8h_source.html"];
-  Node10 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node14 [label="code/src/pn532Oled.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532Oled_8cpp.html",tooltip="This file implements the functions declared in pn532Oled.h. "];
-  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node15 [label="examples_mifare_classic\l/decrement/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2decrement_2main_8cpp.html",tooltip="Example use of the nfc library to decrement a value block on a Mifare classic 1k using the pn532..."];
+  Node13 [label="application/code/headers\l/train_ov.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train__ov_8h.html",tooltip="Train implementation of the abstract ov class. "];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="application/code/src\l/train_ov.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train__ov_8cpp.html",tooltip="This file implements the functions declared in train_ov.h. "];
+  Node12 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="application/code/src\l/ov.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ov_8cpp.html",tooltip="This file implements the functions declared in ov.h. "];
   Node10 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node16 [label="examples_mifare_classic\l/increment/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2increment_2main_8cpp.html",tooltip="Example use of the nfc library to increment a value block on a Mifare classic 1k using the pn532..."];
+  Node16 [label="code/src/pn532Oled.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pn532Oled_8cpp.html",tooltip="This file implements the functions declared in pn532Oled.h. "];
   Node10 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="examples_mifare_classic\l/Oled_decorator/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2Oled__decorator_2main_8cpp.html",tooltip="Example use of the nfc oled decorator to integrate an oled display with the pn532. "];
+  Node17 [label="examples_mifare_classic\l/decrement/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2decrement_2main_8cpp.html",tooltip="Example use of the nfc library to decrement a value block on a Mifare classic 1k using the pn532..."];
+  Node10 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="examples_mifare_classic\l/increment/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2increment_2main_8cpp.html",tooltip="Example use of the nfc library to increment a value block on a Mifare classic 1k using the pn532..."];
+  Node10 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="examples_mifare_classic\l/Oled_decorator/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$examples__mifare__classic_2Oled__decorator_2main_8cpp.html",tooltip="Example use of the nfc oled decorator to integrate an oled display with the pn532. "];
 }

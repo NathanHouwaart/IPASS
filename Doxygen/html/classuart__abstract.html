@@ -65,6 +65,11 @@ $(function() {
 <div class="title">uart_abstract Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is a pure abstract class of the hardware UART.  
+ <a href="classuart__abstract.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hardware__uart_8h_source.html">hardware_uart.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for uart_abstract:</div>
 <div class="dyncontent">
@@ -74,31 +79,71 @@ Inheritance diagram for uart_abstract:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a44203f54f9cdbe8c3ea71ad65d3be62b"><td class="memItemLeft" align="right" valign="top"><a id="a44203f54f9cdbe8c3ea71ad65d3be62b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>uart_init</b> ()=0</td></tr>
+<tr class="memitem:a44203f54f9cdbe8c3ea71ad65d3be62b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#a44203f54f9cdbe8c3ea71ad65d3be62b">uart_init</a> ()=0</td></tr>
+<tr class="memdesc:a44203f54f9cdbe8c3ea71ad65d3be62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is used to initialise the UART bus.  <a href="#a44203f54f9cdbe8c3ea71ad65d3be62b">More...</a><br /></td></tr>
 <tr class="separator:a44203f54f9cdbe8c3ea71ad65d3be62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f7efba4039c82f8c70a1891bb9a577"><td class="memItemLeft" align="right" valign="top"><a id="a38f7efba4039c82f8c70a1891bb9a577"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>avialable</b> ()=0</td></tr>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#a38f7efba4039c82f8c70a1891bb9a577">avialable</a> ()=0</td></tr>
+<tr class="memdesc:a38f7efba4039c82f8c70a1891bb9a577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chekcs whether there is a character available in the ringbuffer. <br /></td></tr>
 <tr class="separator:a38f7efba4039c82f8c70a1891bb9a577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8956fc6951a4b5860f0ef44b424929bb"><td class="memItemLeft" align="right" valign="top"><a id="a8956fc6951a4b5860f0ef44b424929bb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>sendByte</b> (const uint8_t c)=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#a8956fc6951a4b5860f0ef44b424929bb">sendByte</a> (const uint8_t c)=0</td></tr>
+<tr class="memdesc:a8956fc6951a4b5860f0ef44b424929bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a byte over the UART bus. <br /></td></tr>
 <tr class="separator:a8956fc6951a4b5860f0ef44b424929bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1029a0f07ce2f8880f2b388378bbfb4"><td class="memItemLeft" align="right" valign="top"><a id="ac1029a0f07ce2f8880f2b388378bbfb4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#ac1029a0f07ce2f8880f2b388378bbfb4">storeByte</a> (const char c)=0</td></tr>
+<tr class="memdesc:ac1029a0f07ce2f8880f2b388378bbfb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a byte in the ringbuffer. <br /></td></tr>
+<tr class="separator:ac1029a0f07ce2f8880f2b388378bbfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26f90ebb38ac73e23693cc5aafc3954"><td class="memItemLeft" align="right" valign="top"><a id="ad26f90ebb38ac73e23693cc5aafc3954"></a>
-virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>receiveByte</b> ()=0</td></tr>
+virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#ad26f90ebb38ac73e23693cc5aafc3954">receiveByte</a> ()=0</td></tr>
+<tr class="memdesc:ad26f90ebb38ac73e23693cc5aafc3954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a byte form the UART bus. <br /></td></tr>
 <tr class="separator:ad26f90ebb38ac73e23693cc5aafc3954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a10405e3e52c8175899a443871c1598"><td class="memItemLeft" align="right" valign="top"><a id="a8a10405e3e52c8175899a443871c1598"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>uart_has_overrun</b> ()=0</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#a8a10405e3e52c8175899a443871c1598">uart_has_overrun</a> ()=0</td></tr>
+<tr class="memdesc:a8a10405e3e52c8175899a443871c1598"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to check whether the rx buffer has overrun. <br /></td></tr>
 <tr class="separator:a8a10405e3e52c8175899a443871c1598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bef51a86d044af4537c975460d4aac2"><td class="memItemLeft" align="right" valign="top"><a id="a5bef51a86d044af4537c975460d4aac2"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>uart_has_rx_error</b> ()=0</td></tr>
-<tr class="separator:a5bef51a86d044af4537c975460d4aac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d93d3e15a85df80fcef701552f91080"><td class="memItemLeft" align="right" valign="top"><a id="a3d93d3e15a85df80fcef701552f91080"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>rxReady</b> ()=0</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#a3d93d3e15a85df80fcef701552f91080">rxReady</a> ()=0</td></tr>
+<tr class="memdesc:a3d93d3e15a85df80fcef701552f91080"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to check whether the receive register is ready to be read from. <br /></td></tr>
 <tr class="separator:a3d93d3e15a85df80fcef701552f91080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a701d4eec1363bec9a7677e3b1f6c68b3"><td class="memItemLeft" align="right" valign="top"><a id="a701d4eec1363bec9a7677e3b1f6c68b3"></a>
-virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>getC</b> ()=0</td></tr>
+virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuart__abstract.html#a701d4eec1363bec9a7677e3b1f6c68b3">getC</a> ()=0</td></tr>
+<tr class="memdesc:a701d4eec1363bec9a7677e3b1f6c68b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a character from the ringbuffer. <br /></td></tr>
 <tr class="separator:a701d4eec1363bec9a7677e3b1f6c68b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is a pure abstract class of the hardware UART. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a44203f54f9cdbe8c3ea71ad65d3be62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44203f54f9cdbe8c3ea71ad65d3be62b">&#9670;&nbsp;</a></span>uart_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void uart_abstract::uart_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function is used to initialise the UART bus. </p>
+<p>In this function, the proper registers should be set in order to activate the harware uart bus on the host controller </p>
+
+<p>Implemented in <a class="el" href="classHardwareUart.html#a2425939b2fc43a8ff119687cf878fa05">HardwareUart</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>code/headers/<a class="el" href="hardware__uart_8h_source.html">hardware_uart.h</a></li>
 </ul>

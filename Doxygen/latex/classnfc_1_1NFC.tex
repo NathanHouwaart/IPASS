@@ -2,6 +2,11 @@
 \label{classnfc_1_1NFC}\index{nfc\+::\+N\+FC@{nfc\+::\+N\+FC}}
 
 
+Pure abstract template class that can be implemented by any nfc reader.  
+
+
+
+
 {\ttfamily \#include $<$nfc.\+h$>$}
 
 
@@ -21,7 +26,7 @@ virtual void \hyperlink{classnfc_1_1NFC_a9893c1b762ed0c6796afcde7733bd8cc}{init}
 \begin{DoxyCompactList}\small\item\em Abstract function to intialise a \hyperlink{classnfc_1_1NFC}{N\+FC} card. \end{DoxyCompactList}\item 
 virtual void \hyperlink{classnfc_1_1NFC_af8fe01b21da65e4e8334f802073168ab}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, const uint8\+\_\+t n\+\_\+bytes)=0
 \begin{DoxyCompactList}\small\item\em Abstract function to send data to the nfc chip over the provided interface. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classnfc_1_1NFC_a3458fc807a5f0d485099a1e5f54bcbb5}{get\+Data} (uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n\+\_\+bytes)=0
+virtual void \hyperlink{classnfc_1_1NFC_a3458fc807a5f0d485099a1e5f54bcbb5}{get\+Data} (uint8\+\_\+t $\ast$buffer, const uint8\+\_\+t n\+\_\+bytes)=0
 \begin{DoxyCompactList}\small\item\em Abstract function to get data from the nfc chip over the provided interface. \end{DoxyCompactList}\item 
 virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NFC_a7e0a000aadae9b545e94ba213d4ac24e}{write\+Register} (const uint16\+\_\+t reg, const uint8\+\_\+t val)=0
 \begin{DoxyCompactList}\small\item\em Abstract function to write a internal register of a nfc chip. \end{DoxyCompactList}\item 
@@ -33,7 +38,7 @@ virtual std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1NFC_a2d2ccf98
 \begin{DoxyCompactList}\small\item\em Abstract function to read certain G\+P\+IO pins of the nfc chip. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{classnfc_1_1NFC_a71585d021800a85b4a52a212d6313b1f}{wait\+For\+Chip} (const int timeout=2000)=0
 \begin{DoxyCompactList}\small\item\em Abstract function to check wether the nfc chip has responded within the given timeout. \end{DoxyCompactList}\item 
-virtual bool \hyperlink{classnfc_1_1NFC_a9d859ed12251d6d553d9f5c09bbb10ef}{check\+Ack} (const uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n)=0
+virtual bool \hyperlink{classnfc_1_1NFC_a9d859ed12251d6d553d9f5c09bbb10ef}{check\+Ack} (const uint8\+\_\+t $\ast$buffer, const uint8\+\_\+t n)=0
 \begin{DoxyCompactList}\small\item\em Abstract function to check wether the send data has been acknowleged by the nfc chip. \end{DoxyCompactList}\item 
 virtual \hyperlink{structnfc_1_1Result}{Result} \hyperlink{classnfc_1_1NFC_a2a14e65f49707ef1efaea07ec9fce1c8}{send\+Command\+And\+Check\+Ack} (\hyperlink{classsetupSendCommand}{setup\+Send\+Command} \&command)=0
 \begin{DoxyCompactList}\small\item\em Abstract function that can handle the complete communication between the nfc chip and host controller. \end{DoxyCompactList}\item 
@@ -80,7 +85,7 @@ virtual \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Co
 
 
 \subsection{Detailed Description}
-Pure abstract template class that can be implemented by any nfc reader 
+Pure abstract template class that can be implemented by any nfc reader. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classnfc_1_1NFC_a6ebeb8952cb8be604ef33d4188f86303}\label{classnfc_1_1NFC_a6ebeb8952cb8be604ef33d4188f86303}} 

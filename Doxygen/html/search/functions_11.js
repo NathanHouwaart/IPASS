@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['terminal',['terminal',['../classhwlib_1_1terminal.html#af55bf18e347959a373bba863cdbdb27a',1,'hwlib::terminal']]],
-  ['terminal_5ffrom',['terminal_from',['../classhwlib_1_1terminal__from.html#a400a133dec12c0617db38c94ca75ba79',1,'hwlib::terminal_from']]],
-  ['test_5fend',['test_end',['../namespacehwlib.html#af30c15244b6a508f320f01317dc84d7f',1,'hwlib']]],
-  ['ticks_5fper_5fus',['ticks_per_us',['../hwlib-frdm-kl27z_8hpp.html#a3a22a56400f28b8eb02535cb389b740a',1,'frdm_kl27z::ticks_per_us()'],['../namespacestm32f030x6.html#a27427bc351a5ba91ea69a3be5d1b27de',1,'stm32f030x6::ticks_per_us()'],['../namespacehwlib.html#a0d513bcd3062ebfea65bcb2c82e0c1a8',1,'hwlib::ticks_per_us()'],['../namespacedue.html#aa7b4a4a4dffe3296d13e465cc3d78a62',1,'due::ticks_per_us()'],['../namespacestm32f103c8.html#a7690d875e87715532777680634201060',1,'stm32f103c8::ticks_per_us()']]],
-  ['topup',['topUp',['../classovTracker.html#a9611f8fe5ed1937262ebcd89bd7ee617',1,'ovTracker::topUp()'],['../classtrain.html#a1bb8ac7f3f0bf3bfe61cf479abfe4cbb',1,'train::topUp()']]],
-  ['toradians',['toRadians',['../classovTracker.html#afabb57769940df42bc2e5b224c4db9e5',1,'ovTracker']]],
-  ['train',['train',['../classtrain.html#ae6db22b1f686e5a4a65434a4a7157643',1,'train']]],
-  ['transaction',['transaction',['../classhwlib_1_1spi__bus.html#ad28cd2173d2401a5a4437ff1d76175b5',1,'hwlib::spi_bus']]]
+  ['waitcard',['waitCard',['../classovTracker.html#a43dea6c5e524377f2190e59a7da85b51',1,'ovTracker::waitCard()'],['../classtrain.html#a4509fc35ff69717aab2636dd847981d4',1,'train::waitCard()']]],
+  ['waitforchip',['waitForChip',['../classnfc_1_1NFC.html#a71585d021800a85b4a52a212d6313b1f',1,'nfc::NFC::waitForChip()'],['../classnfc_1_1PN532__chip.html#a10aa275adf2ddbcb6db5afa5666a9594',1,'nfc::PN532_chip::waitForChip()'],['../classnfc_1_1NfcOled.html#aed3fb53e82dba1bbdc97adb38d6fdb29',1,'nfc::NfcOled::waitForChip()']]],
+  ['wakeup',['wakeUp',['../classcommunication_1_1protocol.html#aefe3def7b92b2eae8c98bfc542e27078',1,'communication::protocol::wakeUp()'],['../classcommunication_1_1i2c.html#a342b43822a50e1837ac7c677083c7f39',1,'communication::i2c::wakeUp()'],['../classcommunication_1_1spi.html#a7bc104e72a3f9efc946ef5ffdebfcc2a',1,'communication::spi::wakeUp()'],['../classcommunication_1_1uart.html#aea97e95d698c8738fb891e5f0d65e288',1,'communication::uart::wakeUp()']]],
+  ['writegpio',['writeGPIO',['../classnfc_1_1NFC.html#a606b08348cb8176a38b2dd9fc1136888',1,'nfc::NFC::writeGPIO()'],['../classnfc_1_1PN532__chip.html#ad33f6bf96640bf7b10407e735ca57e2a',1,'nfc::PN532_chip::writeGPIO()'],['../classnfc_1_1NfcOled.html#a93a2097132e92d3bc6f1e1c4c45d364b',1,'nfc::NfcOled::writeGPIO()']]],
+  ['writeregister',['writeRegister',['../classnfc_1_1NFC.html#a7e0a000aadae9b545e94ba213d4ac24e',1,'nfc::NFC::writeRegister()'],['../classnfc_1_1PN532__chip.html#a2b82f8ed84c6a9b4a7f0c1ad699c13a7',1,'nfc::PN532_chip::writeRegister()'],['../classnfc_1_1NfcOled.html#a8782a26a35cb2b412621b580cc58eec4',1,'nfc::NfcOled::writeRegister()']]]
 ];

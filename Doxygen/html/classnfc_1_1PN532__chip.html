@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Implementation of the <a class="el" href="classnfc_1_1NFC.html">NFC</a> class specificly for the pn532.  
+<p>Implementation of the <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> class specificly for the pn532.  
  <a href="classnfc_1_1PN532__chip.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="pn532_8h_source.html">pn532.h</a>&gt;</code></p>
@@ -91,7 +91,7 @@ Collaboration diagram for nfc::PN532_chip:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afbdb5e54a580824290c6761db92d460e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#afbdb5e54a580824290c6761db92d460e">PN532_chip</a> (<a class="el" href="classcommunication_1_1protocol.html">communication::protocol</a> &amp;_protocol, hwlib::pin_in &amp;irq)</td></tr>
-<tr class="memdesc:afbdb5e54a580824290c6761db92d460e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the pn532 <a class="el" href="classnfc_1_1NFC.html">NFC</a> chip.  <a href="#afbdb5e54a580824290c6761db92d460e">More...</a><br /></td></tr>
+<tr class="memdesc:afbdb5e54a580824290c6761db92d460e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the pn532 <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> chip.  <a href="#afbdb5e54a580824290c6761db92d460e">More...</a><br /></td></tr>
 <tr class="separator:afbdb5e54a580824290c6761db92d460e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2eecf84902eedff7e7b5fae0c562804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#ab2eecf84902eedff7e7b5fae0c562804">init</a> () override</td></tr>
 <tr class="memdesc:ab2eecf84902eedff7e7b5fae0c562804"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function initialises the pn532 chip.  <a href="#ab2eecf84902eedff7e7b5fae0c562804">More...</a><br /></td></tr>
@@ -99,7 +99,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aab53fb1c9fced99ce154ab035f795302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#aab53fb1c9fced99ce154ab035f795302">sendData</a> (uint8_t *commandBuffer, const uint8_t nBytes) override</td></tr>
 <tr class="memdesc:aab53fb1c9fced99ce154ab035f795302"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sends data to the pn532 over the provided interface.  <a href="#aab53fb1c9fced99ce154ab035f795302">More...</a><br /></td></tr>
 <tr class="separator:aab53fb1c9fced99ce154ab035f795302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8414552a504fec6b62ad0be140e53e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#ae8414552a504fec6b62ad0be140e53e0">getData</a> (uint8_t *<a class="el" href="classbuffer.html">buffer</a>, const uint8_t nBytes) override</td></tr>
+<tr class="memitem:ae8414552a504fec6b62ad0be140e53e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#ae8414552a504fec6b62ad0be140e53e0">getData</a> (uint8_t *buffer, const uint8_t nBytes) override</td></tr>
 <tr class="memdesc:ae8414552a504fec6b62ad0be140e53e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function gets data from the pn532 over the provided interface.  <a href="#ae8414552a504fec6b62ad0be140e53e0">More...</a><br /></td></tr>
 <tr class="separator:ae8414552a504fec6b62ad0be140e53e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b82f8ed84c6a9b4a7f0c1ad699c13a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="declarations_8h.html#ae1d20c5a38cae82ccaa6a77be3fd264b">statusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#a2b82f8ed84c6a9b4a7f0c1ad699c13a7">writeRegister</a> (const uint16_t reg, const uint8_t val) override</td></tr>
@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a10aa275adf2ddbcb6db5afa5666a9594"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#a10aa275adf2ddbcb6db5afa5666a9594">waitForChip</a> (const int timeout=2000) override</td></tr>
 <tr class="memdesc:a10aa275adf2ddbcb6db5afa5666a9594"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks wether the pn532 has responded within the given timeout.  <a href="#a10aa275adf2ddbcb6db5afa5666a9594">More...</a><br /></td></tr>
 <tr class="separator:a10aa275adf2ddbcb6db5afa5666a9594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a631fa2690b45119c7bbb99e07f41b464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#a631fa2690b45119c7bbb99e07f41b464">checkAck</a> (const uint8_t *<a class="el" href="classbuffer.html">buffer</a>, const uint8_t n) override</td></tr>
+<tr class="memitem:a631fa2690b45119c7bbb99e07f41b464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#a631fa2690b45119c7bbb99e07f41b464">checkAck</a> (const uint8_t *buffer, const uint8_t n) override</td></tr>
 <tr class="memdesc:a631fa2690b45119c7bbb99e07f41b464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that checks the ACKnowlege frame the pn532 sends.  <a href="#a631fa2690b45119c7bbb99e07f41b464">More...</a><br /></td></tr>
 <tr class="separator:a631fa2690b45119c7bbb99e07f41b464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3184528f3e8e793905d1638067cfe9e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnfc_1_1Result.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1PN532__chip.html#a3184528f3e8e793905d1638067cfe9e1">sendCommandAndCheckAck</a> (<a class="el" href="classsetupSendCommand.html">setupSendCommand</a> &amp;command) override</td></tr>
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7c0e1c1e6df0dbe1d53f27b27f26ff8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classnfc_1_1NFC"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnfc_1_1NFC')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classnfc_1_1NFC.html">nfc::NFC</a></td></tr>
 <tr class="memitem:a6ebeb8952cb8be604ef33d4188f86303 inherit pub_methods_classnfc_1_1NFC"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a6ebeb8952cb8be604ef33d4188f86303">NFC</a> (<a class="el" href="classcommunication_1_1protocol.html">communication::protocol</a> &amp;_protocol)</td></tr>
-<tr class="memdesc:a6ebeb8952cb8be604ef33d4188f86303 inherit pub_methods_classnfc_1_1NFC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the abstract <a class="el" href="classnfc_1_1NFC.html">NFC</a> class.  <a href="classnfc_1_1NFC.html#a6ebeb8952cb8be604ef33d4188f86303">More...</a><br /></td></tr>
+<tr class="memdesc:a6ebeb8952cb8be604ef33d4188f86303 inherit pub_methods_classnfc_1_1NFC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the abstract <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> class.  <a href="classnfc_1_1NFC.html#a6ebeb8952cb8be604ef33d4188f86303">More...</a><br /></td></tr>
 <tr class="separator:a6ebeb8952cb8be604ef33d4188f86303 inherit pub_methods_classnfc_1_1NFC"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -193,7 +193,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac6089dd87172f3ce870767500e53b9e8 inherit pro_attribs_classnfc_1_1NFC"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementation of the <a class="el" href="classnfc_1_1NFC.html">NFC</a> class specificly for the pn532. </p>
+<div class="textblock"><p>Implementation of the <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> class specificly for the pn532. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afbdb5e54a580824290c6761db92d460e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbdb5e54a580824290c6761db92d460e">&#9670;&nbsp;</a></span>PN532_chip()</h2>
@@ -221,7 +221,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for the pn532 <a class="el" href="classnfc_1_1NFC.html">NFC</a> chip. </p>
+<p>Constructor for the pn532 <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> chip. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_protocol</td><td>A protocol that the arduino can use to communicate with the pn532 chip </td></tr>

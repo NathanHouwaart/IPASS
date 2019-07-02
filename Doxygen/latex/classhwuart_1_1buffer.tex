@@ -1,0 +1,71 @@
+\hypertarget{classhwuart_1_1buffer}{}\section{hwuart\+:\+:buffer$<$ n $>$ Class Template Reference}
+\label{classhwuart_1_1buffer}\index{hwuart\+::buffer$<$ n $>$@{hwuart\+::buffer$<$ n $>$}}
+
+
+This is a ringbuffer class that is supposed to store the received data from the U\+A\+RT bus.  
+
+
+
+
+{\ttfamily \#include $<$hardware\+\_\+uart.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhwuart_1_1buffer_aa71598b427cc076787cd12adee9e4c90}\label{classhwuart_1_1buffer_aa71598b427cc076787cd12adee9e4c90}} 
+\hyperlink{classhwuart_1_1buffer_aa71598b427cc076787cd12adee9e4c90}{buffer} ()
+\begin{DoxyCompactList}\small\item\em Default construcctor for the buffer. The buffer will initially be empty when created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1buffer_aadb9e6c01b4de3a8c801b55d35988baf}\label{classhwuart_1_1buffer_aadb9e6c01b4de3a8c801b55d35988baf}} 
+int \hyperlink{classhwuart_1_1buffer_aadb9e6c01b4de3a8c801b55d35988baf}{return\+Begin} ()
+\begin{DoxyCompactList}\small\item\em Returns the begin index of the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1buffer_a7d015fb50d49061f02034f847c784709}\label{classhwuart_1_1buffer_a7d015fb50d49061f02034f847c784709}} 
+int \hyperlink{classhwuart_1_1buffer_a7d015fb50d49061f02034f847c784709}{return\+End} ()
+\begin{DoxyCompactList}\small\item\em Returns the end index of the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1buffer_a3d3d0797b0d3c17e1a1903129f6f650e}\label{classhwuart_1_1buffer_a3d3d0797b0d3c17e1a1903129f6f650e}} 
+int \hyperlink{classhwuart_1_1buffer_a3d3d0797b0d3c17e1a1903129f6f650e}{return\+Size} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classhwuart_1_1buffer_aa72858218a0fbf6c1d4d9fa72ea557da}{push\+\_\+back} (const uint8\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Pushes back a character at the back of the buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classhwuart_1_1buffer_aa77af13f8079fc875da04b188d018868}{pop} ()
+\begin{DoxyCompactList}\small\item\em Gets the first element of the buffer and removes it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhwuart_1_1buffer_af61bca01072e9d942b26812b38230a06}\label{classhwuart_1_1buffer_af61bca01072e9d942b26812b38230a06}} 
+void \hyperlink{classhwuart_1_1buffer_af61bca01072e9d942b26812b38230a06}{clear} ()
+\begin{DoxyCompactList}\small\item\em reset the buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t n$>$\newline
+class hwuart\+::buffer$<$ n $>$}
+
+This is a ringbuffer class that is supposed to store the received data from the U\+A\+RT bus. 
+
+This buffer is templated and can be decided at compile time. It is reccomended to make the buffer no larger than 255 bytes for speed purposes 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhwuart_1_1buffer_aa77af13f8079fc875da04b188d018868}\label{classhwuart_1_1buffer_aa77af13f8079fc875da04b188d018868}} 
+\index{hwuart\+::buffer@{hwuart\+::buffer}!pop@{pop}}
+\index{pop@{pop}!hwuart\+::buffer@{hwuart\+::buffer}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+uint8\+\_\+t \hyperlink{classhwuart_1_1buffer}{hwuart\+::buffer}$<$ n $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the first element of the buffer and removes it. 
+
+If the buffer has reached the end index of the buffer, it will wrap around and start at index 0 again and start popping characters form there \mbox{\Hypertarget{classhwuart_1_1buffer_aa72858218a0fbf6c1d4d9fa72ea557da}\label{classhwuart_1_1buffer_aa72858218a0fbf6c1d4d9fa72ea557da}} 
+\index{hwuart\+::buffer@{hwuart\+::buffer}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!hwuart\+::buffer@{hwuart\+::buffer}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+void \hyperlink{classhwuart_1_1buffer}{hwuart\+::buffer}$<$ n $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes back a character at the back of the buffer. 
+
+If the buffer has reached the end index of the buffer, it will wrap around and start at index 0 again. This will possibly overwrite the characters already there 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/headers/\hyperlink{hardware__uart_8h}{hardware\+\_\+uart.\+h}\end{DoxyCompactItemize}

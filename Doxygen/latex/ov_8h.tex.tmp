@@ -23,6 +23,8 @@ abstract OV tracker class
 
 Abstract OV class for storing cardata and manipulating valueblocks
 
+Code for the Haversine formula is based on \href{https://www.geeksforgeeks.org/program-distance-two-points-earth/}{\tt https\+://www.\+geeksforgeeks.\+org/program-\/distance-\/two-\/points-\/earth/} the Author of this code is Aayush Chaturvedi
+
 \begin{DoxyAuthor}{Author}
 Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
 \end{DoxyAuthor}

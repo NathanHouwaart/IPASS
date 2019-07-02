@@ -26,7 +26,7 @@ void \hyperlink{classnfc_1_1PN532__chip_ab2eecf84902eedff7e7b5fae0c562804}{init}
 \begin{DoxyCompactList}\small\item\em This function initialises the pn532 chip. \end{DoxyCompactList}\item 
 void \hyperlink{classnfc_1_1PN532__chip_aab53fb1c9fced99ce154ab035f795302}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, const uint8\+\_\+t n\+Bytes) override
 \begin{DoxyCompactList}\small\item\em This function sends data to the pn532 over the provided interface. \end{DoxyCompactList}\item 
-void \hyperlink{classnfc_1_1PN532__chip_ae8414552a504fec6b62ad0be140e53e0}{get\+Data} (uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n\+Bytes) override
+void \hyperlink{classnfc_1_1PN532__chip_ae8414552a504fec6b62ad0be140e53e0}{get\+Data} (uint8\+\_\+t $\ast$buffer, const uint8\+\_\+t n\+Bytes) override
 \begin{DoxyCompactList}\small\item\em This function gets data from the pn532 over the provided interface. \end{DoxyCompactList}\item 
 \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1PN532__chip_a2b82f8ed84c6a9b4a7f0c1ad699c13a7}{write\+Register} (const uint16\+\_\+t reg, const uint8\+\_\+t val) override
 \begin{DoxyCompactList}\small\item\em This function is used to overwrite the content of a internal register of the pn532. \end{DoxyCompactList}\item 
@@ -38,7 +38,7 @@ std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1PN532__chip_a1c7e2ace
 \begin{DoxyCompactList}\small\item\em The pn532 reads the value for each port and returns the information to the host controller. \end{DoxyCompactList}\item 
 bool \hyperlink{classnfc_1_1PN532__chip_a10aa275adf2ddbcb6db5afa5666a9594}{wait\+For\+Chip} (const int timeout=2000) override
 \begin{DoxyCompactList}\small\item\em This function checks wether the pn532 has responded within the given timeout. \end{DoxyCompactList}\item 
-bool \hyperlink{classnfc_1_1PN532__chip_a631fa2690b45119c7bbb99e07f41b464}{check\+Ack} (const uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n) override
+bool \hyperlink{classnfc_1_1PN532__chip_a631fa2690b45119c7bbb99e07f41b464}{check\+Ack} (const uint8\+\_\+t $\ast$buffer, const uint8\+\_\+t n) override
 \begin{DoxyCompactList}\small\item\em Function that checks the A\+C\+Knowlege frame the pn532 sends. \end{DoxyCompactList}\item 
 \hyperlink{structnfc_1_1Result}{Result} \hyperlink{classnfc_1_1PN532__chip_a3184528f3e8e793905d1638067cfe9e1}{send\+Command\+And\+Check\+Ack} (\hyperlink{classsetupSendCommand}{setup\+Send\+Command} \&command) override
 \begin{DoxyCompactList}\small\item\em Function that handles the complete communication between the pn532 and host controller. \end{DoxyCompactList}\item 

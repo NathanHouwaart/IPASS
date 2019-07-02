@@ -29,7 +29,7 @@ void \hyperlink{classnfc_1_1NfcOled_a2b394a955afe3f280e3f2509908effe9}{init} () 
 void \hyperlink{classnfc_1_1NfcOled_aa969ac754435a695ce1ddb8c4285e76c}{send\+Data} (uint8\+\_\+t $\ast$command\+Buffer, const uint8\+\_\+t n\+Bytes) override
 \begin{DoxyCompactList}\small\item\em Same as slave.\+send\+Data() \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}\label{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}} 
-void \hyperlink{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}{get\+Data} (uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n\+Bytes) override
+void \hyperlink{classnfc_1_1NfcOled_a4f9564fbbc2981031fbfbf50be308745}{get\+Data} (uint8\+\_\+t $\ast$buffer, const uint8\+\_\+t n\+Bytes) override
 \begin{DoxyCompactList}\small\item\em Same as slave.\+get\+Data() \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}\label{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}} 
 \hyperlink{declarations_8h_ae1d20c5a38cae82ccaa6a77be3fd264b}{status\+Code} \hyperlink{classnfc_1_1NfcOled_a8782a26a35cb2b412621b580cc58eec4}{write\+Register} (const uint16\+\_\+t reg, const uint8\+\_\+t val) override
@@ -47,7 +47,7 @@ std\+::array$<$ uint8\+\_\+t, 2 $>$ \hyperlink{classnfc_1_1NfcOled_a0dd17c714697
 bool \hyperlink{classnfc_1_1NfcOled_aed3fb53e82dba1bbdc97adb38d6fdb29}{wait\+For\+Chip} (const int timeout) override
 \begin{DoxyCompactList}\small\item\em Same as slave.\+wait\+For\+Chip. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}\label{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}} 
-bool \hyperlink{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}{check\+Ack} (const uint8\+\_\+t $\ast$\hyperlink{classbuffer}{buffer}, const uint8\+\_\+t n) override
+bool \hyperlink{classnfc_1_1NfcOled_abac578b4b4a7b4a4c58dbfd4e89a6bf3}{check\+Ack} (const uint8\+\_\+t $\ast$buffer, const uint8\+\_\+t n) override
 \begin{DoxyCompactList}\small\item\em Same as slave.\+check\+Ack() \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}\label{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}} 
 \hyperlink{structnfc_1_1Result}{Result} \hyperlink{classnfc_1_1NfcOled_afcd62a218b26b6d7a59eb27fdc7b1c78}{send\+Command\+And\+Check\+Ack} (\hyperlink{classsetupSendCommand}{setup\+Send\+Command} \&command) override

@@ -9,5 +9,6 @@ var searchData=
   ['cardtype',['CardType',['../namespacenfc_1_1pn532_1_1command.html#ac328c34e45a34dbcb476249e08402db0',1,'nfc::pn532::command']]],
   ['checkack',['checkAck',['../classnfc_1_1NFC.html#a9d859ed12251d6d553d9f5c09bbb10ef',1,'nfc::NFC::checkAck()'],['../classnfc_1_1PN532__chip.html#a631fa2690b45119c7bbb99e07f41b464',1,'nfc::PN532_chip::checkAck()'],['../classnfc_1_1NfcOled.html#abac578b4b4a7b4a4c58dbfd4e89a6bf3',1,'nfc::NfcOled::checkAck()']]],
   ['checkin',['checkIn',['../classovTracker.html#a1d5cd8f5a6bd02c91d6d010f1a3839ce',1,'ovTracker::checkIn()'],['../classtrain.html#a1e0e594fdafed4ac60b5b6d81b91c2ca',1,'train::checkIn()']]],
-  ['checkout',['checkOut',['../classovTracker.html#a96e808776b864290f742f271e18c401c',1,'ovTracker::checkOut()'],['../classtrain.html#ae631814ed393394a525646ada78e1994',1,'train::checkOut()']]]
+  ['checkout',['checkOut',['../classovTracker.html#a96e808776b864290f742f271e18c401c',1,'ovTracker::checkOut()'],['../classtrain.html#ae631814ed393394a525646ada78e1994',1,'train::checkOut()']]],
+  ['clear',['clear',['../classhwuart_1_1buffer.html#af61bca01072e9d942b26812b38230a06',1,'hwuart::buffer']]]
 ];

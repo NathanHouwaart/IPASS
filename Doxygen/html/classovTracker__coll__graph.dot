@@ -8,7 +8,7 @@ digraph "ovTracker"
   Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currentStation" ,fontname="Helvetica"];
   Node4 [label="Station",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structStation.html",tooltip="Station struct. Data for one perticulair staion can be stored in here. "];
   Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nfc" ,fontname="Helvetica"];
-  Node5 [label="nfc::NFC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnfc_1_1NFC.html"];
+  Node5 [label="nfc::NFC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnfc_1_1NFC.html",tooltip="Pure abstract template class that can be implemented by any nfc reader. "];
   Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _protocol" ,fontname="Helvetica"];
   Node6 [label="communication::protocol",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcommunication_1_1protocol.html",tooltip="Abstract protocol class. "];
 }

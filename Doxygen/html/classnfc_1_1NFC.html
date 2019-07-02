@@ -71,6 +71,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Pure abstract template class that can be implemented by any nfc reader.  
+ <a href="classnfc_1_1NFC.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="nfc_8h_source.html">nfc.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for nfc::NFC:</div>
@@ -88,15 +91,15 @@ Collaboration diagram for nfc::NFC:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ebeb8952cb8be604ef33d4188f86303"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a6ebeb8952cb8be604ef33d4188f86303">NFC</a> (<a class="el" href="classcommunication_1_1protocol.html">communication::protocol</a> &amp;_protocol)</td></tr>
-<tr class="memdesc:a6ebeb8952cb8be604ef33d4188f86303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the abstract <a class="el" href="classnfc_1_1NFC.html">NFC</a> class.  <a href="#a6ebeb8952cb8be604ef33d4188f86303">More...</a><br /></td></tr>
+<tr class="memdesc:a6ebeb8952cb8be604ef33d4188f86303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the abstract <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> class.  <a href="#a6ebeb8952cb8be604ef33d4188f86303">More...</a><br /></td></tr>
 <tr class="separator:a6ebeb8952cb8be604ef33d4188f86303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9893c1b762ed0c6796afcde7733bd8cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a9893c1b762ed0c6796afcde7733bd8cc">init</a> ()=0</td></tr>
-<tr class="memdesc:a9893c1b762ed0c6796afcde7733bd8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to intialise a <a class="el" href="classnfc_1_1NFC.html">NFC</a> card.  <a href="#a9893c1b762ed0c6796afcde7733bd8cc">More...</a><br /></td></tr>
+<tr class="memdesc:a9893c1b762ed0c6796afcde7733bd8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to intialise a <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> card.  <a href="#a9893c1b762ed0c6796afcde7733bd8cc">More...</a><br /></td></tr>
 <tr class="separator:a9893c1b762ed0c6796afcde7733bd8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8fe01b21da65e4e8334f802073168ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#af8fe01b21da65e4e8334f802073168ab">sendData</a> (uint8_t *commandBuffer, const uint8_t n_bytes)=0</td></tr>
 <tr class="memdesc:af8fe01b21da65e4e8334f802073168ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to send data to the nfc chip over the provided interface.  <a href="#af8fe01b21da65e4e8334f802073168ab">More...</a><br /></td></tr>
 <tr class="separator:af8fe01b21da65e4e8334f802073168ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3458fc807a5f0d485099a1e5f54bcbb5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a3458fc807a5f0d485099a1e5f54bcbb5">getData</a> (uint8_t *<a class="el" href="classbuffer.html">buffer</a>, const uint8_t n_bytes)=0</td></tr>
+<tr class="memitem:a3458fc807a5f0d485099a1e5f54bcbb5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a3458fc807a5f0d485099a1e5f54bcbb5">getData</a> (uint8_t *buffer, const uint8_t n_bytes)=0</td></tr>
 <tr class="memdesc:a3458fc807a5f0d485099a1e5f54bcbb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to get data from the nfc chip over the provided interface.  <a href="#a3458fc807a5f0d485099a1e5f54bcbb5">More...</a><br /></td></tr>
 <tr class="separator:a3458fc807a5f0d485099a1e5f54bcbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e0a000aadae9b545e94ba213d4ac24e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="declarations_8h.html#ae1d20c5a38cae82ccaa6a77be3fd264b">statusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a7e0a000aadae9b545e94ba213d4ac24e">writeRegister</a> (const uint16_t reg, const uint8_t val)=0</td></tr>
@@ -114,14 +117,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71585d021800a85b4a52a212d6313b1f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a71585d021800a85b4a52a212d6313b1f">waitForChip</a> (const int timeout=2000)=0</td></tr>
 <tr class="memdesc:a71585d021800a85b4a52a212d6313b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to check wether the nfc chip has responded within the given timeout.  <a href="#a71585d021800a85b4a52a212d6313b1f">More...</a><br /></td></tr>
 <tr class="separator:a71585d021800a85b4a52a212d6313b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d859ed12251d6d553d9f5c09bbb10ef"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a9d859ed12251d6d553d9f5c09bbb10ef">checkAck</a> (const uint8_t *<a class="el" href="classbuffer.html">buffer</a>, const uint8_t n)=0</td></tr>
+<tr class="memitem:a9d859ed12251d6d553d9f5c09bbb10ef"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a9d859ed12251d6d553d9f5c09bbb10ef">checkAck</a> (const uint8_t *buffer, const uint8_t n)=0</td></tr>
 <tr class="memdesc:a9d859ed12251d6d553d9f5c09bbb10ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to check wether the send data has been acknowleged by the nfc chip.  <a href="#a9d859ed12251d6d553d9f5c09bbb10ef">More...</a><br /></td></tr>
 <tr class="separator:a9d859ed12251d6d553d9f5c09bbb10ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a14e65f49707ef1efaea07ec9fce1c8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structnfc_1_1Result.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a2a14e65f49707ef1efaea07ec9fce1c8">sendCommandAndCheckAck</a> (<a class="el" href="classsetupSendCommand.html">setupSendCommand</a> &amp;command)=0</td></tr>
 <tr class="memdesc:a2a14e65f49707ef1efaea07ec9fce1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function that can handle the complete communication between the nfc chip and host controller.  <a href="#a2a14e65f49707ef1efaea07ec9fce1c8">More...</a><br /></td></tr>
 <tr class="separator:a2a14e65f49707ef1efaea07ec9fce1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25a4f9824ac567c8ca37ea3486d32882"><td class="memItemLeft" align="right" valign="top">virtual std::array&lt; uint8_t, 5 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#a25a4f9824ac567c8ca37ea3486d32882">getFirmwareVersion</a> ()=0</td></tr>
-<tr class="memdesc:a25a4f9824ac567c8ca37ea3486d32882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to get the firmware version of the <a class="el" href="classnfc_1_1NFC.html">NFC</a> chip.  <a href="#a25a4f9824ac567c8ca37ea3486d32882">More...</a><br /></td></tr>
+<tr class="memdesc:a25a4f9824ac567c8ca37ea3486d32882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to get the firmware version of the <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> chip.  <a href="#a25a4f9824ac567c8ca37ea3486d32882">More...</a><br /></td></tr>
 <tr class="separator:a25a4f9824ac567c8ca37ea3486d32882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac23474442d2bc8e35ee583c1390386eb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="declarations_8h.html#ae1d20c5a38cae82ccaa6a77be3fd264b">statusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html#ac23474442d2bc8e35ee583c1390386eb">performSelftest</a> ()=0</td></tr>
 <tr class="memdesc:ac23474442d2bc8e35ee583c1390386eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function to let the nfc chip perform a selftest.  <a href="#ac23474442d2bc8e35ee583c1390386eb">More...</a><br /></td></tr>
@@ -178,7 +181,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac6089dd87172f3ce870767500e53b9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Pure abstract template class that can be implemented by any nfc reader </p>
+<div class="textblock"><p>Pure abstract template class that can be implemented by any nfc reader. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6ebeb8952cb8be604ef33d4188f86303"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ebeb8952cb8be604ef33d4188f86303">&#9670;&nbsp;</a></span>NFC()</h2>
@@ -204,7 +207,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor for the abstract <a class="el" href="classnfc_1_1NFC.html">NFC</a> class. </p>
+<p>Constructor for the abstract <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> class. </p>
 <p>Takes a protocol (SPI, I2C, UART) as argument </p>
 
 </div>
@@ -389,7 +392,7 @@ true A card has been detected </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Abstract function to get the firmware version of the <a class="el" href="classnfc_1_1NFC.html">NFC</a> chip. </p>
+<p>Abstract function to get the firmware version of the <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> chip. </p>
 <dl class="section return"><dt>Returns</dt><dd>array[0] Status of the operation </dd>
 <dd>
 array[1] Device version </dd>
@@ -457,8 +460,8 @@ array[4] Suppor version </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Abstract function to intialise a <a class="el" href="classnfc_1_1NFC.html">NFC</a> card. </p>
-<p>This method is used to initialise a <a class="el" href="classnfc_1_1NFC.html">NFC</a> card For exampe: Set cerain flags, modes, etc.. </p>
+<p>Abstract function to intialise a <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> card. </p>
+<p>This method is used to initialise a <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> card For exampe: Set cerain flags, modes, etc.. </p>
 
 <p>Implemented in <a class="el" href="classnfc_1_1NfcOled.html#a2b394a955afe3f280e3f2509908effe9">nfc::NfcOled</a>, and <a class="el" href="classnfc_1_1PN532__chip.html#ab2eecf84902eedff7e7b5fae0c562804">nfc::PN532_chip</a>.</p>
 
@@ -1232,7 +1235,7 @@ array[1] Value of the internal register </dd></dl>
 </div><div class="memdoc">
 
 <p>Abstract function to select / or deselect a specific card that is in the nfc's rf field. </p>
-<p>This can be used when multiple cards are within the rf field of a <a class="el" href="classnfc_1_1NFC.html">NFC</a> chip </p><dl class="section return"><dt>Returns</dt><dd>statusCode Status of the operation </dd></dl>
+<p>This can be used when multiple cards are within the rf field of a <a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">NFC</a> chip </p><dl class="section return"><dt>Returns</dt><dd>statusCode Status of the operation </dd></dl>
 
 <p>Implemented in <a class="el" href="classnfc_1_1PN532__chip.html#a348f7d8d7cf3853e47307efe5f787f34">nfc::PN532_chip</a>, and <a class="el" href="classnfc_1_1NfcOled.html#a7ae4a0942240950d8db41b75c898cb3c">nfc::NfcOled</a>.</p>
 
@@ -1269,9 +1272,9 @@ array[1] Value of the internal register </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnfc_1_1Result.html">Result</a>[0] Statuscode of the operation </dd>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structnfc_1_1Result.html" title="Struct where results of functions can be stored in. ">Result</a>[0] Statuscode of the operation </dd>
 <dd>
-<a class="el" href="structnfc_1_1Result.html">Result</a>[1] received command/data frm the nfc chip </dd></dl>
+<a class="el" href="structnfc_1_1Result.html" title="Struct where results of functions can be stored in. ">Result</a>[1] received command/data frm the nfc chip </dd></dl>
 
 <p>Implemented in <a class="el" href="classnfc_1_1PN532__chip.html#a3184528f3e8e793905d1638067cfe9e1">nfc::PN532_chip</a>, and <a class="el" href="classnfc_1_1NfcOled.html#afcd62a218b26b6d7a59eb27fdc7b1c78">nfc::NfcOled</a>.</p>
 

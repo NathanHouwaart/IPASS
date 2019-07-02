@@ -91,15 +91,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnfc_1_1Result.html">nfc::Result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct where results of functions can be stored in.  <a href="structnfc_1_1Result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnfc_1_1NFC.html">nfc::NFC</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure abstract template class that can be implemented by any nfc reader.  <a href="classnfc_1_1NFC.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract nfc class that can be implemented for any nfc reader. </p>
 <p>This file contains the abstract interface for any nfc reader. You can inherit from this class and overwrite its abstract functions.</p>
 <p>If you do so, you can use the format:</p>
-<p><a class="el" href="classnfc_1_1NFC.html">nfc::NFC</a>* nfc = &amp;YOUR_NFC_CLASS( constructor arguments ); nfc-&gt;getFirmwareversion(); nfc-&gt;getGeneralStatus();</p>
+<p><a class="el" href="classnfc_1_1NFC.html" title="Pure abstract template class that can be implemented by any nfc reader. ">nfc::NFC</a>* nfc = &amp;YOUR_NFC_CLASS( constructor arguments ); nfc-&gt;getFirmwareversion(); nfc-&gt;getGeneralStatus();</p>
 <p>And so on..</p>
 <dl class="section author"><dt>Author</dt><dd>Nathan Houwaart  See LICENSE </dd></dl>
 </div></div><!-- contents -->

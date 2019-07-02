@@ -2,6 +2,15 @@
 \label{classHardwareUart}\index{Hardware\+Uart@{Hardware\+Uart}}
 
 
+Implementation of the abstract U\+A\+RT class.  
+
+
+
+
+{\ttfamily \#include $<$hardware\+\_\+uart.\+h$>$}
+
+
+
 Inheritance diagram for Hardware\+Uart\+:
 % FIG 0
 
@@ -11,33 +20,71 @@ Collaboration diagram for Hardware\+Uart\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classHardwareUart_aa5ca3cbeac085c36f9902a6933009615}\label{classHardwareUart_aa5ca3cbeac085c36f9902a6933009615}} 
-{\bfseries Hardware\+Uart} (int baudrate)
-\item 
+\hyperlink{classHardwareUart_aa5ca3cbeac085c36f9902a6933009615}{Hardware\+Uart} (int baudrate)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{classHardwareUart}{Hardware\+Uart} class. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHardwareUart_a2425939b2fc43a8ff119687cf878fa05}\label{classHardwareUart_a2425939b2fc43a8ff119687cf878fa05}} 
-void {\bfseries uart\+\_\+init} () override
-\item 
+void \hyperlink{classHardwareUart_a2425939b2fc43a8ff119687cf878fa05}{uart\+\_\+init} () override
+\begin{DoxyCompactList}\small\item\em Initialise the hardware uart on the host controller. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHardwareUart_a01095dd408b5cf2cd81326887d6dd6cd}\label{classHardwareUart_a01095dd408b5cf2cd81326887d6dd6cd}} 
-int {\bfseries avialable} () override
-\item 
-\mbox{\Hypertarget{classHardwareUart_a0cfa72622aa1bd0a2e97a56452f0c552}\label{classHardwareUart_a0cfa72622aa1bd0a2e97a56452f0c552}} 
-bool {\bfseries uart\+\_\+has\+\_\+overrun} () override
-\item 
-\mbox{\Hypertarget{classHardwareUart_a4a9db0c7a8c3f603cf61c635967673dd}\label{classHardwareUart_a4a9db0c7a8c3f603cf61c635967673dd}} 
-bool {\bfseries uart\+\_\+has\+\_\+rx\+\_\+error} () override
-\item 
+int \hyperlink{classHardwareUart_a01095dd408b5cf2cd81326887d6dd6cd}{avialable} () override
+\begin{DoxyCompactList}\small\item\em Checks how many bytes are stored in the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHardwareUart_aaa0022de2385260ae43663e813934c4f}\label{classHardwareUart_aaa0022de2385260ae43663e813934c4f}} 
+void \hyperlink{classHardwareUart_aaa0022de2385260ae43663e813934c4f}{store\+Byte} (const char c) override
+\begin{DoxyCompactList}\small\item\em Stores a byte in the ringbuffer. \end{DoxyCompactList}\item 
+bool \hyperlink{classHardwareUart_a0cfa72622aa1bd0a2e97a56452f0c552}{uart\+\_\+has\+\_\+overrun} () override
+\begin{DoxyCompactList}\small\item\em Checks whether the rx buffer has overrun. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHardwareUart_ac8adb0c6e412026e0e95a7a940fbe1a9}\label{classHardwareUart_ac8adb0c6e412026e0e95a7a940fbe1a9}} 
-uint8\+\_\+t {\bfseries receive\+Byte} () override
-\item 
+uint8\+\_\+t \hyperlink{classHardwareUart_ac8adb0c6e412026e0e95a7a940fbe1a9}{receive\+Byte} () override
+\begin{DoxyCompactList}\small\item\em Receives a byte form the U\+A\+RT bus. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHardwareUart_adddb0832d3ada845701a8a5638a2140a}\label{classHardwareUart_adddb0832d3ada845701a8a5638a2140a}} 
-bool {\bfseries rx\+Ready} () override
-\item 
+bool \hyperlink{classHardwareUart_adddb0832d3ada845701a8a5638a2140a}{rx\+Ready} () override
+\begin{DoxyCompactList}\small\item\em A function to check whether the receive register is ready to be read from. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHardwareUart_ab746480156eec92af197505681b9fcfc}\label{classHardwareUart_ab746480156eec92af197505681b9fcfc}} 
-uint8\+\_\+t {\bfseries getC} () override
-\item 
+uint8\+\_\+t \hyperlink{classHardwareUart_ab746480156eec92af197505681b9fcfc}{getC} () override
+\begin{DoxyCompactList}\small\item\em Get a character from the rungbuffer if available. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHardwareUart_ae097ce5f33053f11b8c76052b6a20ab6}\label{classHardwareUart_ae097ce5f33053f11b8c76052b6a20ab6}} 
-void {\bfseries send\+Byte} (const uint8\+\_\+t c) override
-\end{DoxyCompactItemize}
+void \hyperlink{classHardwareUart_ae097ce5f33053f11b8c76052b6a20ab6}{send\+Byte} (const uint8\+\_\+t c) override
+\begin{DoxyCompactList}\small\item\em Send a byte over the U\+A\+RT bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the abstract U\+A\+RT class. 
+
+This will only implement T\+X3 \& R\+X3 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHardwareUart_aa5ca3cbeac085c36f9902a6933009615}\label{classHardwareUart_aa5ca3cbeac085c36f9902a6933009615}} 
+\index{Hardware\+Uart@{Hardware\+Uart}!Hardware\+Uart@{Hardware\+Uart}}
+\index{Hardware\+Uart@{Hardware\+Uart}!Hardware\+Uart@{Hardware\+Uart}}
+\subsubsection{\texorpdfstring{Hardware\+Uart()}{HardwareUart()}}
+{\footnotesize\ttfamily Hardware\+Uart\+::\+Hardware\+Uart (\begin{DoxyParamCaption}\item[{int}]{baudrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of the \hyperlink{classHardwareUart}{Hardware\+Uart} class. 
+
+Once created it will initialise itself 
+\begin{DoxyParams}{Parameters}
+{\em baudrate} & The baudrate the bus needs to be set to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHardwareUart_a0cfa72622aa1bd0a2e97a56452f0c552}\label{classHardwareUart_a0cfa72622aa1bd0a2e97a56452f0c552}} 
+\index{Hardware\+Uart@{Hardware\+Uart}!uart\+\_\+has\+\_\+overrun@{uart\+\_\+has\+\_\+overrun}}
+\index{uart\+\_\+has\+\_\+overrun@{uart\+\_\+has\+\_\+overrun}!Hardware\+Uart@{Hardware\+Uart}}
+\subsubsection{\texorpdfstring{uart\+\_\+has\+\_\+overrun()}{uart\_has\_overrun()}}
+{\footnotesize\ttfamily bool Hardware\+Uart\+::uart\+\_\+has\+\_\+overrun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the rx buffer has overrun. 
+
+If overrun, it wil try to clear the register 
+
+Implements \hyperlink{classuart__abstract_a8a10405e3e52c8175899a443871c1598}{uart\+\_\+abstract}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

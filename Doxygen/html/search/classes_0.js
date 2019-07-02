@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['buffer',['buffer',['../classbuffer.html',1,'']]],
-  ['buffer_3c_20255_20_3e',['buffer&lt; 255 &gt;',['../classbuffer.html',1,'']]]
+  ['buffer',['buffer',['../classhwuart_1_1buffer.html',1,'hwuart']]],
+  ['buffer_3c_20255_20_3e',['buffer&lt; 255 &gt;',['../classhwuart_1_1buffer.html',1,'hwuart']]]
 ];

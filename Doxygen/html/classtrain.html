@@ -342,7 +342,20 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sectorLocation</b>
 </div><div class="memdoc">
 
 <p>Constructor of a train class application. </p>
-<p>This function will need all the data fields of the <a class="el" href="classovTracker.html" title="Abstract OV class with build in calculation functions. ">ovTracker</a> supporter Upon initialising the <a class="el" href="classovTracker.html" title="Abstract OV class with build in calculation functions. ">ovTracker</a> class, the train class will initialise itself by calling <a class="el" href="classtrain.html#a52db26884bf0f979ad55ce92f3d2f159" title="This function will initialise the train class. ">init()</a> </p>
+<p>This function will need all the data fields of the <a class="el" href="classovTracker.html" title="Abstract OV class with build in calculation functions. ">ovTracker</a> supporter Upon initialising the <a class="el" href="classovTracker.html" title="Abstract OV class with build in calculation functions. ">ovTracker</a> class, the train class will initialise itself by calling <a class="el" href="classtrain.html#a52db26884bf0f979ad55ce92f3d2f159" title="This function will initialise the train class. ">init()</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nfc</td><td>pn532 chip class </td></tr>
+    <tr><td class="paramname">display</td><td>Display that can be written to </td></tr>
+    <tr><td class="paramname">pins</td><td>Station/ mode slection pins </td></tr>
+    <tr><td class="paramname">price</td><td>Price per kilometer </td></tr>
+    <tr><td class="paramname">maxCardBalance</td><td>The max balance a card can have </td></tr>
+    <tr><td class="paramname">topUpValue</td><td>The value the card will be topped up with </td></tr>
+    <tr><td class="paramname">AorB</td><td>Wether the user wants to autenticate the sector with keyA or keyB </td></tr>
+    <tr><td class="paramname">valueBlockLocation</td><td>Number of the page where the value block is located </td></tr>
+    <tr><td class="paramname">sectorLocation</td><td>Number of the sector trailer page that needs to be authenticated </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -723,7 +736,7 @@ false card not properly formatted </dd></dl>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>application/code/headers/<a class="el" href="train__ov_8h_source.html">train_ov.h</a></li>
-<li>application/code/src/train_ov.cpp</li>
+<li>application/code/src/<a class="el" href="train__ov_8cpp.html">train_ov.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

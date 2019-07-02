@@ -1,27 +1,70 @@
 \hypertarget{classbuffer}{}\section{buffer$<$ n $>$ Class Template Reference}
 \label{classbuffer}\index{buffer$<$ n $>$@{buffer$<$ n $>$}}
+
+
+This is a ringbuffer class that is supposed to store the received data from the U\+A\+RT bus.  
+
+
+
+
+{\ttfamily \#include $<$hardware\+\_\+uart.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classbuffer_af167e2486ec566cacd9fc3d48bd42e80}\label{classbuffer_af167e2486ec566cacd9fc3d48bd42e80}} 
+\hyperlink{classbuffer_af167e2486ec566cacd9fc3d48bd42e80}{buffer} ()
+\begin{DoxyCompactList}\small\item\em Default construcctor for the buffer. The buffer will initially be empty when created. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbuffer_aff92199fadb5da62646008c2fa7b3a07}\label{classbuffer_aff92199fadb5da62646008c2fa7b3a07}} 
-int {\bfseries return\+Begin} ()
-\item 
+int \hyperlink{classbuffer_aff92199fadb5da62646008c2fa7b3a07}{return\+Begin} ()
+\begin{DoxyCompactList}\small\item\em Returns the begin index of the buffer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbuffer_ae6ef03f00a09332e04e21f61bd216767}\label{classbuffer_ae6ef03f00a09332e04e21f61bd216767}} 
-int {\bfseries return\+End} ()
-\item 
+int \hyperlink{classbuffer_ae6ef03f00a09332e04e21f61bd216767}{return\+End} ()
+\begin{DoxyCompactList}\small\item\em Returns the end index of the buffer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbuffer_ade7959181a0fe6c4dff38053a07b2ece}\label{classbuffer_ade7959181a0fe6c4dff38053a07b2ece}} 
-int {\bfseries return\+Size} ()
-\item 
-\mbox{\Hypertarget{classbuffer_a9a581b60e734970b849182ecc150590f}\label{classbuffer_a9a581b60e734970b849182ecc150590f}} 
-void {\bfseries push\+\_\+back} (const uint8\+\_\+t c)
-\item 
-\mbox{\Hypertarget{classbuffer_a43392276a25538804cf08852d4bd54f6}\label{classbuffer_a43392276a25538804cf08852d4bd54f6}} 
-uint8\+\_\+t {\bfseries pop} ()
-\item 
+int \hyperlink{classbuffer_ade7959181a0fe6c4dff38053a07b2ece}{return\+Size} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classbuffer_a9a581b60e734970b849182ecc150590f}{push\+\_\+back} (const uint8\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Pushes back a character at the back of the buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classbuffer_a43392276a25538804cf08852d4bd54f6}{pop} ()
+\begin{DoxyCompactList}\small\item\em Gets the first element of the buffer and removes it. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbuffer_a3de5ff2f764dd574776d3292ca522a76}\label{classbuffer_a3de5ff2f764dd574776d3292ca522a76}} 
-void {\bfseries clear} ()
-\end{DoxyCompactItemize}
+void \hyperlink{classbuffer_a3de5ff2f764dd574776d3292ca522a76}{clear} ()
+\begin{DoxyCompactList}\small\item\em reset the buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t n$>$\newline
+class buffer$<$ n $>$}
+
+This is a ringbuffer class that is supposed to store the received data from the U\+A\+RT bus. 
+
+This buffer is templated and can be decided at compile time. It is reccomended to make the buffer no larger than 255 bytes for speed purposes 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbuffer_a43392276a25538804cf08852d4bd54f6}\label{classbuffer_a43392276a25538804cf08852d4bd54f6}} 
+\index{buffer@{buffer}!pop@{pop}}
+\index{pop@{pop}!buffer@{buffer}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+uint8\+\_\+t \hyperlink{classbuffer}{buffer}$<$ n $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the first element of the buffer and removes it. 
+
+If the buffer has reached the end index of the buffer, it will wrap around and start at index 0 again and start popping characters form there \mbox{\Hypertarget{classbuffer_a9a581b60e734970b849182ecc150590f}\label{classbuffer_a9a581b60e734970b849182ecc150590f}} 
+\index{buffer@{buffer}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!buffer@{buffer}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n$>$ \\
+void \hyperlink{classbuffer}{buffer}$<$ n $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes back a character at the back of the buffer. 
+
+If the buffer has reached the end index of the buffer, it will wrap around and start at index 0 again. This will possibly overwrite the characters already there 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

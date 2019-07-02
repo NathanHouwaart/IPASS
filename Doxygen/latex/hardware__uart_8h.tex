@@ -2,7 +2,7 @@
 \label{hardware__uart_8h}\index{code/headers/hardware\+\_\+uart.\+h@{code/headers/hardware\+\_\+uart.\+h}}
 
 
-This file implements the functions declared in hardware\+\_\+uart.\+hpp.  
+This file implements a ringbuffer, abstract U\+A\+RT interface and an implementation of this interface.  
 
 
 {\ttfamily \#include \char`\"{}hwlib.\+hpp\char`\"{}}\newline
@@ -14,17 +14,20 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classbuffer}{buffer$<$ n $>$}
-\item 
-class \hyperlink{classuart__abstract}{uart\+\_\+abstract}
-\item 
-class \hyperlink{classHardwareUart}{Hardware\+Uart}
-\end{DoxyCompactItemize}
+class \hyperlink{classhwuart_1_1buffer}{hwuart\+::buffer$<$ n $>$}
+\begin{DoxyCompactList}\small\item\em This is a ringbuffer class that is supposed to store the received data from the U\+A\+RT bus. \end{DoxyCompactList}\item 
+class \hyperlink{classhwuart_1_1uart__abstract}{hwuart\+::uart\+\_\+abstract}
+\begin{DoxyCompactList}\small\item\em This is a pure abstract class of the hardware U\+A\+RT. \end{DoxyCompactList}\item 
+class \hyperlink{classhwuart_1_1HardwareUart}{hwuart\+::\+Hardware\+Uart}
+\begin{DoxyCompactList}\small\item\em Implementation of the abstract U\+A\+RT class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This file implements the functions declared in hardware\+\_\+uart.\+hpp. 
+This file implements a ringbuffer, abstract U\+A\+RT interface and an implementation of this interface. 
 
+\begin{DoxyNote}{Note}
+The hardware U\+A\+RT implementation is only working when sending a command to a slave. Reveiving data over the U\+A\+RT bus is not yet possible. In order to make this happen, cpu interrupts need to be added tho interrupt the cpu when R\+X\+R\+DY register is 1. This is however out of my knowledge and therefore not yet implemented. Also this file is not yet split up in to .cpp files and .h files. This will be done as soon as the receive function is working
+\end{DoxyNote}
 \begin{DoxyAuthor}{Author}
 Nathan Houwaart  See L\+I\+C\+E\+N\+SE 
 \end{DoxyAuthor}
