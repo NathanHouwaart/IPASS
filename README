@@ -1,1 +1,4 @@
-This is the repsitory of my IPASS project
+Ipass repository.
+
+
+This library makes use of a slightly customized hwlib. Therefore it is inlcuded in the code here. All credits of this library go to Wouter van Ooien.
