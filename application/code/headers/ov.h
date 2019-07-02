@@ -4,6 +4,9 @@
  *
  * Abstract OV class for storing cardata and manipulating valueblocks
  * 
+ * Code for the Haversine formula is based on https://www.geeksforgeeks.org/program-distance-two-points-earth/ 
+ * the Author of this code is Aayush Chaturvedi 
+ * 
  * @author    Nathan Houwaart
  * @license   See LICENSE
  */
@@ -78,6 +81,8 @@ public:
     /// @param display              Display that can be written to
     /// @param pins                 Station/ mode slection pins
     /// @param price                Price per kilometer
+    /// @param maxCardBalance       The max balance a card can have
+    /// @param topUpValue           The value the card will be topped up with
     /// @param AorB                 Wether the user wants to autenticate the sector with keyA or keyB
     /// @param valueBlockLocation   Number of the page where the value block is located
     /// @param sectorLocation       Number of the sector trailer page that needs to be authenticated
@@ -124,20 +129,20 @@ public:
     /// This function will read out the 8 GPIO pins to determine the current station
     /// \details
     /// By reading the 8 gpio pins and storing them in a 8 bit value,
-    /// @return uint8_t value of the pins read.
+    /// @return Mode    the mode the pins are set in
     virtual Mode getMode() = 0;
 
     /// \brief
     /// This function will set the mode of apllication
     /// \details
-    /// @param  uint8_t     mode
+    /// @param  newMode     newMode
     virtual void setMode(const Mode newMode) = 0;
 
     /// \brief
     /// This function is used to get and set a new station
     /// \details
-    /// this function changes the internal current station.id member
-    virtual void getAndSetStation() = 0;
+    /// This function changes the internal current station.id member
+    virtual bool getAndSetStation() = 0;
 
     /// \brief
     /// This function is used to calculate the price of the ride based on distance traveled

@@ -69,7 +69,7 @@ int main() {
     // construct communication busses
     auto i2cbus     = hwlib::i2c_bus_bit_banged_scl_sda(scl, sda);
     auto spiBus     = hwlib::spi_bus_bit_banged_sclk_mosi_miso(clock, mosi, miso);
-    auto uartbus    = HardwareUart(115200);
+    auto uartbus    = hwuart::HardwareUart(115200);
     
     auto uartInterface  = communication::uart(uartbus);
     auto spiInterface   = communication::spi(spiBus, ss, irq);

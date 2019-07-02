@@ -154,7 +154,7 @@ public:
 ///             This is a work in progress
 class uart : public protocol {
 private:
-    uart_abstract& bus;
+    hwuart::uart_abstract& bus;
 
 public:
 
@@ -162,7 +162,7 @@ public:
     /// Constructor of the UART class
     /// \details
     /// @param  abstract_uart   A reference to a abstract uart class
-    uart(uart_abstract& bus);
+    uart(hwuart::uart_abstract& bus);
 
     /// \brief
     /// This Funtion will wake up / initialise the spi bus / chip for communication

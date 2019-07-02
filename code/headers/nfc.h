@@ -25,9 +25,10 @@
 
 namespace nfc {
 
+/// Struct where results of functions can be stored in
 struct Result {statusCode status; receivedCommand response;};
 
-/// \Brief
+/// \brief
 /// Pure abstract template class that can be implemented by any nfc reader
 class NFC {
 protected:

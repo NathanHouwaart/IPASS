@@ -24,4 +24,12 @@ The library also has various examples of how to use it’s functions to read
 a Mifare card along with elaborated Doxygen lines.
 
 
+Contens of this library:
+- Application	All the application files and code
+- Code		Code for the pn532 library
+- Doxygen	The complete doxygen documentation of this library and the application
+- Examples	This folder contains several examples of how to use the library
+- Miscellaneous	This folder contains the ipass poster, user manual and test plan of this library
+
+
 This library makes use of a slightly customized hwlib. Therefore it is inlcuded in the code here. All credits of this library go to Wouter van Ooien.

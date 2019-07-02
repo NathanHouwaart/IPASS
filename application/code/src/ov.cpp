@@ -1,3 +1,12 @@
+/**
+ * @file
+ * @brief     This file implements the functions declared in ov.h
+ * 
+ * @author    Nathan Houwaart
+ * @license   See LICENSE
+ */
+
+
 #include "../headers/ov.h"
 
 ovTracker::ovTracker(

@@ -1,3 +1,11 @@
+/**
+ * @file
+ * @brief     Train implementation of the abstract ov class
+ * 
+ * @author    Nathan Houwaart
+ * @license   See LICENSE
+ */
+
 #ifndef V1_OOPC_18_NATHANHOUWAART_TRAIN_OV_H
 #define V1_OOPC_18_NATHANHOUWAART_TRAIN_OV_H
 
@@ -18,6 +26,15 @@ public:
     /// \details
     /// This function will need all the data fields of the ovTracker supporter
     /// Upon initialising the ovTracker class, the train class will initialise itself by calling init()
+    /// @param nfc                  pn532 chip class
+    /// @param display              Display that can be written to
+    /// @param pins                 Station/ mode slection pins
+    /// @param price                Price per kilometer
+    /// @param maxCardBalance       The max balance a card can have
+    /// @param topUpValue           The value the card will be topped up with
+    /// @param AorB                 Wether the user wants to autenticate the sector with keyA or keyB
+    /// @param valueBlockLocation   Number of the page where the value block is located
+    /// @param sectorLocation       Number of the sector trailer page that needs to be authenticated
     train(
         nfc::NFC& nfc, 
         hwlib::terminal_from& display, 
@@ -81,7 +98,7 @@ public:
     /// This function is used to get and set a new station
     /// \details
     /// this function changes the internal current station.id member
-    void getAndSetStation() override;
+    bool getAndSetStation() override;
 
     /// \brief
     /// This function is used to calculate the price of the ride based on distance traveled

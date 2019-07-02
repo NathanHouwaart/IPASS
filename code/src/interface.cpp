@@ -77,7 +77,7 @@ void spi::endTransaction()
 
 // UART specific functions
 
-uart::uart(uart_abstract& bus):bus(bus){
+uart::uart(hwuart::uart_abstract& bus):bus(bus){
     wakeUp();
 }
 
@@ -96,11 +96,13 @@ void uart::sendData(uint8_t *commandBuffer, uint8_t nBytes)
 
 void uart::receiveData(uint8_t *receiveBuffer, uint8_t nBytes)
 {
-    hwlib::cout << "iets";
-    auto x = bus.avialable();
-    for(int i = 0; i < x; i++){
-        uint8_t x = bus.getC();
-        receiveBuffer[i] = x;
+    for(int i = 0; i < nBytes; i++){
+         while(!bus.rxReady()){} // wait till the bus is ready
+        bus.storeByte(bus.getC());
+    }
+   
+    for(int i = 0; i < bus.avialable(); i++){
+        receiveBuffer[i] = bus.getC();
     }
 }
     

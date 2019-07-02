@@ -56,7 +56,7 @@ int main() {
     uint8_t  valueBlockPage         = 0x05;                                                 // Page that the valueblock needs to be created on
     uint8_t  sector                 = 0x07;                                                 // Sector the valueblock will be located in
     uint8_t* sectorKey              = card1Keys.aKeys[2];                                   // Key that needs to be authenticated with
-    nfc::mifareCommands athenticateAorB  = nfc::mifareCommands::authenticateKeyA;
+    nfc::mifareCommands athenticateAorB  = nfc::mifareCommands::authenticateKeyA;           // Authenticate with key a or b
     
     //-----------------------//
     // ---- DECLARATIONS ----//
@@ -81,7 +81,7 @@ int main() {
     // construct communication busses
     auto i2cbus     = hwlib::i2c_bus_bit_banged_scl_sda(scl, sda);
     auto spiBus     = hwlib::spi_bus_bit_banged_sclk_mosi_miso(clock, mosi, miso);
-    auto uartbus    = HardwareUart(115200);
+    auto uartbus    = hwuart::HardwareUart(115200);
     
     auto uartInterface  = communication::uart(uartbus);
     auto spiInterface   = communication::spi(spiBus, ss, irq);

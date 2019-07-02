@@ -1,3 +1,11 @@
+/**
+ * @file
+ * @brief     This file implements the functions declared in train_ov.h
+ * 
+ * @author    Nathan Houwaart
+ * @license   See LICENSE
+ */
+
 #include "../headers/train_ov.h"
 
 train::train(
@@ -122,8 +130,9 @@ void train::setMode(const Mode newMode){
     switch (newMode)
     {
     case Mode::travelMode:
-        getAndSetStation();
-        waitCard();
+        if(getAndSetStation()){
+                waitCard();
+        };
         break;
     case Mode::topUpMode:
         topUp(100);
@@ -135,7 +144,7 @@ void train::setMode(const Mode newMode){
     }
 }
 
-void train::getAndSetStation(){
+bool train::getAndSetStation(){
     uint8_t reading = 0;
     reading |= (!stationPin1.read() << 7);
     reading |= (!stationPin2.read() << 6);
@@ -146,16 +155,17 @@ void train::getAndSetStation(){
     reading |= (!stationPin7.read() << 1);
     reading |= (!stationPin8.read() << 0);
 
-    if(reading == currentStation.id){return;}
+    if(reading == currentStation.id){return true;}
 
     for(uint8_t i = 0; i < stations.size(); i++){
         if(reading == stations[i].id){
             currentStation = stations[i];  
             display << "\v\n" << currentStation.naam << hwlib::flush; 
-            return;
+            return true;
         }
     }
     display << "\v\n" << "Invalid sation" << hwlib::flush;
+    return false;
 }
 
 float train::calculate_price(const int index) {
@@ -187,6 +197,7 @@ uint32_t train::getBalance(card & cardinfo){
 
 void train::topUp(int increment_value){
     display << "\v\n" << "Top up" << hwlib::flush;  // Write on the display
+    currentStation = Station();                     // reset the current station
 
     auto cardinfo = card();
     if(!nfc.detectCard(cardinfo, 0x01, nfc::pn532::command::CardType::TypeA_ISO_IEC14443)) return;  // wait for a card to enter the pn532's rf-field
