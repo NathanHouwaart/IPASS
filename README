@@ -13,7 +13,7 @@ abstract interface that can be used to implement different kinds of
 communication methods. In this particular library the implemented
 communciation methods are: i2c, SPI and HSU (High Speed UART).
 The i2c and SPI communication protocols are fully implemented and use
-a bit banged version provided in hwlib ( credits: Wouter Van Ooien). The
+a bit banged version provided in hwlib ( credits: Wouter van Ooijen). The
 HSU implementation however is hardware based but is not implemented
 completely (yet) .
 
