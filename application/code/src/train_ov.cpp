@@ -15,8 +15,8 @@ train::train(
     hwlib::pin_in& stationPin5, hwlib::pin_in& stationPin6, hwlib::pin_in& stationPin7, hwlib::pin_in& stationPin8, 
     hwlib::pin_in& modeSelectPin1, hwlib::pin_in& modeSelectPin2, hwlib::pin_in& modeSelectPin3, hwlib::pin_in& modeSelectPin4,
     float pricePerKilometer,
-    int maxCardBalance,
-    int topUpValue,
+    uint32_t maxCardBalance,
+    uint32_t topUpValue,
     nfc::mifareCommands AorB,
     uint8_t valueBlockLocation,
     uint8_t sectorLocation
@@ -135,7 +135,7 @@ void train::setMode(const Mode newMode){
         };
         break;
     case Mode::topUpMode:
-        topUp(100);
+        topUp(topUpValue);
         break;
     case Mode::makeCardMode:
         break;
@@ -190,12 +190,12 @@ uint32_t train::getBalance(card & cardinfo){
 
     // rearrange the bytes. Bytes are stored in least signigicant byte first
     uint32_t saldo = (valueBlock[0]) | (valueBlock[1] << 8) | (valueBlock[2] << 16) | (valueBlock[3] << 24);
-    if(saldo > 1000){ saldo = saldo - 0xFFFFFFFF;};  // if the uint32_t has flipped around because of a negative saldo, it will be restored here
+    if(saldo > maxCardBalance){ saldo = saldo - 0xFFFFFFFF;};  // if the uint32_t has flipped around because of a negative saldo, it will be restored here
 
     return saldo;
 }
 
-void train::topUp(int increment_value){
+void train::topUp(uint32_t increment_value){
     display << "\v\n" << "Top up" << hwlib::flush;  // Write on the display
     currentStation = Station();                     // reset the current station
 
@@ -206,7 +206,7 @@ void train::topUp(int increment_value){
 
     display << "\v\n\n\n" << "Old balance:" << hwlib::dec << static_cast<int>(balance);
 
-    auto TopUpRemainder = 1000 - static_cast<int>(balance);                     // Maximum amount of balance that can be stored on the card
+    auto TopUpRemainder = maxCardBalance - static_cast<int>(balance);                     // Maximum amount of balance that can be stored on the card
     if(increment_value > TopUpRemainder){ increment_value = TopUpRemainder;}    // If the increment value will exceed the max balance, 
                                                                                 // only the difference from current balance to max balance is stored
 

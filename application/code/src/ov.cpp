@@ -16,8 +16,8 @@ ovTracker::ovTracker(
     hwlib::pin_in& stationPin5, hwlib::pin_in& stationPin6, hwlib::pin_in& stationPin7, hwlib::pin_in& stationPin8, 
     hwlib::pin_in& modeSelectPin1, hwlib::pin_in& modeSelectPin2, hwlib::pin_in& modeSelectPin3, hwlib::pin_in& modeSelectPin4,
     float pricePerKilometer,
-    int maxCardBalance,
-    int topUpValue,
+    uint32_t maxCardBalance,
+    uint32_t topUpValue,
     nfc::mifareCommands AorB,
     uint8_t valueBlockLocation,
     uint8_t sectorLocation

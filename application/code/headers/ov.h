@@ -42,8 +42,8 @@ protected:
 
     float           pricePerKilometer;
     Station         currentStation; 
-    int             maxCardBalance;
-    int             topUpValue;
+    uint32_t        maxCardBalance;
+    uint32_t        topUpValue;
 
     cardBuffer<5> checkinInformation;
 
@@ -93,8 +93,8 @@ public:
         hwlib::pin_in& stationPin5, hwlib::pin_in& stationPin6, hwlib::pin_in& stationPin7, hwlib::pin_in& stationPin8, 
         hwlib::pin_in& modeSelectPin1, hwlib::pin_in& modeSelectPin2, hwlib::pin_in& modeSelectPin3, hwlib::pin_in& modeSelectPin4,
         float pricePerKilometer,
-        int maxCardbalance, 
-        int topUpValue,
+        uint32_t maxCardbalance, 
+        uint32_t topUpValue,
         nfc::mifareCommands AorB,
         uint8_t valueBlockLocation,
         uint8_t sectorLocation
@@ -170,7 +170,7 @@ public:
     /// This function is used to top up a cards' balance
     /// \details
     /// @param incrementValue   value that the balance of valueblock of a mifare classic card needs to be incremented by
-    virtual void topUp(int incrementValue) = 0;
+    virtual void topUp(uint32_t incrementValue) = 0;
 
 };
 
