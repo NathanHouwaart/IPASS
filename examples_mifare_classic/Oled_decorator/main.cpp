@@ -87,6 +87,17 @@ int main() {
     nfc::NFC *nfc = &chip;
 
    for(;;){
+
+	// ----- FIRMWARE ----- //
+        auto firmware = nfc->getFirmwareVersion();
+        if(firmware[0] == nfc::statusCode::pn532StatusOK){
+            hwlib::cout << "Found device:     pn5" << hwlib::hex << firmware[1] << hwlib::endl;
+            hwlib::cout << "Firmware version: " << static_cast<uint8_t>(firmware[2]) << '.' << static_cast<uint8_t>(firmware[3]) << hwlib::endl;
+            hwlib::cout << "Support version:  " << static_cast<uint8_t>(firmware[4]) << hwlib::endl;
+            hwlib::cout << hwlib::endl;
+        }else{
+            hwlib::cout << "Error getting firmware version: " << firmware[0] <<  hwlib::endl;
+        }
         
 
         hwlib::wait_ms(2000);

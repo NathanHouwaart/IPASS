@@ -97,6 +97,7 @@ int main() {
     if(rf != nfc::statusCode::pn532StatusOK){return rf;}
 
     for(;;){
+	hwlib::cout << "Present card" << hwlib::endl;
         auto cardinfo = card();
         while(!nfc->detectCard(cardinfo, 0x01, cardType)){}
 
