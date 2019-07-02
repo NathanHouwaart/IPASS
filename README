@@ -1,4 +1,27 @@
-Ipass repository.
+﻿Pn532 library
+A library for Mifare Classic 1K
+card reading
+
+
+This library both provides and implements an abstract NFC super class.
+The implementation is done for the pn532 specifically. With this library,
+the pn532 is able to fully read a Mifare classic 1k card and is capable of
+much more.
+
+Apart from the abstract NFC interface, this library also provides an
+abstract interface that can be used to implement different kinds of
+communication methods. In this particular library the implemented
+communciation methods are: i2c, SPI and HSU (High Speed UART).
+The i2c and SPI communication protocols are fully implemented and use
+a bit banged version provided in hwlib ( credits: Wouter Van Ooien). The
+HSU implementation however is hardware based but is not implemented
+completely (yet) .
+
+Another extra feature of this library is that it comes equipped with a
+decorator for the NFC class so it can work in combination with an oled
+display.
+The library also has various examples of how to use it’s functions to read
+a Mifare card along with elaborated Doxygen lines.
 
 
 This library makes use of a slightly customized hwlib. Therefore it is inlcuded in the code here. All credits of this library go to Wouter van Ooien.
