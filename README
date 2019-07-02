@@ -31,5 +31,8 @@ Contens of this library:
 - Examples	This folder contains several examples of how to use the library
 - Miscellaneous	This folder contains the ipass poster, user manual and test plan of this library
 
+============================================================
+This library requires BMPTK to be present in the home folder!
+To use this library, use git clone in the home folder. Otherwise you need to update the makefile paths
 
 This library makes use of a slightly customized hwlib. Therefore it is inlcuded in the code here. All credits of this library go to Wouter van Ooien.
