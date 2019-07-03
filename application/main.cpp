@@ -21,13 +21,14 @@ int main() {
     // ---- Declarations ----- 
     nfc::cardKeys               card1Keys;          // If the defaul 0xFF keys are not valid, make a struct containing the right keys
     nfc::mifareCommands AorB    = nfc::authenticateKeyA;
-    float   pricePerKm          = 0.335;
+    uint8_t cardNumber          = 0x01;
+    float   pricePerKm          = 1; //0.335
     uint8_t sectorLocation      = 0x07;
     uint8_t valueBlockLocation  = 0x05;
     int     baudrate            = 115200;
     uint8_t oledAdress          = 0x3C;
-    int     maxCardBalance      = 1000;
-    int     topUpValue          = 50;
+    uint32_t maxCardBalance     = 2000;
+    uint32_t topUpValue         = 200;
 
     auto stationPin1 = target::pin_in( target::pins::d44 );
     auto stationPin2 = target::pin_in( target::pins::d45 );
@@ -73,16 +74,16 @@ int main() {
     auto font    = hwlib::font_default_8x8();
     auto display = hwlib::terminal_from( oled, font );   
     
-    // auto card = nfc::PN532_chip(spiInterface, irq);
+    auto card = nfc::PN532_chip(spiInterface, irq);
     // auto card = nfc::PN532_chip(uartInterface, irq);
-    auto card = nfc::PN532_chip(i2cInterface, irq);
+    //auto card = nfc::PN532_chip(i2cInterface, irq);
 
     auto terminal = nfc::NfcOled(card, display, spiInterface);  /// < ------- nfc::NfcOled instead of nfc::PN532_chip
 
     auto trainReader = train(
         terminal, display, 
         stationPin1, stationPin2, stationPin3, stationPin4, stationPin5, stationPin6, stationPin7, stationPin8, 
-        modeSelectPin1, modeSelectPin2, modeSelectPin3, modeSelectPin4,
+        modeSelectPin1, modeSelectPin2, modeSelectPin3, modeSelectPin4, cardNumber,
         pricePerKm, maxCardBalance, topUpValue, AorB, valueBlockLocation, sectorLocation
     );  
 

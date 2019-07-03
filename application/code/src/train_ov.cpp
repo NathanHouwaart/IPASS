@@ -14,6 +14,7 @@ train::train(
     hwlib::pin_in& stationPin1, hwlib::pin_in& stationPin2, hwlib::pin_in& stationPin3, hwlib::pin_in& stationPin4, 
     hwlib::pin_in& stationPin5, hwlib::pin_in& stationPin6, hwlib::pin_in& stationPin7, hwlib::pin_in& stationPin8, 
     hwlib::pin_in& modeSelectPin1, hwlib::pin_in& modeSelectPin2, hwlib::pin_in& modeSelectPin3, hwlib::pin_in& modeSelectPin4,
+    uint8_t cardNumber,
     float pricePerKilometer,
     uint32_t maxCardBalance,
     uint32_t topUpValue,
@@ -26,7 +27,7 @@ train::train(
         stationPin1, stationPin2, stationPin3, stationPin4, 
         stationPin5, stationPin6, stationPin7, stationPin8,
         modeSelectPin1, modeSelectPin2, modeSelectPin3, modeSelectPin4,
-        pricePerKilometer, maxCardBalance, topUpValue,
+        cardNumber, pricePerKilometer, maxCardBalance, topUpValue,
         AorB, valueBlockLocation, sectorLocation)
 { 
     init();
@@ -42,7 +43,7 @@ void train::init()
 
 void train::waitCard(){
     auto cardinfo = card();
-    if(!nfc.detectCard(cardinfo, 0x01, nfc::pn532::command::CardType::TypeA_ISO_IEC14443)){hwlib::cout << "."; return;}
+    if(!nfc.detectCard(cardinfo, cardNumber, nfc::pn532::command::CardType::TypeA_ISO_IEC14443)){hwlib::cout << "."; return;}
     auto carduid = cardinfo.getUID();
 
     for(int i = 0; i < 10; i++){
@@ -80,8 +81,8 @@ void train::checkIn( card& cardinfo ){
 
 void train::checkOut(const int index){
     auto price =  static_cast<uint32_t>(calculate_price(index));
-    nfc.mifareDecrement(checkinInformation.checkins[index], 0x01, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2], price);
-    if(nfc.mifareTransfer(checkinInformation.checkins[index], 0x01, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2])!= nfc::statusCode::pn532StatusOK){hwlib::cout << "error checking out"; return;};
+    nfc.mifareDecrement(checkinInformation.checkins[index], cardNumber, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2], price);
+    if(nfc.mifareTransfer(checkinInformation.checkins[index], cardNumber, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2])!= nfc::statusCode::pn532StatusOK){hwlib::cout << "error checking out"; return;};
 
     // check wether a card has moved stations
     if(checkinInformation.checkinStation[index].id == currentStation.id){ display << "\v\n\n\n" << "Cancelled";}
@@ -175,16 +176,16 @@ float train::calculate_price(const int index) {
 
 bool train::validateCard(card & cardinfo){
     // Checks wether the card is properly formatted
-    if(nfc.mifareDecrement(cardinfo, 0x01, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2], 0)!= nfc::statusCode::pn532StatusOK){hwlib::cout<< "card not formatted properly" << hwlib::endl;return false;}
-    if(nfc.mifareTransfer(cardinfo, 0x01, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2])!= nfc::statusCode::pn532StatusOK){hwlib::cout<< "card not formatted properly" << hwlib::endl;return false;}
+    if(nfc.mifareDecrement(cardinfo, cardNumber, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2], 0)!= nfc::statusCode::pn532StatusOK){hwlib::cout<< "card not formatted properly" << hwlib::endl;return false;}
+    if(nfc.mifareTransfer(cardinfo, cardNumber, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2])!= nfc::statusCode::pn532StatusOK){hwlib::cout<< "card not formatted properly" << hwlib::endl;return false;}
     return true;
 }
 
 
 uint32_t train::getBalance(card & cardinfo){
     // Gets remaining balance
-    nfc.mifareAuthenticate(cardinfo, 0x01, authenticateAorB, sectorLocation, keys.aKeys[2]);
-    nfc.mifareReadPage(cardinfo, 0x01, valueBlockLocation);
+    nfc.mifareAuthenticate(cardinfo, cardNumber, authenticateAorB, sectorLocation, keys.aKeys[2]);
+    nfc.mifareReadPage(cardinfo, cardNumber, valueBlockLocation);
 
     auto valueBlock = cardinfo.getPage(valueBlockLocation);
 
@@ -200,7 +201,7 @@ void train::topUp(uint32_t increment_value){
     currentStation = Station();                     // reset the current station
 
     auto cardinfo = card();
-    if(!nfc.detectCard(cardinfo, 0x01, nfc::pn532::command::CardType::TypeA_ISO_IEC14443)) return;  // wait for a card to enter the pn532's rf-field
+    if(!nfc.detectCard(cardinfo, cardNumber, nfc::pn532::command::CardType::TypeA_ISO_IEC14443)) return;  // wait for a card to enter the pn532's rf-field
 
     auto balance = getBalance(cardinfo);        // get the current balance
 
@@ -211,8 +212,8 @@ void train::topUp(uint32_t increment_value){
                                                                                 // only the difference from current balance to max balance is stored
 
 
-    nfc.mifareIncrement(cardinfo, 0x01, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2], static_cast<uint32_t>(increment_value));
-    if(nfc.mifareTransfer(cardinfo, 0x01, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2])!= nfc::statusCode::pn532StatusOK){hwlib::cout << "error incrementing"; return;};
+    nfc.mifareIncrement(cardinfo, cardNumber, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2], static_cast<uint32_t>(increment_value));
+    if(nfc.mifareTransfer(cardinfo, cardNumber, authenticateAorB, valueBlockLocation, sectorLocation, keys.aKeys[2])!= nfc::statusCode::pn532StatusOK){hwlib::cout << "error incrementing"; return;};
 
     balance = getBalance(cardinfo);
     display << "\n\n" << "new balance:" << hwlib::dec << balance << hwlib::flush;     // Display new balance on oled and flush the screen
