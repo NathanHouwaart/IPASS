@@ -52,6 +52,7 @@ int main() {
 
     nfc::cardKeys card1Keys;                                                                                                     // Initialize default card keys 6 x { 0xFF }
     uint8_t  cardType                    = nfc::pn532::command::CardType::TypeA_ISO_IEC14443;                                    // Cardtype we want to detect
+    uint8_t  cardnumber 		 = 0x01;
     uint8_t  Page                        = 0x06;                                                                                 // Page we want to write
     uint8_t  sector                      = 0x07;                                                                                 // Sector we want to write in
     uint8_t* sectorKey                   = card1Keys.aKeys[2];                                                                   // Key of the sector we want to write in
@@ -87,8 +88,8 @@ int main() {
     auto font    = hwlib::font_default_8x8();
     auto display = hwlib::terminal_from( oled, font );   
     
-    //auto chip = PN532_chip(spiInterface, irq);
-    //auto chip = PN532_chip(uartInterface, irq);
+    //auto chip = nfc::PN532_chip(spiInterface, irq);
+    //auto chip = nfc::PN532_chip(uartInterface, irq);
     auto chip = nfc::PN532_chip(i2cInterface, irq);
 
     nfc::NFC *nfc = &chip;
@@ -101,16 +102,16 @@ int main() {
     for(;;){
         hwlib::cout << "Present card" << hwlib::endl;
         auto cardinfo = card();
-        while(!nfc->detectCard(cardinfo, 0x01, cardType)){}
+        while(!nfc->detectCard(cardinfo, cardnumber, cardType)){}
 
-        auto authenticate = nfc->mifareAuthenticate(cardinfo, 0x01, athenticateAorB, sector, sectorKey);
+        auto authenticate = nfc->mifareAuthenticate(cardinfo, cardnumber, athenticateAorB, sector, sectorKey);
         if(authenticate != nfc::statusCode::pn532StatusOK){return authenticate;}
 
-        auto write = nfc->mifareWritePage(cardinfo, 0x01, Page, data);
+        auto write = nfc->mifareWritePage(cardinfo, cardnumber, Page, data);
         if(write != nfc::statusCode::pn532StatusOK){hwlib::cout << "Write unsuccesfull: "<< write << hwlib::endl;}
 
-        nfc->mifareAuthenticate(cardinfo, 0x01, athenticateAorB, sector, sectorKey);
-        nfc->mifareReadPage(cardinfo, 0x01, Page);
+        nfc->mifareAuthenticate(cardinfo, cardnumber, athenticateAorB, sector, sectorKey);
+        nfc->mifareReadPage(cardinfo, cardnumber, Page);
         cardinfo.readPage(Page); hwlib::cout << hwlib::endl;
 
         hwlib::cout << hwlib::endl<< "Written page succesfully" << hwlib::endl;

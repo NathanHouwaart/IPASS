@@ -44,6 +44,7 @@ int main() {
 
     nfc::cardKeys card1Keys;                                                                // initialise card keys
     uint8_t  cardType               = nfc::pn532::command::CardType::TypeA_ISO_IEC14443;    // Declare the card type you want to read
+    uint8_t cardnumber 		    = 0x01;
     uint8_t  valueBlockPage         = 0x05;                                                 // Page that the valueblock is located on
     uint8_t  sector                 = 0x07;                                                 // Sector the valueblock will be located in
     uint8_t* sectorKey              = card1Keys.aKeys[2];                                   // Key that needs to be authenticated with
@@ -80,8 +81,8 @@ int main() {
     auto font    = hwlib::font_default_8x8();
     auto display = hwlib::terminal_from( oled, font );   
     
-    //auto chip = PN532_chip(spiInterface, irq);
-    //auto chip = PN532_chip(uartInterface, irq);
+    //auto chip = nfc::PN532_chip(spiInterface, irq);
+    //auto chip = nfc::PN532_chip(uartInterface, irq);
     auto chip =  nfc::PN532_chip(i2cInterface, irq);
 
     auto terminal = nfc::NfcOled(chip, display, i2cInterface);
@@ -96,21 +97,21 @@ int main() {
     for(;;){
         hwlib::cout << "Present card" << hwlib::endl;
         auto cardinfo = card();
-        while(!nfc->detectCard(cardinfo, 0x01, cardType)){}
+        while(!nfc->detectCard(cardinfo, cardnumber, cardType)){}
 
-        nfc->mifareAuthenticate(cardinfo, 0x01, athenticateAorB, sector, sectorKey);
-        nfc->mifareReadPage(cardinfo, 0x01, 0x05);
+        nfc->mifareAuthenticate(cardinfo, cardnumber, athenticateAorB, sector, sectorKey);
+        nfc->mifareReadPage(cardinfo, cardnumber, 0x05);
         hwlib::cout << "Old valueblock: " << hwlib::endl;
         cardinfo.readPage(0x05); hwlib::cout << hwlib::endl;
 
-        auto increment = nfc->mifareIncrement(cardinfo, 0x01, athenticateAorB, valueBlockPage, sector, sectorKey, incrementValue);
+        auto increment = nfc->mifareIncrement(cardinfo, cardnumber, athenticateAorB, valueBlockPage, sector, sectorKey, incrementValue);
         if(increment !=   nfc::statusCode::pn532StatusOK){hwlib::cout << "Error incrementing" << hwlib::endl;continue;}
 
-        auto transfer = nfc->mifareTransfer(cardinfo, 0x01, athenticateAorB, valueBlockPage, sector, sectorKey);
+        auto transfer = nfc->mifareTransfer(cardinfo, cardnumber, athenticateAorB, valueBlockPage, sector, sectorKey);
         if(transfer !=  nfc::statusCode::pn532StatusOK){hwlib::cout << "Error transferring" << hwlib::endl;continue;}
 
-        nfc->mifareAuthenticate(cardinfo, 0x01, athenticateAorB, sector, sectorKey);
-        nfc->mifareReadPage(cardinfo, 0x01, 0x05);
+        nfc->mifareAuthenticate(cardinfo, cardnumber, athenticateAorB, sector, sectorKey);
+        nfc->mifareReadPage(cardinfo, cardnumber, 0x05);
          hwlib::cout << "New valueblock: " << hwlib::endl;
         cardinfo.readPage(0x05); hwlib::cout << hwlib::endl;
 

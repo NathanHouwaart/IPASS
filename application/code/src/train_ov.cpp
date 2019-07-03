@@ -17,6 +17,7 @@ train::train(
     uint8_t cardNumber,
     float pricePerKilometer,
     uint32_t maxCardBalance,
+    int minimumCardBalance,
     uint32_t topUpValue,
     nfc::mifareCommands AorB,
     uint8_t valueBlockLocation,
@@ -27,7 +28,7 @@ train::train(
         stationPin1, stationPin2, stationPin3, stationPin4, 
         stationPin5, stationPin6, stationPin7, stationPin8,
         modeSelectPin1, modeSelectPin2, modeSelectPin3, modeSelectPin4,
-        cardNumber, pricePerKilometer, maxCardBalance, topUpValue,
+        cardNumber, pricePerKilometer, maxCardBalance, minimumCardBalance, topUpValue,
         AorB, valueBlockLocation, sectorLocation)
 { 
     init();
@@ -62,7 +63,7 @@ void train::checkIn( card& cardinfo ){
     if(checkinInformation.spaces_occupied >= checkinInformation.getSize()){ display << "\v\n\n\n" << "Full buffer" << hwlib::flush; hwlib::wait_ms(2000);return;}
     // checks wether card has enough saldo
     auto saldo = getBalance(cardinfo);
-    if(static_cast<int>(saldo) < 10){ display << "\v\n\n\n" << "Balance too low" << "\n" << "Balance: " << hwlib::dec << static_cast<int>(saldo) << hwlib::flush; hwlib::wait_ms(4000);return;}
+    if(static_cast<int>(saldo) < minimumCardBalance){ display << "\v\n\n\n" << "Balance too low" << "\n" << "Balance: " << hwlib::dec << static_cast<int>(saldo) << hwlib::flush; hwlib::wait_ms(4000);return;}
     display << "\v\n\n\n\n\n\n" << "Checked in" << "\n" << "Balance: " << hwlib::dec <<  static_cast<int>(saldo) <<  hwlib::flush;
     
     // writes the approved card in a avaialble spot in the buffer

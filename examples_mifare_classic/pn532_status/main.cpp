@@ -66,8 +66,8 @@ int main() {
     auto font    = hwlib::font_default_8x8();
     auto display = hwlib::terminal_from( oled, font );   
     
-    //auto chip = PN532_chip(spiInterface, irq);
-    //auto chip = PN532_chip(uartInterface, irq);
+    //auto chip = nfc::PN532_chip(spiInterface, irq);
+    //auto chip = nfc::PN532_chip(uartInterface, irq);
     auto chip = nfc::PN532_chip(i2cInterface, irq);
 
     nfc::NFC *nfc = &chip;

@@ -44,6 +44,7 @@ protected:
     float           pricePerKilometer;
     Station         currentStation; 
     uint32_t        maxCardBalance;
+    int        minimumCardBalance;
     uint32_t        topUpValue;
 
     cardBuffer<5> checkinInformation;
@@ -96,6 +97,7 @@ public:
 	uint8_t cardNumber,
         float pricePerKilometer,
         uint32_t maxCardbalance, 
+        int minimumCardBalance,
         uint32_t topUpValue,
         nfc::mifareCommands AorB,
         uint8_t valueBlockLocation,

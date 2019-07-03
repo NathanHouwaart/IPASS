@@ -48,7 +48,8 @@ int main() {
     //-----------------------//
 
     nfc::cardKeys card1Keys;                                                                // Initialise default card keys
-    uint8_t  cardType               =  nfc::pn532::command::CardType::TypeA_ISO_IEC14443;   // Cardtype we want to detect
+    uint8_t  cardType               = nfc::pn532::command::CardType::TypeA_ISO_IEC14443;   // Cardtype we want to detect
+    uint8_t  cardnumber 	    = 0x01; 
     
     // Kill watchdog
     WDT->WDT_MR = WDT_MR_WDDIS;
@@ -79,9 +80,9 @@ int main() {
     auto font    = hwlib::font_default_8x8();
     auto display = hwlib::terminal_from( oled, font );   
     
-    //auto chip = nfc::PN532_chip(spiInterface,display, irq);
-    //auto chip = nfc::PN532_chip(uartInterface, display irq);
-    auto chip = nfc::PN532_chip(i2cInterface, irq);
+    auto chip = nfc::PN532_chip(spiInterface, irq);
+    //auto chip = nfc::PN532_chip(uartInterface irq);
+    //auto chip = nfc::PN532_chip(i2cInterface, irq);
 
     nfc::NFC *nfc = &chip;
 
@@ -97,10 +98,10 @@ int main() {
         auto cardinfo = card();
 
         // Wait for a nfc card to be detected by the pn532
-        while(!nfc->detectCard(cardinfo, 0x01, cardType)){}
+        while(!nfc->detectCard(cardinfo, cardnumber, cardType)){}
 
         // If a card has been detected, try to read the entire card
-        nfc->mifareReadCard(cardinfo, 0x01, nfc::mifareCommands::authenticateKeyA, card1Keys);
+        nfc->mifareReadCard(cardinfo, cardnumber, nfc::mifareCommands::authenticateKeyA, card1Keys);
 
         hwlib::wait_ms(5000);
     }
